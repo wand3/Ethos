@@ -1,4 +1,4 @@
 class Config:
-    SECRET_KEY = 'ONE'
-    ALGORITHM = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES = 30
+    SECRET_KEY: str = 'ONE'
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30

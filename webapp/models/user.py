@@ -1,38 +1,18 @@
-import jwt
-from fastapi.security import OAuth2PasswordBearer
-from ..config import Config
-from webapp.database.db_engine import db
-from fastapi import Depends, HTTPException, status
-from typing import Optional, Annotated
-from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
-from passlib.context import CryptContext
 from bson import ObjectId
 from datetime import datetime, timedelta, timezone
-from jwt.exceptions import InvalidTokenError
-
-from webapp.schemas.user import UserInDB, UserUpdate, UserCreate, UserBase
+from jwt import encode, decode, exceptions
+from motor.motor_asyncio import AsyncIOMotorDatabase
+from passlib.context import CryptContext
+from typing import Optional
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from ..schemas.user import UserInDB, UserCreate, UserUpdate, PyObjectId
 from ..schemas.auth import TokenData
+from ..config import Config
 
 # Password hashing setup
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-# Utility to work with MongoDB ObjectIds
-class PyObjectId(ObjectId):
-    @classmethod
-    def __get_validators__(cls):
-        yield cls.validate
-
-    @classmethod
-    def validate(cls, v):
-        if not ObjectId.is_valid(v):
-            raise ValueError("Invalid ObjectId")
-        return ObjectId(v)
-
-    @classmethod
-    def __modify_schema__(cls, field_schema):
-        field_schema.update(type="string")
 
 
 class UserModel:
@@ -40,11 +20,10 @@ class UserModel:
         self.collection = db["users"]
 
     async def create_user(self, user_data: UserCreate) -> UserInDB:
-        """Create a new user in the database."""
         hashed_password = self.hash_password(user_data.password)
         user_dict = {
             "email": user_data.email,
-            "username": user_data.full_name,
+            "full_name": user_data.full_name,
             "hashed_password": hashed_password,
             "created_at": datetime.utcnow(),
             "updated_at": datetime.utcnow(),
@@ -53,54 +32,37 @@ class UserModel:
         user_dict["_id"] = result.inserted_id
         return UserInDB(**user_dict)
 
-    def get_user(db, username: str):
-        if username in db:
-            user_dict = db[username]
-            return UserInDB(**user_dict)
     async def get_user_by_email(self, email: str) -> Optional[UserInDB]:
-        """Retrieve a user by email."""
         user = await self.collection.find_one({"email": email})
-        if user:
-            return UserInDB(**user)
-        return None
+        return UserInDB(**user) if user else None
 
     async def get_user_by_id(self, user_id: str) -> Optional[UserInDB]:
-        """Retrieve a user by their ObjectId."""
         user = await self.collection.find_one({"_id": ObjectId(user_id)})
-        if user:
-            return UserInDB(**user)
-        return None
+        return UserInDB(**user) if user else None
 
     async def update_user(self, user_id: str, user_data: UserUpdate) -> Optional[UserInDB]:
-        """Update user details."""
         update_dict = user_data.dict(exclude_unset=True)
         if "password" in update_dict:
             update_dict["hashed_password"] = self.hash_password(update_dict.pop("password"))
         update_dict["updated_at"] = datetime.utcnow()
         result = await self.collection.find_one_and_update(
-            {"_id": ObjectId(user_id)},
-            {"$set": update_dict},
-            return_document=True,
+            {"_id": ObjectId(user_id)}, {"$set": update_dict}, return_document=True
         )
-        if result:
-            return UserInDB(**result)
-        return None
+        return UserInDB(**result) if result else None
 
     async def delete_user(self, user_id: str) -> bool:
-        """Delete a user from the database."""
         result = await self.collection.delete_one({"_id": ObjectId(user_id)})
         return result.deleted_count == 1
 
     @staticmethod
     def hash_password(password: str) -> str:
-        """Hash a plain-text password."""
         return pwd_context.hash(password)
 
     @staticmethod
     def verify_password(plain_password: str, hashed_password: str) -> bool:
-        """Verify a plain-text password against a hashed password."""
         return pwd_context.verify(plain_password, hashed_password)
 
+    @staticmethod
     def authenticate_user(self, db, username: str, password: str):
         user = self.get_user(db, username)
         if not user:
@@ -109,49 +71,32 @@ class UserModel:
             return False
         return user
 
+    @staticmethod
     def create_access_token(data: dict, expires_delta: timedelta | None = None):
         to_encode = data.copy()
-        if expires_delta:
-            expire = datetime.now(timezone.utc) + expires_delta
-        else:
-            expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+        expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=15))
         to_encode.update({"exp": expire})
-        encoded_jwt = jwt.encode(to_encode, Config.SECRET_KEY, algorithm=Config.ALGORITHM)
-        return encoded_jwt
+        return encode(to_encode, Config.SECRET_KEY, algorithm=Config.ALGORITHM)
 
-    async def get_current_user(self, token: Annotated[str, Depends(oauth2_scheme)]):
+    async def get_current_user(self, token: str = Depends(oauth2_scheme)) -> UserInDB:
         credentials_exception = HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",
             headers={"WWW-Authenticate": "Bearer"},
         )
         try:
-            payload = jwt.decode(token, Config.SECRET_KEY, algorithms=[Config.ALGORITHM])
-            username: str = payload.get("sub")
-            if username is None:
+            payload = decode(token, Config.SECRET_KEY, algorithms=[Config.ALGORITHM])
+            email: str = payload.get("sub")
+            if email is None:
                 raise credentials_exception
-            token_data = (
-                TokenData(username=username))
-        except InvalidTokenError:
+        except exceptions.InvalidTokenError:
             raise credentials_exception
-        user = self.get_user(fake_users_db, username=token_data.username)
-        if user is None:
+        user = await self.get_user_by_email(email)
+        if not user:
             raise credentials_exception
         return user
 
-    @staticmethod
-    async def get_current_active_user(
-            self, current_user: Annotated[UserBase, Depends(get_current_user)],
-    ):
-        if current_user.disabled:
+    async def get_current_active_user(self, current_user: UserInDB = Depends(get_current_user)):
+        if getattr(current_user, "disabled", False):
             raise HTTPException(status_code=400, detail="Inactive user")
         return current_user
-
-
-# class User():
-#     id: ObjectId = Field(default_factory=ObjectId, alias="_id")
-#
-#     username: str
-#
-#     def __repr__(self):
-#         return f"<User(full_name={self.full_name}, email={self.email}, id={self.id} )>"
