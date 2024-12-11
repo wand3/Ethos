@@ -13,6 +13,7 @@ DATABASE_NAME = "ethos"
 
 # Create a MongoDB client
 client = AsyncIOMotorClient(MONGO_CONNECTION_STRING)
+db = client["ethos"]
 
 
 @asynccontextmanager
