@@ -1,6 +1,6 @@
 import datetime
 from typing import List, Optional
-from pydantic import BaseModel, Field, EmailStr
+from pydantic import BaseModel, Field
 from bson import ObjectId
 from webapp.database.db_engine import db
 
@@ -9,6 +9,7 @@ class Post(BaseModel):
     id: ObjectId = Field(default_factory=ObjectId, alias="_id")
     title: str
     content: str
+    image: str
     createdAt: datetime = Field(default_factory=datetime.datetime.utcnow())
     updatedAt: datetime = Field(default_factory=datetime.datetime.utcnow())
     tags: List[str] = []
