@@ -8,7 +8,7 @@ from webapp.models.user import UserModel
 from webapp.database.db_engine import db
 from ..config import Config
 
-auth = APIRouter(prefix="/auth", tags=["Auth"])
+auth = APIRouter( tags=["Auth"])
 
 
 def get_user_model() -> UserModel:
@@ -19,10 +19,11 @@ def get_user_model() -> UserModel:
 @auth.post("/token", response_model=Token)
 async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
-    user_model: Annotated[UserModel, Depends(get_user_model)],
+    user_model: Annotated[UserModel, Depends(get_user_model)],  # Inject the UserModel instance
 ) -> Token:
     """Authenticate user and issue a JWT access token."""
-    user = await user_model.authenticate_user(form_data.username, form_data.password)
+    # Call the instance method using the injected user_model
+    user = await user_model.authenticate_user(self=db, username=form_data.username, password=form_data.password)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

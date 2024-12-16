@@ -23,7 +23,7 @@ class UserModel:
         hashed_password = self.hash_password(user_data.password)
         user_dict = {
             "email": user_data.email,
-            "full_name": user_data.full_name,
+            "username": user_data.username,
             "hashed_password": hashed_password,
             "created_at": datetime.utcnow(),
             "updated_at": datetime.utcnow(),
@@ -63,13 +63,12 @@ class UserModel:
         return pwd_context.verify(plain_password, hashed_password)
 
     @staticmethod
-    def authenticate_user(self, db, username: str, password: str):
-        user = self.get_user(db, username)
-        if not user:
-            return False
-        if not self.verify_password(password, user.hashed_password):
-            return False
-        return user
+    async def authenticate_user(self, username: str, password: str) -> Optional[UserInDB]:
+        """Verify the user's credentials."""
+        user = await self.collection.find_one({"email": username})
+        if user and self.verify_password(password, user["hashed_password"]):
+            return UserInDB(**user)
+        return None
 
     @staticmethod
     def create_access_token(data: dict, expires_delta: timedelta | None = None):
@@ -100,3 +99,4 @@ class UserModel:
         if getattr(current_user, "disabled", False):
             raise HTTPException(status_code=400, detail="Inactive user")
         return current_user
+
