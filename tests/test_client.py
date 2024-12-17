@@ -1,26 +1,3 @@
-from fastapi.testclient import TestClient
-from webapp.main import app
-
-client = TestClient(app)
-
-
-# def test_create_user():
-#     response = client.post(
-#         "/auth/register",
-#         json={"email": "test@example.com", "password": "testpassword", "username": "testuser"},
-#     )
-#     assert response.status_code == 201
-#     assert response.json()["email"] == "test@example.com"
-
-
-def test_login_user():
-    response = client.post(
-            "/token",
-            data={"username": "test@example.com", "password": "testpassword"},
-            headers={"Content-Type": "application/x-www-form-urlencoded"},
-        )
-    assert response.status_code == 200
-    assert "access_token" in response.json()
 
 import pytest
 

@@ -78,4 +78,5 @@ async def read_users_me(
     current_user: Annotated[UserBase, Depends(UserModel.get_current_active_user)],
 ):
     """Retrieve details of the currently authenticated user."""
+    current_user = current_user.username
     return current_user
