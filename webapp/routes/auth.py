@@ -3,7 +3,7 @@ from datetime import timedelta
 from typing import Annotated
 from fastapi.security import OAuth2PasswordRequestForm
 from webapp.schemas.auth import Token
-from webapp.schemas.user import UserBase, UserCreate
+from webapp.schemas.user import UserBase, UserCreate, UserInDB
 from webapp.models.user import UserModel
 from webapp.database.db_engine import db
 from ..config import Config
@@ -43,6 +43,8 @@ async def register_user(
     user_data: UserCreate,
     user_model: Annotated[UserModel, Depends(get_user_model)],
 ) -> UserBase:
+    if not user_data.email or not user_data.password or not user_data.username:
+        raise HTTPException(status_code=400, detail="Missing required fields")
     existing_user = await user_model.get_user_by_email(email=user_data.email)
     if existing_user:
         raise HTTPException(
@@ -50,6 +52,7 @@ async def register_user(
             detail="Email already registered.",
         )
     new_user = await user_model.create_user(user_data=user_data)
+
     return UserBase(**new_user.dict())
 
 

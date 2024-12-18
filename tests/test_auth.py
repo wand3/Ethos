@@ -1,20 +1,9 @@
 import pytest
-import pytest_asyncio
-from httpx import AsyncClient
-from fastapi.testclient import TestClient
-import motor.motor_asyncio
-from webapp.main import app  # Ensure this is your FastAPI app instance
-import logging
-from webapp.database.db_engine import db
+from tests import db_client, clear_db, client
 
 
-from fastapi.testclient import TestClient
-from webapp.main import app
-
-client = TestClient(app)
-
-
-def test_create_user():
+@pytest.fixture(scope="function")
+def test_create_user(client, clear_db):
     response = client.post(
         "/auth/register",
         json={"email": "test1@example.com", "password": "testpassword", "username": "testuser"},
@@ -23,7 +12,8 @@ def test_create_user():
     assert response.json()["email"] == "test1@example.com"
 
 
-def test_login_user():
+@pytest.fixture(scope="function")
+def test_login_user(client):
     response = client.post(
             "/token",
             data={"username": "test1@example.com", "password": "testpassword"},
