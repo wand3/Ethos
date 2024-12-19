@@ -8,7 +8,7 @@ from webapp.models.user import UserModel
 from webapp.database.db_engine import db
 from ..config import Config
 
-auth = APIRouter( tags=["Auth"])
+auth = APIRouter(tags=["Auth"])
 
 
 def get_user_model() -> UserModel:
@@ -74,12 +74,3 @@ async def login_for_access_token(
         data={"sub": user.email}, expires_delta=access_token_expires
     )
     return Token(access_token=access_token, token_type="bearer")
-
-
-@auth.get("/users/me/", response_model=UserBase)
-async def read_users_me(
-    current_user: Annotated[UserBase, Depends(UserModel.get_current_active_user)],
-):
-    """Retrieve details of the currently authenticated user."""
-    current_user = current_user.username
-    return current_user

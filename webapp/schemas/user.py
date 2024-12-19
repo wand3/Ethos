@@ -1,25 +1,7 @@
 from datetime import datetime
-
 from pydantic import BaseModel, EmailStr
 from typing import Optional
-
-from bson import ObjectId
-
-
-class PyObjectId(ObjectId):
-    @classmethod
-    def __get_validators__(cls):
-        yield cls.validate
-
-    @classmethod
-    def validate(cls, v):
-        if not ObjectId.is_valid(v):
-            raise ValueError("Invalid ObjectId")
-        return ObjectId(v)
-
-    @classmethod
-    def __get_pydantic_json_schema__(cls, field_schema):
-        field_schema.update(type="string")
+from ..schemas import PyObjectId
 
 
 class UserBase(BaseModel):
@@ -28,6 +10,12 @@ class UserBase(BaseModel):
 
     class Config:
         from_attributes = True
+        json_schema_extra = {
+            "example": {
+                "username": "john_doe",
+                "email": "john_doe@example.com"
+            }
+        }
 
 
 class UserInDB(UserBase):

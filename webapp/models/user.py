@@ -1,12 +1,12 @@
 from bson import ObjectId
 from datetime import datetime, timedelta, timezone
 from jwt import encode, decode, exceptions
-from motor.motor_asyncio import AsyncIOMotorDatabase
+from pymongo import AsyncMongoClient
 from passlib.context import CryptContext
 from typing import Optional
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from ..schemas.user import UserInDB, UserCreate, UserUpdate, PyObjectId
+from ..schemas.user import UserInDB, UserCreate, UserUpdate
 from ..schemas.auth import TokenData
 from ..config import Config
 
@@ -16,7 +16,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 class UserModel:
-    def __init__(self, db: AsyncIOMotorDatabase):
+    def __init__(self, db: AsyncMongoClient):
         self.collection = db["users"]
 
     async def create_user(self, user_data: UserCreate) -> UserInDB:
