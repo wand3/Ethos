@@ -30,6 +30,7 @@ class Post:
         return BlogPostInDB(**post) if post else None
 
     # get post by id
+    @staticmethod
     async def get_post_by_id(self, post_id: str) -> Optional[BlogPostInDB]:
         post = await self.collection.find_one({"_id": ObjectId(post_id)})
         return BlogPostInDB(**post) if post else None
@@ -37,13 +38,17 @@ class Post:
 
     # get post by tag and tags
 
+
     # update post
+    @staticmethod
     async def update_post(self, post_id: str, post_data: UpdateBlogPost) -> Optional[BlogPostInDB]:
         update_dict = post_data.dict(exclude_unset=True)
         result = await self.collection.find_one_and_update(
-            { "_id": ObjectId(post_id)}, {"set": update_dict}, return_document=True
+            {"_id": ObjectId(post_id)}, {"set": update_dict}, return_document=True
         )
 
         return BlogPostInDB(**result) if result else None
 
     # delete post
+
+

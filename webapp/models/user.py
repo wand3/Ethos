@@ -95,6 +95,7 @@ class UserModel:
             raise credentials_exception
         return user
 
+    @staticmethod
     async def get_current_active_user(self, current_user: UserInDB = Depends(get_current_user)):
         if getattr(current_user, "disabled", False):
             raise HTTPException(status_code=400, detail="Inactive user")

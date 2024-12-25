@@ -15,7 +15,7 @@ def test_create_user(client, clear_db):
 @pytest.fixture(scope="function")
 def test_login_user(client):
     response = client.post(
-            "/token",
+            "/tokens",
             data={"username": "test1@example.com", "password": "testpassword"},
             headers={"Content-Type": "application/x-www-form-urlencoded"},
         )

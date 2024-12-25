@@ -1,5 +1,5 @@
 from datetime import datetime
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, constr
 from typing import Optional
 from ..schemas import PyObjectId
 
@@ -30,5 +30,9 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(BaseModel):
-    email: Optional[str]
-    password: Optional[str]
+    # email: EmailStr
+    # username: str
+    # password: Optional[str] = None
+    username: Optional[constr(min_length=3, max_length=50)] = None
+    email: Optional[EmailStr] = None
+    password: Optional[constr(min_length=6)] = None

@@ -8,7 +8,7 @@ from webapp.main import app
 def db_client():
     """Provide a connection to the MongoDB test database."""
     client = MongoClient('mongodb://localhost:27017')
-    db = client["test_db"]
+    db = client["ethos"]
     yield db
     client.close()  # Close the MongoClient connection
 
