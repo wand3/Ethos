@@ -1,6 +1,9 @@
+from typing import AsyncGenerator
+
 from fastapi import FastAPI
 from pymongo import AsyncMongoClient
 import logging
+from contextlib import asynccontextmanager
 
 
 # MongoDB's connection string (localhost, no authentication)
@@ -14,6 +17,7 @@ client = AsyncMongoClient(MONGO_CONNECTION_STRING)
 db = client["ethos"]
 
 
+@asynccontextmanager
 async def db_lifespan(app: FastAPI):
     # Startup
     app.mongodb_client = AsyncMongoClient(MONGO_CONNECTION_STRING)
@@ -29,3 +33,47 @@ async def db_lifespan(app: FastAPI):
     # Shutdown
     await app.mongodb_client.close()
 
+# Create a global client instance (do this ONCE at application startup)
+# client: AsyncMongoClient = None
+
+async def connect_to_mongo():
+    global client
+    if client is None:
+        client = AsyncMongoClient(MONGO_CONNECTION_STRING)
+
+async def close_mongo_connection():
+    global client
+    if client:
+        await client.close()
+
+
+async def get_db() -> AsyncGenerator:
+    """
+    Asynchronous dependency injection for MongoDB database.
+    """
+    if client is None:
+        raise RuntimeError("MongoDB client not initialized. Call connect_to_mongo() on startup.")
+    try:
+        # db = client['ethos']  # Gets the default database from the URI
+        yield db
+    except Exception as e:
+        print(f"Database error: {e}") # Log the error for debugging
+        raise # Re-raise the exception to be handled by FastAPI
+    finally:
+        pass # Motor handles connec
+
+# async def get_db() -> AsyncGenerator:
+#     """
+#     Asynchronous dependency injection for MongoDB database.
+#
+#     Yields:
+#         AsyncGenerator: An asynchronous generator that yields the database instance.
+#     """
+#     try:
+#         # db = client.get_database()  # Gets the default database from the URI
+#         db = client["ethos"]  # Gets the default database from the URI
+#
+#         yield db
+#     finally:
+#         # No explicit close needed for motor. The client handles connection pooling.
+#         pass # or you can add logging here if needed e.g. logging.info("MongoDB connection released")

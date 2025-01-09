@@ -12,7 +12,7 @@ import RegInputField from "../components/Auth/RegisterForm";
 
 
 type FormErrorType = {
-  email?: string;
+  username?: string;
   password?: string;
 };
 
@@ -25,14 +25,14 @@ const LoginPage = () => {
   const api = UseApi();
   const {setUser, user, fetchUser} = useUser();
 
-  const emailField = useRef<HTMLInputElement>(null);
+  const usernameField = useRef<HTMLInputElement>(null);
   const passwordField = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
-    console.log("data: ", emailField);
+    console.log("data: ", usernameField);
     console.log("data2: ", passwordField);
-    const email = emailField.current ? emailField.current.value : "";
+    const username = usernameField.current ? usernameField.current.value : "";
     const password = passwordField.current ? passwordField.current.value : "";
 
     // useEffect(() => {
@@ -40,13 +40,14 @@ const LoginPage = () => {
     //     emailField.current.focus();
     //   }
     // }, []);
+    const form = newForm();
 
-    console.log("data: ", email);
+    console.log("data: ", username);
     console.log("data2: ", password);
 
     const errors: FormErrorType = {};
-    if (!email) {
-      errors.email = "Email must not be empty";
+    if (!username) {
+      errors.username = "Email must not be empty";
     }
     if (!password) {
       errors.password = "Password must not be empty";
@@ -93,7 +94,7 @@ const LoginPage = () => {
       const response = await fetch("http://127.0.0.1:8000/tokens", {
         method: "POST",
         headers: {
-          Authorization: "Basic " + btoa(`${email}:${password}`),
+          Authorization: "Basic " + btoa(`${username}:${password}`),
         },
       });
       console.log(response)
@@ -190,11 +191,11 @@ const LoginPage = () => {
                     
                      <RegInputField
                       name="email"
-                      label="Email"
-                      type="email"
+                      label="username"
+                      type="name"
                       placeholder="Enter email"
-                      error={formErrors.email}
-                      Fieldref={emailField}
+                      error={formErrors.username}
+                      Fieldref={usernameField}
                     />
 
                     <RegInputField

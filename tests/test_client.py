@@ -1,5 +1,4 @@
 import logging
-
 import pytest
 from tests import db_client, clear_db, client
 

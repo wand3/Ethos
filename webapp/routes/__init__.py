@@ -1,6 +1,6 @@
 from webapp.routes.main import main as ethos_router
 from webapp.routes.auth import auth as auth_router
-from webapp.routes.user import user as user_router
+from webapp.routes.user import router as user_router
 from webapp.routes.blog import blog as blog_router
 
 __all__ = [

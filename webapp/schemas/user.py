@@ -1,4 +1,6 @@
 from datetime import datetime
+
+from bson import ObjectId
 from pydantic import BaseModel, EmailStr, constr
 from typing import Optional
 from ..schemas import PyObjectId
@@ -7,9 +9,13 @@ from ..schemas import PyObjectId
 class UserBase(BaseModel):
     email: EmailStr
     username: str
+    disabled: bool | None = None
 
     class Config:
         from_attributes = True
+        json_encoders = {
+            ObjectId: str
+        }
         json_schema_extra = {
             "example": {
                 "username": "john_doe",
@@ -30,9 +36,9 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(BaseModel):
-    # email: EmailStr
-    # username: str
-    # password: Optional[str] = None
-    username: Optional[constr(min_length=3, max_length=50)] = None
-    email: Optional[EmailStr] = None
-    password: Optional[constr(min_length=6)] = None
+    email: EmailStr
+    username: str
+    password: Optional[str] = None
+    # username: Optional[constr(min_length=3, max_length=50)] = None
+    # email: Optional[EmailStr] = None
+    # password: Optional[constr(min_length=6)] = None

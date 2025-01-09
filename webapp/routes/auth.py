@@ -16,14 +16,14 @@ def get_user_model() -> UserModel:
     return UserModel(db)
 
 
-@auth.post("/tokens", response_model=Token)
+@auth.post("/token", response_model=Token)
 async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
     user_model: Annotated[UserModel, Depends(get_user_model)],  # Inject the UserModel instance
 ) -> Token:
     """Authenticate user and issue a JWT access token."""
     # Call the instance method using the injected user_model
-    user = await user_model.authenticate_user(self=get_user_model(), username=form_data.email, password=form_data.password)
+    user = await user_model.authenticate_user(self=user_model, username=form_data.username, password=form_data.password)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -32,7 +32,7 @@ async def login_for_access_token(
         )
     access_token_expires = timedelta(minutes=Config.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = user_model.create_access_token(
-        data={"sub": user.email}, expires_delta=access_token_expires
+        data={"sub": user.username}, expires_delta=access_token_expires
     )
     return Token(access_token=access_token, token_type="bearer")
 
@@ -62,7 +62,7 @@ async def login_for_access_token(
     form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
     user_model: Annotated[UserModel, Depends(get_user_model)],
 ) -> Token:
-    user = await user_model.authenticate_user(username=form_data.username, password=form_data.password)
+    user = await user_model.authenticate_user(self=user_model, username=form_data.username, password=form_data.password)
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -71,6 +71,6 @@ async def login_for_access_token(
         )
     access_token_expires = timedelta(minutes=Config.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = user_model.create_access_token(
-        data={"sub": user.email}, expires_delta=access_token_expires
+        data={"sub": user.username}, expires_delta=access_token_expires
     )
     return Token(access_token=access_token, token_type="bearer")
