@@ -36,9 +36,6 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(BaseModel):
-    email: EmailStr
-    username: str
-    password: Optional[str] = None
-    # username: Optional[constr(min_length=3, max_length=50)] = None
-    # email: Optional[EmailStr] = None
-    # password: Optional[constr(min_length=6)] = None
+    email: Optional[EmailStr] = None
+    username: Optional[constr(min_length=3, max_length=50)] = None
+    password: Optional[constr(min_length=6)] = None

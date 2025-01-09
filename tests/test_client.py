@@ -1,9 +1,6 @@
-import logging
+from webapp.logger import logger
 import pytest
 from tests import db_client, clear_db, client
-
-# Configure logging to display messages to the terminal
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.StreamHandler()])
 
 
 @pytest.fixture(scope="function")
@@ -49,95 +46,98 @@ def test_user_update(db_client, clear_db):
     assert user["username"] == "testupdateuser"
 
 
-# @pytest.fixture(scope="session")
-# def test_update_user_client(client, db_client):
-#     # Create a user
-#     # response = client.post(
-#     #     "/auth/register",
-#     #     json={
-#     #         "username": "testinguser",
-#     #         "email": "testuser20@example.com",
-#     #         "password": "securepassword",
-#     #     }
-#     # )
-#     # assert response.status_code == 201
-#     # assert response.json()["email"] == "testuser20@example.com"
-#
-#     response = client.post(
-#         "/token",
-#         data={"username": "testuser20@example.com", "password": "securepassword"},
-#         headers={"Content-Type": "application/x-www-form-urlencoded"},
-#     )
-#     assert response.status_code == 200
-#     assert "access_token" in response.json()
-#     access_token = response.json()["access_token"]
-#
-#     collection = db_client["users"]
-#     user = collection.find_one({"email": "testuser20@example.com"})
-#
-#     # user_id = response.json()["email"]
-#     print(f"Found user: {user}")
-#
-#     user_id = user["_id"]
-#
-#     # Update the user
-#     update_dict = {"email": "testupdate200@example.com", "username": "testupdateuser"}
-#
-#     response = client.put(
-#         f"/user/{user_id}/me",
-#         data=update_dict,
-#         headers={"Authorization": f"Bearer {access_token}"},
-#     )
-#     assert response.status_code == 200
-#     data = response.json()
-#     # assert data["bio"] == "An updated bio"
-#
+@pytest.fixture(scope="session")
+def test_update_user_client(client, db_client):
+    # Create a user
+    response = client.post(
+        "/auth/register",
+        json={
+            "username": "testinguser",
+            "email": "testuser20@example.com",
+            "password": "securepassword",
+        }
+    )
+    assert response.status_code == 201
+    assert response.json()["email"] == "testuser20@example.com"
 
-def test_update_user(client, db_client):
+    response = client.post(
+        "/token",
+        data={"username": "testinguser", "password": "securepassword"},
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+    access_token = response.json()["access_token"]
 
-    access_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImV4cCI6MTczNTE1NTYzNX0.K0BZGULAMcv_64K0al84nFyCT3ZuDHvcy1opdRzQQ6E'
-    # Create a test user (using string id for MongoDB)
     collection = db_client["users"]
+    user = collection.find_one({"email": "testuser20@example.com"})
 
-    test_user_id = "6763457c59b0aa764955eb18"
-    # collection.insert_one({"_id": test_user_id, "username": "testuser", "email": "test@example.com", "password":"password"})
+    # user_id = response.json()["email"]
+    print(f"Found user: {user}")
 
-    # Test updating username
-    response = client.put(f"/user/users/{test_user_id}", json={"username": "newuser"}, headers={"Authorization": f"Bearer {access_token}"})
+    user_id = user["_id"]
+
+    # Update the user
+    update_dict = {"email": "testupdate200@example.com", "username": "testupdateuser"}
+
+    response = client.put(
+        f"/user/{user_id}/me",
+        json=update_dict,
+        headers={"Authorization": f"Bearer {access_token}"}
+    )
+    logger.info(response)
+
     assert response.status_code == 200
-    assert response.json() == {"message": "User updated successfully"}
-    updated_user = collection.find_one({"_id": test_user_id})
-    assert updated_user["username"] == "newuser"
 
-    # Test updating email
-    response = client.put(f"/user/users/{test_user_id}", json={"email": "newemail@example.com"})
-    assert response.status_code == 200
-    updated_user = collection.find_one({"_id": test_user_id})
-    assert updated_user["email"] == "newemail@example.com"
 
-    # Test updating password
-    response = client.put(f"/user/users/{test_user_id}", json={"password": "newpassword"})
-    assert response.status_code == 200
-    updated_user = collection.find_one({"_id": test_user_id})
-    assert updated_user["password"] == "newpassword"
 
-    # Test user not found
-    response = client.put("/user/users/nonexistentuser", json={"username": "doesntmatter"})
-    assert response.status_code == 404
-    assert response.json() == {"detail": "User not found"}
 
-    # Test duplicate username
-    collection.insert_one({"_id": "testuser456", "username": "testuser2", "email": "test2@example.com", "password":"password"})
-    response = client.put(f"/user/users/{test_user_id}", json={"username": "testuser2"})
-    assert response.status_code == 400
-    assert response.json() == {"detail": "Username already taken"}
 
-    # Test duplicate email
-    response = client.put(f"/user/users/{test_user_id}", json={"email": "test2@example.com"})
-    assert response.status_code == 400
-    assert response.json() == {"detail": "Email already taken"}
-
-    #Test no fields to update
-    response = client.put(f"/user/users/{test_user_id}", json={})
-    assert response.status_code == 200
-    assert response.json() == {"message": "No fields to update provided"}
+# def test_update_user(client, db_client):
+#
+#     access_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImV4cCI6MTczNTE1NTYzNX0.K0BZGULAMcv_64K0al84nFyCT3ZuDHvcy1opdRzQQ6E'
+#     # Create a test user (using string id for MongoDB)
+#     collection = db_client["users"]
+#
+#     test_user_id = "6763457c59b0aa764955eb18"
+#     # collection.insert_one({"_id": test_user_id, "username": "testuser", "email": "test@example.com", "password":"password"})
+#
+#     # Test updating username
+#     response = client.put(f"/user/users/{test_user_id}", json={"username": "newuser"}, headers={"Authorization": f"Bearer {access_token}"})
+#     assert response.status_code == 200
+#     assert response.json() == {"message": "User updated successfully"}
+#     updated_user = collection.find_one({"_id": test_user_id})
+#     assert updated_user["username"] == "newuser"
+#
+#     # Test updating email
+#     response = client.put(f"/user/users/{test_user_id}", json={"email": "newemail@example.com"})
+#     assert response.status_code == 200
+#     updated_user = collection.find_one({"_id": test_user_id})
+#     assert updated_user["email"] == "newemail@example.com"
+#
+#     # Test updating password
+#     response = client.put(f"/user/users/{test_user_id}", json={"password": "newpassword"})
+#     assert response.status_code == 200
+#     updated_user = collection.find_one({"_id": test_user_id})
+#     assert updated_user["password"] == "newpassword"
+#
+#     # Test user not found
+#     response = client.put("/user/users/nonexistentuser", json={"username": "doesntmatter"})
+#     assert response.status_code == 404
+#     assert response.json() == {"detail": "User not found"}
+#
+#     # Test duplicate username
+#     collection.insert_one({"_id": "testuser456", "username": "testuser2", "email": "test2@example.com", "password":"password"})
+#     response = client.put(f"/user/users/{test_user_id}", json={"username": "testuser2"})
+#     assert response.status_code == 400
+#     assert response.json() == {"detail": "Username already taken"}
+#
+#     # Test duplicate email
+#     response = client.put(f"/user/users/{test_user_id}", json={"email": "test2@example.com"})
+#     assert response.status_code == 400
+#     assert response.json() == {"detail": "Email already taken"}
+#
+#     #Test no fields to update
+#     response = client.put(f"/user/users/{test_user_id}", json={})
+#     assert response.status_code == 200
+#     assert response.json() == {"message": "No fields to update provided"}

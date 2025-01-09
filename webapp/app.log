@@ -282,3 +282,183 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-09 19:32:45,294 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
 2025-01-09 19:32:45,295 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
 2025-01-09 19:32:45,349 - INFO - 3 changes detected
+2025-01-09 21:47:40,568 - INFO - Application started -----------
+2025-01-09 21:47:42,950 - INFO - Application started -----------
+2025-01-09 21:57:08,019 - INFO - 9 changes detected
+2025-01-09 21:57:08,611 - INFO - 1 change detected
+2025-01-09 21:57:10,870 - INFO - 3 changes detected
+2025-01-09 21:57:12,004 - INFO - 3 changes detected
+2025-01-09 22:04:06,868 - INFO - 3 changes detected
+2025-01-09 22:04:10,090 - INFO - Application started -----------
+2025-01-09 22:04:10,185 - INFO - 3 changes detected
+2025-01-09 22:04:29,877 - INFO - 3 changes detected
+2025-01-09 22:04:30,513 - INFO - 1 change detected
+2025-01-09 22:05:44,991 - INFO - 3 changes detected
+2025-01-09 22:06:07,749 - INFO - 3 changes detected
+2025-01-09 22:07:03,327 - INFO - 3 changes detected
+2025-01-09 22:07:05,932 - INFO - Application started -----------
+2025-01-09 22:07:05,997 - INFO - 3 changes detected
+2025-01-09 22:10:21,946 - INFO - 3 changes detected
+2025-01-09 22:10:22,572 - INFO - 1 change detected
+2025-01-09 22:10:25,227 - INFO - Application started -----------
+2025-01-09 22:10:25,325 - INFO - 3 changes detected
+2025-01-09 22:11:45,478 - INFO - 3 changes detected
+2025-01-09 22:11:46,041 - INFO - 1 change detected
+2025-01-09 22:11:48,491 - INFO - Application started -----------
+2025-01-09 22:11:48,596 - INFO - 3 changes detected
+2025-01-09 22:12:08,494 - INFO - 3 changes detected
+2025-01-09 22:12:09,002 - INFO - 1 change detected
+2025-01-09 22:12:11,870 - INFO - Application started -----------
+2025-01-09 22:12:11,975 - INFO - 3 changes detected
+2025-01-09 22:12:56,994 - INFO - 3 changes detected
+2025-01-09 22:12:57,563 - INFO - 1 change detected
+2025-01-09 22:12:59,985 - INFO - Application started -----------
+2025-01-09 22:13:00,094 - INFO - 3 changes detected
+2025-01-09 22:13:14,892 - INFO - 3 changes detected
+2025-01-09 22:13:15,410 - INFO - 1 change detected
+2025-01-09 22:13:34,730 - INFO - 3 changes detected
+2025-01-09 22:13:37,799 - INFO - Application started -----------
+2025-01-09 22:13:37,875 - INFO - 3 changes detected
+2025-01-09 22:14:46,854 - INFO - 3 changes detected
+2025-01-09 22:14:47,357 - INFO - 1 change detected
+2025-01-09 22:14:50,348 - INFO - Application started -----------
+2025-01-09 22:14:50,442 - INFO - 3 changes detected
+2025-01-09 22:16:07,443 - INFO - 3 changes detected
+2025-01-09 22:16:08,012 - INFO - 1 change detected
+2025-01-09 22:16:10,399 - INFO - Application started -----------
+2025-01-09 22:16:10,459 - INFO - 3 changes detected
+2025-01-09 22:16:37,928 - INFO - 3 changes detected
+2025-01-09 22:16:38,465 - INFO - 1 change detected
+2025-01-09 22:16:40,878 - INFO - Application started -----------
+2025-01-09 22:16:40,967 - INFO - 3 changes detected
+2025-01-09 22:16:57,725 - INFO - 3 changes detected
+2025-01-09 22:16:58,236 - INFO - 1 change detected
+2025-01-09 22:16:59,579 - INFO - Application started -----------
+2025-01-09 22:16:59,645 - INFO - 3 changes detected
+2025-01-09 22:18:56,600 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 22:18:57,027 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQ1OTMzNn0.d8bNO3E6b-3yb8HH_46tprGvfGWX9ekvVr44sNwYJAE
+2025-01-09 22:19:24,656 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDU5MzY0fQ.q4dzI8tT7p8ud3etyQ_ul0dExShIQMlyJ2DW8tIzwgY
+2025-01-09 22:20:16,122 - INFO - User model ---- get current user start
+2025-01-09 22:20:16,131 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 22:20:16,133 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 22:20:16,134 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 22:22:15,498 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJleHAiOjE3MzY0NTk1MzV9.T5Fj0XS4mTMlNfY7fb3o8Cy3cpLhgAKmMHUWjszWNnM
+2025-01-09 22:22:30,358 - INFO - User model ---- get current user start
+2025-01-09 22:22:30,360 - INFO - User model ---- get current user payload error
+2025-01-09 22:22:48,366 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdHJpbmciLCJleHAiOjE3MzY0NTk1Njh9.6EEPlATMyN_lVZFOiPG-rL3LXoZ6PAJbCwNz1X6CT7Y
+2025-01-09 22:23:10,612 - INFO - User model ---- get current user start
+2025-01-09 22:23:10,615 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'user@example.com', 'username': 'string', 'hashed_password': '$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 21, 20, 16, 541000), 'disabled': False}
+2025-01-09 22:23:10,615 - INFO - User model ----  user email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:23:10,616 - INFO - User model ---- get current  active user payload error email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:26:35,936 - INFO - 6 changes detected
+2025-01-09 22:26:36,490 - INFO - 1 change detected
+2025-01-09 22:26:39,047 - INFO - 6 changes detected
+2025-01-09 22:26:39,517 - INFO - Application started -----------
+2025-01-09 22:28:00,838 - INFO - User model ---- get current user start
+2025-01-09 22:28:00,863 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'user@example.com', 'username': 'string', 'hashed_password': '$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 21, 20, 16, 541000), 'disabled': False}
+2025-01-09 22:28:00,875 - INFO - User model ----  user email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:28:00,876 - INFO - User model ---- get current  active user payload error email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:28:05,052 - INFO - User model ---- get current user start
+2025-01-09 22:28:05,055 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'user@example.com', 'username': 'string', 'hashed_password': '$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 21, 20, 16, 541000), 'disabled': False}
+2025-01-09 22:28:05,055 - INFO - User model ----  user email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:28:05,056 - INFO - User model ---- get current  active user payload error email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:29:07,673 - INFO - 3 changes detected
+2025-01-09 22:29:08,213 - INFO - 1 change detected
+2025-01-09 22:29:10,128 - INFO - 3 changes detected
+2025-01-09 22:29:10,531 - INFO - Application started -----------
+2025-01-09 22:30:24,835 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 22:30:55,364 - INFO - User model ---- get current  active user payload error email='user@example.com' username='string' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 20, 16, 541000)
+2025-01-09 22:38:40,498 - INFO - User model ---- get current  active user payload error email='testuser@example.com' username='stringer' disabled=False id=None hashed_password='$2b$12$AKTdZbmsxJEwisZL8k1NAelxq.lBKduxhMSbgoISaDrKkXDWt1vL6' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 21, 30, 55, 374000)
+2025-01-09 22:40:22,108 - INFO - 3 changes detected
+2025-01-09 22:40:22,622 - INFO - 1 change detected
+2025-01-09 22:40:24,530 - INFO - 3 changes detected
+2025-01-09 22:40:24,890 - INFO - Application started -----------
+2025-01-09 22:42:30,883 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 22:43:14,946 - INFO - 3 changes detected
+2025-01-09 22:43:15,537 - INFO - 1 change detected
+2025-01-09 22:43:17,289 - INFO - 3 changes detected
+2025-01-09 22:43:17,893 - INFO - Application started -----------
+2025-01-09 22:43:31,383 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 22:44:42,158 - INFO - 3 changes detected
+2025-01-09 22:44:42,648 - INFO - 1 change detected
+2025-01-09 22:44:44,519 - INFO - 3 changes detected
+2025-01-09 22:44:45,062 - INFO - Application started -----------
+2025-01-09 22:56:49,267 - INFO - 3 changes detected
+2025-01-09 22:56:49,805 - INFO - 1 change detected
+2025-01-09 22:56:52,304 - INFO - Application started -----------
+2025-01-09 22:56:52,408 - INFO - 3 changes detected
+2025-01-09 23:27:01,344 - INFO - 3 changes detected
+2025-01-09 23:27:01,955 - INFO - 1 change detected
+2025-01-09 23:27:04,445 - INFO - 3 changes detected
+2025-01-09 23:27:05,019 - INFO - Application started -----------
+2025-01-09 23:27:07,925 - INFO - User model ---- get current user payload error
+2025-01-09 23:27:37,768 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:28:02,506 - INFO - 3 changes detected
+2025-01-09 23:28:03,082 - INFO - 1 change detected
+2025-01-09 23:28:05,123 - INFO - 3 changes detected
+2025-01-09 23:28:05,640 - INFO - Application started -----------
+2025-01-09 23:28:06,203 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:28:22,819 - INFO - User model ---- get current user payload error
+2025-01-09 23:29:16,159 - INFO - User model ---- get current user payload error
+2025-01-09 23:30:34,956 - INFO - 3 changes detected
+2025-01-09 23:30:35,495 - INFO - 1 change detected
+2025-01-09 23:30:37,680 - INFO - 3 changes detected
+2025-01-09 23:30:38,277 - INFO - Application started -----------
+2025-01-09 23:31:11,368 - INFO - 3 changes detected
+2025-01-09 23:31:11,857 - INFO - 1 change detected
+2025-01-09 23:31:13,603 - INFO - 3 changes detected
+2025-01-09 23:31:14,032 - INFO - Application started -----------
+2025-01-09 23:31:26,250 - INFO - 3 changes detected
+2025-01-09 23:31:26,745 - INFO - 1 change detected
+2025-01-09 23:31:28,506 - INFO - 3 changes detected
+2025-01-09 23:31:29,116 - INFO - Application started -----------
+2025-01-09 23:31:57,112 - INFO - 3 changes detected
+2025-01-09 23:31:57,671 - INFO - 1 change detected
+2025-01-09 23:31:59,640 - INFO - 3 changes detected
+2025-01-09 23:32:00,210 - INFO - Application started -----------
+2025-01-09 23:32:14,588 - INFO - 3 changes detected
+2025-01-09 23:32:15,163 - INFO - 1 change detected
+2025-01-09 23:32:17,826 - INFO - 3 changes detected
+2025-01-09 23:32:18,438 - INFO - Application started -----------
+2025-01-09 23:32:48,926 - INFO - 3 changes detected
+2025-01-09 23:32:49,479 - INFO - 1 change detected
+2025-01-09 23:32:51,394 - INFO - 3 changes detected
+2025-01-09 23:32:52,116 - INFO - Application started -----------
+2025-01-09 23:34:18,080 - INFO - 3 changes detected
+2025-01-09 23:34:18,656 - INFO - 1 change detected
+2025-01-09 23:34:20,585 - INFO - 3 changes detected
+2025-01-09 23:34:21,083 - INFO - Application started -----------
+2025-01-09 23:35:45,411 - INFO - 3 changes detected
+2025-01-09 23:35:45,943 - INFO - 1 change detected
+2025-01-09 23:35:48,333 - INFO - 3 changes detected
+2025-01-09 23:35:48,814 - INFO - Application started -----------

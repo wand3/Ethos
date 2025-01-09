@@ -1,0 +1,83 @@
+2025-01-09 23:02:13,127 - INFO - Application started -----------
+2025-01-09 23:02:13,299 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:02:13,683 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2025-01-09 23:02:13,689 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 401 Unauthorized"
+2025-01-09 23:09:49,105 - INFO - Application started -----------
+2025-01-09 23:09:49,204 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 401 Unauthorized"
+2025-01-09 23:11:40,609 - INFO - Application started -----------
+2025-01-09 23:11:40,694 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 401 Unauthorized"
+2025-01-09 23:15:19,834 - INFO - Application started -----------
+2025-01-09 23:15:19,937 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:15:20,387 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:15:20,387 - INFO - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0aW5ndXNlciIsImV4cCI6MTczNjQ2MjcyMH0.GFiCKPVaG-TKndNFeXz7vjcLTaS9jJdJMx_FAk6Xim4
+2025-01-09 23:15:20,397 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 422 Unprocessable Entity"
+2025-01-09 23:17:19,140 - INFO - Application started -----------
+2025-01-09 23:17:19,242 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:17:19,671 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:17:19,681 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 422 Unprocessable Entity"
+2025-01-09 23:17:19,682 - INFO - <Response [422 Unprocessable Entity]>
+2025-01-09 23:18:24,113 - INFO - Application started -----------
+2025-01-09 23:18:24,213 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:18:24,639 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:18:24,649 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 422 Unprocessable Entity"
+2025-01-09 23:18:24,650 - INFO - <Response [422 Unprocessable Entity]>
+2025-01-09 23:19:34,116 - INFO - Application started -----------
+2025-01-09 23:19:34,220 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:19:34,646 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:19:34,661 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 422 Unprocessable Entity"
+2025-01-09 23:19:34,661 - INFO - <Response [422 Unprocessable Entity]>
+2025-01-09 23:20:05,139 - INFO - Application started -----------
+2025-01-09 23:20:05,242 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:20:05,671 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:20:05,675 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 401 Unauthorized"
+2025-01-09 23:20:05,676 - INFO - <Response [401 Unauthorized]>
+2025-01-09 23:20:59,910 - INFO - Application started -----------
+2025-01-09 23:21:00,008 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:21:00,441 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:21:00,452 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 422 Unprocessable Entity"
+2025-01-09 23:21:00,452 - INFO - <Response [422 Unprocessable Entity]>
+2025-01-09 23:22:44,412 - INFO - Application started -----------
+2025-01-09 23:22:44,528 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 23:22:45,006 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-09 23:22:45,031 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 200 OK"
+2025-01-09 23:22:45,032 - INFO - <Response [200 OK]>

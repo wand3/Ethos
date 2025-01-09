@@ -70,7 +70,7 @@ class UserModel:
     async def authenticate_user(self, username: str, password: str) -> Optional[UserInDB]:
         """Verify the user's credentials."""
         user = await self.db.find_one({"username": username})
-        logger.info(f'User auth {user}')
+        # logger.info(f'User auth {user}')
         if user and self.verify_password(password, user["hashed_password"]):
             return UserInDB(**user)
         return None
@@ -84,14 +84,14 @@ class UserModel:
             expire = datetime.now(timezone.utc) + timedelta(minutes=15)
         to_encode.update({"exp": expire})
         encoded_jwt = jwt.encode(to_encode, Config.SECRET_KEY, algorithm=Config.ALGORITHM)
-        logger.info(f'Token created for user {encoded_jwt}')
+        # logger.info(f'Token created for user {encoded_jwt}')
 
         return encoded_jwt
 
     async def get_user(self, database, username: str):
         database = self.db
         user = await database.find_one({"username": username})
-        logger.info(f'Get User in auth: {user}')
+        # logger.info(f'Get User in auth: {user}')
         if user:
             user["_id"] = str(user["_id"])
             return UserInDB(**user)
@@ -103,16 +103,16 @@ class UserModel:
             detail="Could not validate credentials",
             headers={"WWW-Authenticate": "Bearer"},
         )
-        logger.info(f'User model ---- get current user start')
+        # logger.info(f'User model ---- get current user start')
 
         try:
-            logger.info(f'User model ---- get current user next')
-            logger.info(f'User model ---- get current user token {token}')
-            logger.info(f'User model ---- get current user secret key {Config.SECRET_KEY}')
-            logger.info(f'User model ---- get current user algo {Config.ALGORITHM}')
+            # logger.info(f'User model ---- get current user next')
+            # logger.info(f'User model ---- get current user token {token}')
+            # logger.info(f'User model ---- get current user secret key {Config.SECRET_KEY}')
+            # logger.info(f'User model ---- get current user algo {Config.ALGORITHM}')
 
             payload = jwt.decode(token, Config.SECRET_KEY, algorithms=[Config.ALGORITHM])
-            logger.info(f'User model ---- get current user payload {payload}')
+            # logger.info(f'User model ---- get current user payload {payload}')
 
             username: str = payload.get("sub")
 
@@ -124,7 +124,7 @@ class UserModel:
 
             raise credentials_exception
         user = await self.get_user(database=self.db, username=token_data.username)
-        logger.info(f'User model ----  user {user}')
+        # logger.info(f'User model ----  user {user}')
 
         if user is None:
             raise credentials_exception
@@ -147,9 +147,7 @@ active_u = UserModel(db=dep_inj)
 
 
 async def get_current_active_user(current_user: Annotated[UserBase, Depends(active_u.get_current_user)]):
-    logger.info(f'User model ---- get current  active user payload error {current_user}')
-
-    # if getattr(current_user, "disabled", False):
+    # logger.info(f'User model ---- get current  active user payload error {current_user}')
     if current_user.disabled:
         raise HTTPException(status_code=400, detail="Inactive user")
     return current_user
