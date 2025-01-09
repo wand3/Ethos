@@ -1,227 +1,284 @@
-2025-01-09 11:50:10,813 - INFO - Application started <fastapi.applications.FastAPI object at 0x10cb53b90>
-2025-01-09 11:51:56,242 - INFO - User model ---- <webapp.models.user.UserModel object at 0x103428310>
-2025-01-09 11:51:56,368 - INFO - Application started -----------
-2025-01-09 11:52:24,884 - INFO - User model ---- <function UserModel.get_current_active_user at 0x1042262a0>
-2025-01-09 11:52:25,002 - INFO - Application started -----------
-2025-01-09 11:52:59,104 - INFO - Application started -----------
-2025-01-09 11:53:36,528 - INFO - Application started -----------
-2025-01-09 11:56:49,830 - INFO - Application started -----------
-2025-01-09 11:56:52,933 - INFO - User model ---- get current user
-2025-01-09 11:57:37,651 - INFO - User model ---- get current user
-2025-01-09 11:57:48,271 - INFO - Application started -----------
-2025-01-09 11:57:50,445 - INFO - User model ---- get current user
-2025-01-09 11:58:21,484 - INFO - Application started -----------
-2025-01-09 11:58:27,611 - INFO - User model ---- get current user start
-2025-01-09 11:58:55,498 - INFO - Application started -----------
-2025-01-09 11:58:58,664 - INFO - User model ---- get current user start
-2025-01-09 11:58:58,665 - INFO - User model ---- get current user next
-2025-01-09 11:58:59,814 - INFO - User model ---- get current user start
-2025-01-09 11:58:59,814 - INFO - User model ---- get current user next
-2025-01-09 11:59:28,314 - INFO - Application started -----------
-2025-01-09 11:59:38,644 - INFO - User model ---- get current user start
-2025-01-09 11:59:38,644 - INFO - User model ---- get current user next
-2025-01-09 12:00:07,501 - INFO - User model ---- get current user start
-2025-01-09 12:00:07,501 - INFO - User model ---- get current user next
-2025-01-09 12:00:55,938 - INFO - Application started -----------
-2025-01-09 12:01:02,041 - INFO - User model ---- get current user start
-2025-01-09 12:01:02,042 - INFO - User model ---- get current user next
-2025-01-09 12:01:02,042 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:01:08,254 - INFO - User model ---- get current user start
-2025-01-09 12:01:08,254 - INFO - User model ---- get current user next
-2025-01-09 12:01:08,254 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MTUxMzZ9.JjzFfK2JqJlVKt0eun3qrzc5rjnokVUL_lQpHKsNXec
-2025-01-09 12:01:09,473 - INFO - User model ---- get current user start
-2025-01-09 12:01:09,473 - INFO - User model ---- get current user next
-2025-01-09 12:01:09,473 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MTUxMzZ9.JjzFfK2JqJlVKt0eun3qrzc5rjnokVUL_lQpHKsNXec
-2025-01-09 12:02:16,934 - INFO - Application started -----------
-2025-01-09 12:02:21,816 - INFO - User model ---- get current user start
-2025-01-09 12:02:21,817 - INFO - User model ---- get current user next
-2025-01-09 12:02:21,817 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MTUxMzZ9.JjzFfK2JqJlVKt0eun3qrzc5rjnokVUL_lQpHKsNXec
-2025-01-09 12:02:21,817 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:02:21,817 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:05:36,355 - INFO - Application started -----------
-2025-01-09 12:05:38,279 - INFO - User model ---- get current user start
-2025-01-09 12:05:38,279 - INFO - User model ---- get current user next
-2025-01-09 12:05:38,279 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MTUxMzZ9.JjzFfK2JqJlVKt0eun3qrzc5rjnokVUL_lQpHKsNXec
-2025-01-09 12:05:38,279 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:05:38,279 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:05:38,299 - INFO - User model ---- get current user payload error
-2025-01-09 12:07:39,350 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:07:39,359 - WARNING - (trapped) error reading bcrypt version
+2025-01-09 18:25:27,427 - INFO - Application started -----------
+2025-01-09 18:25:28,934 - INFO - Application started -----------
+2025-01-09 18:25:42,618 - INFO - 3 changes detected
+2025-01-09 18:25:43,129 - INFO - 1 change detected
+2025-01-09 18:25:44,225 - INFO - 3 changes detected
+2025-01-09 18:25:44,971 - INFO - Application started -----------
+2025-01-09 18:27:31,865 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:07:39,854 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:14:46,757 - INFO - Application started -----------
-2025-01-09 12:14:53,146 - INFO - User model ---- get current user start
-2025-01-09 12:14:53,146 - INFO - User model ---- get current user next
-2025-01-09 12:14:53,146 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:14:53,146 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:14:53,146 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:14:53,147 - INFO - User model ---- get current user payload
-2025-01-09 12:14:53,190 - INFO - Get User in auth: None
-2025-01-09 12:15:01,936 - INFO - User model ---- get current user start
-2025-01-09 12:15:01,937 - INFO - User model ---- get current user next
-2025-01-09 12:15:01,938 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:15:01,938 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:15:01,938 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:15:01,938 - INFO - User model ---- get current user payload
-2025-01-09 12:15:01,941 - INFO - Get User in auth: None
-2025-01-09 12:16:25,976 - INFO - Application started -----------
-2025-01-09 12:16:30,904 - INFO - User model ---- get current user start
-2025-01-09 12:16:30,905 - INFO - User model ---- get current user next
-2025-01-09 12:16:30,905 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:16:30,905 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:16:30,905 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:16:30,905 - INFO - User model ---- get current user payload {'sub': 'testemail@mail.com', 'exp': 1736422659}
-2025-01-09 12:16:30,923 - INFO - Get User in auth: None
-2025-01-09 12:18:02,063 - INFO - Application started -----------
-2025-01-09 12:18:05,861 - INFO - User model ---- get current user start
-2025-01-09 12:18:05,864 - INFO - User model ---- get current user next
-2025-01-09 12:18:05,864 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:18:05,864 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:18:05,864 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:18:05,865 - INFO - User model ---- get current user payload {'sub': 'testemail@mail.com', 'exp': 1736422659}
-2025-01-09 12:18:05,888 - INFO - Get User in auth: None
-2025-01-09 12:18:09,731 - INFO - User model ---- get current user start
-2025-01-09 12:18:09,732 - INFO - User model ---- get current user next
-2025-01-09 12:18:09,732 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0ZW1haWxAbWFpbC5jb20iLCJleHAiOjE3MzY0MjI2NTl9.CS5TQH3es7SGTS05VlXvxsrO1aMUrhwmw9yOUk4aD9k
-2025-01-09 12:18:09,732 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:18:09,732 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:18:09,732 - INFO - User model ---- get current user payload {'sub': 'testemail@mail.com', 'exp': 1736422659}
-2025-01-09 12:18:09,734 - INFO - Get User in auth: None
-2025-01-09 12:18:28,114 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:18:28,116 - WARNING - (trapped) error reading bcrypt version
+2025-01-09 18:28:04,503 - INFO - User auth {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 18:28:04,901 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ1NDg0fQ.4q8XCXbZDK1Osz2yb_QTcI0NnfHquL-GuAx8iTwVmXs
+2025-01-09 18:28:46,203 - INFO - 3 changes detected
+2025-01-09 18:28:46,732 - INFO - 1 change detected
+2025-01-09 18:28:48,704 - INFO - 3 changes detected
+2025-01-09 18:28:49,140 - INFO - Application started -----------
+2025-01-09 18:30:01,095 - INFO - 3 changes detected
+2025-01-09 18:30:01,567 - INFO - 1 change detected
+2025-01-09 18:30:03,496 - INFO - 3 changes detected
+2025-01-09 18:30:03,894 - INFO - Application started -----------
+2025-01-09 18:30:27,583 - INFO - 3 changes detected
+2025-01-09 18:30:28,102 - INFO - 1 change detected
+2025-01-09 18:30:29,979 - INFO - 3 changes detected
+2025-01-09 18:30:30,512 - INFO - Application started -----------
+2025-01-09 18:31:52,076 - INFO - 3 changes detected
+2025-01-09 18:31:52,602 - INFO - 1 change detected
+2025-01-09 18:31:55,532 - INFO - 3 changes detected
+2025-01-09 18:31:56,290 - INFO - User model ---- get current user payload error<function UserModel.get_current_user at 0x10f3571a0>
+2025-01-09 18:31:56,374 - INFO - Application started -----------
+2025-01-09 18:36:02,738 - INFO - 3 changes detected
+2025-01-09 18:36:03,256 - INFO - 1 change detected
+2025-01-09 18:36:05,673 - INFO - 3 changes detected
+2025-01-09 18:36:06,089 - INFO - Application started -----------
+2025-01-09 18:36:08,676 - INFO - User model ---- get current  active user payload error
+2025-01-09 18:37:14,159 - INFO - 3 changes detected
+2025-01-09 18:37:14,662 - INFO - 1 change detected
+2025-01-09 18:37:16,956 - INFO - 3 changes detected
+2025-01-09 18:37:17,413 - INFO - Application started -----------
+2025-01-09 18:38:20,171 - INFO - 3 changes detected
+2025-01-09 18:38:20,731 - INFO - 1 change detected
+2025-01-09 18:38:22,594 - INFO - 3 changes detected
+2025-01-09 18:38:23,190 - INFO - Application started -----------
+2025-01-09 18:38:24,672 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x10ccd0bd0>
+2025-01-09 18:38:26,145 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x10ccd0bd0>
+2025-01-09 18:38:49,307 - INFO - 3 changes detected
+2025-01-09 18:38:49,823 - INFO - 1 change detected
+2025-01-09 18:38:51,806 - INFO - 3 changes detected
+2025-01-09 18:38:52,251 - INFO - Application started -----------
+2025-01-09 18:38:52,389 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x105500b50>
+2025-01-09 18:39:37,373 - INFO - 3 changes detected
+2025-01-09 18:39:37,899 - INFO - 1 change detected
+2025-01-09 18:39:39,816 - INFO - 3 changes detected
+2025-01-09 18:39:40,202 - INFO - Application started -----------
+2025-01-09 18:40:05,318 - INFO - 3 changes detected
+2025-01-09 18:40:05,889 - INFO - 1 change detected
+2025-01-09 18:40:07,753 - INFO - 3 changes detected
+2025-01-09 18:40:08,127 - INFO - Application started -----------
+2025-01-09 18:40:53,592 - INFO - 3 changes detected
+2025-01-09 18:40:54,113 - INFO - 1 change detected
+2025-01-09 18:40:56,543 - INFO - Application started -----------
+2025-01-09 18:40:56,615 - INFO - 3 changes detected
+2025-01-09 18:40:57,651 - INFO - User model ---- get current user start
+2025-01-09 18:40:57,651 - INFO - User model ---- get current user next
+2025-01-09 18:40:57,652 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzk5OX0.okdveYgR49SfYIDdN3wIQ8LBjMex5nV0jxUnfQuUeIY
+2025-01-09 18:40:57,652 - INFO - User model ---- get current user secret key ONE
+2025-01-09 18:40:57,652 - INFO - User model ---- get current user algo HS256
+2025-01-09 18:40:57,659 - INFO - User model ---- get current user payload error
+2025-01-09 18:42:27,804 - INFO - User auth {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 18:42:27,806 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:18:28,842 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzMwOH0.Fye3c38rqSWLfX_u5z_T3m4-WkmWkwnrNZXhZiSzc0k
-2025-01-09 12:18:32,472 - INFO - User model ---- get current user start
-2025-01-09 12:18:32,472 - INFO - User model ---- get current user next
-2025-01-09 12:18:32,472 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzMwOH0.Fye3c38rqSWLfX_u5z_T3m4-WkmWkwnrNZXhZiSzc0k
-2025-01-09 12:18:32,473 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:18:32,473 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:18:32,473 - INFO - User model ---- get current user payload {'sub': 'testuser', 'exp': 1736423308}
-2025-01-09 12:18:32,475 - INFO - Get User in auth: {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:18:43,341 - INFO - User model ---- get current user start
-2025-01-09 12:18:43,343 - INFO - User model ---- get current user next
-2025-01-09 12:18:43,343 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:18:43,344 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:18:43,344 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:18:43,345 - INFO - User model ---- get current user payload error
-2025-01-09 12:19:45,667 - INFO - Application started -----------
-2025-01-09 12:19:54,505 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:19:54,506 - WARNING - (trapped) error reading bcrypt version
+2025-01-09 18:42:28,210 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 18:43:01,376 - INFO - User model ---- get current user start
+2025-01-09 18:43:01,376 - INFO - User model ---- get current user next
+2025-01-09 18:43:01,376 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 18:43:01,377 - INFO - User model ---- get current user secret key ONE
+2025-01-09 18:43:01,377 - INFO - User model ---- get current user algo HS256
+2025-01-09 18:43:01,377 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736446348}
+2025-01-09 18:43:01,379 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 18:45:44,450 - INFO - 3 changes detected
+2025-01-09 18:45:45,051 - INFO - 1 change detected
+2025-01-09 18:45:47,829 - INFO - Application started -----------
+2025-01-09 18:45:47,927 - INFO - 3 changes detected
+2025-01-09 18:46:47,110 - INFO - 3 changes detected
+2025-01-09 18:46:47,680 - INFO - 1 change detected
+2025-01-09 18:46:49,528 - INFO - 3 changes detected
+2025-01-09 18:46:49,929 - INFO - Application started -----------
+2025-01-09 18:49:17,522 - INFO - User auth {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 18:49:17,525 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:19:54,929 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzM5NH0.gBissjy-uu7b61lWH-Zzu9JGd9zR1blw64Bb-zRm_MI
-2025-01-09 12:20:23,520 - INFO - Application started -----------
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user start
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user next
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:20:29,139 - INFO - User model ---- get current user payload error
-2025-01-09 12:20:59,192 - INFO - Application started -----------
-2025-01-09 12:21:01,521 - INFO - User model ---- get current user start
-2025-01-09 12:21:01,522 - INFO - User model ---- get current user next
-2025-01-09 12:21:01,523 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:21:01,523 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:21:01,523 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:21:01,523 - INFO - User model ---- get current user payload error
-2025-01-09 12:21:11,682 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:21:11,682 - WARNING - (trapped) error reading bcrypt version
+2025-01-09 18:49:17,918 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2NzU3fQ.btcs4d2QYe8NkYpswPYhnZCx5O19omZ38mm1A0Pkkys
+2025-01-09 18:49:23,106 - INFO - User model ---- get current user start
+2025-01-09 18:49:23,106 - INFO - User model ---- get current user next
+2025-01-09 18:49:23,106 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2NzU3fQ.btcs4d2QYe8NkYpswPYhnZCx5O19omZ38mm1A0Pkkys
+2025-01-09 18:49:23,107 - INFO - User model ---- get current user secret key ONE
+2025-01-09 18:49:23,107 - INFO - User model ---- get current user algo HS256
+2025-01-09 18:49:23,108 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736446757}
+2025-01-09 18:50:55,945 - INFO - 3 changes detected
+2025-01-09 18:50:56,493 - INFO - 1 change detected
+2025-01-09 18:50:58,979 - INFO - 3 changes detected
+2025-01-09 18:50:59,402 - INFO - Application started -----------
+2025-01-09 18:50:59,432 - INFO - User model ---- get current user start
+2025-01-09 18:50:59,433 - INFO - User model ---- get current user next
+2025-01-09 18:50:59,433 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2NzU3fQ.btcs4d2QYe8NkYpswPYhnZCx5O19omZ38mm1A0Pkkys
+2025-01-09 18:50:59,433 - INFO - User model ---- get current user secret key ONE
+2025-01-09 18:50:59,433 - INFO - User model ---- get current user algo HS256
+2025-01-09 18:50:59,439 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736446757}
+2025-01-09 18:58:09,036 - INFO - 6 changes detected
+2025-01-09 18:58:09,544 - INFO - 1 change detected
+2025-01-09 18:58:12,573 - INFO - 3 changes detected
+2025-01-09 18:58:12,993 - INFO - Application started -----------
+2025-01-09 18:58:13,083 - INFO - 3 changes detected
+2025-01-09 18:58:13,431 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x1125e72d0>
+2025-01-09 18:59:03,849 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x1125e72d0>
+2025-01-09 18:59:40,781 - INFO - 3 changes detected
+2025-01-09 18:59:41,356 - INFO - 1 change detected
+2025-01-09 18:59:43,215 - INFO - 3 changes detected
+2025-01-09 18:59:43,637 - INFO - Application started -----------
+2025-01-09 18:59:47,560 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x10d6fb610>
+2025-01-09 19:02:54,959 - INFO - 3 changes detected
+2025-01-09 19:02:55,462 - INFO - 1 change detected
+2025-01-09 19:02:58,118 - INFO - Application started -----------
+2025-01-09 19:02:58,189 - INFO - 3 changes detected
+2025-01-09 19:02:59,383 - INFO - User model ---- get current user start
+2025-01-09 19:02:59,383 - INFO - User model ---- get current user next
+2025-01-09 19:02:59,383 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:02:59,383 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:02:59,383 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:02:59,390 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736446348}
+2025-01-09 19:02:59,401 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:02:59,414 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:04:04,925 - INFO - 6 changes detected
+2025-01-09 19:04:05,475 - INFO - 1 change detected
+2025-01-09 19:04:08,106 - INFO - 3 changes detected
+2025-01-09 19:04:08,474 - INFO - Application started -----------
+2025-01-09 19:04:08,575 - INFO - 3 changes detected
+2025-01-09 19:04:09,568 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x105d5a750>
+2025-01-09 19:04:28,429 - INFO - 3 changes detected
+2025-01-09 19:04:28,957 - INFO - 1 change detected
+2025-01-09 19:04:30,286 - INFO - 3 changes detected
+2025-01-09 19:04:30,655 - INFO - Application started -----------
+2025-01-09 19:04:36,040 - INFO - User model ---- get current  active user payload error <webapp.models.user.UserModel object at 0x10c9e3710>
+2025-01-09 19:07:19,739 - INFO - 3 changes detected
+2025-01-09 19:07:20,292 - INFO - 1 change detected
+2025-01-09 19:07:22,275 - INFO - 3 changes detected
+2025-01-09 19:07:22,749 - INFO - Application started -----------
+2025-01-09 19:08:28,831 - INFO - 3 changes detected
+2025-01-09 19:08:29,326 - INFO - 1 change detected
+2025-01-09 19:08:32,068 - INFO - Application started -----------
+2025-01-09 19:08:32,172 - INFO - 3 changes detected
+2025-01-09 19:08:55,879 - INFO - 3 changes detected
+2025-01-09 19:08:56,371 - INFO - 1 change detected
+2025-01-09 19:08:58,613 - INFO - 3 changes detected
+2025-01-09 19:08:58,971 - INFO - Application started -----------
+2025-01-09 19:09:00,007 - INFO - User model ---- get current user start
+2025-01-09 19:09:00,007 - INFO - User model ---- get current user next
+2025-01-09 19:09:00,007 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:09:00,007 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:09:00,008 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:09:00,016 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736446348}
+2025-01-09 19:09:00,029 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:09:00,040 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:13:54,763 - INFO - 6 changes detected
+2025-01-09 19:13:55,311 - INFO - 1 change detected
+2025-01-09 19:13:58,317 - INFO - 3 changes detected
+2025-01-09 19:13:58,715 - INFO - Application started -----------
+2025-01-09 19:13:58,781 - INFO - 3 changes detected
+2025-01-09 19:13:59,757 - INFO - User model ---- get current user start
+2025-01-09 19:13:59,757 - INFO - User model ---- get current user next
+2025-01-09 19:13:59,757 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:13:59,757 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:13:59,757 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:13:59,764 - INFO - User model ---- get current user payload error
+2025-01-09 19:14:47,785 - INFO - 3 changes detected
+2025-01-09 19:14:48,403 - INFO - 1 change detected
+2025-01-09 19:14:50,853 - INFO - 3 changes detected
+2025-01-09 19:15:07,611 - INFO - 3 changes detected
+2025-01-09 19:15:10,142 - INFO - Application started -----------
+2025-01-09 19:15:10,206 - INFO - 3 changes detected
+2025-01-09 19:15:15,042 - INFO - User model ---- get current user start
+2025-01-09 19:15:15,044 - INFO - User model ---- get current user next
+2025-01-09 19:15:15,044 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:15:15,045 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:15:15,045 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:15:15,055 - INFO - User model ---- get current user payload error
+2025-01-09 19:15:16,563 - INFO - User model ---- get current user start
+2025-01-09 19:15:16,563 - INFO - User model ---- get current user next
+2025-01-09 19:15:16,563 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:15:16,564 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:15:16,564 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:15:16,564 - INFO - User model ---- get current user payload error
+2025-01-09 19:16:09,674 - INFO - User auth {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:16:09,677 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:21:12,163 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzQ3Mn0.fMvFbvNiF1tPqpmczLYghb4pICdBg8LN5jivp3JAGL4
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user start
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user next
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:21:15,876 - INFO - User model ---- get current user payload error
-2025-01-09 12:22:06,780 - INFO - User model ---- get current user start
-2025-01-09 12:22:06,782 - INFO - User model ---- get current user next
-2025-01-09 12:22:06,782 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:22:06,783 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:22:06,783 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:22:06,785 - INFO - User model ---- get current user payload error
-2025-01-09 12:22:13,471 - INFO - Application started -----------
-2025-01-09 12:22:17,949 - INFO - User model ---- get current user start
-2025-01-09 12:22:17,950 - INFO - User model ---- get current user next
-2025-01-09 12:22:17,950 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:22:17,950 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:22:17,950 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:22:17,950 - INFO - User model ---- get current user payload error
-2025-01-09 12:23:40,803 - INFO - Application started -----------
-2025-01-09 12:23:46,163 - INFO - User model ---- get current user start
-2025-01-09 12:23:46,165 - INFO - User model ---- get current user next
-2025-01-09 12:23:46,166 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:23:46,166 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:23:46,166 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:23:46,167 - INFO - User model ---- get current user payload error
-2025-01-09 12:23:51,810 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:23:51,812 - WARNING - (trapped) error reading bcrypt version
+2025-01-09 19:16:10,065 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4MzcwfQ.sQC2fjeJIyImQVoFUqlwt9jC_yfO-o3jxxOEjWIMWUk
+2025-01-09 19:16:14,308 - INFO - User model ---- get current user start
+2025-01-09 19:16:14,308 - INFO - User model ---- get current user next
+2025-01-09 19:16:14,308 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4MzcwfQ.sQC2fjeJIyImQVoFUqlwt9jC_yfO-o3jxxOEjWIMWUk
+2025-01-09 19:16:14,308 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:16:14,309 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:16:14,309 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736448370}
+2025-01-09 19:16:14,311 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:16:14,311 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:16:14,312 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:23:31,995 - INFO - 3 changes detected
+2025-01-09 19:23:32,585 - INFO - 1 change detected
+2025-01-09 19:23:34,748 - INFO - 3 changes detected
+2025-01-09 19:23:35,147 - INFO - Application started -----------
+2025-01-09 19:23:58,256 - INFO - User model ---- get current user start
+2025-01-09 19:23:58,256 - INFO - User model ---- get current user next
+2025-01-09 19:23:58,257 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ2MzQ4fQ.waTyytziV9uzT94YdzQJioNoPnfUoFj3nklQwGJ6_go
+2025-01-09 19:23:58,257 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:23:58,257 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:23:58,265 - INFO - User model ---- get current user payload error
+2025-01-09 19:24:05,399 - INFO - User auth {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:24:05,400 - WARNING - (trapped) error reading bcrypt version
 Traceback (most recent call last):
   File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:23:52,277 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzYzMn0.L4vA-PcyIIiPZBkbnMEKBPy8GAKPxXvkIjDedOQqgU4
-2025-01-09 12:23:58,330 - INFO - User model ---- get current user start
-2025-01-09 12:23:58,330 - INFO - User model ---- get current user next
-2025-01-09 12:23:58,330 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
-2025-01-09 12:23:58,330 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:23:58,330 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:23:58,331 - INFO - User model ---- get current user payload error
-2025-01-09 12:24:38,784 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:24:39,134 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzY3OX0.VuMuwpFkUZKbSgHaTjIy0hQteUJqtU48T0yzo8ZB-dg
-2025-01-09 12:25:07,671 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:25:08,023 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzcwOH0.rnChyqgddVtGnb3iyzivNzORcmRfXdtujmL01kck6X0
-2025-01-09 12:25:10,963 - INFO - User model ---- get current user start
-2025-01-09 12:25:10,963 - INFO - User model ---- get current user next
-2025-01-09 12:25:10,963 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzcwOH0.rnChyqgddVtGnb3iyzivNzORcmRfXdtujmL01kck6X0
-2025-01-09 12:25:10,964 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:25:10,964 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:25:10,966 - INFO - User model ---- get current user payload {'sub': 'testuser', 'exp': 1736423708}
-2025-01-09 12:25:10,967 - INFO - Get User in auth: {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:26:21,786 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:26:22,157 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzc4Mn0.A6DCu5Zm9RlGngVvzGOP2aHtv7FH6tC8zXLO_0Oyq-Y
-2025-01-09 12:29:05,793 - INFO - Application started -----------
-2025-01-09 12:29:59,487 - INFO - User auth {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:29:59,489 - WARNING - (trapped) error reading bcrypt version
-Traceback (most recent call last):
-  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-    version = _bcrypt.__about__.__version__
-              ^^^^^^^^^^^^^^^^^
-AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-01-09 12:29:59,959 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzk5OX0.okdveYgR49SfYIDdN3wIQ8LBjMex5nV0jxUnfQuUeIY
-2025-01-09 12:31:53,809 - INFO - Application started -----------
-2025-01-09 12:31:57,132 - INFO - User model ---- get current user start
-2025-01-09 12:31:57,132 - INFO - User model ---- get current user next
-2025-01-09 12:31:57,132 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0dXNlciIsImV4cCI6MTczNjQyMzk5OX0.okdveYgR49SfYIDdN3wIQ8LBjMex5nV0jxUnfQuUeIY
-2025-01-09 12:31:57,132 - INFO - User model ---- get current user secret key ONE
-2025-01-09 12:31:57,132 - INFO - User model ---- get current user algo HS256
-2025-01-09 12:31:57,141 - INFO - User model ---- get current user payload {'sub': 'testuser', 'exp': 1736423999}
-2025-01-09 12:31:57,152 - INFO - Get User in auth: {'_id': ObjectId('6778543190f4bf59562b002f'), 'email': 'testemail@mail.com', 'username': 'testuser', 'hashed_password': '$2b$12$zMyU0CHjEfGsa.AX9YPD3O8I8imFo7DUzf4mDoYOdTmbobz7VDyMO', 'created_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000), 'updated_at': datetime.datetime(2025, 1, 3, 21, 18, 41, 674000)}
-2025-01-09 12:35:01,114 - INFO - Application started -----------
-2025-01-09 12:35:44,189 - INFO - Application started -----------
-2025-01-09 12:37:44,079 - INFO - Application started -----------
-2025-01-09 12:39:17,290 - INFO - Application started -----------
-2025-01-09 12:40:03,915 - INFO - Application started -----------
-2025-01-09 12:45:30,059 - INFO - Application started -----------
-2025-01-09 12:47:11,466 - INFO - Application started -----------
-2025-01-09 12:47:39,377 - INFO - Application started -----------
-2025-01-09 12:48:26,285 - INFO - Application started -----------
-2025-01-09 12:49:22,279 - INFO - Application started -----------
-2025-01-09 12:50:06,138 - INFO - Application started -----------
-2025-01-09 12:50:40,663 - INFO - Application started -----------
+2025-01-09 19:24:05,849 - INFO - Token created for user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4ODQ1fQ.aECov_4BBlnH8nAhDlRS6dsN4YdSLzsVBH0ZEJ3UgFc
+2025-01-09 19:24:32,982 - INFO - User model ---- get current user start
+2025-01-09 19:24:32,983 - INFO - User model ---- get current user next
+2025-01-09 19:24:32,983 - INFO - User model ---- get current user token .eJwdzjmOAkEMAMC_dExg9-Fu85mRT4GQQJqBaLV_Z0ReQf2VLfc4buX63j9xKdvdy7UM5DSMXnlCN3QgaBTsY9CIgUqrQrYeqtklUlY3llO3ujCtzrFYHHhFIstUUlNf1qX5JF6CMxNyojbkKerCgNZhOZNOA-RyRj5H7L8NXoode27v1yOeZw6xBzAMiqrVpyLKqpjpOqpXyQhLdaTy_wVqTT_A.ZoqxjA.DgldR5wPN3XA4VfForv8PTziN6w
+2025-01-09 19:24:32,983 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:24:32,983 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:24:32,984 - INFO - User model ---- get current user payload error
+2025-01-09 19:25:02,574 - INFO - User model ---- get current user start
+2025-01-09 19:25:02,576 - INFO - User model ---- get current user next
+2025-01-09 19:25:02,576 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4ODQ1fQ.aECov_4BBlnH8nAhDlRS6dsN4YdSLzsVBH0ZEJ3UgFc
+2025-01-09 19:25:02,576 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:25:02,576 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:25:02,577 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736448845}
+2025-01-09 19:25:02,578 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:25:02,578 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:25:02,579 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:26:41,147 - INFO - 3 changes detected
+2025-01-09 19:26:41,638 - INFO - 1 change detected
+2025-01-09 19:26:44,035 - INFO - Application started -----------
+2025-01-09 19:26:44,125 - INFO - 3 changes detected
+2025-01-09 19:26:47,143 - INFO - User model ---- get current user start
+2025-01-09 19:26:47,145 - INFO - User model ---- get current user next
+2025-01-09 19:26:47,145 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4ODQ1fQ.aECov_4BBlnH8nAhDlRS6dsN4YdSLzsVBH0ZEJ3UgFc
+2025-01-09 19:26:47,146 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:26:47,146 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:26:47,160 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736448845}
+2025-01-09 19:26:47,180 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:26:47,196 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:26:47,197 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:26:55,077 - INFO - 3 changes detected
+2025-01-09 19:26:55,654 - INFO - 1 change detected
+2025-01-09 19:26:58,079 - INFO - Application started -----------
+2025-01-09 19:26:58,145 - INFO - 3 changes detected
+2025-01-09 19:27:23,214 - INFO - 3 changes detected
+2025-01-09 19:27:23,790 - INFO - 1 change detected
+2025-01-09 19:27:25,949 - INFO - Application started -----------
+2025-01-09 19:27:26,059 - INFO - 3 changes detected
+2025-01-09 19:32:41,649 - INFO - 3 changes detected
+2025-01-09 19:32:42,175 - INFO - 1 change detected
+2025-01-09 19:32:45,242 - INFO - Application started -----------
+2025-01-09 19:32:45,265 - INFO - User model ---- get current user start
+2025-01-09 19:32:45,265 - INFO - User model ---- get current user next
+2025-01-09 19:32:45,265 - INFO - User model ---- get current user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0b3lzb2xkaWVyIiwiZXhwIjoxNzM2NDQ4ODQ1fQ.aECov_4BBlnH8nAhDlRS6dsN4YdSLzsVBH0ZEJ3UgFc
+2025-01-09 19:32:45,266 - INFO - User model ---- get current user secret key ONE
+2025-01-09 19:32:45,266 - INFO - User model ---- get current user algo HS256
+2025-01-09 19:32:45,273 - INFO - User model ---- get current user payload {'sub': 'toysoldier', 'exp': 1736448845}
+2025-01-09 19:32:45,283 - INFO - Get User in auth: {'_id': ObjectId('67800704e789b4c8eadcd5b9'), 'email': 'testuser2000@40example.com', 'username': 'toysoldier', 'hashed_password': '$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju', 'created_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'updated_at': datetime.datetime(2025, 1, 9, 17, 27, 32, 262000), 'disabled': False}
+2025-01-09 19:32:45,294 - INFO - User model ----  user email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:32:45,295 - INFO - User model ---- get current  active user payload error email='testuser2000@40example.com' username='toysoldier' disabled=False id=None hashed_password='$2b$12$0/2zodDbehtdlNBOl6lVquXuc5i.IesnLv/RwZai07AjYVGDkD/Ju' created_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000) updated_at=datetime.datetime(2025, 1, 9, 17, 27, 32, 262000)
+2025-01-09 19:32:45,349 - INFO - 3 changes detected

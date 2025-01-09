@@ -1,27 +1,33 @@
-import logging
-from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.encoders import jsonable_encoder
 from typing import Annotated, Optional
 from webapp.schemas.user import UserBase, UserUpdate, UserInDB
-from webapp.models.user import UserModel, oauth2_scheme
-from webapp.database.db_engine import db
-from webapp.routes.auth import get_user_model
+from webapp.models.user import get_current_active_user
+# from webapp.database.db_engine import db
 
 
 router = APIRouter(prefix="/user", tags=["User"])
 
-curr_user = UserModel(db=db)
+# curr_user = UserModel(db=db) #for class injection
 
 
-@router.get("/me")
+@router.get("/me", response_model=None)
 async def read_users_me(
-    current_user: UserBase = Depends(curr_user.get_current_active_user),
+    current_user: UserBase = Depends(get_current_active_user),
 ):
-    return current_user
-
-# @router.get("/me", response_model=None)
-# async def read_users_me(
-#     current_user: Annotated[UserBase, Depends(get_current_user)],
-# ):
-#     return current_user
+    try:
+        # Ensure the current_user is valid and active
+        if not current_user:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="User not found"
+            )
+        if getattr(current_user, "disabled", False):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Inactive user"
+            )
+        return current_user
+    except HTTPException as e:
+        # Handle HTTPException and re-raise it
+        raise e

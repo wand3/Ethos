@@ -10,7 +10,7 @@ from ..schemas.user import UserInDB, UserCreate, UserUpdate, UserBase
 from ..schemas.auth import TokenData
 from ..config import Config
 from jose import jwt, JWTError
-# from webapp.database.db_engine import db
+from webapp.database.db_engine import db as dep_inj
 
 
 # Password hashing setup
@@ -30,6 +30,7 @@ class UserModel:
             "hashed_password": hashed_password,
             "created_at": datetime.utcnow(),
             "updated_at": datetime.utcnow(),
+            "disabled": False
         }
         result = await self.db.insert_one(user_dict)
         user_dict["_id"] = result.inserted_id
@@ -96,7 +97,6 @@ class UserModel:
             return UserInDB(**user)
         return None
 
-    # @staticmethod
     async def get_current_user(self, token: Annotated[str, Depends(oauth2_scheme)]):
         credentials_exception = HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -124,19 +124,32 @@ class UserModel:
 
             raise credentials_exception
         user = await self.get_user(database=self.db, username=token_data.username)
+        logger.info(f'User model ----  user {user}')
+
         if user is None:
             raise credentials_exception
         return user
 
-
-    async def get_current_active_user(current_user: UserBase = Depends(get_current_user)):
-        # if getattr(current_user, "disabled", False):
-        if current_user:
-            raise HTTPException(status_code=400, detail="Inactive user")
-        return current_user
+    # async def get_current_active_user(self, current_user: Annotated[UserBase, Depends(get_current_user)]):
+    #     logger.info(f'User model ---- get current  active user payload error {current_user}')
+    #
+    #     # if getattr(current_user, "disabled", False):
+    #     if current_user.disabled:
+    #         raise HTTPException(status_code=400, detail="Inactive user")
+    #     return current_user
 
     @property
     def user_collection(self):
         return self.db
 
 
+active_u = UserModel(db=dep_inj)
+
+
+async def get_current_active_user(current_user: Annotated[UserBase, Depends(active_u.get_current_user)]):
+    logger.info(f'User model ---- get current  active user payload error {current_user}')
+
+    # if getattr(current_user, "disabled", False):
+    if current_user.disabled:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user

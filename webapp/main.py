@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from webapp.routes import ethos_router, user_router, auth_router, blog_router
 import uvicorn
 from webapp.database.db_engine import db_lifespan, connect_to_mongo, close_mongo_connection
-from logger import logger
+from .logger import logger
 
 
 def create_app() -> FastAPI:
@@ -33,16 +33,17 @@ def create_app() -> FastAPI:
     return app
 
 
-# app = create_app()
+app = create_app()
 
 
 if __name__ == "__main__":
-    uvicorn.run(create_app(), host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
 
 
 @app.on_event("startup")
 async def startup_event():
     await connect_to_mongo()
+
 
 @app.on_event("shutdown")
 async def shutdown_event():
