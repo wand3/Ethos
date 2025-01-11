@@ -81,3 +81,15 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-09 23:22:45,006 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
 2025-01-09 23:22:45,031 - INFO - HTTP Request: PUT http://testserver/user/67804765e72290fa0bdfcd8f/me "HTTP/1.1 200 OK"
 2025-01-09 23:22:45,032 - INFO - <Response [200 OK]>
+2025-01-11 21:47:14,850 - INFO - Application started -----------
+2025-01-11 21:47:48,051 - INFO - Application started -----------
+2025-01-11 21:47:49,370 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-11 21:47:49,852 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2025-01-11 21:47:50,274 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-11 21:47:50,314 - INFO - HTTP Request: PUT http://testserver/user/6782d8f52b07a88b57e8f6fe/me "HTTP/1.1 200 OK"
+2025-01-11 21:47:50,315 - INFO - <Response [200 OK]>

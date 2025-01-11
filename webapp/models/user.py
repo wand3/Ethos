@@ -18,6 +18,18 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
+# def user_helper(user) -> dict:
+#     return {
+#         "id": user['email'],
+#         "email": user["email"],
+#         "username": user["username"],
+#         "hashed_password": user["hashed_password"],
+#         "created_at": user["created_at"],
+#         "updated_at": user["updated_at"],
+#         "disabled": user["disabled"]
+#     }
+
+
 class UserModel:
     def __init__(self, db: AsyncMongoClient):
         self.db = db["users"]
@@ -94,6 +106,8 @@ class UserModel:
         # logger.info(f'Get User in auth: {user}')
         if user:
             user["_id"] = str(user["_id"])
+            # logger.info(f'get user User in auth with wrapper: {UserInDB(**user)}')
+            # logger.info(f'get user User in auth with user_helper: {user_helper(user)}')
             return UserInDB(**user)
         return None
 

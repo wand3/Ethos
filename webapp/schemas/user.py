@@ -1,7 +1,6 @@
 from datetime import datetime
-
 from bson import ObjectId
-from pydantic import BaseModel, EmailStr, constr
+from pydantic import BaseModel, EmailStr, constr, Field, field_validator
 from typing import Optional
 from ..schemas import PyObjectId
 
@@ -13,9 +12,9 @@ class UserBase(BaseModel):
 
     class Config:
         from_attributes = True
-        json_encoders = {
-            ObjectId: str
-        }
+        # json_encoders = {
+        #     ObjectId: str
+        # }
         json_schema_extra = {
             "example": {
                 "username": "john_doe",
@@ -25,10 +24,22 @@ class UserBase(BaseModel):
 
 
 class UserInDB(UserBase):
-    id: Optional[PyObjectId] = None
+    # id: PyObjectId
+    id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     hashed_password: str
     created_at: datetime
     updated_at: datetime
+
+    @field_validator("id")
+    def convert_objectid_to_str(cls, v):
+        if isinstance(v, ObjectId):
+            return str(v)
+
+    #     return v
+    class Config:
+        json_encoders = {
+            ObjectId: str
+        }
 
 
 class UserCreate(UserBase):
