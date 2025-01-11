@@ -30,7 +30,8 @@ class BlogPost(BaseModel):
 
 
 class BlogPostInDB(BlogPost):
-    id: Optional[PyObjectId] = None
+    # id: Optional[PyObjectId] = None
+    id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     createdAt: datetime
     updatedAt: datetime
 
@@ -41,7 +42,15 @@ class UpdateBlogPost(BaseModel):
     content: str = Field(...)
     tags: List[str] = Field(...)
 
+
 # comment
+class CommentBase(BaseModel):
+    body: str
+    author_name: Optional[str] = "Anonymous"
+    author_email: Optional[str] = "Random name"
+    post_id: str
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-
+class CommentInDB(CommentBase):
+    id: str

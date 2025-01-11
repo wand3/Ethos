@@ -90,18 +90,31 @@ def test_update_user_client(client, db_client):
     assert response.status_code == 200
 
 
+@pytest.fixture(scope="session")
+def test_delete_user_route(client, db_client):
+    # login and delete user
+    response = client.post(
+        "/token",
+        data={"username": "testinguser", "password": "securepassword"},
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+    access_token = response.json()["access_token"]
+
+    # Define the user_id to delete
+    user_id = "mock_user_id"
+
+    # Send a DELETE request
+    response = client.delete(f"/{user_id}/me")
+
+    # Assertions
+    assert response.status_code == 200
+    assert response.json() == {"message": "User deleted successfully"}
 
 
 
-# def test_update_user(client, db_client):
-#
-#     access_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBleGFtcGxlLmNvbSIsImV4cCI6MTczNTE1NTYzNX0.K0BZGULAMcv_64K0al84nFyCT3ZuDHvcy1opdRzQQ6E'
-#     # Create a test user (using string id for MongoDB)
-#     collection = db_client["users"]
-#
-#     test_user_id = "6763457c59b0aa764955eb18"
-#     # collection.insert_one({"_id": test_user_id, "username": "testuser", "email": "test@example.com", "password":"password"})
-#
+
 #     # Test updating username
 #     response = client.put(f"/user/users/{test_user_id}", json={"username": "newuser"}, headers={"Authorization": f"Bearer {access_token}"})
 #     assert response.status_code == 200

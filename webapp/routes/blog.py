@@ -1,11 +1,12 @@
-from fastapi import APIRouter
+from typing import List, Annotated
+from fastapi import APIRouter, Depends, HTTPException, status, Form
+from webapp.schemas.blog import BlogPostInDB
+from webapp.models.blog import Post, get_post_model
+from webapp.models.user import get_current_active_user, UserModel
+from webapp.schemas.forms import PostFormData
 
-blog = APIRouter(prefix="/blog", tags=["Blog"])
 
-
-@blog.get("/")
-async def get_blog():
-    return {"message": "Blog"}
+blog = APIRouter(prefix="/blog", tags=["Blog"], dependencies=[Depends(get_current_active_user)])
 
 
 # # MongoDB helper functions
@@ -24,35 +25,46 @@ async def get_blog():
 #         )
 #     return None
 #
-# # Routes
-# @app.post("/posts/", response_model=PostInDB)
-# async def create_post(post_data: PostCreate):
-#     post_dict = {
-#         "title": post_data.title,
-#         "content": post_data.content,
-#         "image": post_data.image,
-#         "tags": post_data.tags,
-#         "published": post_data.published,
-#         "createdAt": datetime.utcnow(),
-#         "updatedAt": datetime.utcnow()
-#     }
-#     result = posts_collection.insert_one(post_dict)
-#     post_dict["_id"] = result.inserted_id
-#     return PostInDB(
-#         id=str(post_dict["_id"]),
-#         **post_data.dict(),
-#         createdAt=post_dict["createdAt"],
-#         updatedAt=post_dict["updatedAt"]
-#     )
-#
-# @app.get("/posts/{post_id}", response_model=PostInDB)
+# Routes
+
+
+@blog.post("/posts/", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
+async def create_post(post_data: Annotated[PostFormData, Form()],
+                      post_model: Annotated[Post, Depends(get_post_model)]
+                      ):
+    post = await post_model.create_post(post_data)
+
+    if not post:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password"
+        )
+    # post_dict = {
+    #     "title": post_data.title,
+    #     "content": post_data.content,
+    #     "image": post_data.image,
+    #     "tags": post_data.tags,
+    #     "published": post_data.published,
+    #     "createdAt": datetime.utcnow(),
+    #     "updatedAt": datetime.utcnow()
+    # }
+    # result = posts_collection.insert_one(post_dict)
+    # post_dict["_id"] = result.inserted_id
+    # return PostInDB(
+    #     id=str(post_dict["_id"]),
+    #     **post_data.dict(),
+    #     createdAt=post_dict["createdAt"],
+    #     updatedAt=post_dict["updatedAt"]
+    # )
+
+# @blog.get("/posts/{post_id}", response_model=BlogPostInDB)
 # def read_post(post_id: str):
 #     post = get_post_by_id(post_id)
 #     if not post:
 #         raise HTTPException(status_code=404, detail="Post not found")
 #     return post
 #
-# @app.put("/posts/{post_id}", response_model=PostInDB)
+# @blog.put("/posts/{post_id}", response_model=BlogPostInDB)
 # def update_post(post_id: str, post_data: PostUpdate):
 #     existing_post = get_post_by_id(post_id)
 #     if not existing_post:
@@ -74,7 +86,8 @@ async def get_blog():
 #         updatedAt=updated_post["updatedAt"]
 #     )
 #
-# @app.delete("/posts/{post_id}", response_model=dict)
+#
+# @blog.delete("/posts/{post_id}", response_model=dict)
 # def delete_post(post_id: str):
 #     existing_post = get_post_by_id(post_id)
 #     if not existing_post:
@@ -83,7 +96,8 @@ async def get_blog():
 #     posts_collection.delete_one({"_id": ObjectId(post_id)})
 #     return {"message": "Post deleted successfully"}
 #
-# @app.get("/posts/", response_model=List[PostInDB])
+#
+# @blog.get("/posts/", response_model=List[BlogPostInDB])
 # def get_posts_by_tags(tags: List[str]):
 #     posts = posts_collection.find({"tags": {"$in": tags}})
 #     result = [

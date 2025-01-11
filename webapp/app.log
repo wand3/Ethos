@@ -369,3 +369,56 @@ Traceback (most recent call last):
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-11 21:46:03,129 - INFO - User model ---- get current user payload error
+2025-01-11 21:55:15,790 - INFO - 9 changes detected
+2025-01-11 21:55:16,442 - INFO - 1 change detected
+2025-01-11 21:55:18,584 - INFO - 3 changes detected
+2025-01-11 21:55:19,005 - INFO - Application started -----------
+2025-01-11 22:04:39,808 - INFO - 6 changes detected
+2025-01-11 22:04:40,372 - INFO - 1 change detected
+2025-01-11 22:04:44,023 - INFO - Application started -----------
+2025-01-11 22:14:18,298 - INFO - 3 changes detected
+2025-01-11 22:14:18,828 - INFO - 1 change detected
+2025-01-11 22:14:21,578 - INFO - Application started -----------
+2025-01-11 22:15:08,703 - INFO - 3 changes detected
+2025-01-11 22:15:09,275 - INFO - 1 change detected
+2025-01-11 22:15:11,730 - INFO - Application started -----------
+2025-01-11 22:16:34,986 - INFO - 3 changes detected
+2025-01-11 22:16:35,497 - INFO - 1 change detected
+2025-01-11 22:16:37,726 - INFO - Application started -----------
+2025-01-11 22:17:53,375 - INFO - 2 changes detected
+2025-01-11 22:20:19,468 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-11 22:39:00,902 - INFO - 6 changes detected
+2025-01-11 22:39:01,436 - INFO - 1 change detected
+2025-01-11 22:39:03,787 - INFO - 9 changes detected
+2025-01-11 22:52:59,015 - INFO - 3 changes detected
+2025-01-11 22:53:02,248 - INFO - 3 changes detected
+2025-01-11 23:37:06,529 - INFO - 3 changes detected
+2025-01-11 23:37:12,328 - INFO - 3 changes detected
+2025-01-11 23:39:07,119 - INFO - 3 changes detected
+2025-01-11 23:39:11,421 - INFO - 3 changes detected
+2025-01-11 23:44:04,218 - INFO - 1 change detected
+2025-01-11 23:44:41,627 - INFO - 3 changes detected
+2025-01-11 23:45:50,741 - INFO - 3 changes detected
+2025-01-11 23:56:27,338 - INFO - 6 changes detected
+2025-01-11 23:56:31,500 - INFO - 3 changes detected
+2025-01-11 23:59:06,346 - INFO - 6 changes detected
+2025-01-12 00:05:13,072 - INFO - 3 changes detected
+2025-01-12 00:05:17,619 - INFO - 6 changes detected
+2025-01-12 00:07:05,806 - INFO - 3 changes detected
+2025-01-12 00:07:08,809 - INFO - 3 changes detected
+2025-01-12 00:08:50,080 - INFO - 3 changes detected
+2025-01-12 00:08:53,197 - INFO - 3 changes detected
+2025-01-12 00:09:20,135 - INFO - 3 changes detected
+2025-01-12 00:09:23,075 - INFO - Application started -----------
+2025-01-12 00:09:23,168 - INFO - 3 changes detected
+2025-01-12 00:11:40,034 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'

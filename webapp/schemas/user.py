@@ -24,7 +24,6 @@ class UserBase(BaseModel):
 
 
 class UserInDB(UserBase):
-    # id: PyObjectId
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     hashed_password: str
     created_at: datetime
@@ -35,7 +34,6 @@ class UserInDB(UserBase):
         if isinstance(v, ObjectId):
             return str(v)
 
-    #     return v
     class Config:
         json_encoders = {
             ObjectId: str
