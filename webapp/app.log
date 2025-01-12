@@ -12,3 +12,149 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-12 13:22:09,182 - INFO - 1 change detected
 2025-01-12 13:22:11,472 - INFO - Application started -----------
 2025-01-12 13:22:11,521 - INFO - 3 changes detected
+2025-01-12 13:23:54,899 - INFO - 3 changes detected
+2025-01-12 13:23:55,467 - INFO - 1 change detected
+2025-01-12 13:23:58,713 - INFO - 3 changes detected
+2025-01-12 13:23:58,714 - INFO - Application started -----------
+2025-01-12 17:08:06,247 - INFO - Application started -----------
+2025-01-12 17:08:08,339 - INFO - Application started -----------
+2025-01-12 17:08:15,429 - INFO - User model ---- get current user payload error
+2025-01-12 17:08:21,435 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 17:08:57,130 - INFO - 1 change detected
+2025-01-12 17:09:34,422 - INFO - 3 changes detected
+2025-01-12 17:09:34,973 - INFO - 1 change detected
+2025-01-12 17:09:38,154 - INFO - Application started -----------
+2025-01-12 17:09:38,261 - INFO - 3 changes detected
+2025-01-12 17:09:41,511 - INFO - 1 change detected
+2025-01-12 17:10:21,294 - INFO - 3 changes detected
+2025-01-12 17:10:21,841 - INFO - 1 change detected
+2025-01-12 17:10:24,390 - INFO - Application started -----------
+2025-01-12 17:10:24,486 - INFO - 3 changes detected
+2025-01-12 17:10:25,053 - INFO - 1 change detected
+2025-01-12 17:11:32,873 - INFO - 6 changes detected
+2025-01-12 17:11:33,432 - INFO - 1 change detected
+2025-01-12 17:11:36,509 - INFO - Application started -----------
+2025-01-12 17:11:36,602 - INFO - 6 changes detected
+2025-01-12 17:11:38,561 - INFO - Post ---- retrieved post {'_id': ObjectId('6783e9bae2b6065c953c5a02'), 'image': '6783e9bae2b6065c953c5a01_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 11, 38, 535000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 11, 38, 535000)}
+2025-01-12 17:11:38,645 - INFO - 1 change detected
+2025-01-12 17:12:09,566 - INFO - 3 changes detected
+2025-01-12 17:12:10,125 - INFO - 1 change detected
+2025-01-12 17:12:12,214 - INFO - Application started -----------
+2025-01-12 17:12:12,278 - INFO - 3 changes detected
+2025-01-12 17:13:14,869 - INFO - 1 change detected
+2025-01-12 17:17:28,632 - INFO - 3 changes detected
+2025-01-12 17:17:29,234 - INFO - 1 change detected
+2025-01-12 17:17:33,131 - INFO - Application started -----------
+2025-01-12 17:17:33,194 - INFO - 3 changes detected
+2025-01-12 17:17:35,651 - INFO - Post ---- retrieved post {'_id': ObjectId('6783eb1f1f168794b8ce0030'), 'image': '6783eb1f1f168794b8ce002f_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 17, 35, 642000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 17, 35, 642000)}
+2025-01-12 17:17:35,711 - INFO - 1 change detected
+2025-01-12 17:25:11,148 - INFO - 3 changes detected
+2025-01-12 17:25:11,768 - INFO - 1 change detected
+2025-01-12 17:25:15,053 - INFO - Application started -----------
+2025-01-12 17:25:15,132 - INFO - 3 changes detected
+2025-01-12 17:27:02,044 - INFO - 6 changes detected
+2025-01-12 17:27:02,537 - INFO - 1 change detected
+2025-01-12 17:27:05,403 - INFO - 6 changes detected
+2025-01-12 17:27:25,887 - INFO - 3 changes detected
+2025-01-12 17:27:28,550 - INFO - Application started -----------
+2025-01-12 17:27:28,638 - INFO - Post tag---- retrieved post taglist ['one, two, fish']
+2025-01-12 17:27:28,638 - INFO - 3 changes detected
+2025-01-12 17:27:28,642 - INFO - Post ---- retrieved post {'_id': ObjectId('6783ed70f9890188361cff40'), 'image': '6783ed70f9890188361cff3f_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 27, 28, 639000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 27, 28, 639000)}
+2025-01-12 17:27:29,000 - INFO - 1 change detected
+2025-01-12 17:27:33,863 - INFO - Post tag---- retrieved post taglist ['one, two, fish']
+2025-01-12 17:27:33,865 - INFO - Post ---- retrieved post {'_id': ObjectId('6783ed75f9890188361cff42'), 'image': '6783ed75f9890188361cff41_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 27, 33, 863000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 27, 33, 863000)}
+2025-01-12 17:27:33,974 - INFO - 1 change detected
+2025-01-12 17:31:18,323 - INFO - 3 changes detected
+2025-01-12 17:31:18,870 - INFO - 1 change detected
+2025-01-12 17:31:21,736 - INFO - Application started -----------
+2025-01-12 17:31:21,812 - INFO - 3 changes detected
+2025-01-12 17:31:24,234 - INFO - Post tags ----  user ['one, two, fish']
+2025-01-12 17:31:24,238 - INFO - Post tag---- retrieved post taglist ['one, two, fish']
+2025-01-12 17:31:24,245 - INFO - Post ---- retrieved post {'_id': ObjectId('6783ee5c85e4f8aba550d2b4'), 'image': '6783ee5c85e4f8aba550d2b3_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 31, 24, 238000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 31, 24, 238000)}
+2025-01-12 17:31:24,319 - INFO - 1 change detected
+2025-01-12 17:32:50,399 - INFO - 3 changes detected
+2025-01-12 17:32:50,924 - INFO - 1 change detected
+2025-01-12 17:32:53,171 - INFO - Application started -----------
+2025-01-12 17:32:53,250 - INFO - 3 changes detected
+2025-01-12 17:33:33,669 - INFO - Post tags ----  user ['one, two, fish']
+2025-01-12 17:33:33,672 - INFO - Post tag---- retrieved post taglist ['one, two, fish']
+2025-01-12 17:33:33,675 - INFO - Post ---- retrieved post {'_id': ObjectId('6783eedd57d6caaccfd76571'), 'image': '6783eedd57d6caaccfd76570_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 33, 33, 672000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 33, 33, 672000)}
+2025-01-12 17:33:34,213 - INFO - 1 change detected
+2025-01-12 17:34:24,982 - INFO - 3 changes detected
+2025-01-12 17:34:25,528 - INFO - 1 change detected
+2025-01-12 17:34:27,921 - INFO - Application started -----------
+2025-01-12 17:34:27,981 - INFO - 3 changes detected
+2025-01-12 17:34:33,114 - INFO - Post tags ----  user ['one, two, fish']
+2025-01-12 17:34:33,116 - INFO - Post tag---- retrieved post taglist list ['one, two, fish']
+2025-01-12 17:34:33,125 - INFO - Post ---- retrieved post {'_id': ObjectId('6783ef19047f533e316c40de'), 'image': '6783ef19047f533e316c40dd_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one, two, fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 34, 33, 116000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 34, 33, 116000)}
+2025-01-12 17:34:33,185 - INFO - 1 change detected
+2025-01-12 17:36:06,515 - INFO - 3 changes detected
+2025-01-12 17:36:07,036 - INFO - 1 change detected
+2025-01-12 17:36:09,219 - INFO - Application started -----------
+2025-01-12 17:36:09,308 - INFO - 3 changes detected
+2025-01-12 17:36:36,073 - INFO - 3 changes detected
+2025-01-12 17:36:36,644 - INFO - 1 change detected
+2025-01-12 17:36:39,330 - INFO - Application started -----------
+2025-01-12 17:36:39,419 - INFO - 3 changes detected
+2025-01-12 17:36:41,871 - INFO - Post tags ----  user ['one, two, fish']
+2025-01-12 17:36:41,873 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-12 17:36:41,878 - INFO - Post ---- retrieved post {'_id': ObjectId('6783ef99244c001569cacb93'), 'image': '6783ef99244c001569cacb92_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 12, 16, 36, 41, 873000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 36, 41, 873000)}
+2025-01-12 17:36:41,984 - INFO - 1 change detected
+2025-01-12 17:37:43,535 - INFO - 13 changes detected
+2025-01-12 17:37:46,180 - INFO - 3 changes detected
+2025-01-12 17:37:46,683 - INFO - 1 change detected
+2025-01-12 17:37:49,243 - INFO - Application started -----------
+2025-01-12 17:37:49,321 - INFO - 3 changes detected
+2025-01-12 17:38:29,832 - INFO - 6 changes detected
+2025-01-12 17:38:30,377 - INFO - 1 change detected
+2025-01-12 17:38:32,562 - INFO - Application started -----------
+2025-01-12 17:38:32,659 - INFO - 6 changes detected
+2025-01-12 17:38:45,055 - INFO - User model ---- get current user payload error
+2025-01-12 17:39:57,532 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 17:40:16,254 - INFO - User model ---- get current user payload error
+2025-01-12 17:40:37,045 - INFO - User model ---- get current user payload error
+2025-01-12 17:40:55,907 - INFO - User model ---- get current user payload error
+2025-01-12 17:42:29,034 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish', 'yes']
+2025-01-12 17:42:29,041 - INFO - Post ---- retrieved post {'_id': ObjectId('6783f0f556ec0d12a1d14a69'), 'image': '6783f0f556ec0d12a1d14a68_', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one', 'two', 'fish', 'yes'], 'created_at': datetime.datetime(2025, 1, 12, 16, 42, 29, 35000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 42, 29, 35000)}
+2025-01-12 17:42:29,483 - INFO - 2 changes detected
+2025-01-12 17:47:49,343 - INFO - 6 changes detected
+2025-01-12 17:47:49,905 - INFO - 1 change detected
+2025-01-12 17:47:52,931 - INFO - Application started -----------
+2025-01-12 17:47:52,980 - INFO - 6 changes detected
+2025-01-12 17:50:47,244 - INFO - 3 changes detected
+2025-01-12 17:50:47,842 - INFO - 1 change detected
+2025-01-12 17:50:50,443 - INFO - Application started -----------
+2025-01-12 17:50:50,497 - INFO - 3 changes detected
+2025-01-12 17:52:06,447 - INFO - 3 changes detected
+2025-01-12 17:52:06,943 - INFO - 1 change detected
+2025-01-12 17:52:09,514 - INFO - 3 changes detected
+2025-01-12 17:52:09,546 - INFO - Application started -----------
+2025-01-12 17:52:21,910 - INFO - 3 changes detected
+2025-01-12 17:52:22,463 - INFO - 1 change detected
+2025-01-12 17:52:24,904 - INFO - 3 changes detected
+2025-01-12 17:52:24,932 - INFO - Application started -----------
+2025-01-12 17:56:50,404 - INFO - 3 changes detected
+2025-01-12 17:56:51,070 - INFO - 1 change detected
+2025-01-12 17:56:54,312 - INFO - Application started -----------
+2025-01-12 17:56:54,396 - INFO - 3 changes detected
+2025-01-12 17:58:03,310 - INFO - 3 changes detected
+2025-01-12 17:58:03,841 - INFO - 1 change detected
+2025-01-12 17:58:06,580 - INFO - Application started -----------
+2025-01-12 17:58:06,642 - INFO - 3 changes detected
+2025-01-12 17:58:08,764 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish', 'yes']
+2025-01-12 17:58:08,805 - INFO - Post ---- retrieved post {'_id': ObjectId('6783f4a0f0358f75c8622b97'), 'image': '6783f4a0f0358f75c8622b96_flipper.jpeg', 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one', 'two', 'fish', 'yes'], 'created_at': datetime.datetime(2025, 1, 12, 16, 58, 8, 767000), 'updated_at': datetime.datetime(2025, 1, 12, 16, 58, 8, 767000)}
+2025-01-12 17:58:08,861 - INFO - 1 change detected
+2025-01-12 17:59:02,060 - INFO - 3 changes detected
+2025-01-12 17:59:02,663 - INFO - 1 change detected
+2025-01-12 17:59:06,641 - INFO - Application started -----------
+2025-01-12 17:59:06,713 - INFO - 3 changes detected
