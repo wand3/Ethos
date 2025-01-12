@@ -11,21 +11,21 @@ class Post:
     def __init__(self, db: AsyncMongoClient):
         self.db = db["posts"]
 
-    async def create_post(self, post_data: BlogPost) -> BlogPostInDB:
-        post_dict = {
-            "title": post_data.title,
-            "content": post_data.content,
-            "image": post_data.image,
-            "tags": post_data.tags,
-            "createdAt": datetime.datetime.utcnow(),
-            "updatedAt": datetime.datetime.utcnow()
-        }
+    # async def create_post(self, post_data: BlogPost) -> BlogPostInDB:
+    #     post_dict = {
+    #         "title": post_data.title,
+    #         "content": post_data.content,
+    #         "image": post_data.image,
+    #         "tags": post_data.tags,
+    #         "createdAt": datetime.datetime.utcnow(),
+    #         "updatedAt": datetime.datetime.utcnow()
+    #     }
+    #
+    #     result = await self.db.insert_one(post_dict)
+    #     post_dict["_id"] = result.inserted_id
+    #     return BlogPostInDB(**post_dict)
 
-        result = await self.db.insert_one(post_dict)
-        post_dict["_id"] = result.inserted_id
-        return BlogPostInDB(**post_dict)
-
-    async def get_post_by_title(self, title: str ) -> Optional[BlogPostInDB]:
+    async def get_post_by_title(self, title: str) -> Optional[BlogPostInDB]:
         post = await self.db.find_one({"title": title})
         return BlogPostInDB(**post) if post else None
 

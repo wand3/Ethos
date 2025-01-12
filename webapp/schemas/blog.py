@@ -32,8 +32,8 @@ class BlogPost(BaseModel):
 class BlogPostInDB(BlogPost):
     # id: Optional[PyObjectId] = None
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
-    createdAt: datetime
-    updatedAt: datetime
+    created_at: datetime
+    updated_at: datetime
 
 
 class UpdateBlogPost(BaseModel):

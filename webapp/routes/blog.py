@@ -1,6 +1,13 @@
-from typing import List, Annotated
-from fastapi import APIRouter, Depends, HTTPException, status, Form
-from webapp.schemas.blog import BlogPostInDB
+import os
+import shutil
+from datetime import datetime
+from typing import List, Annotated, Optional
+from webapp.config import Config
+from bson import ObjectId
+from fastapi import APIRouter, Depends, HTTPException, status, Form, UploadFile, File
+
+from webapp.logger import logger
+from webapp.schemas.blog import BlogPostInDB, BlogPost
 from webapp.models.blog import Post, get_post_model
 from webapp.models.user import get_current_active_user, UserModel
 from webapp.schemas.forms import PostFormData
@@ -9,36 +16,54 @@ from webapp.schemas.forms import PostFormData
 blog = APIRouter(prefix="/blog", tags=["Blog"], dependencies=[Depends(get_current_active_user)])
 
 
-# # MongoDB helper functions
-# def get_post_by_id(post_id: str):
-#     post_data = posts_collection.find_one({"_id": ObjectId(post_id)})
-#     if post_data:
-#         return PostInDB(
-#             id=str(post_data["_id"]),
-#             title=post_data["title"],
-#             content=post_data["content"],
-#             published=post_data["published"],
-#             image=post_data.get("image"),
-#             tags=post_data.get("tags", []),
-#             createdAt=post_data["createdAt"],
-#             updatedAt=post_data["updatedAt"]
-#         )
-#     return None
-#
-# Routes
+@blog.post("/post", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
+async def create_post(
+    # post_data: Annotated[PostFormData, Form()],
+    post_model: Annotated[Post, Depends(get_post_model)],
 
+    title: str = Form(...),
+    content: str = Form(...),
+    tags: str = Form(""), # Receive tags as a comma-separated string
+    image: Optional[UploadFile] = File(None)
+):
+    
+    # logger.info(f'Post title ----  user {title}')
+    # logger.info(f'Post content ----  user {content}')
+    # logger.info(f'Post tags ----  user {tags}')
+    # logger.info(f'Post image ----  user {image}')
+    # logger.info(f'Post content ----  user {content}')
 
-@blog.post("/posts/", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
-async def create_post(post_data: Annotated[PostFormData, Form()],
-                      post_model: Annotated[Post, Depends(get_post_model)]
-                      ):
-    post = await post_model.create_post(post_data)
+    try:
+        image_filename = None
+        if image:
+            image_filename = f"{ObjectId()}_{image.filename}"
+            # Create uploads directory if it doesn't exist
+            os.makedirs(Config.UPLOAD_BLOG_POST_IMAGE, exist_ok=True)
 
-    if not post:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password"
-        )
+            image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, image_filename)
+            with open(image_path, "wb") as buffer:
+                shutil.copyfileobj(image.file, buffer)
+
+        tags_list = [tag.strip() for tag in tags.split(",") if
+                     tag.strip()]  # Convert comma separated string to list of strings
+        post = BlogPost(title=title, content=content, image=image_filename, tags=tags_list)
+        post_dict = post.model_dump(by_alias=True)
+        post_dict["created_at"] = datetime.utcnow()
+        post_dict["updated_at"] = datetime.utcnow()
+
+        inserted_post = await post_model.db.insert_one(post_dict)
+        post_dict["_id"] = inserted_post.inserted_id
+
+        retrieved_post = await post_model.db.find_one({"_id": ObjectId(post_dict["_id"])})
+        logger.info(f'Post ---- retrieved post {retrieved_post}')
+
+        if retrieved_post:
+
+            return BlogPostInDB(**retrieved_post)
+        else:
+            raise HTTPException(status_code=404, detail="Post not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
     # post_dict = {
     #     "title": post_data.title,
     #     "content": post_data.content,
