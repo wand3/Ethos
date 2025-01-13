@@ -49,6 +49,7 @@ class Post:
         if not post:
             raise HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"Post not found: {post_id}")
         return None
+
     # get post by tag and tags
     async def get_posts_by_tags(self, tags: List[str]) -> List[BlogPostInDB]:
         query = {"tags": {"$in": tags}}

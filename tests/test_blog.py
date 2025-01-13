@@ -180,9 +180,136 @@ def test_get_posts_by_id_not_found(client):
     assert response.json() == {"detail": f"Post not found: {post_id}"}  # or a more specific error message if you customize it
 
 
-# test update post
+# test get post by tag or tags
+@pytest.fixture(scope="function")
+def test_get_posts_by_tag_success(client):
+    tags = ["yes"]  # using a single tag
+    expected_posts = [
+        {
+            "image": "6783fb100b4a9acc8e52d39b_flipper.jpeg",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n    "
+                       "                       'using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish",
+                "yes"
+            ],
+            "_id": "6783fb100b4a9acc8e52d39c",
+            "created_at": "2025-01-12T17:25:36.137000",
+            "updated_at": "2025-01-12T17:25:36.137000"
+        }
+    ]
+
+    response = client.get("/posts/tags/?tags=yes") # Multiple query params are added like this
+
+    assert response.status_code == 200
+    assert response.json() == expected_posts
 
 
+@pytest.fixture(scope="function")
+def test_get_posts_by_tags_success(client):
+    tags = ["yes", "fish"]  # using a single tag
+    expected_posts = [
+        {
+            "image": "6783fb100b4a9acc8e52d39b_flipper.jpeg",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish",
+                "yes"
+            ],
+            "_id": "6783fb100b4a9acc8e52d39c",
+            "created_at": "2025-01-12T17:25:36.137000",
+            "updated_at": "2025-01-12T17:25:36.137000"
+        },
+        {
+            "image": "6784defe3e2c085e71490328_test_image.png",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784defe3e2c085e71490329",
+            "created_at": "2025-01-13T09:38:06.240000",
+            "updated_at": "2025-01-13T09:38:06.240000"
+        },
+        {
+            "image": "6784df1de7dcf26bab03376d_test_image.png",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784df1de7dcf26bab03376e",
+            "created_at": "2025-01-13T09:38:37.538000",
+            "updated_at": "2025-01-13T09:38:37.538000"
+        },
+        {
+            "image": "6784e06b2b8db8fad9544806_test_image.png",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784e06b2b8db8fad9544807",
+            "created_at": "2025-01-13T09:44:11.516000",
+            "updated_at": "2025-01-13T09:44:11.516000"
+        },
+        {
+            "image": "6784e22ee2e858d506ed7f32_test_image.png",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784e22ee2e858d506ed7f33",
+            "created_at": "2025-01-13T09:51:42.061000",
+            "updated_at": "2025-01-13T09:51:42.061000"
+        },
+        {
+            "image": "6784e2529511ab63ca847746_test_image.png",
+            "title": "testblog",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784e2529511ab63ca847747",
+            "created_at": "2025-01-13T09:52:18.937000",
+            "updated_at": "2025-01-13T09:52:18.937000"
+        },
+        {
+            "image": "6784fb1a6e0792981e3a9370_flipper.jpeg",
+            "title": "lady",
+            "content": "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.",
+            "tags": [
+                "one",
+                "two",
+                "fish"
+            ],
+            "_id": "6784fb1a6e0792981e3a9371",
+            "created_at": "2025-01-13T11:38:02.794000",
+            "updated_at": "2025-01-13T11:38:02.794000"
+        }
+    ]
+
+    response = client.get("/posts/tags/?tags=yes&tags=fish")  # Multiple query params are added like this
+
+    assert response.status_code == 200
+    assert response.json() == expected_posts
 
 # def test_update_post():
 #     # Create a post

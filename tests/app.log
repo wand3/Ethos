@@ -18,3 +18,22 @@
 2025-01-13 17:39:48,217 - INFO - HTTP Request: GET http://testserver/678501750a991f0c000f2fdm/posts/ "HTTP/1.1 500 Internal Server Error"
 2025-01-13 17:40:11,454 - INFO - Application started -----------
 2025-01-13 17:40:11,522 - INFO - HTTP Request: GET http://testserver/678501750a991c000f2fdm/posts/ "HTTP/1.1 500 Internal Server Error"
+2025-01-13 18:08:00,504 - INFO - Application started -----------
+2025-01-13 18:08:00,730 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=fish "HTTP/1.1 200 OK"
+2025-01-13 18:08:36,471 - INFO - Application started -----------
+2025-01-13 18:08:36,659 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:09:15,060 - INFO - Application started -----------
+2025-01-13 18:09:15,166 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:10:44,940 - INFO - Application started -----------
+2025-01-13 18:10:45,069 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:11:06,567 - INFO - Application started -----------
+2025-01-13 18:11:06,695 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:12:47,166 - INFO - Application started -----------
+2025-01-13 18:12:47,270 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:14:46,169 - INFO - Application started -----------
+2025-01-13 18:14:46,275 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:16:51,396 - INFO - Application started -----------
+2025-01-13 18:16:51,560 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes "HTTP/1.1 200 OK"
+2025-01-13 18:20:43,338 - INFO - Application started -----------
+2025-01-13 18:21:01,990 - INFO - Application started -----------
+2025-01-13 18:21:02,155 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes&tags=fish "HTTP/1.1 200 OK"

@@ -67,3 +67,21 @@ async def get_posts_by_id(
 ):
     post = await post_model.get_post_by_id(post_id=post_id)
     return post
+
+
+# get post by tag or tags
+@main.get("/posts/tags/")
+async def get_posts_by_tags(
+    post_model: Annotated[Post, Depends(get_post_model)],
+    tags: List[str] = Query(..., description="List of tags to search for"),  # Query is used for query parameters. ... makes the query parameter required
+):
+    try:
+        posts = await post_model.get_posts_by_tags(tags)
+        if not posts:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No posts found with these tags")
+        return posts
+    except Exception as e:
+        print(f"Error searching posts by tags: {e}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to search posts by tags")
+
+
