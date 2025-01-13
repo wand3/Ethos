@@ -198,3 +198,104 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-13 10:44:11,515 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
 2025-01-13 10:44:11,518 - INFO - Post ---- retrieved post {'_id': ObjectId('6784e06b2b8db8fad9544807'), 'image': '6784e06b2b8db8fad9544806_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 44, 11, 516000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 44, 11, 516000)}
 2025-01-13 10:44:11,519 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"
+2025-01-13 10:51:41,386 - INFO - Application started -----------
+2025-01-13 10:51:41,485 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:51:41,879 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:51:42,059 - INFO - Post image ----  user UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-13 10:51:42,061 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-13 10:51:42,067 - INFO - Post ---- retrieved post {'_id': ObjectId('6784e22ee2e858d506ed7f33'), 'image': '6784e22ee2e858d506ed7f32_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 51, 42, 61000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 51, 42, 61000)}
+2025-01-13 10:51:42,067 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"
+2025-01-13 10:52:18,251 - INFO - Application started -----------
+2025-01-13 10:52:18,348 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:52:18,767 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:52:18,935 - INFO - Post image ----  user UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-13 10:52:18,937 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-13 10:52:18,940 - INFO - Post ---- retrieved post {'_id': ObjectId('6784e2529511ab63ca847747'), 'image': '6784e2529511ab63ca847746_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 52, 18, 937000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 52, 18, 937000)}
+2025-01-13 10:52:18,940 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"
+2025-01-13 10:56:22,938 - INFO - Application started -----------
+2025-01-13 11:49:46,348 - INFO - Application started -----------
+2025-01-13 11:49:46,421 - INFO - HTTP Request: GET http://testserver/posts "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 11:49:46,435 - INFO - HTTP Request: GET http://testserver/posts/ "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,318 - INFO - Application started -----------
+2025-01-13 13:03:09,415 - INFO - HTTP Request: GET http://testserver/posts/search?q=done "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,430 - INFO - HTTP Request: GET http://testserver/posts/search/?q=done "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,431 - INFO - HTTP Request: GET http://testserver/posts/search?q=lady "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,435 - INFO - HTTP Request: GET http://testserver/posts/search/?q=lady "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,438 - INFO - HTTP Request: GET http://testserver/posts/search?q=yes "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,441 - INFO - HTTP Request: GET http://testserver/posts/search/?q=yes "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,443 - INFO - HTTP Request: GET http://testserver/posts/search?q=YES "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,447 - INFO - HTTP Request: GET http://testserver/posts/search/?q=YES "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,449 - INFO - HTTP Request: GET http://testserver/posts/search?q=nonexistent "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,453 - INFO - HTTP Request: GET http://testserver/posts/search/?q=nonexistent "HTTP/1.1 200 OK"
+2025-01-13 13:03:09,455 - INFO - HTTP Request: GET http://testserver/posts/search "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:03:09,457 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
+2025-01-13 13:04:36,874 - INFO - Application started -----------
+2025-01-13 13:04:36,949 - INFO - HTTP Request: GET http://testserver/posts/search?q=done "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,967 - INFO - HTTP Request: GET http://testserver/posts/search/?q=done "HTTP/1.1 200 OK"
+2025-01-13 13:04:36,971 - INFO - HTTP Request: GET http://testserver/posts/search?q=lady "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,976 - INFO - HTTP Request: GET http://testserver/posts/search/?q=lady "HTTP/1.1 200 OK"
+2025-01-13 13:04:36,979 - INFO - HTTP Request: GET http://testserver/posts/search?q=yes "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,983 - INFO - HTTP Request: GET http://testserver/posts/search/?q=yes "HTTP/1.1 200 OK"
+2025-01-13 13:04:36,984 - INFO - HTTP Request: GET http://testserver/posts/search?q=YES "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,989 - INFO - HTTP Request: GET http://testserver/posts/search/?q=YES "HTTP/1.1 200 OK"
+2025-01-13 13:04:36,991 - INFO - HTTP Request: GET http://testserver/posts/search?q=nonexistent "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,995 - INFO - HTTP Request: GET http://testserver/posts/search/?q=nonexistent "HTTP/1.1 200 OK"
+2025-01-13 13:04:36,997 - INFO - HTTP Request: GET http://testserver/posts/search "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:36,999 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
+2025-01-13 13:04:37,146 - INFO - HTTP Request: GET http://testserver/posts/search?q=$^+.?{}[]()\| "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:04:37,154 - INFO - HTTP Request: GET http://testserver/posts/search/?q=$%5E+.?%7B%7D[]()%5C%7C "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,734 - INFO - Application started -----------
+2025-01-13 13:05:09,805 - INFO - HTTP Request: GET http://testserver/posts/search?q=done "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,817 - INFO - HTTP Request: GET http://testserver/posts/search/?q=done "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,819 - INFO - HTTP Request: GET http://testserver/posts/search?q=lady "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,823 - INFO - HTTP Request: GET http://testserver/posts/search/?q=lady "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,825 - INFO - HTTP Request: GET http://testserver/posts/search?q=yes "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,829 - INFO - HTTP Request: GET http://testserver/posts/search/?q=yes "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,830 - INFO - HTTP Request: GET http://testserver/posts/search?q=YES "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,835 - INFO - HTTP Request: GET http://testserver/posts/search/?q=YES "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,836 - INFO - HTTP Request: GET http://testserver/posts/search?q=nonexistent "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,841 - INFO - HTTP Request: GET http://testserver/posts/search/?q=nonexistent "HTTP/1.1 200 OK"
+2025-01-13 13:05:09,842 - INFO - HTTP Request: GET http://testserver/posts/search "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,844 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
+2025-01-13 13:05:09,868 - INFO - HTTP Request: GET http://testserver/posts/search?q=$^+.?{}[]()\| "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:05:09,874 - INFO - HTTP Request: GET http://testserver/posts/search/?q=$%5E+.?%7B%7D[]()%5C%7C "HTTP/1.1 200 OK"
+2025-01-13 13:06:57,975 - INFO - Application started -----------
+2025-01-13 13:06:58,055 - INFO - HTTP Request: GET http://testserver/posts/search?q=done "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,070 - INFO - HTTP Request: GET http://testserver/posts/search/?q=done "HTTP/1.1 200 OK"
+2025-01-13 13:06:58,071 - INFO - HTTP Request: GET http://testserver/posts/search?q=lady "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,076 - INFO - HTTP Request: GET http://testserver/posts/search/?q=lady "HTTP/1.1 200 OK"
+2025-01-13 13:06:58,078 - INFO - HTTP Request: GET http://testserver/posts/search?q=yes "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,082 - INFO - HTTP Request: GET http://testserver/posts/search/?q=yes "HTTP/1.1 200 OK"
+2025-01-13 13:06:58,084 - INFO - HTTP Request: GET http://testserver/posts/search?q=YES "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,088 - INFO - HTTP Request: GET http://testserver/posts/search/?q=YES "HTTP/1.1 200 OK"
+2025-01-13 13:06:58,089 - INFO - HTTP Request: GET http://testserver/posts/search?q=nonexistent "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,094 - INFO - HTTP Request: GET http://testserver/posts/search/?q=nonexistent "HTTP/1.1 200 OK"
+2025-01-13 13:06:58,096 - INFO - HTTP Request: GET http://testserver/posts/search "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,098 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
+2025-01-13 13:06:58,123 - INFO - HTTP Request: GET http://testserver/posts/search?q=$^+.?{}[]()\| "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:06:58,129 - INFO - HTTP Request: GET http://testserver/posts/search/?q=$%5E+.?%7B%7D[]()%5C%7C "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,542 - INFO - Application started -----------
+2025-01-13 13:18:03,615 - INFO - HTTP Request: GET http://testserver/posts/search?q=done "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,630 - INFO - HTTP Request: GET http://testserver/posts/search/?q=done "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,632 - INFO - HTTP Request: GET http://testserver/posts/search?q=lady "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,637 - INFO - HTTP Request: GET http://testserver/posts/search/?q=lady "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,639 - INFO - HTTP Request: GET http://testserver/posts/search?q=yes "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,642 - INFO - HTTP Request: GET http://testserver/posts/search/?q=yes "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,645 - INFO - HTTP Request: GET http://testserver/posts/search?q=YES "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,649 - INFO - HTTP Request: GET http://testserver/posts/search/?q=YES "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,650 - INFO - HTTP Request: GET http://testserver/posts/search?q=nonexistent "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,655 - INFO - HTTP Request: GET http://testserver/posts/search/?q=nonexistent "HTTP/1.1 200 OK"
+2025-01-13 13:18:03,656 - INFO - HTTP Request: GET http://testserver/posts/search "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,658 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
+2025-01-13 13:18:03,721 - INFO - HTTP Request: GET http://testserver/posts/search?q=$^+.?{}[]()\| "HTTP/1.1 307 Temporary Redirect"
+2025-01-13 13:18:03,731 - INFO - HTTP Request: GET http://testserver/posts/search/?q=$%5E+.?%7B%7D[]()%5C%7C "HTTP/1.1 200 OK"

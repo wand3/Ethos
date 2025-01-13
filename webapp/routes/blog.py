@@ -54,11 +54,11 @@ async def create_post(
         # Handle tags input (either a string or a list)
         if isinstance(post_data.tags, str):
             tags_list = [tag.strip() for tag in post_data.tags.split(",")]
-            logger.info(f'Post tag---- retrieved post taglist  string {tags_list}')
+            # logger.info(f'Post tag---- retrieved post taglist  string {tags_list}')
 
         elif isinstance(post_data.tags, list):
             tags_list = [tag.strip() for tag in post_data.tags[0].split(",")]
-            logger.info(f'Post tag---- retrieved post taglist list {tags_list}')
+            # logger.info(f'Post tag---- retrieved post taglist list {tags_list}')
 
         else:
             raise HTTPException(
@@ -74,7 +74,7 @@ async def create_post(
         post_dict["_id"] = inserted_post.inserted_id
 
         retrieved_post = await post_model.db.find_one({"_id": ObjectId(post_dict["_id"])})
-        logger.info(f'Post ---- retrieved post {retrieved_post}')
+        # logger.info(f'Post ---- retrieved post {retrieved_post}')
 
         if retrieved_post:
 
