@@ -20,16 +20,11 @@ blog = APIRouter(prefix="/blog", tags=["Blog"], dependencies=[Depends(get_curren
 async def create_post(
     post_data: Annotated[PostFormData, Form()],
     post_model: Annotated[Post, Depends(get_post_model)],
-
-    # title: str = Form(...),
-    # content: str = Form(...),
-    # tags: str = Form(""), # Receive tags as a comma-separated string
-    # image: Optional[UploadFile] = File(None)
 ):
     # logger.info(f'Post title ----  user {title}')
     # logger.info(f'Post content ----  user {content}')
     # logger.info(f'Post tags ----  user {post_data.tags}')
-    # logger.info(f'Post image ----  user {image}')
+    logger.info(f'Post image ----  user {post_data.image}')
     # logger.info(f'Post content ----  user {content}')
 
     try:
@@ -127,22 +122,3 @@ async def create_post(
 #
 #     posts_collection.delete_one({"_id": ObjectId(post_id)})
 #     return {"message": "Post deleted successfully"}
-#
-#
-# @blog.get("/posts/", response_model=List[BlogPostInDB])
-# def get_posts_by_tags(tags: List[str]):
-#     posts = posts_collection.find({"tags": {"$in": tags}})
-#     result = [
-#         PostInDB(
-#             id=str(post["_id"]),
-#             title=post["title"],
-#             content=post["content"],
-#             published=post["published"],
-#             image=post.get("image"),
-#             tags=post.get("tags", []),
-#             createdAt=post["createdAt"],
-#             updatedAt=post["updatedAt"]
-#         )
-#         for post in posts
-#     ]
-#     return result

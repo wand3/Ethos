@@ -93,3 +93,108 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-11 21:47:50,274 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
 2025-01-11 21:47:50,314 - INFO - HTTP Request: PUT http://testserver/user/6782d8f52b07a88b57e8f6fe/me "HTTP/1.1 200 OK"
 2025-01-11 21:47:50,315 - INFO - <Response [200 OK]>
+2025-01-12 18:12:27,202 - INFO - Application started -----------
+2025-01-12 18:13:13,710 - INFO - Application started -----------
+2025-01-12 18:14:28,118 - INFO - Application started -----------
+2025-01-12 18:15:31,372 - INFO - Application started -----------
+2025-01-12 18:16:52,290 - INFO - Application started -----------
+2025-01-12 18:16:52,376 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 401 Unauthorized"
+2025-01-12 18:18:58,553 - INFO - Application started -----------
+2025-01-12 18:18:58,638 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 401 Unauthorized"
+2025-01-12 18:20:21,214 - INFO - Application started -----------
+2025-01-12 18:20:21,318 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 18:20:21,753 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-12 18:20:21,756 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 401 Unauthorized"
+2025-01-12 18:21:19,088 - INFO - Application started -----------
+2025-01-12 18:21:19,177 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 18:21:19,567 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-12 18:21:19,577 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 422 Unprocessable Entity"
+2025-01-12 18:21:50,409 - INFO - Application started -----------
+2025-01-12 18:21:50,496 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 18:21:50,888 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-12 18:21:50,897 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 422 Unprocessable Entity"
+2025-01-12 18:23:06,093 - INFO - Application started -----------
+2025-01-12 18:23:06,195 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-12 18:23:06,610 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-12 18:23:06,617 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 422 Unprocessable Entity"
+2025-01-12 18:27:37,290 - INFO - Application started -----------
+2025-01-13 10:33:36,066 - INFO - Application started -----------
+2025-01-13 10:33:36,205 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:33:36,639 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:38:05,565 - INFO - Application started -----------
+2025-01-13 10:38:05,667 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:38:06,062 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:38:06,237 - INFO - Post image ----  user UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-13 10:38:06,239 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-13 10:38:06,273 - INFO - Post ---- retrieved post {'_id': ObjectId('6784defe3e2c085e71490329'), 'image': '6784defe3e2c085e71490328_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 38, 6, 240000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 38, 6, 240000)}
+2025-01-13 10:38:06,276 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"
+2025-01-13 10:38:36,869 - INFO - Application started -----------
+2025-01-13 10:38:36,953 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:38:37,374 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:38:37,538 - INFO - Post image ----  user UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-13 10:38:37,538 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-13 10:38:37,541 - INFO - Post ---- retrieved post {'_id': ObjectId('6784df1de7dcf26bab03376e'), 'image': '6784df1de7dcf26bab03376d_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 38, 37, 538000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 38, 37, 538000)}
+2025-01-13 10:38:37,542 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"
+2025-01-13 10:41:20,218 - INFO - Application started -----------
+2025-01-13 10:41:20,305 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:41:20,715 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:43:08,491 - INFO - Application started -----------
+2025-01-13 10:43:08,667 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:43:09,081 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:44:10,853 - INFO - Application started -----------
+2025-01-13 10:44:10,950 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 10:44:11,365 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-13 10:44:11,514 - INFO - Post image ----  user UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-13 10:44:11,515 - INFO - Post tag---- retrieved post taglist list ['one', 'two', 'fish']
+2025-01-13 10:44:11,518 - INFO - Post ---- retrieved post {'_id': ObjectId('6784e06b2b8db8fad9544807'), 'image': '6784e06b2b8db8fad9544806_test_image.png', 'title': 'testblog', 'content': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.', 'tags': ['one', 'two', 'fish'], 'created_at': datetime.datetime(2025, 1, 13, 9, 44, 11, 516000), 'updated_at': datetime.datetime(2025, 1, 13, 9, 44, 11, 516000)}
+2025-01-13 10:44:11,519 - INFO - HTTP Request: POST http://testserver/blog/post "HTTP/1.1 201 Created"

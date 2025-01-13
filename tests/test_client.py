@@ -103,7 +103,9 @@ def test_delete_user_route(client, db_client):
     access_token = response.json()["access_token"]
 
     # Define the user_id to delete
-    user_id = "mock_user_id"
+    user_id = response.json()["id"]
+
+    # or  user_id = "mock_user_id"
 
     # Send a DELETE request
     response = client.delete(f"/{user_id}/me")
