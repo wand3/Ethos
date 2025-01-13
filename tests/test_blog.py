@@ -1,6 +1,5 @@
 import os
 from datetime import datetime
-
 from bson import ObjectId
 from webapp.config import basedir
 from webapp.logger import logger
@@ -85,6 +84,7 @@ def test_get_all_posts(client):
 
 
 # test search for post by title, tags or content
+@pytest.fixture(scope="function")
 def test_search_blogs(client):
     # Test cases for searching
     test_cases = [
@@ -117,6 +117,7 @@ def test_search_blogs(client):
                 assert title_match or content_match or tag_match
 
 
+@pytest.fixture(scope="function")
 def test_search_with_special_chars(client, db_client):
     collection = db_client["posts"]
 
@@ -136,27 +137,53 @@ def test_search_with_special_chars(client, db_client):
     # assert blogs[0]["title"] == "Special Chars $^+.?{}[]()\\|"
 
 
+# def test_get_post_by_id
+@pytest.fixture(scope="function")
+def test_get_posts_by_id_success(db_client, client):
+    post_id = "678501750a991f0c000f2fdf"  # update this to depend on a post present in db
+    expected_post = {
+        "_id": post_id,
+        "title": "Special Chars $^+.?{}[]()\\|",
+        'image': 'special.jpg',
+        "content": 'Content with special chars',
+        "tags": ['special'],
+        "created_at": "2025-01-13T12:05:09.863000",
+        "updated_at": "2025-01-13T12:05:09.863000",
+    }  # same as above for the same post
 
-# def test_get_post_by_id():
-#     # Create a post
-#     response = client.post(
-#         "/posts/",
-#         json={
-#             "title": "First Post",
-#             "content": "This is the content of the first post.",
-#             "published": True,
-#             "tags": ["test", "fastapi"]
-#         }
-#     )
-#     post_id = response.json()["id"]
-#
-#     # Fetch the post
-#     response = client.get(f"/posts/{post_id}")
-#     assert response.status_code == 200
-#     data = response.json()
-#     assert data["title"] == "First Post"
-#
-#
+    response = client.get(f"/{post_id}/posts/")
+
+    assert response.status_code == 200
+    assert response.json() == expected_post
+    response_data = response.json()
+    logger.info(str(response_data))
+    assert response_data["content"] == 'Content with special chars'
+
+
+@pytest.fixture(scope="function")
+def test_get_posts_by_id_invalid(client):
+    post_id = "678501750a991c000f2fdm"
+
+    response = client.get(f"/{post_id}/posts/")
+
+    assert response.status_code == 500
+    assert response.json() == {'detail': f'Invalid post_id: {post_id}'}
+
+
+@pytest.fixture(scope="function")
+def test_get_posts_by_id_not_found(client):
+    post_id = "678501750a991f0c000f2fdm"
+
+    response = client.get(f"/{post_id}/posts/")
+
+    assert response.status_code == 204  # or 400 depending on how you handle the error in your route check error handling in related class
+    assert response.json() == {"detail": f"Post not found: {post_id}"}  # or a more specific error message if you customize it
+
+
+# test update post
+
+
+
 # def test_update_post():
 #     # Create a post
 #     response = client.post(

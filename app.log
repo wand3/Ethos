@@ -299,3 +299,22 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-13 13:18:03,658 - INFO - HTTP Request: GET http://testserver/posts/search/ "HTTP/1.1 400 Bad Request"
 2025-01-13 13:18:03,721 - INFO - HTTP Request: GET http://testserver/posts/search?q=$^+.?{}[]()\| "HTTP/1.1 307 Temporary Redirect"
 2025-01-13 13:18:03,731 - INFO - HTTP Request: GET http://testserver/posts/search/?q=$%5E+.?%7B%7D[]()%5C%7C "HTTP/1.1 200 OK"
+2025-01-13 17:10:59,926 - INFO - Application started -----------
+2025-01-13 17:11:19,142 - INFO - HTTP Request: GET http://testserver/67850155c9d9a5b29faa9dc4/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:11:45,393 - INFO - Application started -----------
+2025-01-13 17:11:45,490 - INFO - HTTP Request: GET http://testserver/67850155c9d9a5b29faa9dc4/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:13:27,385 - INFO - Application started -----------
+2025-01-13 17:13:27,506 - INFO - HTTP Request: GET http://testserver/67850155c9d9a5b29faa9dc4/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:13:58,553 - INFO - Application started -----------
+2025-01-13 17:13:58,673 - INFO - HTTP Request: GET http://testserver/67850155c9d9a5b29faa9dc4/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:13:58,673 - INFO - {'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], '_id': '67850155c9d9a5b29faa9dc4', 'created_at': '2025-01-13T12:04:37.016000', 'updated_at': '2025-01-13T12:04:37.016000'}
+2025-01-13 17:15:42,110 - INFO - Application started -----------
+2025-01-13 17:15:42,290 - INFO - HTTP Request: GET http://testserver/67850155c9d9a5b29faa9dc4/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:15:42,291 - INFO - {'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], '_id': '67850155c9d9a5b29faa9dc4', 'created_at': '2025-01-13T12:04:37.016000', 'updated_at': '2025-01-13T12:04:37.016000'}
+2025-01-13 17:23:20,372 - INFO - Application started -----------
+2025-01-13 17:23:20,585 - INFO - HTTP Request: GET http://testserver/678501750a991f0c000f2fdf/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:23:51,852 - INFO - Application started -----------
+2025-01-13 17:23:51,935 - INFO - HTTP Request: GET http://testserver/678501750a991f0c000f2fdf/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:24:36,783 - INFO - Application started -----------
+2025-01-13 17:24:36,884 - INFO - HTTP Request: GET http://testserver/678501750a991f0c000f2fdf/posts/ "HTTP/1.1 200 OK"
+2025-01-13 17:24:36,884 - INFO - {'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], '_id': '678501750a991f0c000f2fdf', 'created_at': '2025-01-13T12:05:09.863000', 'updated_at': '2025-01-13T12:05:09.863000'}

@@ -1,7 +1,10 @@
 import datetime
 from typing import List, Optional
 from bson import ObjectId
+from bson.errors import InvalidId
 from fastapi import HTTPException, status
+from pydantic import ValidationError
+
 from webapp.logger import logger
 from pymongo import AsyncMongoClient
 from ..schemas.blog import BlogPost, BlogPostInDB, UpdateBlogPost
@@ -23,16 +26,29 @@ class Post:
             print(f"Error fetching blogs: {e}")
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to fetch all posts")
 
-    async def get_post_by_title(self, title: str) -> Optional[BlogPostInDB]:
+    async def get_post_by_title(self, title: str) -> Optional[BlogPost]:
         post = await self.db.find_one({"title": title})
-        return BlogPostInDB(**post) if post else None
+        return BlogPost(**post) if post else None
 
-    # get post by id
-    @staticmethod
     async def get_post_by_id(self, post_id: str) -> Optional[BlogPostInDB]:
-        post = await self.collection.find_one({"_id": ObjectId(post_id)})
-        return BlogPostInDB(**post) if post else None
+        try:
+            # Validate the post_id
+            object_id = ObjectId(post_id)
+        except InvalidId:
+            # raise ValueError(f"Invalid post_id: {post_id}")
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Invalid post_id: {post_id}")
 
+        post = await self.db.find_one({"_id": object_id})
+        if post:
+            # Convert ObjectId to string for compatibility with Pydantic
+            post["_id"] = str(post["_id"])
+            try:
+                return BlogPostInDB(**post)
+            except ValidationError as e:
+                raise ValueError(f"Invalid data for BlogPostInDB: {e}")
+        if not post:
+            raise HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"Post not found: {post_id}")
+        return None
     # get post by tag and tags
     async def get_posts_by_tags(self, tags: List[str]) -> List[BlogPostInDB]:
         query = {"tags": {"$in": tags}}

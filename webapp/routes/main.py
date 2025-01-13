@@ -58,3 +58,12 @@ async def get_search_posts_by_title(
     except Exception as e:
         print(f"Error searching blogs: {e}")
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to search blogs")
+
+
+# get post by id
+@main.get("/{post_id}/posts/")
+async def get_posts_by_id(
+    post_id: str, post_model: Annotated[Post, Depends(get_post_model)],
+):
+    post = await post_model.get_post_by_id(post_id=post_id)
+    return post
