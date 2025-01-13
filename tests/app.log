@@ -37,3 +37,82 @@
 2025-01-13 18:20:43,338 - INFO - Application started -----------
 2025-01-13 18:21:01,990 - INFO - Application started -----------
 2025-01-13 18:21:02,155 - INFO - HTTP Request: GET http://testserver/posts/tags/?tags=yes&tags=fish "HTTP/1.1 200 OK"
+2025-01-14 00:05:00,627 - INFO - Application started -----------
+2025-01-14 00:05:00,821 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:05:01,292 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:06:33,759 - INFO - Application started -----------
+2025-01-14 00:06:33,955 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:06:34,418 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:06:34,541 - INFO - update data ------- title='testblogupdate' content='Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.' tags=['one, two, fish'] image=UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-14 00:06:34,558 - INFO - HTTP Request: PUT http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 200 OK"
+2025-01-14 00:06:34,558 - INFO - <Response [200 OK]>
+2025-01-14 00:07:30,428 - INFO - Application started -----------
+2025-01-14 00:07:30,522 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:07:30,940 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:07:31,130 - INFO - update data ------- title='testblogupdate' content='Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.' tags=['one, two, fish'] image=UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-14 00:07:31,138 - INFO - HTTP Request: PUT http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 201 Created"
+2025-01-14 00:07:31,139 - INFO - <Response [201 Created]>
+2025-01-14 00:08:13,291 - INFO - Application started -----------
+2025-01-14 00:08:13,468 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:08:13,883 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:08:14,030 - INFO - update data ------- title='testblogupdate' content='Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.' tags=['one, two, fish'] image=UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-14 00:08:14,036 - INFO - HTTP Request: PUT http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 201 Created"
+2025-01-14 00:08:14,037 - INFO - <Response [201 Created]>
+2025-01-14 00:11:20,045 - INFO - Application started -----------
+2025-01-14 00:11:20,144 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:11:20,573 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:11:20,743 - INFO - update data ------- title='testblogupdate' content='Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression using up to 4 threads Compressing objects: 100% (22/22), done.' tags=['one, two, fish'] image=UploadFile(filename='test_image.png', size=284, headers=Headers({'content-disposition': 'form-data; name="image"; filename="test_image.png"', 'content-type': 'image/png'}))
+2025-01-14 00:11:20,750 - INFO - HTTP Request: PUT http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 201 Created"
+2025-01-14 00:11:20,751 - INFO - <Response [201 Created]>
+2025-01-14 00:19:23,679 - INFO - Application started -----------
+2025-01-14 00:19:23,877 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:19:24,321 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:19:24,323 - INFO - HTTP Request: DELETE http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 401 Unauthorized"
+2025-01-14 00:22:31,090 - INFO - Application started -----------
+2025-01-14 00:22:31,273 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:22:31,686 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:22:31,691 - INFO - HTTP Request: DELETE http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 200 OK"
+2025-01-14 00:23:05,494 - INFO - Application started -----------
+2025-01-14 00:23:05,665 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:23:06,075 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-14 00:23:06,083 - INFO - HTTP Request: DELETE http://testserver/blog/post/6785047b7b4ea85416b2a695 "HTTP/1.1 200 OK"

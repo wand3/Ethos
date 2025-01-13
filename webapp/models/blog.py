@@ -7,7 +7,8 @@ from pydantic import ValidationError
 
 from webapp.logger import logger
 from pymongo import AsyncMongoClient
-from ..schemas.blog import BlogPost, BlogPostInDB, UpdateBlogPost
+from ..schemas.blog import BlogPost, BlogPostInDB
+from ..schemas.forms import UpdateBlogPost
 
 
 class Post:

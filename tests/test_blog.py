@@ -311,43 +311,85 @@ def test_get_posts_by_tags_success(client):
     assert response.status_code == 200
     assert response.json() == expected_posts
 
-# def test_update_post():
-#     # Create a post
-#     response = client.post(
-#         "/posts/",
-#         json={
-#             "title": "First Post",
-#             "content": "This is the content of the first post.",
-#             "published": True,
-#             "tags": ["test", "fastapi"]
-#         }
-#     )
-#     post_id = response.json()["id"]
-#
-#     # Update the post
-#     response = client.put(
-#         f"/posts/{post_id}",
-#         json={"content": "Updated content"}
-#     )
-#     assert response.status_code == 200
-#     data = response.json()
-#     assert data["content"] == "Updated content"
-#
-#
-# def test_delete_post():
-#     # Create a post
-#     response = client.post(
-#         "/posts/",
-#         json={
-#             "title": "First Post",
-#             "content": "This is the content of the first post.",
-#             "published": True,
-#             "tags": ["test", "fastapi"]
-#         }
-#     )
-#     post_id = response.json()["id"]
-#
-#     # Delete the post
-#     response = client.delete(f"/posts/{post_id}")
-#     assert response.status_code == 200
-#     assert response.json()["message"] == "Post deleted successfully"
+
+@pytest.fixture(scope="session")
+def test_update_post(client, db_client):
+    response = client.post(
+        "/token",
+        data={"username": "john_doe", "password": "jonnybones"},
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+    access_token = response.json()["access_token"]
+
+    collection = db_client["users"]
+    user = collection.find_one({"email": "john_doe@example.com"})
+    post_id = "6785047b7b4ea85416b2a695"  # any existing post to update
+
+    # Create a valid image file for testing
+    from PIL import Image
+    image_path = os.path.join(basedir, 'static', 'test_image.png')  # "/static/test/test_image.png"
+    image = Image.new("RGB", (100, 100), color=(255, 0, 0))  # A red square
+    image.save(image_path)
+
+    try:
+        # Prepare the update data
+        update_dict = {
+            "title": (None, "testblogupdate"),
+            "content": (None, "Enumerating objects: 36, done Counting objects: 100% (36/36), done. "
+                              "Delta compression using up to 4 threads Compressing objects: 100% (22/22), done."),
+            "tags": (None, "one, two, fish"),
+            "image": ("test_image.png", open(image_path, "rb"), "image/png"),
+        }
+
+        # Send PUT request
+        response = client.put(
+            f"/blog/post/{post_id}",
+            files=update_dict,
+            headers={"Authorization": f"Bearer {access_token}"}
+        )
+        logger.info(response)
+
+        assert response.status_code == 201
+        response_data = response.json()
+
+        # Validate the response
+        assert "_id" in response_data
+        assert response_data["title"] == "testblogupdate"
+        assert response_data["content"] == update_dict["content"][1]
+        assert response_data["tags"] == ["one", "two", "fish"]
+        assert "created_at" in response_data
+        assert "updated_at" in response_data
+        assert isinstance(ObjectId(response_data["_id"]), ObjectId)
+
+    finally:
+        # Clean up
+        if os.path.exists(image_path):
+            os.remove(image_path)
+        clear_posts_db(db_client)
+
+
+@pytest.fixture(scope="session")
+def test_delete_post(client, db_client):
+    # login and delete user
+    response = client.post(
+        "/token",
+        data={"username": "john_doe", "password": "jonnybones"},
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+    access_token = response.json()["access_token"]
+
+    # Define the post_id to delete
+    post_id = "6785047b7b4ea85416b2a695"
+
+    # or  user_id = "mock_user_id"
+
+    # Send a DELETE request
+    response = client.delete(f"/blog/post/{post_id}",
+                             headers={"Authorization": f"Bearer {access_token}"})
+    # Assertions
+    assert response.status_code == 200
+    assert response.json() == {"message": f"Post deleted successfully True"}

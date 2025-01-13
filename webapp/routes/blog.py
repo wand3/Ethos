@@ -5,9 +5,9 @@ from typing import List, Annotated, Optional
 from webapp.config import Config
 from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, status, Form, UploadFile, File
-
 from webapp.logger import logger
 from webapp.schemas.blog import BlogPostInDB, BlogPost
+from ..schemas.forms import UpdateBlogPost
 from webapp.models.blog import Post, get_post_model
 from webapp.models.user import get_current_active_user, UserModel
 from webapp.schemas.forms import PostFormData
@@ -84,41 +84,85 @@ async def create_post(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# @blog.get("/posts/{post_id}", response_model=BlogPostInDB)
-# def read_post(post_id: str):
-#     post = get_post_by_id(post_id)
-#     if not post:
-#         raise HTTPException(status_code=404, detail="Post not found")
-#     return post
-#
-# @blog.put("/posts/{post_id}", response_model=BlogPostInDB)
-# def update_post(post_id: str, post_data: PostUpdate):
-#     existing_post = get_post_by_id(post_id)
-#     if not existing_post:
-#         raise HTTPException(status_code=404, detail="Post not found")
-#
-#     update_data = {k: v for k, v in post_data.dict().items() if v is not None}
-#     update_data["updatedAt"] = datetime.utcnow()
-#
-#     posts_collection.update_one({"_id": ObjectId(post_id)}, {"$set": update_data})
-#     updated_post = posts_collection.find_one({"_id": ObjectId(post_id)})
-#     return PostInDB(
-#         id=str(updated_post["_id"]),
-#         title=updated_post["title"],
-#         content=updated_post["content"],
-#         published=updated_post["published"],
-#         image=updated_post.get("image"),
-#         tags=updated_post.get("tags", []),
-#         createdAt=updated_post["createdAt"],
-#         updatedAt=updated_post["updatedAt"]
-#     )
-#
-#
-# @blog.delete("/posts/{post_id}", response_model=dict)
-# def delete_post(post_id: str):
-#     existing_post = get_post_by_id(post_id)
-#     if not existing_post:
-#         raise HTTPException(status_code=404, detail="Post not found")
-#
-#     posts_collection.delete_one({"_id": ObjectId(post_id)})
-#     return {"message": "Post deleted successfully"}
+
+@blog.put("/post/{post_id}", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
+async def update_post(
+    post_id: str,
+    update_data: Annotated[UpdateBlogPost, Form()],
+    post_model: Annotated[Post, Depends(get_post_model)],
+):
+    logger.info(f"update data ------- {update_data}")
+    try:
+        if not ObjectId.is_valid(post_id):
+            raise HTTPException(status_code=400, detail="Invalid post ID format.")
+
+        existing_post = await post_model.db.find_one({"_id": ObjectId(post_id)})
+        if not existing_post:
+            raise HTTPException(status_code=404, detail="Post not found.")
+
+        updated_data = {}
+
+        if update_data.title is not None:
+            updated_data["title"] = update_data.title
+        if update_data.content is not None:
+            updated_data["content"] = update_data.content
+
+        if update_data.tags is not None:
+            # Handle tags (accepting both string and list input)
+            if isinstance(update_data.tags, str):
+                tags_list = [tag.strip() for tag in update_data.tags.split(",")]
+            elif isinstance(update_data.tags, list):
+                tags_list = [tag.strip() for tag in update_data.tags[0].split(",")]
+            else:
+                raise HTTPException(status_code=400, detail="Invalid format for tags. Must be a string or list.")
+            updated_data["tags"] = tags_list
+
+        if update_data.image is not None:  # Check if image is provided
+            file_content = await update_data.image.read()
+            file_size = len(file_content)
+            if file_size > Config.MAX_IMAGE_SIZE:
+                raise HTTPException(status_code=400, detail="Image size exceeds limit.")
+
+            file_ext = os.path.splitext(update_data.image.filename)[1]
+            if file_ext not in Config.UPLOAD_EXTENSIONS:
+                raise HTTPException(status_code=400,
+                                    detail=f"Unsupported image format. Allowed: {', '.join(Config.UPLOAD_EXTENSIONS)}.")
+
+            image_filename = f"{ObjectId()}_{update_data.image.filename}"
+            os.makedirs(Config.UPLOAD_BLOG_POST_IMAGE, exist_ok=True)
+            image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, image_filename)
+
+            with open(image_path, "wb") as buffer:
+                shutil.copyfileobj(update_data.image.file, buffer)
+
+            if existing_post.get("image"):
+                old_image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, existing_post["image"])
+                try:
+                    os.remove(old_image_path)
+                except FileNotFoundError:
+                    pass
+
+            updated_data["image"] = image_filename
+        updated_data["updated_at"] = datetime.utcnow()
+
+        if updated_data:  # only update if there is data to update
+            await post_model.db.update_one({"_id": ObjectId(post_id)}, {"$set": updated_data})
+
+        updated_post = await post_model.db.find_one({"_id": ObjectId(post_id)})
+        return BlogPostInDB(**updated_post)
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@blog.delete("/post/{post_id}", status_code=status.HTTP_200_OK)
+async def delete_post(
+    post_id: str,
+    post_model: Annotated[Post, Depends(get_post_model)]
+):
+    post = await post_model.delete_post(post_id)
+    # if not existing_post:
+    #     raise HTTPException(status_code=404, detail="Post not found")
+    #
+    # posts_collection.delete_one({"_id": ObjectId(post_id)})
+    return {"message": f"Post deleted successfully {post}"}

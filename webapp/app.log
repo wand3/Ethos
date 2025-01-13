@@ -80,3 +80,146 @@
 2025-01-13 17:58:49,578 - INFO - 1 change detected
 2025-01-13 17:58:52,418 - INFO - 3 changes detected
 2025-01-13 17:58:53,006 - INFO - Application started -----------
+2025-01-13 22:17:30,160 - INFO - Application started -----------
+2025-01-13 22:17:35,364 - INFO - Application started -----------
+2025-01-13 22:27:57,132 - INFO - 3 changes detected
+2025-01-13 22:27:57,818 - INFO - 1 change detected
+2025-01-13 22:30:23,798 - INFO - 6 changes detected
+2025-01-13 22:30:26,656 - INFO - 3 changes detected
+2025-01-13 22:31:44,344 - INFO - 3 changes detected
+2025-01-13 22:31:47,828 - INFO - Application started -----------
+2025-01-13 22:31:47,937 - INFO - 3 changes detected
+2025-01-13 22:37:16,773 - INFO - 3 changes detected
+2025-01-13 22:37:17,406 - INFO - 1 change detected
+2025-01-13 22:37:20,864 - INFO - 3 changes detected
+2025-01-13 22:37:20,969 - INFO - Application started -----------
+2025-01-13 22:41:39,110 - INFO - 3 changes detected
+2025-01-13 22:41:39,705 - INFO - 1 change detected
+2025-01-13 22:41:41,984 - INFO - Application started -----------
+2025-01-13 22:41:42,090 - INFO - 3 changes detected
+2025-01-13 22:44:23,255 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 22:48:44,156 - INFO - 3 changes detected
+2025-01-13 22:48:44,713 - INFO - 1 change detected
+2025-01-13 22:48:48,775 - INFO - Application started -----------
+2025-01-13 22:48:48,814 - INFO - 3 changes detected
+2025-01-13 22:49:49,359 - INFO - 3 changes detected
+2025-01-13 22:49:49,852 - INFO - 1 change detected
+2025-01-13 22:49:53,184 - INFO - Application started -----------
+2025-01-13 22:49:53,268 - INFO - 3 changes detected
+2025-01-13 22:50:20,197 - INFO - 1 change detected
+2025-01-13 22:50:55,738 - INFO - 1 change detected
+2025-01-13 22:54:14,893 - INFO - 3 changes detected
+2025-01-13 22:54:15,468 - INFO - 1 change detected
+2025-01-13 22:54:19,519 - INFO - 3 changes detected
+2025-01-13 22:54:19,612 - INFO - Application started -----------
+2025-01-13 22:54:27,624 - INFO - 1 change detected
+2025-01-13 22:54:43,108 - INFO - 2 changes detected
+2025-01-13 22:54:53,583 - INFO - 1 change detected
+2025-01-13 23:04:31,801 - INFO - 3 changes detected
+2025-01-13 23:04:32,374 - INFO - 1 change detected
+2025-01-13 23:04:34,719 - INFO - Application started -----------
+2025-01-13 23:04:34,795 - INFO - 3 changes detected
+2025-01-13 23:10:10,817 - INFO - 3 changes detected
+2025-01-13 23:10:11,342 - INFO - 1 change detected
+2025-01-13 23:10:14,669 - INFO - Application started -----------
+2025-01-13 23:10:14,726 - INFO - 3 changes detected
+2025-01-13 23:10:25,532 - INFO - update data ------- title=None content=None tags=['uno'] image=None
+2025-01-13 23:12:04,577 - INFO - 3 changes detected
+2025-01-13 23:12:05,169 - INFO - 1 change detected
+2025-01-13 23:12:07,951 - INFO - 3 changes detected
+2025-01-13 23:12:08,052 - INFO - Application started -----------
+2025-01-13 23:12:27,633 - INFO - 3 changes detected
+2025-01-13 23:12:28,197 - INFO - 1 change detected
+2025-01-13 23:12:30,774 - INFO - 3 changes detected
+2025-01-13 23:12:30,910 - INFO - Application started -----------
+2025-01-13 23:12:34,501 - INFO - update data ------- title=None content=None tags=['uno'] image=None
+2025-01-13 23:13:24,327 - INFO - update data ------- title=None content=None tags=['uno'] image=None
+2025-01-13 23:15:25,228 - INFO - 3 changes detected
+2025-01-13 23:15:25,780 - INFO - 1 change detected
+2025-01-13 23:15:28,054 - INFO - 3 changes detected
+2025-01-13 23:15:28,185 - INFO - Application started -----------
+2025-01-13 23:15:32,661 - INFO - User model ---- get current user payload error
+2025-01-13 23:20:39,586 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-13 23:21:51,928 - INFO - 3 changes detected
+2025-01-13 23:21:52,482 - INFO - 1 change detected
+2025-01-13 23:21:55,955 - INFO - 3 changes detected
+2025-01-13 23:21:56,158 - INFO - Application started -----------
+2025-01-13 23:21:56,351 - INFO - update data ------- title=None content=None tags=['uno'] image=None
+2025-01-13 23:23:04,162 - INFO - 3 changes detected
+2025-01-13 23:23:04,761 - INFO - 1 change detected
+2025-01-13 23:23:07,598 - INFO - Application started -----------
+2025-01-13 23:23:07,676 - INFO - 3 changes detected
+2025-01-13 23:24:30,110 - INFO - 3 changes detected
+2025-01-13 23:24:30,684 - INFO - 1 change detected
+2025-01-13 23:24:33,696 - INFO - Application started -----------
+2025-01-13 23:24:33,743 - INFO - 3 changes detected
+2025-01-13 23:24:33,844 - INFO - update data ------- title='ladyo' content='zooterh' tags=['uno'] image=None
+2025-01-13 23:26:36,459 - INFO - 9 changes detected
+2025-01-13 23:26:37,011 - INFO - 1 change detected
+2025-01-13 23:26:39,614 - INFO - 3 changes detected
+2025-01-13 23:28:24,990 - INFO - 3 changes detected
+2025-01-13 23:28:27,662 - INFO - 6 changes detected
+2025-01-13 23:28:28,029 - INFO - 3 changes detected
+2025-01-13 23:28:56,044 - INFO - 3 changes detected
+2025-01-13 23:28:58,574 - INFO - Application started -----------
+2025-01-13 23:28:58,656 - INFO - 3 changes detected
+2025-01-13 23:28:58,662 - INFO - update data ------- title='ladyo' content='zooterh' tags=['uno'] image=None
+2025-01-13 23:29:37,793 - INFO - update data ------- title='ladyo' content='zooterh' tags=['uno'] image=UploadFile(filename='Screenshot 2024-11-06 at 00.00.57.png', size=342385, headers=Headers({'content-disposition': 'form-data; name="image"; filename="Screenshot 2024-11-06 at 00.00.57.png"', 'content-type': 'image/png'}))
+2025-01-13 23:29:38,907 - INFO - 2 changes detected
+2025-01-13 23:29:44,128 - INFO - update data ------- title=None content='zooterh' tags=['uno'] image=UploadFile(filename='Screenshot 2024-11-06 at 00.00.57.png', size=342385, headers=Headers({'content-disposition': 'form-data; name="image"; filename="Screenshot 2024-11-06 at 00.00.57.png"', 'content-type': 'image/png'}))
+2025-01-13 23:29:44,210 - INFO - 2 changes detected
+2025-01-13 23:29:50,454 - INFO - update data ------- title=None content=None tags=['uno'] image=UploadFile(filename='Screenshot 2024-11-06 at 00.00.57.png', size=342385, headers=Headers({'content-disposition': 'form-data; name="image"; filename="Screenshot 2024-11-06 at 00.00.57.png"', 'content-type': 'image/png'}))
+2025-01-13 23:29:50,531 - INFO - 3 changes detected
+2025-01-13 23:30:02,417 - INFO - update data ------- title=None content=None tags=['uno, tres'] image=None
+2025-01-13 23:30:52,866 - INFO - update data ------- title=None content=None tags=None image=UploadFile(filename='Screenshot 2024-10-05 at 04.06.47.png', size=562986, headers=Headers({'content-disposition': 'form-data; name="image"; filename="Screenshot 2024-10-05 at 04.06.47.png"', 'content-type': 'image/png'}))
+2025-01-13 23:30:53,097 - INFO - 2 changes detected
+2025-01-13 23:49:21,264 - INFO - 3 changes detected
+2025-01-13 23:49:21,863 - INFO - 1 change detected
+2025-01-13 23:49:25,389 - INFO - Application started -----------
+2025-01-13 23:49:25,449 - INFO - 3 changes detected
+2025-01-13 23:50:00,985 - INFO - 3 changes detected
+2025-01-13 23:50:01,565 - INFO - 1 change detected
+2025-01-13 23:50:04,230 - INFO - Application started -----------
+2025-01-13 23:50:04,339 - INFO - 3 changes detected
+2025-01-13 23:50:54,082 - INFO - 3 changes detected
+2025-01-13 23:50:54,638 - INFO - 1 change detected
+2025-01-13 23:50:57,354 - INFO - Application started -----------
+2025-01-13 23:50:57,448 - INFO - 3 changes detected
+2025-01-13 23:50:58,371 - INFO - User model ---- get current user payload error
+2025-01-13 23:51:06,074 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-14 00:05:01,519 - INFO - 2 changes detected
+2025-01-14 00:06:34,667 - INFO - 3 changes detected
+2025-01-14 00:07:27,793 - INFO - 3 changes detected
+2025-01-14 00:07:28,495 - INFO - 1 change detected
+2025-01-14 00:07:30,381 - INFO - Application started -----------
+2025-01-14 00:07:30,486 - INFO - 3 changes detected
+2025-01-14 00:07:31,226 - INFO - 4 changes detected
+2025-01-14 00:08:14,111 - INFO - 4 changes detected
+2025-01-14 00:11:17,602 - INFO - 3 changes detected
+2025-01-14 00:11:18,128 - INFO - 1 change detected
+2025-01-14 00:11:20,005 - INFO - Application started -----------
+2025-01-14 00:11:20,077 - INFO - 5 changes detected
+2025-01-14 00:11:20,855 - INFO - 4 changes detected
+2025-01-14 00:11:49,831 - INFO - 3 changes detected
+2025-01-14 00:11:50,361 - INFO - 1 change detected
+2025-01-14 00:11:53,504 - INFO - Application started -----------
+2025-01-14 00:11:53,563 - INFO - 3 changes detected
+2025-01-14 00:19:20,737 - INFO - 3 changes detected
+2025-01-14 00:19:21,339 - INFO - 1 change detected
+2025-01-14 00:19:23,631 - INFO - Application started -----------
+2025-01-14 00:19:23,721 - INFO - 3 changes detected

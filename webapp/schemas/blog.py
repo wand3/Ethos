@@ -1,4 +1,6 @@
 from datetime import datetime, timedelta, timezone
+
+from fastapi import UploadFile, File
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from ..schemas import PyObjectId
@@ -10,10 +12,15 @@ def ErrorResponseModel(error, code, message):
 
 # post
 class BlogPost(BaseModel):
-    image: str = Field(...)
-    title: str = Field(...)
-    content: str = Field(...)
-    tags: List[str] = Field(...)
+    title: Optional[str] = None
+    content: Optional[str] = None
+    tags: Optional[List[str]] = None
+    image: Optional[str] = None
+
+    # image: str = Field(...)
+    # title: str = Field(...)
+    # content: str = Field(...)
+    # tags: List[str] = Field(...)
 
     class Config:
         form_attributes = True
@@ -34,13 +41,6 @@ class BlogPostInDB(BlogPost):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     created_at: datetime
     updated_at: datetime
-
-
-class UpdateBlogPost(BaseModel):
-    image: str = Field(...)
-    title: str = Field(...)
-    content: str = Field(...)
-    tags: List[str] = Field(...)
 
 
 # comment
