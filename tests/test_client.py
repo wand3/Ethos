@@ -108,7 +108,7 @@ def test_delete_user_route(client, db_client):
     # or  user_id = "mock_user_id"
 
     # Send a DELETE request
-    response = client.delete(f"/{user_id}/me")
+    response = client.delete(f"/{user_id}/me", headers={"Authorization": f"Bearer {access_token}"})
 
     # Assertions
     assert response.status_code == 200

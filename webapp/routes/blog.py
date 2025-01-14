@@ -1,15 +1,15 @@
 import os
 import shutil
 from datetime import datetime
-from typing import List, Annotated, Optional
+from typing import Annotated
 from webapp.config import Config
 from bson import ObjectId
-from fastapi import APIRouter, Depends, HTTPException, status, Form, UploadFile, File
+from fastapi import APIRouter, Depends, HTTPException, status, Form
 from webapp.logger import logger
 from webapp.schemas.blog import BlogPostInDB, BlogPost
 from ..schemas.forms import UpdateBlogPost
 from webapp.models.blog import Post, get_post_model
-from webapp.models.user import get_current_active_user, UserModel
+from webapp.models.user import get_current_active_user
 from webapp.schemas.forms import PostFormData
 
 
@@ -23,8 +23,7 @@ async def create_post(
 ):
     # logger.info(f'Post title ----  user {title}')
     # logger.info(f'Post content ----  user {content}')
-    # logger.info(f'Post tags ----  user {post_data.tags}')
-    logger.info(f'Post image ----  user {post_data.image}')
+    # logger.info(f'Post image ----  user {post_data.image}')
     # logger.info(f'Post content ----  user {content}')
 
     try:

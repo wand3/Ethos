@@ -7,7 +7,9 @@ from webapp.logger import logger
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 
 from webapp.models.blog import Post, get_post_model
+from webapp.models.project import get_project_model, ProjectModel
 from webapp.schemas.blog import BlogPostInDB, BlogPost
+from webapp.schemas.project import Project, ProjectInDB
 
 main = APIRouter()
 
@@ -15,6 +17,11 @@ main = APIRouter()
 @main.get("/ethos")
 async def root():
     return {"message": "Hello World"}
+
+"""
+    Routes for all posts
+    
+"""
 
 
 # get all posts
@@ -47,7 +54,8 @@ async def get_search_posts_by_title(
     blogs = []
     try:
         regex_query = {"$or": [
-            {"title": {"$regex": re.compile(re.escape(q), re.IGNORECASE)}},  # escape prevents regex injection vulnerabilities
+            {"title": {"$regex": re.compile(re.escape(q), re.IGNORECASE)}},  # escape prevents regex injection
+            # vulnerabilities
             {"content": {"$regex": re.compile(re.escape(q), re.IGNORECASE)}},
             {"tags": {"$in": [re.compile(re.escape(q), re.IGNORECASE)]}}
         ]}
@@ -73,7 +81,8 @@ async def get_posts_by_id(
 @main.get("/posts/tags/")
 async def get_posts_by_tags(
     post_model: Annotated[Post, Depends(get_post_model)],
-    tags: List[str] = Query(..., description="List of tags to search for"),  # Query is used for query parameters. ... makes the query parameter required
+    tags: List[str] = Query(..., description="List of tags to search for"),  # Query is used for query parameters.
+        # ... makes the query parameter required
 ):
     try:
         posts = await post_model.get_posts_by_tags(tags)
@@ -84,4 +93,18 @@ async def get_posts_by_tags(
         print(f"Error searching posts by tags: {e}")
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to search posts by tags")
 
+
+"""
+    Routes for all projects
+
+"""
+
+
+# get all projects
+@main.get("/projects/", status_code=status.HTTP_200_OK, response_model=List[ProjectInDB])
+async def get_posts(
+    project_model: Annotated[ProjectModel, Depends(get_project_model)]
+):
+    posts = await project_model.get_all_projects()
+    return posts
 

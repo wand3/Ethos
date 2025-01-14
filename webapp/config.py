@@ -13,3 +13,5 @@ class Config:
     UPLOAD_EXTENSIONS = ['.jpg', '.png', '.img', '.jpeg']
     # blog post image directory
     UPLOAD_BLOG_POST_IMAGE = os.path.join(basedir, 'static', 'images', 'post_images')
+    UPLOAD_PROJECT_IMAGE = os.path.join(basedir, 'static', 'images', 'project_images')
+
