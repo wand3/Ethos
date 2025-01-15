@@ -1,7 +1,9 @@
 from typing import Optional, List
 
-from fastapi import UploadFile, File
+from fastapi import UploadFile, File, Body
 from pydantic import BaseModel, Field, HttpUrl
+
+from webapp.schemas.project import TechStack
 
 
 class PostFormData(BaseModel):
@@ -29,12 +31,13 @@ class ProjectFormData(BaseModel):
                                               'Developer", "Backend Developer", "Test Engineer", "Automation '
                                               'Engineer", "DevOps Engineer"')
     # testing_details: Optional[TestingDetails] = Field(None, description="Details about testing and automation")
-    # images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
     images: Optional[List[UploadFile]] = Field(None, description="List of URLs to project screenshots/images")
 
 
+# update product images form
+class ProjectImagesFormData(BaseModel):
+    images: Optional[List[UploadFile]] = Field(..., description="List of URLs to project screenshots/images")
 
-# add product technologies form
 
 
 # add product testing_details form

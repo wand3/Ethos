@@ -7,7 +7,7 @@ from webapp.schemas import PyObjectId
 
 class TechStack(BaseModel):
     """Details about technologies used in the project."""
-    language: str = Field(..., description="Programming language (e.g., Python, JavaScript)")
+    language: Optional[List[str]] = Field(None, description="Programming language (e.g., Python, JavaScript)")
     frameworks: Optional[List[str]] = Field(None, description="Frameworks used (e.g., React, Django)")
     databases: Optional[List[str]] = Field(None, description="Databases used (e.g., PostgreSQL, MongoDB)")
     tools: Optional[List[str]] = Field(None, description="Development/Deployment tools (e.g., Docker, Kubernetes, AWS)")
@@ -15,11 +15,11 @@ class TechStack(BaseModel):
 
 class TestingDetails(BaseModel):
     """Specifics about testing methodologies and automation."""
-    test_types: List[str] = Field(..., description='Types of testing performed e.g. "Unit", "Integration", "E2E", '
-                                                   '"Performance", "Security", "API" ')
+    test_types: Optional[List[str]] = Field(None, description='Types of testing performed e.g. "Unit", "Integration", '
+                                                              '"E2E, Performance", "Security", "API" ')
     automation_frameworks: Optional[List[str]] = Field(None, description="Automation frameworks used (e.g., Selenium, "
                                                                          "pytest)")
-    ci_cd_integration: bool = Field(False, description="Whether CI/CD was integrated for testing")
+    ci_cd_integration: Optional[List[str]] = Field(None, description="Whether CI/CD was integrated for testing")
 
 
 class Project(BaseModel):
@@ -52,14 +52,15 @@ class Project(BaseModel):
 
     """Comprehensive details about a portfolio project."""
     # id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
-    title: str = Field(..., description="Project title")
-    description: str = Field(..., description="Detailed project description")
+    title: Optional[str] = Field(..., description="Project title")
+    description: Optional[str] = Field(..., description="Detailed project description")
     project_url: Optional[str] = Field(None, description="Link to the live project or demo")
     github_url: Optional[str] = Field(None, description="Link to the GitHub repository")
-    technologies: Optional[List[TechStack]] = Field(None, description="List of technologies used")
-    roles: List[str] = Field(..., description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
-                                              'Developer", "Backend Developer", "Test Engineer", "Automation '
-                                              'Engineer", "DevOps Engineer"')
+    technologies: Optional[TechStack] = Field(None, description="List of technologies used")
+    roles: Optional[List[str]] = Field(...,
+                                       description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
+                                                   'Developer", "Backend Developer", "Test Engineer", "Automation '
+                                                   'Engineer", "DevOps Engineer"')
     testing_details: Optional[TestingDetails] = Field(None, description="Details about testing and automation")
     images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
 

@@ -33,7 +33,7 @@ class ProjectModel:
             object_id = ObjectId(post_id)
         except InvalidId:
             # raise ValueError(f"Invalid post_id: {post_id}")
-            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Invalid post_id: {post_id}")
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Invalid project_id: {post_id}")
 
         post = await self.db.find_one({"_id": object_id})
         if post:
@@ -42,9 +42,9 @@ class ProjectModel:
             try:
                 return ProjectInDB(**post)
             except ValidationError as e:
-                raise ValueError(f"Invalid data for BlogPostInDB: {e}")
+                raise ValueError(f"Invalid data for ProjectInDB: {e}")
         if not post:
-            raise HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"Post not found: {post_id}")
+            raise HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"Project not found: {post_id}")
         return None
 
     # get project by tag and tags

@@ -1,17 +1,20 @@
+import logging
 import os
 import shutil
 from datetime import datetime
 from typing import Annotated
+
+from starlette.requests import Request
+
 from webapp.config import Config
 from bson import ObjectId
-from fastapi import APIRouter, Depends, HTTPException, status, Form
+from fastapi import APIRouter, Depends, HTTPException, status, Form, Body
 from webapp.logger import logger
 # from ..schemas.forms import UpdateBlogPost
-from webapp.schemas.project import Project
+from webapp.schemas.project import Project, TechStack
 from webapp.models.project import ProjectModel, get_project_model, ProjectInDB
 from webapp.models.user import get_current_active_user
-from webapp.schemas.forms import ProjectFormData
-
+from webapp.schemas.forms import ProjectFormData, ProjectImagesFormData
 
 project = APIRouter(prefix="/project", tags=["Project"])  # , dependencies=[Depends(get_current_active_user)]
 
@@ -95,8 +98,204 @@ async def create_project(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# @blog.put("/post/{post_id}", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
-# async def update_post(
+# update project technologies
+@project.put("/{project_id}/add/technologies", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
+async def update_project_technologies(
+    project_id: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+    request: Request,  # Add request to access form data
+):
+    try:
+        if not ObjectId.is_valid(project_id):
+            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+
+        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        # logger.info(existing_project)
+        if not existing_project:
+            raise HTTPException(status_code=404, detail="Project not found.")
+
+        form_data = await request.form()
+        technology_data = {"language": form_data.get("language").split(",") if form_data.get("language") else None,
+                           "frameworks": form_data.get("frameworks").split(",") if form_data.get(
+                               "frameworks") else None,
+                           "databases": form_data.get("databases").split(",") if form_data.get("databases") else None,
+                           "tools": form_data.get("tools").split(",") if form_data.get("tools") else None,
+                           }
+        technologies_data = technology_data
+        # logging.info(f"---------------------*********** {technology_data}")
+
+        if not any(value is not None for value in technology_data.values()):
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                                detail="At least one field must be provided in technology")
+        if technology_data.get("language") is None and existing_project["language"] is None:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Language must be alphanumeric")
+        for field_name in ["frameworks", "databases", "tools", "language"]:
+            field_value = technology_data.get(field_name)
+            if field_value is not None and not all(isinstance(item, str) for item in field_value):
+                raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                                    detail=f"All items in {field_name} must be strings")
+
+        result = await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"technologies": technologies_data}}
+        )
+
+        # update time of modification
+        await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"updated_at": datetime}}
+        )
+        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        if updated_project:
+            if result.modified_count == 0:
+                raise HTTPException(status_code=status.HTTP_304_NOT_MODIFIED,
+                                    detail="Technologies has no new fields")
+            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+        else:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                                detail="Failed to retrieve updated project")
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# update project testing_details
+@project.put("/{project_id}/add/testing", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
+async def update_project_testing(
+    project_id: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+    request: Request,  # Add request to access form data
+):
+    try:
+        if not ObjectId.is_valid(project_id):
+            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+
+        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        # logger.info(existing_project)
+        if not existing_project:
+            raise HTTPException(status_code=404, detail="Project not found.")
+
+        form_data = await request.form()
+        testing_types_data = {
+            "test_types": form_data.get("test_types").split(",") if form_data.get("test_types") else None,
+            "automation_frameworks": form_data.get("automation_frameworks").split(",") if form_data.get("automation_frameworks") else None,
+            "ci_cd_integration": form_data.get("ci_cd_integration").split(",") if form_data.get("ci_cd_integration") else form_data.get("ci_cd_integration")
+            }
+        testing_data = testing_types_data
+        # logging.info(f"---------------------*********** {technology_data}")
+
+        if not any(value is not None for value in testing_types_data.values()):
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                                detail="At least one field must be provided in technology")
+        # if testing_types_data.get("language") is None and existing_project["language"] is None:
+        #     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Language must be alphanumeric")
+        for field_name in ["test_types", "automation_frameworks", "ci_cd_integration"]:
+            field_value = testing_types_data.get(field_name)
+            if field_value is not None and not all(isinstance(item, str) for item in field_value):
+                raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                                    detail=f"All items in {field_name} must be strings")
+
+        result = await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"testing_details": testing_data}}
+        )
+
+        # update time of modification
+        await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"updated_at": datetime.utcnow()}}
+        )
+        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        if updated_project:
+            if result.modified_count == 0:
+                raise HTTPException(status_code=status.HTTP_304_NOT_MODIFIED,
+                                    detail="TestingDetails has no new fields")
+            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+        else:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                                detail="Failed to retrieve updated project")
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# update projects
+
+# get project by role name
+
+# update project images
+@project.put("/{project_id}/add/images", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
+async def update_project_images(
+    project_id: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+    project_data: Annotated[ProjectImagesFormData, Form()]
+
+):
+    try:
+        if not ObjectId.is_valid(project_id):
+            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+
+        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        # logger.info(existing_project)
+        if not existing_project:
+            raise HTTPException(status_code=404, detail="Project not found.")
+
+        # Handle image uploads (single or multiple)
+        images = []
+
+        if project_data.images:
+            # Check if it's a single file upload
+            if not isinstance(project_data.images, list):
+                project_data.images = [project_data.images]
+
+            # Loop through each uploaded image
+            for image in project_data.images:
+                # Validate image size and format (logic remains the same)
+                file_content = await image.read()
+                file_size = len(file_content)
+                if file_size > Config.MAX_IMAGE_SIZE:
+                    raise HTTPException(status_code=400, detail="Image size exceeds 5 MB limit.")
+
+                file_ext = os.path.splitext(image.filename)[1]
+                if file_ext not in Config.UPLOAD_EXTENSIONS:
+                    raise HTTPException(status_code=400,
+                                        detail=f"Unsupported image format. Allowed: {', '.join(Config.UPLOAD_EXTENSIONS)}.")
+
+                # Generate unique filename
+                image_filename = f"{ObjectId()}_{image.filename}"
+
+                # Create uploads directory (logic remains the same)
+                os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+
+                image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
+                with open(image_path, "wb") as buffer:
+                    shutil.copyfileobj(image.file, buffer)
+
+                images.append(image_filename)
+
+        await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"images": images}}
+        )
+
+        # update time of modification
+        await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"updated_at": datetime.utcnow()}}
+        )
+        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        if updated_project:
+            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+        else:
+            raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                                detail="Failed to retrieve updated project")
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# @project.put("/project/{post_id}", response_model=BlogPostInDB, status_code=status.HTTP_201_CREATED)
+# async def update_project(
 #     post_id: str,
 #     update_data: Annotated[UpdateBlogPost, Form()],
 #     post_model: Annotated[Post, Depends(get_post_model)],
@@ -165,7 +364,7 @@ async def create_project(
 #         raise HTTPException(status_code=500, detail=str(e))
 #
 #
-# @blog.delete("/post/{post_id}", status_code=status.HTTP_200_OK)
+# @project.delete("/post/{post_id}", status_code=status.HTTP_200_OK)
 # async def delete_post(
 #     post_id: str,
 #     post_model: Annotated[Post, Depends(get_post_model)]

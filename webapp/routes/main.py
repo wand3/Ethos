@@ -108,3 +108,13 @@ async def get_posts(
     posts = await project_model.get_all_projects()
     return posts
 
+
+# get project by id
+@main.get("/projects/{project_id}", status_code=status.HTTP_200_OK, response_model=ProjectInDB)
+async def get_posts(
+    project_id: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)]
+):
+    posts = await project_model.get_project_by_id(project_id)
+    return posts
+
