@@ -39,5 +39,14 @@ class ProjectImagesFormData(BaseModel):
     images: Optional[List[UploadFile]] = Field(..., description="List of URLs to project screenshots/images")
 
 
+# update product form
+class ProjectUpdateFormData(BaseModel):
+    title: str = Field(..., description="Project title")
+    description: str = Field(..., description="Detailed project description")
+    project_url: Optional[str] = Field(None, description="Link to the live project or demo")
+    github_url: Optional[str] = Field(None, description="Link to the GitHub repository")
+    roles: List[str] = Field(..., description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
+                                              'Developer", "Backend Developer", "Test Engineer", "Automation '
+                                              'Engineer", "DevOps Engineer"')
 
-# add product testing_details form
+
