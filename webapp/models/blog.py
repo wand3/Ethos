@@ -38,9 +38,11 @@ class Post:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=f"Invalid post_id: {post_id}")
 
         post = await self.db.find_one({"_id": object_id})
+        # logger.info(post)
         if post:
             # Convert ObjectId to string for compatibility with Pydantic
             post["_id"] = str(post["_id"])
+
             try:
                 return BlogPostInDB(**post)
             except ValidationError as e:

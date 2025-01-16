@@ -26,11 +26,9 @@ class ProjectFormData(BaseModel):
     description: str = Field(..., description="Detailed project description")
     project_url: Optional[str] = Field(None, description="Link to the live project or demo")
     github_url: Optional[str] = Field(None, description="Link to the GitHub repository")
-    # technologies: List[TechStack] = Field(..., description="List of technologies used")
     roles: List[str] = Field(..., description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
                                               'Developer", "Backend Developer", "Test Engineer", "Automation '
                                               'Engineer", "DevOps Engineer"')
-    # testing_details: Optional[TestingDetails] = Field(None, description="Details about testing and automation")
     images: Optional[List[UploadFile]] = Field(None, description="List of URLs to project screenshots/images")
 
 

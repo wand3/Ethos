@@ -69,7 +69,7 @@ async def get_search_posts_by_title(
 
 
 # get post by id
-@main.get("/{post_id}/posts/")
+@main.get("/{post_id}/posts/", status_code=status.HTTP_200_OK)
 async def get_posts_by_id(
     post_id: str, post_model: Annotated[Post, Depends(get_post_model)],
 ):
@@ -118,3 +118,21 @@ async def get_posts(
     posts = await project_model.get_project_by_id(project_id)
     return posts
 
+
+# get project by role or roles
+@main.get("/projects/roles/", response_model=List[ProjectInDB])
+async def get_projects_by_roles(
+    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+    roles: List[str] = Query(..., description="List of roles to search for"),  # Query is used for query parameters.
+        # ... makes the query parameter required
+):
+    try:
+        projects = await project_model.get_projects_by_roles(roles)
+        if projects:
+            logger.info(projects)
+            return projects
+        else:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No projects found with these roles")
+    except Exception as e:
+        print(f"Error searching projects by roles: {e}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to search projects by roles")

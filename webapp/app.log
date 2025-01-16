@@ -698,3 +698,259 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-15 10:41:16,388 - INFO - Application started -----------
 2025-01-15 10:41:16,435 - INFO - 3 changes detected
 2025-01-15 10:41:18,761 - INFO - update data ------- title='test project update' description='update Developed a full-featured test project' project_url='https://example.com/ecommerceupdate' github_url='https://github.com/yourusername/ecommerceupdate' roles=['full-stack, front, devops, update'] images=None
+2025-01-16 04:21:52,172 - INFO - Application started -----------
+2025-01-16 04:21:54,482 - INFO - Application started -----------
+2025-01-16 04:24:02,397 - INFO - 3 changes detected
+2025-01-16 04:24:02,979 - INFO - 1 change detected
+2025-01-16 04:24:05,261 - INFO - 3 changes detected
+2025-01-16 04:24:05,929 - INFO - Application started -----------
+2025-01-16 04:24:06,376 - INFO - []
+2025-01-16 04:24:54,529 - INFO - 3 changes detected
+2025-01-16 04:24:55,028 - INFO - 1 change detected
+2025-01-16 04:24:57,063 - INFO - 3 changes detected
+2025-01-16 04:24:57,667 - INFO - Application started -----------
+2025-01-16 04:24:57,877 - INFO - []
+2025-01-16 04:25:27,887 - INFO - 3 changes detected
+2025-01-16 04:25:28,414 - INFO - 1 change detected
+2025-01-16 04:25:29,924 - INFO - 3 changes detected
+2025-01-16 04:25:30,213 - INFO - Application started -----------
+2025-01-16 04:25:31,645 - INFO - []
+2025-01-16 04:25:33,937 - INFO - []
+2025-01-16 04:25:53,688 - INFO - 3 changes detected
+2025-01-16 04:25:54,186 - INFO - 1 change detected
+2025-01-16 04:25:56,112 - INFO - 3 changes detected
+2025-01-16 04:25:56,728 - INFO - Application started -----------
+2025-01-16 04:25:56,854 - INFO - []
+2025-01-16 04:26:15,695 - INFO - 3 changes detected
+2025-01-16 04:26:16,181 - INFO - 1 change detected
+2025-01-16 04:26:17,909 - INFO - 3 changes detected
+2025-01-16 04:26:18,086 - INFO - Application started -----------
+2025-01-16 04:26:18,652 - INFO - 0
+2025-01-16 04:29:16,101 - INFO - 3 changes detected
+2025-01-16 04:29:16,672 - INFO - 1 change detected
+2025-01-16 04:29:18,442 - INFO - 3 changes detected
+2025-01-16 04:29:19,084 - INFO - Application started -----------
+2025-01-16 04:29:21,399 - INFO - []
+2025-01-16 04:29:21,399 - INFO - inside if
+2025-01-16 04:29:23,456 - INFO - []
+2025-01-16 04:29:23,456 - INFO - inside if
+2025-01-16 04:30:15,041 - INFO - []
+2025-01-16 04:30:15,042 - INFO - inside if
+2025-01-16 04:30:36,504 - INFO - [ProjectInDB(title='test project update', description='update Developed a full-featured test project', project_url='https://example.com/ecommerceupdate', github_url='https://github.com/yourusername/ecommerceupdate', technologies=TechStack(language=['P', ' B', ' K'], frameworks=['React', ' Flask', ' FASTapi'], databases=['mongodb', ' sql'], tools=['Docker', ' AWS']), roles=['full-stack', 'front', 'devops', 'update'], testing_details=TestingDetails(test_types=['Unitest', ' Automation', ' Security'], automation_frameworks=['vy'], ci_cd_integration=['yes']), images=['678709cc9d4de95c66d187e5_Screenshot 2024-10-05 at 04.06.47.png', '678709cc9d4de95c66d187e6_Screenshot 2024-11-06 at 00.00.57.png'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 1, 15, 9, 41, 18, 770820))]
+2025-01-16 04:30:58,457 - INFO - [ProjectInDB(title='test project update', description='update Developed a full-featured test project', project_url='https://example.com/ecommerceupdate', github_url='https://github.com/yourusername/ecommerceupdate', technologies=TechStack(language=['P', ' B', ' K'], frameworks=['React', ' Flask', ' FASTapi'], databases=['mongodb', ' sql'], tools=['Docker', ' AWS']), roles=['full-stack', 'front', 'devops', 'update'], testing_details=TestingDetails(test_types=['Unitest', ' Automation', ' Security'], automation_frameworks=['vy'], ci_cd_integration=['yes']), images=['678709cc9d4de95c66d187e5_Screenshot 2024-10-05 at 04.06.47.png', '678709cc9d4de95c66d187e6_Screenshot 2024-11-06 at 00.00.57.png'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 1, 15, 9, 41, 18, 770820))]
+2025-01-16 04:31:11,744 - INFO - [ProjectInDB(title='test project update', description='update Developed a full-featured test project', project_url='https://example.com/ecommerceupdate', github_url='https://github.com/yourusername/ecommerceupdate', technologies=TechStack(language=['P', ' B', ' K'], frameworks=['React', ' Flask', ' FASTapi'], databases=['mongodb', ' sql'], tools=['Docker', ' AWS']), roles=['full-stack', 'front', 'devops', 'update'], testing_details=TestingDetails(test_types=['Unitest', ' Automation', ' Security'], automation_frameworks=['vy'], ci_cd_integration=['yes']), images=['678709cc9d4de95c66d187e5_Screenshot 2024-10-05 at 04.06.47.png', '678709cc9d4de95c66d187e6_Screenshot 2024-11-06 at 00.00.57.png'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 1, 15, 9, 41, 18, 770820))]
+2025-01-16 04:32:22,095 - INFO - 3 changes detected
+2025-01-16 04:32:22,631 - INFO - 1 change detected
+2025-01-16 04:32:24,875 - INFO - 3 changes detected
+2025-01-16 04:32:25,422 - INFO - Application started -----------
+2025-01-16 04:32:27,439 - INFO - []
+2025-01-16 04:33:07,952 - INFO - 3 changes detected
+2025-01-16 04:33:08,501 - INFO - 1 change detected
+2025-01-16 04:33:10,382 - INFO - 3 changes detected
+2025-01-16 04:33:11,002 - INFO - Application started -----------
+2025-01-16 04:33:11,081 - INFO - []
+2025-01-16 04:33:12,733 - INFO - []
+2025-01-16 04:34:33,160 - INFO - 3 changes detected
+2025-01-16 04:34:33,727 - INFO - 1 change detected
+2025-01-16 04:34:36,140 - INFO - 3 changes detected
+2025-01-16 04:34:36,838 - INFO - Application started -----------
+2025-01-16 04:34:36,919 - INFO - []
+2025-01-16 04:34:39,790 - INFO - []
+2025-01-16 04:35:46,329 - INFO - 3 changes detected
+2025-01-16 04:35:46,869 - INFO - 1 change detected
+2025-01-16 04:35:49,092 - INFO - 3 changes detected
+2025-01-16 04:35:49,716 - INFO - Application started -----------
+2025-01-16 04:37:27,216 - INFO - project content ----  user title='test project 2' description='Another Developed a full-featured test project 2' project_url='https://example.com/ecommerceq' github_url='https://github.com/yourusername/ecommerceq' roles=['full-stack, front, devops, roles'] images=[UploadFile(filename='flipper.jpeg', size=183236, headers=Headers({'content-disposition': 'form-data; name="images"; filename="flipper.jpeg"', 'content-type': 'image/jpeg'}))]
+2025-01-16 04:37:27,352 - INFO - 1 change detected
+2025-01-16 04:37:48,361 - INFO - project content ----  user title='test project 3' description='Another Developed a full-featured test project 3' project_url='https://example.com/ecommerceq' github_url='https://github.com/yourusername/ecommerceq' roles=['full-stack, front, devops, roles, chill'] images=[UploadFile(filename='flipper.jpeg', size=183236, headers=Headers({'content-disposition': 'form-data; name="images"; filename="flipper.jpeg"', 'content-type': 'image/jpeg'}))]
+2025-01-16 04:37:49,947 - INFO - 1 change detected
+2025-01-16 04:38:40,006 - INFO - [ProjectInDB(title='test project 3', description='Another Developed a full-featured test project 3', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=None, roles=['full-stack', 'front', 'devops', 'roles', 'chill'], testing_details=None, images=['67887f0cf91481f49e49f1d2_flipper.jpeg'], id=ObjectId('67887f0cf91481f49e49f1d3'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 361000), updated_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 362000))]
+2025-01-16 04:38:52,450 - INFO - [ProjectInDB(title='test project 2', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=None, roles=['full-stack', 'front', 'devops', 'roles'], testing_details=None, images=['67887ef7f91481f49e49f1d0_flipper.jpeg'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000)), ProjectInDB(title='test project 3', description='Another Developed a full-featured test project 3', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=None, roles=['full-stack', 'front', 'devops', 'roles', 'chill'], testing_details=None, images=['67887f0cf91481f49e49f1d2_flipper.jpeg'], id=ObjectId('67887f0cf91481f49e49f1d3'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 361000), updated_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 362000))]
+2025-01-16 04:39:09,485 - INFO - [ProjectInDB(title='test project 3', description='Another Developed a full-featured test project 3', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=None, roles=['full-stack', 'front', 'devops', 'roles', 'chill'], testing_details=None, images=['67887f0cf91481f49e49f1d2_flipper.jpeg'], id=ObjectId('67887f0cf91481f49e49f1d3'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 361000), updated_at=datetime.datetime(2025, 1, 16, 3, 37, 48, 362000))]
+2025-01-16 04:43:55,227 - INFO - 3 changes detected
+2025-01-16 04:43:55,751 - INFO - 1 change detected
+2025-01-16 04:43:58,369 - INFO - Application started -----------
+2025-01-16 04:43:58,469 - INFO - 3 changes detected
+2025-01-16 04:44:48,981 - INFO - 3 changes detected
+2025-01-16 04:44:49,531 - INFO - 1 change detected
+2025-01-16 04:44:51,754 - INFO - Application started -----------
+2025-01-16 04:44:51,847 - INFO - 3 changes detected
+2025-01-16 04:45:19,865 - INFO - 3 changes detected
+2025-01-16 04:45:20,412 - INFO - 1 change detected
+2025-01-16 04:45:23,219 - INFO - Application started -----------
+2025-01-16 04:45:23,268 - INFO - 3 changes detected
+2025-01-16 04:45:50,359 - INFO - 3 changes detected
+2025-01-16 04:45:50,916 - INFO - 1 change detected
+2025-01-16 04:45:53,396 - INFO - Application started -----------
+2025-01-16 04:45:53,449 - INFO - 3 changes detected
+2025-01-16 04:49:15,621 - INFO - 12 changes detected
+2025-01-16 04:49:16,183 - INFO - 1 change detected
+2025-01-16 04:49:18,971 - INFO - 6 changes detected
+2025-01-16 04:49:19,101 - INFO - Application started -----------
+2025-01-16 04:49:19,347 - INFO - 6 changes detected
+2025-01-16 05:04:55,761 - INFO - 1 change detected
+2025-01-16 05:04:56,368 - INFO - 1 change detected
+2025-01-16 05:04:59,399 - INFO - Application started -----------
+2025-01-16 05:05:21,133 - INFO - 1 change detected
+2025-01-16 05:05:21,700 - INFO - 1 change detected
+2025-01-16 05:05:24,540 - INFO - Application started -----------
+2025-01-16 05:05:46,080 - INFO - 1 change detected
+2025-01-16 05:05:46,597 - INFO - 1 change detected
+2025-01-16 05:05:49,739 - INFO - Application started -----------
+2025-01-16 05:09:25,110 - INFO - 3 changes detected
+2025-01-16 05:09:25,675 - INFO - 1 change detected
+2025-01-16 05:09:28,671 - INFO - Application started -----------
+2025-01-16 07:36:30,628 - INFO - Application started -----------
+2025-01-16 07:36:32,283 - INFO - Application started -----------
+2025-01-16 07:38:30,173 - INFO - 3 changes detected
+2025-01-16 07:38:30,953 - INFO - 2 changes detected
+2025-01-16 07:40:25,072 - INFO - 3 changes detected
+2025-01-16 07:40:25,803 - INFO - 2 changes detected
+2025-01-16 07:51:39,880 - INFO - 3 changes detected
+2025-01-16 07:51:40,469 - INFO - 1 change detected
+2025-01-16 07:51:41,980 - INFO - 3 changes detected
+2025-01-16 07:51:42,454 - INFO - Application started -----------
+2025-01-16 07:53:19,401 - INFO - 3 changes detected
+2025-01-16 07:53:19,958 - INFO - 1 change detected
+2025-01-16 07:53:22,873 - INFO - 3 changes detected
+2025-01-16 07:53:23,046 - INFO - Application started -----------
+2025-01-16 07:54:03,184 - INFO - 3 changes detected
+2025-01-16 07:54:03,719 - INFO - 1 change detected
+2025-01-16 07:54:05,719 - INFO - 3 changes detected
+2025-01-16 07:54:05,784 - INFO - Application started -----------
+2025-01-16 07:55:39,809 - INFO - None
+2025-01-16 07:55:58,282 - INFO - {'_id': ObjectId('6788a9669ac2756c9eb3dbdb'), 'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], 'created_at': datetime.datetime(2025, 1, 16, 6, 38, 30, 222000), 'updated_at': datetime.datetime(2025, 1, 16, 6, 38, 30, 222000)}
+2025-01-16 07:56:34,057 - INFO - {'_id': ObjectId('6788a9d944dbe2e5e45f4946'), 'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], 'created_at': datetime.datetime(2025, 1, 16, 6, 40, 25, 167000), 'updated_at': datetime.datetime(2025, 1, 16, 6, 40, 25, 167000)}
+2025-01-16 07:56:54,987 - INFO - 3 changes detected
+2025-01-16 07:56:55,547 - INFO - 1 change detected
+2025-01-16 07:56:58,898 - INFO - 3 changes detected
+2025-01-16 07:56:59,135 - INFO - Application started -----------
+2025-01-16 08:10:55,945 - INFO - 3 changes detected
+2025-01-16 08:10:56,481 - INFO - 1 change detected
+2025-01-16 08:10:58,469 - INFO - Application started -----------
+2025-01-16 08:10:58,484 - INFO - 5 changes detected
+2025-01-16 08:11:42,110 - INFO - 3 changes detected
+2025-01-16 08:11:42,837 - INFO - 2 changes detected
+2025-01-16 08:12:06,119 - INFO - 2 changes detected
+2025-01-16 08:12:26,764 - INFO - 2 changes detected
+2025-01-16 08:24:11,853 - INFO - 3 changes detected
+2025-01-16 08:24:40,020 - INFO - 2 changes detected
+2025-01-16 08:25:29,014 - INFO - 2 changes detected
+2025-01-16 08:29:59,160 - INFO - 2 changes detected
+2025-01-16 08:31:48,529 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 08:32:18,649 - INFO - User model ---- get current user payload error
+2025-01-16 08:32:25,583 - INFO - 1 change detected
+2025-01-16 08:33:57,562 - INFO - 2 changes detected
+2025-01-16 08:41:32,968 - INFO - 3 changes detected
+2025-01-16 08:41:42,233 - INFO - 5 changes detected
+2025-01-16 17:33:57,266 - INFO - Application started -----------
+2025-01-16 17:33:59,527 - INFO - Application started -----------
+2025-01-16 17:35:03,662 - INFO - 2 changes detected
+2025-01-16 17:35:43,748 - INFO - 2 changes detected
+2025-01-16 17:37:18,556 - INFO - 2 changes detected
+2025-01-16 17:38:04,373 - INFO - 2 changes detected
+2025-01-16 17:38:30,084 - INFO - 2 changes detected
+2025-01-16 17:39:36,838 - INFO - 2 changes detected
+2025-01-16 17:39:59,979 - INFO - 2 changes detected
+2025-01-16 17:41:14,190 - INFO - 2 changes detected
+2025-01-16 17:41:43,357 - INFO - 2 changes detected
+2025-01-16 17:44:54,907 - INFO - 2 changes detected
+2025-01-16 17:48:44,159 - INFO - 2 changes detected
+2025-01-16 17:49:23,868 - INFO - 2 changes detected
+2025-01-16 18:02:25,463 - INFO - 3 changes detected
+2025-01-16 18:09:48,007 - INFO - 3 changes detected
+2025-01-16 18:10:25,566 - INFO - 3 changes detected
+2025-01-16 18:13:06,637 - INFO - 3 changes detected
+2025-01-16 18:15:02,295 - INFO - 3 changes detected
+2025-01-16 18:18:59,138 - INFO - 3 changes detected
+2025-01-16 18:21:31,565 - INFO - 3 changes detected
+2025-01-16 18:24:02,474 - INFO - 3 changes detected
+2025-01-16 18:25:07,050 - INFO - 3 changes detected
+2025-01-16 19:33:53,646 - INFO - 3 changes detected
+2025-01-16 19:33:54,477 - INFO - 1 change detected
+2025-01-16 19:33:56,671 - INFO - Application started -----------
+2025-01-16 19:35:35,065 - INFO - 3 changes detected
+2025-01-16 19:35:35,602 - INFO - 1 change detected
+2025-01-16 19:35:37,784 - INFO - Application started -----------
+2025-01-16 20:04:27,665 - INFO - 3 changes detected
+2025-01-16 20:04:28,232 - INFO - 1 change detected
+2025-01-16 20:04:30,758 - INFO - Application started -----------
+2025-01-16 20:15:18,440 - INFO - 3 changes detected
+2025-01-16 20:15:19,011 - INFO - 1 change detected
+2025-01-16 20:15:21,169 - INFO - Application started -----------
+2025-01-16 20:25:51,529 - INFO - 3 changes detected
+2025-01-16 20:25:52,152 - INFO - 1 change detected
+2025-01-16 20:25:54,679 - INFO - Application started -----------
+2025-01-16 20:25:54,727 - INFO - 3 changes detected
+2025-01-16 20:26:45,462 - INFO - 3 changes detected
+2025-01-16 20:26:46,010 - INFO - 1 change detected
+2025-01-16 20:26:47,996 - INFO - Application started -----------
+2025-01-16 20:26:48,068 - INFO - 3 changes detected
+2025-01-16 20:28:34,316 - INFO - 3 changes detected
+2025-01-16 20:28:34,832 - INFO - 1 change detected
+2025-01-16 20:28:36,842 - INFO - Application started -----------
+2025-01-16 20:28:36,941 - INFO - 5 changes detected
+2025-01-16 20:29:31,368 - INFO - 3 changes detected
+2025-01-16 20:29:31,886 - INFO - 1 change detected
+2025-01-16 20:29:33,812 - INFO - Application started -----------
+2025-01-16 20:29:33,874 - INFO - 3 changes detected
+2025-01-16 20:30:44,007 - INFO - 3 changes detected
+2025-01-16 20:30:44,534 - INFO - 1 change detected
+2025-01-16 20:30:46,671 - INFO - Application started -----------
+2025-01-16 20:30:46,733 - INFO - 3 changes detected
+2025-01-16 20:31:36,686 - INFO - 3 changes detected
+2025-01-16 20:31:37,220 - INFO - 1 change detected
+2025-01-16 20:31:38,936 - INFO - 3 changes detected
+2025-01-16 20:31:39,046 - INFO - Application started -----------
+2025-01-16 20:33:53,304 - INFO - 3 changes detected
+2025-01-16 20:33:53,865 - INFO - 1 change detected
+2025-01-16 20:33:55,973 - INFO - 3 changes detected
+2025-01-16 20:33:56,071 - INFO - Application started -----------
+2025-01-16 20:47:51,505 - INFO - 1 change detected
+2025-01-16 20:50:12,446 - INFO - 1 change detected
+2025-01-16 20:51:17,422 - INFO - 3 changes detected
+2025-01-16 20:51:18,034 - INFO - 1 change detected
+2025-01-16 20:51:19,547 - INFO - Application started -----------
+2025-01-16 20:51:19,554 - INFO - 3 changes detected
+2025-01-16 20:51:20,337 - INFO - 1 change detected
+2025-01-16 20:52:48,695 - INFO - 3 changes detected
+2025-01-16 20:52:49,234 - INFO - 1 change detected
+2025-01-16 20:52:50,868 - INFO - Application started -----------
+2025-01-16 20:52:50,918 - INFO - 3 changes detected
+2025-01-16 20:52:51,716 - INFO - 1 change detected
+2025-01-16 20:54:52,667 - INFO - 3 changes detected
+2025-01-16 20:54:53,222 - INFO - 1 change detected
+2025-01-16 20:54:55,175 - INFO - Application started -----------
+2025-01-16 20:54:55,256 - INFO - 3 changes detected
+2025-01-16 20:54:56,038 - INFO - 1 change detected
+2025-01-16 20:56:18,648 - INFO - 3 changes detected
+2025-01-16 20:56:19,189 - INFO - 1 change detected
+2025-01-16 20:56:21,172 - INFO - Application started -----------
+2025-01-16 20:56:21,248 - INFO - 3 changes detected
+2025-01-16 20:56:22,324 - INFO - 1 change detected
+2025-01-16 20:59:07,051 - INFO - 3 changes detected
+2025-01-16 20:59:07,618 - INFO - 1 change detected
+2025-01-16 20:59:09,789 - INFO - Application started -----------
+2025-01-16 20:59:09,881 - INFO - 5 changes detected
+2025-01-16 20:59:10,731 - INFO - 1 change detected
+2025-01-16 21:00:43,644 - INFO - 2 changes detected
+2025-01-16 21:11:04,133 - INFO - 3 changes detected
+2025-01-16 21:11:04,715 - INFO - 1 change detected
+2025-01-16 21:11:07,720 - INFO - Application started -----------
+2025-01-16 21:44:55,566 - INFO - 3 changes detected
+2025-01-16 21:44:56,164 - INFO - 1 change detected
+2025-01-16 21:44:58,607 - INFO - Application started -----------
+2025-01-16 21:50:35,442 - INFO - 3 changes detected
+2025-01-16 21:50:36,012 - INFO - 1 change detected
+2025-01-16 21:50:38,349 - INFO - Application started -----------
+2025-01-16 21:52:12,765 - INFO - 3 changes detected
+2025-01-16 21:52:13,337 - INFO - 1 change detected
+2025-01-16 21:52:15,262 - INFO - Application started -----------
+2025-01-16 21:52:15,330 - INFO - 3 changes detected
+2025-01-16 22:09:29,297 - INFO - 1 change detected
+2025-01-16 22:09:59,459 - INFO - 18 changes detected

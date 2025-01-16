@@ -47,14 +47,14 @@ class ProjectModel:
             raise HTTPException(status_code=status.HTTP_204_NO_CONTENT, detail=f"Project not found: {post_id}")
         return None
 
-    # get project by tag and tags
-    # async def get_posts_by_tags(self, tags: List[str]) -> List[BlogPostInDB]:
-    #     query = {"tags": {"$in": tags}}
-    #     posts_cursor = self.db.find(query)
-    #     posts = []
-    #     async for post in posts_cursor:
-    #         posts.append(BlogPostInDB(**post))
-    #     return posts
+    # get project by role and roles
+    async def get_projects_by_roles(self, roles: List[str]) -> List[ProjectInDB]:
+        query = {"roles": {"$in": roles}}
+        projects_cursor = self.db.find(query)
+        projects = []
+        async for project in projects_cursor:
+            projects.append(ProjectInDB(**project))
+        return projects
 
     # delete project
     async def delete_project(self, project_id: str) -> bool:
@@ -62,11 +62,6 @@ class ProjectModel:
         return result.deleted_count == 1
 
 
-# def get_project_model() -> Project:
-#     from webapp.database.db_engine import db
-#     """Dependency to inject a `UserModel` instance."""
-#
-#     return Project(db)
 def get_project_model() -> ProjectModel:
     from webapp.database.db_engine import db
 

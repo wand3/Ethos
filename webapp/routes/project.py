@@ -24,7 +24,7 @@ async def create_project(
     project_data: Annotated[ProjectFormData, Form()],
     project_model: Annotated[ProjectModel, Depends(get_project_model)],
 ):
-    logger.info(f'project content ----  user {project_data}')
+    # logger.info(f'project content ----  user {project_data}')
 
     try:
         # Handle image uploads (single or multiple)
@@ -143,7 +143,7 @@ async def update_project_technologies(
         # update time of modification
         await project_model.db.update_one(
             {"_id": ObjectId(project_id)},
-            {"$set": {"updated_at": datetime}}
+            {"$set": {"updated_at": datetime.utcnow()}}
         )
         updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
         if updated_project:
@@ -218,8 +218,6 @@ async def update_project_testing(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
-# get project by role name
 
 # update project images
 @project.put("/{project_id}/add/images", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
@@ -318,6 +316,7 @@ async def update_project(
             updated_data["project_url"] = update_data.project_url
         if update_data.github_url is not None:
             updated_data["github_url"] = update_data.github_url
+        logger.info(update_data.roles)
 
         if update_data.roles is not None:
             # Handle tags (accepting both string and list input)
@@ -329,6 +328,8 @@ async def update_project(
 
                 raise HTTPException(status_code=400, detail="Invalid format for project. Must be a string or list.")
             updated_data["roles"] = roles_list
+            logger.info(updated_data["roles"])
+
         updated_data["updated_at"] = str(datetime.utcnow())
 
         if updated_data:  # only update if there is data to update
@@ -340,15 +341,16 @@ async def update_project(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-#
-# @project.delete("/post/{post_id}", status_code=status.HTTP_200_OK)
-# async def delete_post(
-#     post_id: str,
-#     post_model: Annotated[Post, Depends(get_post_model)]
-# ):
-#     post = await post_model.delete_post(post_id)
-#     # if not existing_post:
-#     #     raise HTTPException(status_code=404, detail="Post not found")
-#     #
-#     # posts_collection.delete_one({"_id": ObjectId(post_id)})
-#     return {"message": f"Post deleted successfully {post}"}
+
+# delete project
+@project.delete("/{project_id}/project/", status_code=status.HTTP_200_OK)
+async def delete_project(
+    project_id: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)]
+):
+    response = await project_model.delete_project(project_id)
+    if not response:
+        raise HTTPException(status_code=404, detail="Project not found")
+
+    return {"message": f"Project deleted successfully {response}"}
+

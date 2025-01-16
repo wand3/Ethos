@@ -1,3 +1,5 @@
+import logging
+
 from fastapi.testclient import TestClient
 from pymongo import MongoClient
 import pytest
@@ -31,4 +33,17 @@ def client():
     """Provide a test client for FastAPI."""
     with TestClient(app) as c:
         yield c
+
+
+def get_recrent_model(client, collection_name: str):
+    collection = client[f"{collection_name}"]
+    logging.info(f"projects collectioncollectioncollection  {collection}")
+
+    post_cursor = collection.find()
+    logging.info(f"projects collection  {post_cursor}")
+    all_p = list(post_cursor)
+    from tests.test_blog import convert_objectid_to_str
+    post_cursor = convert_objectid_to_str(posts=all_p)  # convert the object ids to string
+    expected_posts = post_cursor
+    return expected_posts
 

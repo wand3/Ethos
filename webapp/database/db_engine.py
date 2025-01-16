@@ -15,6 +15,7 @@ DATABASE_NAME = "ethos"
 # Create a MongoDB client
 client = AsyncMongoClient(MONGO_CONNECTION_STRING)
 db = client["ethos"]
+# db = client["test"]
 
 
 @asynccontextmanager

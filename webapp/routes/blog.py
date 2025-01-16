@@ -159,9 +159,10 @@ async def delete_post(
     post_id: str,
     post_model: Annotated[Post, Depends(get_post_model)]
 ):
-    post = await post_model.delete_post(post_id)
-    # if not existing_post:
-    #     raise HTTPException(status_code=404, detail="Post not found")
-    #
-    # posts_collection.delete_one({"_id": ObjectId(post_id)})
-    return {"message": f"Post deleted successfully {post}"}
+    existing_post = await post_model.delete_post(post_id)
+    if not existing_post:
+        raise HTTPException(status_code=404, detail="Post not found")
+
+    return {"message": f"Post deleted successfully {existing_post}"}
+
+
