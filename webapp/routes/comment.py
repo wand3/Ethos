@@ -11,31 +11,31 @@ from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, status, Form, Body
 from webapp.logger import logger
 # from ..schemas.forms import UpdateBlogPost
-from webapp.schemas.project import Project, TechStack
-from webapp.models.project import ProjectModel, get_project_model, ProjectInDB
+from webapp.schemas.comment import CommentBase
+from webapp.models.comment import CommentModel, get_comment_model, CommentInDB
 from webapp.models.user import get_current_active_user
-from webapp.schemas.forms import ProjectFormData, ProjectImagesFormData, ProjectUpdateFormData
+# from webapp.schemas.forms import CommentFormData, CommentImagesFormData, CommentUpdateFormData
 
-project = APIRouter(prefix="/project", tags=["Project"])  # , dependencies=[Depends(get_current_active_user)]
+comment = APIRouter(prefix="/comment", tags=["Comments"])  # , dependencies=[Depends(get_current_active_user)]
 
 
-@project.post("/add", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
-async def create_project(
-    project_data: Annotated[ProjectFormData, Form()],
-    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+@comment.post("/add", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
+async def create_comment(
+    comment_data: Annotated[CommentFormData, Form()],
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)],
 ):
-    # logger.info(f'project content ----  user {project_data}')
+    # logger.info(f'comment content ----  user {comment_data}')
 
     try:
         # Handle image uploads (single or multiple)
         images = []
-        if project_data.images:
+        if comment_data.images:
             # Check if it's a single file upload
-            if not isinstance(project_data.images, list):
-                project_data.images = [project_data.images]
+            if not isinstance(comment_data.images, list):
+                comment_data.images = [comment_data.images]
 
             # Loop through each uploaded image
-            for image in project_data.images:
+            for image in comment_data.images:
                 # Validate image size and format (logic remains the same)
                 file_content = await image.read()
                 file_size = len(file_content)
@@ -60,59 +60,59 @@ async def create_project(
                 images.append(image_filename)
 
         # Handle roles input (either a string or a list)
-        if isinstance(project_data.roles, str):
-            roles_list = [role.strip() for role in project_data.roles.split(",")]
-            # logger.info(f'Project role---- retrieved role list  string {tags_list}')
+        if isinstance(comment_data.roles, str):
+            roles_list = [role.strip() for role in comment_data.roles.split(",")]
+            # logger.info(f'Comment role---- retrieved role list  string {tags_list}')
 
-        elif isinstance(project_data.roles, list):
-            roles_list = [role.strip() for role in project_data.roles[0].split(",")]
-            # logger.info(f'Project role---- retrieved role list {tags_list}')
+        elif isinstance(comment_data.roles, list):
+            roles_list = [role.strip() for role in comment_data.roles[0].split(",")]
+            # logger.info(f'Comment role---- retrieved role list {tags_list}')
 
         else:
             raise HTTPException(
                 status_code=400, detail="Invalid format for roles. Must be a string or list."
             )
 
-        post = Project(title=project_data.title,
-                       description=project_data.description,
-                       project_url=project_data.project_url,
-                       github_url=project_data.github_url,
+        post = Comment(title=comment_data.title,
+                       description=comment_data.description,
+                       comment_url=comment_data.comment_url,
+                       github_url=comment_data.github_url,
                        images=images,
                        roles=roles_list)
-        project_dict = post.model_dump(by_alias=True)
-        project_dict["created_at"] = datetime.utcnow()
-        project_dict["updated_at"] = datetime.utcnow()
+        comment_dict = post.model_dump(by_alias=True)
+        comment_dict["created_at"] = datetime.utcnow()
+        comment_dict["updated_at"] = datetime.utcnow()
 
-        inserted_post = await project_model.db.insert_one(project_dict)
-        project_dict["_id"] = inserted_post.inserted_id
+        inserted_post = await comment_model.db.insert_one(comment_dict)
+        comment_dict["_id"] = inserted_post.inserted_id
 
-        retrieved_project = await project_model.db.find_one({"_id": ObjectId(project_dict["_id"])})
+        retrieved_comment = await comment_model.db.find_one({"_id": ObjectId(comment_dict["_id"])})
         # logger.info(f'Post ---- retrieved post {retrieved_post}')
 
-        if retrieved_project:
+        if retrieved_comment:
 
-            return ProjectInDB(**retrieved_project)
+            return CommentInDB(**retrieved_comment)
         else:
-            raise HTTPException(status_code=404, detail="Project not found")
+            raise HTTPException(status_code=404, detail="Comment not found")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# update project technologies
-@project.put("/{project_id}/add/technologies", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
-async def update_project_technologies(
-    project_id: str,
-    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+# update comment technologies
+@comment.put("/{comment_id}/add/technologies", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
+async def update_comment_technologies(
+    comment_id: str,
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)],
     request: Request,  # Add request to access form data
 ):
     try:
-        if not ObjectId.is_valid(project_id):
-            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+        if not ObjectId.is_valid(comment_id):
+            raise HTTPException(status_code=400, detail="Invalid comment ID format.")
 
-        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        # logger.info(existing_project)
-        if not existing_project:
-            raise HTTPException(status_code=404, detail="Project not found.")
+        existing_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        # logger.info(existing_comment)
+        if not existing_comment:
+            raise HTTPException(status_code=404, detail="Comment not found.")
 
         form_data = await request.form()
         technology_data = {"language": form_data.get("language").split(",") if form_data.get("language") else None,
@@ -127,7 +127,7 @@ async def update_project_technologies(
         if not any(value is not None for value in technology_data.values()):
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                                 detail="At least one field must be provided in technology")
-        if technology_data.get("language") is None and existing_project["language"] is None:
+        if technology_data.get("language") is None and existing_comment["language"] is None:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Language must be alphanumeric")
         for field_name in ["frameworks", "databases", "tools", "language"]:
             field_value = technology_data.get(field_name)
@@ -135,45 +135,45 @@ async def update_project_technologies(
                 raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                                     detail=f"All items in {field_name} must be strings")
 
-        result = await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        result = await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"technologies": technologies_data}}
         )
 
         # update time of modification
-        await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"updated_at": datetime.utcnow()}}
         )
-        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        if updated_project:
+        updated_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        if updated_comment:
             if result.modified_count == 0:
                 raise HTTPException(status_code=status.HTTP_304_NOT_MODIFIED,
                                     detail="Technologies has no new fields")
-            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+            return CommentInDB(**updated_comment)  # Use the Comment model to parse the result
         else:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                                detail="Failed to retrieve updated project")
+                                detail="Failed to retrieve updated comment")
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# update project testing_details
-@project.put("/{project_id}/add/testing", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
-async def update_project_testing(
-    project_id: str,
-    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+# update comment testing_details
+@comment.put("/{comment_id}/add/testing", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
+async def update_comment_testing(
+    comment_id: str,
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)],
     request: Request,  # Add request to access form data
 ):
     try:
-        if not ObjectId.is_valid(project_id):
-            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+        if not ObjectId.is_valid(comment_id):
+            raise HTTPException(status_code=400, detail="Invalid comment ID format.")
 
-        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        # logger.info(existing_project)
-        if not existing_project:
-            raise HTTPException(status_code=404, detail="Project not found.")
+        existing_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        # logger.info(existing_comment)
+        if not existing_comment:
+            raise HTTPException(status_code=404, detail="Comment not found.")
 
         form_data = await request.form()
         testing_types_data = {
@@ -187,7 +187,7 @@ async def update_project_testing(
         if not any(value is not None for value in testing_types_data.values()):
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                                 detail="At least one field must be provided in technology")
-        # if testing_types_data.get("language") is None and existing_project["language"] is None:
+        # if testing_types_data.get("language") is None and existing_comment["language"] is None:
         #     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Language must be alphanumeric")
         for field_name in ["test_types", "automation_frameworks", "ci_cd_integration"]:
             field_value = testing_types_data.get(field_name)
@@ -195,57 +195,57 @@ async def update_project_testing(
                 raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                                     detail=f"All items in {field_name} must be strings")
 
-        result = await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        result = await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"testing_details": testing_data}}
         )
 
         # update time of modification
-        await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"updated_at": datetime.utcnow()}}
         )
-        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        if updated_project:
+        updated_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        if updated_comment:
             if result.modified_count == 0:
                 raise HTTPException(status_code=status.HTTP_304_NOT_MODIFIED,
                                     detail="TestingDetails has no new fields")
-            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+            return CommentInDB(**updated_comment)  # Use the Comment model to parse the result
         else:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                                detail="Failed to retrieve updated project")
+                                detail="Failed to retrieve updated comment")
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# update project images
-@project.put("/{project_id}/add/images", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
-async def update_project_images(
-    project_id: str,
-    project_model: Annotated[ProjectModel, Depends(get_project_model)],
-    project_data: Annotated[ProjectImagesFormData, Form()]
+# update comment images
+@comment.put("/{comment_id}/add/images", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
+async def update_comment_images(
+    comment_id: str,
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)],
+    comment_data: Annotated[CommentImagesFormData, Form()]
 
 ):
     try:
-        if not ObjectId.is_valid(project_id):
-            raise HTTPException(status_code=400, detail="Invalid project ID format.")
+        if not ObjectId.is_valid(comment_id):
+            raise HTTPException(status_code=400, detail="Invalid comment ID format.")
 
-        existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        # logger.info(existing_project)
-        if not existing_project:
-            raise HTTPException(status_code=404, detail="Project not found.")
+        existing_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        # logger.info(existing_comment)
+        if not existing_comment:
+            raise HTTPException(status_code=404, detail="Comment not found.")
 
         # Handle image uploads (single or multiple)
         images = []
 
-        if project_data.images:
+        if comment_data.images:
             # Check if it's a single file upload
-            if not isinstance(project_data.images, list):
-                project_data.images = [project_data.images]
+            if not isinstance(comment_data.images, list):
+                comment_data.images = [comment_data.images]
 
             # Loop through each uploaded image
-            for image in project_data.images:
+            for image in comment_data.images:
                 # Validate image size and format (logic remains the same)
                 file_content = await image.read()
                 file_size = len(file_content)
@@ -269,40 +269,40 @@ async def update_project_images(
 
                 images.append(image_filename)
 
-        await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"images": images}}
         )
 
         # update time of modification
-        await project_model.db.update_one(
-            {"_id": ObjectId(project_id)},
+        await comment_model.db.update_one(
+            {"_id": ObjectId(comment_id)},
             {"$set": {"updated_at": datetime.utcnow()}}
         )
-        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        if updated_project:
-            return ProjectInDB(**updated_project)  # Use the Project model to parse the result
+        updated_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        if updated_comment:
+            return CommentInDB(**updated_comment)  # Use the Comment model to parse the result
         else:
             raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                                detail="Failed to retrieve updated project")
+                                detail="Failed to retrieve updated comment")
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-#  update projects
-@project.put("/{project_id}/project/", status_code=status.HTTP_201_CREATED)
-async def update_project(
-    project_id: str,
-    update_data: Annotated[ProjectFormData, Form()],
-    project_model: Annotated[ProjectModel, Depends(get_project_model)],
+#  update comments
+@comment.put("/{comment_id}/comment/", status_code=status.HTTP_201_CREATED)
+async def update_comment(
+    comment_id: str,
+    update_data: Annotated[CommentFormData, Form()],
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)],
 ):
     logger.info(f"update data ------- {update_data}")
     try:
-        if not ObjectId.is_valid(project_id):
+        if not ObjectId.is_valid(comment_id):
             raise HTTPException(status_code=400, detail="Invalid post ID format.")
 
-        existing_post = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        existing_post = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
         if not existing_post:
             raise HTTPException(status_code=404, detail="Post not found.")
 
@@ -312,8 +312,8 @@ async def update_project(
             updated_data["title"] = update_data.title
         if update_data.description is not None:
             updated_data["description"] = update_data.description
-        if update_data.project_url is not None:
-            updated_data["project_url"] = update_data.project_url
+        if update_data.comment_url is not None:
+            updated_data["comment_url"] = update_data.comment_url
         if update_data.github_url is not None:
             updated_data["github_url"] = update_data.github_url
         logger.info(update_data.roles)
@@ -326,31 +326,31 @@ async def update_project(
                 roles_list = [role.strip() for role in update_data.roles[0].split(",")]
             else:
 
-                raise HTTPException(status_code=400, detail="Invalid format for project. Must be a string or list.")
+                raise HTTPException(status_code=400, detail="Invalid format for comment. Must be a string or list.")
             updated_data["roles"] = roles_list
             logger.info(updated_data["roles"])
 
         updated_data["updated_at"] = str(datetime.utcnow())
 
         if updated_data:  # only update if there is data to update
-            await project_model.db.update_one({"_id": ObjectId(project_id)}, {"$set": updated_data})
+            await comment_model.db.update_one({"_id": ObjectId(comment_id)}, {"$set": updated_data})
 
-        updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-        return ProjectInDB(**updated_project)
+        updated_comment = await comment_model.db.find_one({"_id": ObjectId(comment_id)})
+        return CommentInDB(**updated_comment)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 
-# delete project
-@project.delete("/{project_id}/project/", status_code=status.HTTP_200_OK)
-async def delete_project(
-    project_id: str,
-    project_model: Annotated[ProjectModel, Depends(get_project_model)]
+# delete comment
+@comment.delete("/{comment_id}/comment/", status_code=status.HTTP_200_OK)
+async def delete_comment(
+    comment_id: str,
+    comment_model: Annotated[CommentModel, Depends(get_comment_model)]
 ):
-    response = await project_model.delete_project(project_id)
+    response = await comment_model.delete_comment(comment_id)
     if not response:
-        raise HTTPException(status_code=404, detail="Project not found")
+        raise HTTPException(status_code=404, detail="Comment not found")
 
-    return {"message": f"Project deleted successfully {response}"}
+    return {"message": f"Comment deleted successfully {response}"}
 

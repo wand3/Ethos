@@ -7,7 +7,6 @@ from pydantic import ValidationError
 from webapp.logger import logger
 from pymongo import AsyncMongoClient
 from ..schemas.project import Project, ProjectInDB
-from ..schemas.forms import UpdateBlogPost
 
 
 class ProjectModel:
