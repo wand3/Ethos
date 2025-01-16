@@ -290,10 +290,6 @@ def test_update_project_images(client, db_client):
                     "image/png",
                 )  # Correct way to send files with requests
             }
-            # Prepare the update data
-            # update_dict = {
-            #     files: files,
-            # }
 
             # Send PUT request
             response = client.put(
@@ -301,14 +297,16 @@ def test_update_project_images(client, db_client):
                 files=files,
                 headers={"Authorization": f"Bearer {access_token}"}
             )
-            logger.info(response)
+            logger.info(response.json())
 
             assert response.status_code == 201
             response_data = response.json()
 
+            # update = collection_project.find(project_id)
+            logger.error(files["images"][0])
             # Validate the response
             assert "_id" in response_data
-            assert response_data["images"] == update_dict["images"]
+            assert response_data["images"] == files["images"][0]
             assert "updated_at" in response_data
             assert isinstance(ObjectId(response_data["_id"]), ObjectId)
 

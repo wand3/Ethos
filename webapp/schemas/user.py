@@ -9,6 +9,7 @@ class UserBase(BaseModel):
     email: EmailStr
     username: str
     disabled: bool | None = None
+    profile_pic: Optional[str] = None
 
     class Config:
         from_attributes = True
@@ -18,7 +19,10 @@ class UserBase(BaseModel):
         json_schema_extra = {
             "example": {
                 "username": "john_doe",
-                "email": "john_doe@example.com"
+                "email": "john_doe@example.com",
+                "disabled": "false",
+                "profile_pic": "image.jpg"
+
             }
         }
 

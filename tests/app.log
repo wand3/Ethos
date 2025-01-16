@@ -172,3 +172,117 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-16 22:08:01,703 - INFO - HTTP Request: DELETE http://testserver/project/6789401bd89ec885a0593b53/project/ "HTTP/1.1 200 OK"
 2025-01-16 22:08:01,705 - INFO - HTTP Request: GET http://testserver/projects/6789401bd89ec885a0593b53/ "HTTP/1.1 307 Temporary Redirect"
 2025-01-16 22:08:01,709 - INFO - HTTP Request: GET http://testserver/projects/6789401bd89ec885a0593b53 "HTTP/1.1 204 No Content"
+2025-01-16 23:05:51,841 - INFO - Application started -----------
+2025-01-16 23:05:52,193 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:05:52,637 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:05:52,782 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:05:52,782 - INFO - <Response [201 Created]>
+2025-01-16 23:06:37,222 - INFO - Application started -----------
+2025-01-16 23:06:37,552 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:06:38,022 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:06:38,154 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:06:38,155 - INFO - <Response [201 Created]>
+2025-01-16 23:07:49,656 - INFO - Application started -----------
+2025-01-16 23:07:49,868 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:07:50,289 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:07:50,428 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:07:50,429 - INFO - <Response [201 Created]>
+2025-01-16 23:11:33,846 - INFO - Application started -----------
+2025-01-16 23:11:34,145 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:11:34,558 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:11:34,708 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:11:34,708 - INFO - {'title': 'testprojectupdate', 'description': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', 'project_url': 'https://test-project.com/chuckupdate', 'github_url': 'https://github/test-project.com/chuckupdate', 'technologies': {'language': ['Python', ' JS', ' Typescript', ' update'], 'frameworks': ['one', ' three', ' update'], 'databases': ['mongo', ' sql', ' update'], 'tools': ['selenium', ' update']}, 'roles': ['one', 'three', 'update'], 'testing_details': {'test_types': ['Security', ' update'], 'automation_frameworks': ['Jira', ' update'], 'ci_cd_integration': ['Git actions CI/CD']}, 'images': ['67898416eb0f1987b510de37_test_image_update.png'], '_id': '6786f24e63aee9ba9ef8a53f', 'created_at': '2025-01-14T23:25:02.767000', 'updated_at': '2025-01-16T22:11:34.705000'}
+2025-01-16 23:12:52,087 - INFO - Application started -----------
+2025-01-16 23:12:52,316 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:12:52,737 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:12:52,867 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:12:52,867 - INFO - {'title': 'testprojectupdate', 'description': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', 'project_url': 'https://test-project.com/chuckupdate', 'github_url': 'https://github/test-project.com/chuckupdate', 'technologies': {'language': ['Python', ' JS', ' Typescript', ' update'], 'frameworks': ['one', ' three', ' update'], 'databases': ['mongo', ' sql', ' update'], 'tools': ['selenium', ' update']}, 'roles': ['one', 'three', 'update'], 'testing_details': {'test_types': ['Security', ' update'], 'automation_frameworks': ['Jira', ' update'], 'ci_cd_integration': ['Git actions CI/CD']}, 'images': ['67898464971c6d6de1a5cdc6_test_image_update.png'], '_id': '6786f24e63aee9ba9ef8a53f', 'created_at': '2025-01-14T23:25:02.767000', 'updated_at': '2025-01-16T22:12:52.864000'}
+2025-01-16 23:13:16,895 - INFO - Application started -----------
+2025-01-16 23:13:17,101 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:13:17,526 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:13:17,669 - INFO - HTTP Request: PUT http://testserver/project/6786f24e63aee9ba9ef8a53f/add/images "HTTP/1.1 201 Created"
+2025-01-16 23:13:17,669 - INFO - {'title': 'testprojectupdate', 'description': 'Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', 'project_url': 'https://test-project.com/chuckupdate', 'github_url': 'https://github/test-project.com/chuckupdate', 'technologies': {'language': ['Python', ' JS', ' Typescript', ' update'], 'frameworks': ['one', ' three', ' update'], 'databases': ['mongo', ' sql', ' update'], 'tools': ['selenium', ' update']}, 'roles': ['one', 'three', 'update'], 'testing_details': {'test_types': ['Security', ' update'], 'automation_frameworks': ['Jira', ' update'], 'ci_cd_integration': ['Git actions CI/CD']}, 'images': ['6789847d67cbcced869c1f9d_test_image_update.png'], '_id': '6786f24e63aee9ba9ef8a53f', 'created_at': '2025-01-14T23:25:02.767000', 'updated_at': '2025-01-16T22:13:17.666000'}
+2025-01-16 23:13:17,670 - ERROR - test_image_update.png
+2025-01-16 23:25:27,752 - INFO - Application started -----------
+2025-01-16 23:25:27,943 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:25:28,417 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:26:50,055 - INFO - Application started -----------
+2025-01-16 23:26:50,231 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:26:50,646 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:27:15,390 - INFO - Application started -----------
+2025-01-16 23:27:15,577 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:27:16,025 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:28:03,214 - INFO - Application started -----------
+2025-01-16 23:28:03,425 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:28:03,845 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:30:42,658 - INFO - Application started -----------
+2025-01-16 23:30:42,865 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:30:43,290 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:32:01,886 - INFO - Application started -----------
+2025-01-16 23:32:02,215 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-16 23:32:02,643 - INFO - HTTP Request: POST http://testserver/token "HTTP/1.1 200 OK"
+2025-01-16 23:32:02,747 - ERROR - 678988e2f25af58e9fbe88d0_test_image_update.png
+2025-01-16 23:32:02,748 - ERROR - 678988e2f25af58e9fbe88d0_test_image_update.png
+2025-01-16 23:32:02,754 - INFO - HTTP Request: PUT http://testserver/user/6782a3e32b6a37a97fb76014/add/image "HTTP/1.1 201 Created"
+2025-01-16 23:32:02,754 - INFO - {'email': 'john_doe@example.com', 'username': 'john_doe', 'disabled': False, 'profile_pic': '678988e2f25af58e9fbe88d0_test_image_update.png', '_id': '6782a3e32b6a37a97fb76014', 'hashed_password': '$2b$12$fx0wuZ6Mo25T1sLpt9eeL.3VcfrpzKaBG.nbMyVKhBBqjhettSrwe', 'created_at': '2025-01-11T17:01:23.590000', 'updated_at': '2025-01-16T22:32:02.751000'}
+2025-01-16 23:32:02,754 - ERROR - test_image_update.png

@@ -1,3 +1,6 @@
+import os
+
+from webapp.config import basedir
 from webapp.logger import logger
 import pytest
 from tests import db_client, clear_db, client
@@ -88,6 +91,63 @@ def test_update_user_client(client, db_client):
     logger.info(response)
 
     assert response.status_code == 200
+
+
+# @pytest.fixture(scope="session")
+def test_update_user_image(client, db_client):
+    response = client.post(
+        "/token",
+        data={"username": "john_doe", "password": "jonnybones"},
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+    access_token = response.json()["access_token"]
+
+    res_p = response.json()
+    collection = db_client["users"]
+    # Verify the user is updated in the database
+    user = collection.find_one({"username": "john_doe"})
+    assert user["email"] == "john_doe@example.com"
+    assert user["username"] == "john_doe"
+
+    user_id = user["_id"]
+    # Create a valid image file for testing
+    from PIL import Image
+    image_path = os.path.join(basedir, 'static', 'test_image_update.png')  # "/static/test/test_image.png"
+    image = Image.new("RGB", (100, 100), color=(255, 0, 0))  # A red square
+    image.save(image_path)
+
+    try:
+        with open(image_path, "rb") as image_file:
+            files = {
+                "image": (
+                    "test_image_update.png",
+                    image_file,
+                    "image/png",
+                )  # Correct way to send files with requests
+            }
+
+            # Send PUT request
+            response = client.put(
+                f"/user/{user_id}/add/image",
+                files=files,
+                headers={"Authorization": f"Bearer {access_token}"}
+            )
+            logger.info(response.json())
+
+            assert response.status_code == 201
+            response_data = response.json()
+
+            # update = collection_project.find(project_id)
+            logger.error(files["image"][0])
+            # Validate the response
+            assert "_id" in response_data
+            assert response_data["profile_pic"] == files["image"][0]
+            assert "updated_at" in response_data
+
+    except Exception as e:
+        return str(e)
 
 
 @pytest.fixture(scope="session")

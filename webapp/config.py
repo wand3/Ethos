@@ -11,7 +11,12 @@ class Config:
     MAX_CONTENT_LENGTH = 6144 * 6144
     MAX_IMAGE_SIZE = 10 * 1024 * 1024  # 10 MB
     UPLOAD_EXTENSIONS = ['.jpg', '.png', '.img', '.jpeg']
+
+    # project image directory
+    UPLOAD_USER_IMAGE = os.path.join(basedir, 'static', 'images', 'user_images')
+
     # blog post image directory
     UPLOAD_BLOG_POST_IMAGE = os.path.join(basedir, 'static', 'images', 'post_images')
+    # project image directory
     UPLOAD_PROJECT_IMAGE = os.path.join(basedir, 'static', 'images', 'project_images')
 

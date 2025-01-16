@@ -6,6 +6,10 @@ from pydantic import BaseModel, Field, HttpUrl
 from webapp.schemas.project import TechStack
 
 
+class UserImageUpdateForm(BaseModel):
+    image: Optional[UploadFile] = None
+
+
 class PostFormData(BaseModel):
     title: str = Field(..., max_length=100, description="Title of the blog post")
     content: str = Field(..., description="Content of the blog post")
