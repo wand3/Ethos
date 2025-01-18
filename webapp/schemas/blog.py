@@ -3,6 +3,8 @@ from datetime import datetime, timedelta, timezone
 from fastapi import UploadFile, File
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional, List
+
+from .comment import Comment
 from ..schemas import PyObjectId
 
 
@@ -16,7 +18,7 @@ class BlogPost(BaseModel):
     content: Optional[str] = None
     tags: Optional[List[str]] = None
     image: Optional[str] = None
-    comments: Optional[List[str]] = Field(default_factory=list, description="List of comment IDs")
+    comments: Optional[List[Comment]] = Field(default_factory=list, description="List of comment IDs")
 
     model_config = ConfigDict(
         json_schema_extra={

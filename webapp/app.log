@@ -82,3 +82,300 @@
 2025-01-18 17:51:39,554 - INFO - 678acac2681bd5cb47ccc51b
 2025-01-18 17:51:40,392 - INFO - 1 change detected
 2025-01-18 17:54:36,285 - INFO - 7 changes detected
+2025-01-18 17:56:28,108 - INFO - 3 changes detected
+2025-01-18 17:56:28,699 - INFO - 1 change detected
+2025-01-18 17:56:32,427 - INFO - Application started -----------
+2025-01-18 17:56:32,511 - INFO - 3 changes detected
+2025-01-18 17:57:31,884 - INFO - 3 changes detected
+2025-01-18 17:57:32,431 - INFO - 1 change detected
+2025-01-18 17:57:36,178 - INFO - Application started -----------
+2025-01-18 17:57:36,241 - INFO - 3 changes detected
+2025-01-18 17:58:03,212 - INFO - 3 changes detected
+2025-01-18 17:58:03,749 - INFO - 1 change detected
+2025-01-18 17:58:06,337 - INFO - Application started -----------
+2025-01-18 17:58:06,382 - INFO - 3 changes detected
+2025-01-18 17:58:16,135 - ERROR - comments_cursor
+2025-01-18 17:58:16,135 - ERROR - comments_cursor below
+2025-01-18 17:58:16,135 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x1078cef50>
+2025-01-18 17:58:16,136 - ERROR - []
+2025-01-18 17:59:00,502 - ERROR - comments_cursor
+2025-01-18 17:59:00,503 - ERROR - comments_cursor below
+2025-01-18 17:59:00,503 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x107824fd0>
+2025-01-18 17:59:00,503 - ERROR - []
+2025-01-18 18:06:09,896 - INFO - 3 changes detected
+2025-01-18 18:06:10,590 - INFO - 1 change detected
+2025-01-18 18:06:14,329 - INFO - Application started -----------
+2025-01-18 18:06:14,372 - INFO - 3 changes detected
+2025-01-18 18:06:54,825 - INFO - 3 changes detected
+2025-01-18 18:06:55,425 - INFO - 1 change detected
+2025-01-18 18:06:59,619 - INFO - Application started -----------
+2025-01-18 18:06:59,679 - INFO - 3 changes detected
+2025-01-18 18:09:11,575 - INFO - 3 changes detected
+2025-01-18 18:09:12,174 - INFO - 1 change detected
+2025-01-18 18:09:16,224 - INFO - Application started -----------
+2025-01-18 18:09:16,289 - INFO - 3 changes detected
+2025-01-18 18:10:37,570 - INFO - 3 changes detected
+2025-01-18 18:10:38,102 - INFO - 1 change detected
+2025-01-18 18:10:41,083 - INFO - Application started -----------
+2025-01-18 18:10:41,161 - INFO - 3 changes detected
+2025-01-18 18:10:41,177 - INFO - comment_ids: [ObjectId('678ad4f8bf37c6320c8ee09c'), ObjectId('678ad50abf37c6320c8ee09e'), ObjectId('678bda2739fc58c4a1d26017')]
+2025-01-18 18:11:33,085 - INFO - 3 changes detected
+2025-01-18 18:11:33,652 - INFO - 1 change detected
+2025-01-18 18:11:37,577 - INFO - Application started -----------
+2025-01-18 18:11:37,649 - INFO - 3 changes detected
+2025-01-18 18:11:37,668 - INFO - comment_ids: [ObjectId('678ad4f8bf37c6320c8ee09c'), ObjectId('678ad50abf37c6320c8ee09e'), ObjectId('678bda2739fc58c4a1d26017')]
+2025-01-18 18:11:37,668 - ERROR - [ObjectId('678ad4f8bf37c6320c8ee09c'), ObjectId('678ad50abf37c6320c8ee09e'), ObjectId('678bda2739fc58c4a1d26017')]
+2025-01-18 18:12:33,216 - INFO - 3 changes detected
+2025-01-18 18:12:33,788 - INFO - 1 change detected
+2025-01-18 18:12:36,052 - INFO - Application started -----------
+2025-01-18 18:12:36,118 - INFO - 3 changes detected
+2025-01-18 18:12:40,049 - ERROR - None
+2025-01-18 18:12:40,050 - ERROR - None
+2025-01-18 18:12:40,052 - ERROR - {'_id': ObjectId('678bda2739fc58c4a1d26017'), 'post_id': '6788b835f1d78b357b5ca3e5', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on last post', 'images': ['678bda2739fc58c4a1d26016_flipper.jpeg'], 'replies': [ObjectId('678bdb92cb995ba6da6ba9cc'), ObjectId('678bdbbecb995ba6da6ba9ce')], 'created_at': datetime.datetime(2025, 1, 18, 16, 43, 19, 164000)}
+2025-01-18 18:17:57,944 - INFO - 3 changes detected
+2025-01-18 18:17:58,517 - INFO - 1 change detected
+2025-01-18 18:18:02,724 - INFO - Application started -----------
+2025-01-18 18:18:02,783 - INFO - 3 changes detected
+2025-01-18 18:19:11,112 - INFO - 3 changes detected
+2025-01-18 18:19:11,761 - INFO - 1 change detected
+2025-01-18 18:19:14,868 - INFO - Application started -----------
+2025-01-18 18:19:14,938 - INFO - 3 changes detected
+2025-01-18 18:25:27,278 - INFO - 3 changes detected
+2025-01-18 18:25:27,869 - INFO - 1 change detected
+2025-01-18 18:25:31,049 - INFO - 3 changes detected
+2025-01-18 18:25:31,311 - INFO - Application started -----------
+2025-01-18 18:25:31,433 - ERROR - None
+2025-01-18 18:25:31,435 - ERROR - None
+2025-01-18 18:25:31,436 - ERROR - None
+2025-01-18 18:26:01,395 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 18:26:01,399 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 18:26:07,888 - ERROR - None
+2025-01-18 18:26:07,889 - ERROR - None
+2025-01-18 18:26:07,891 - ERROR - None
+2025-01-18 18:26:10,692 - ERROR - None
+2025-01-18 18:26:10,693 - ERROR - None
+2025-01-18 18:26:10,695 - ERROR - None
+2025-01-18 21:56:34,067 - INFO - Application started -----------
+2025-01-18 21:56:37,424 - INFO - Application started -----------
+2025-01-18 22:00:39,377 - INFO - 3 changes detected
+2025-01-18 22:00:39,986 - INFO - 1 change detected
+2025-01-18 22:00:42,360 - INFO - Application started -----------
+2025-01-18 22:00:42,401 - INFO - 3 changes detected
+2025-01-18 22:03:30,008 - INFO - {'_id': ObjectId('6788b609dbedcd9a2624e71b'), 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one', 'two', 'fish', 'yes'], 'image': '6788b609dbedcd9a2624e71a_flipper.jpeg', 'created_at': datetime.datetime(2025, 1, 16, 7, 32, 25, 433000), 'updated_at': datetime.datetime(2025, 1, 16, 7, 32, 25, 433000)}
+2025-01-18 22:03:30,034 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 22:03:30,035 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 22:05:01,955 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 22:05:01,957 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 22:05:02,215 - INFO - 1 change detected
+2025-01-18 22:08:41,424 - INFO - 3 changes detected
+2025-01-18 22:08:42,035 - INFO - 1 change detected
+2025-01-18 22:08:45,326 - INFO - Application started -----------
+2025-01-18 22:08:45,390 - INFO - 3 changes detected
+2025-01-18 22:09:52,819 - INFO - 3 changes detected
+2025-01-18 22:09:53,368 - INFO - 1 change detected
+2025-01-18 22:09:56,662 - INFO - Application started -----------
+2025-01-18 22:09:56,711 - INFO - 3 changes detected
+2025-01-18 22:09:57,711 - INFO - comment_ids: [{'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000), '_id': ObjectId('678c1722a9c10043b20f3a8b')}]
+2025-01-18 22:09:57,714 - ERROR - {'_id': ObjectId('678c1722a9c10043b20f3a8b'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [{'user_id': '678acac2681bd5cb47ccc51b', 'images': ['678c177da9c10043b20f3a8c_flipper.jpeg'], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'my first reply on second to last post', 'created_at': datetime.datetime(2025, 1, 18, 21, 5, 1, 958000), '_id': ObjectId('678c177da9c10043b20f3a8d')}], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)}
+2025-01-18 22:13:23,117 - INFO - {'_id': ObjectId('6788b609dbedcd9a2624e71b'), 'title': 'testblog', 'content': "Enumerating objects: 36, done Counting objects: 100% (36/36), done. Delta compression '\n                           'using up to 4 threads Compressing objects: 100% (22/22), done.", 'tags': ['one', 'two', 'fish', 'yes'], 'image': '6788b609dbedcd9a2624e71a_flipper.jpeg', 'created_at': datetime.datetime(2025, 1, 16, 7, 32, 25, 433000), 'updated_at': datetime.datetime(2025, 1, 16, 7, 32, 25, 433000), 'comments': [{'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000), '_id': ObjectId('678c1722a9c10043b20f3a8b')}]}
+2025-01-18 22:13:23,121 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 22:13:23,121 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 22:13:29,747 - INFO - comment_ids: [{'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000), '_id': ObjectId('678c1722a9c10043b20f3a8b')}, {'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000), '_id': ObjectId('678c197322e35a048389113c')}]
+2025-01-18 22:13:29,748 - ERROR - {'_id': ObjectId('678c1722a9c10043b20f3a8b'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [{'user_id': '678acac2681bd5cb47ccc51b', 'images': ['678c177da9c10043b20f3a8c_flipper.jpeg'], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'my first reply on second to last post', 'created_at': datetime.datetime(2025, 1, 18, 21, 5, 1, 958000), '_id': ObjectId('678c177da9c10043b20f3a8d')}], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)}
+2025-01-18 22:13:29,751 - ERROR - {'_id': ObjectId('678c197322e35a048389113c'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000)}
+2025-01-18 22:15:02,222 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 22:15:02,223 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 22:15:12,499 - INFO - comment_ids: [{'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000), '_id': ObjectId('678c1722a9c10043b20f3a8b')}, {'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000), '_id': ObjectId('678c197322e35a048389113c')}]
+2025-01-18 22:15:12,502 - ERROR - {'_id': ObjectId('678c1722a9c10043b20f3a8b'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [{'user_id': '678acac2681bd5cb47ccc51b', 'images': ['678c177da9c10043b20f3a8c_flipper.jpeg'], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'my first reply on second to last post', 'created_at': datetime.datetime(2025, 1, 18, 21, 5, 1, 958000), '_id': ObjectId('678c177da9c10043b20f3a8d')}, {'user_id': '678acac2681bd5cb47ccc51b', 'images': [], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'parent comment nest', 'created_at': datetime.datetime(2025, 1, 18, 21, 15, 2, 223000), '_id': ObjectId('678c19d622e35a048389113d')}], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)}
+2025-01-18 22:15:12,504 - ERROR - {'_id': ObjectId('678c197322e35a048389113c'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000)}
+2025-01-18 22:16:41,592 - ERROR - comments_cursor
+2025-01-18 22:16:41,595 - ERROR - comments_cursor below
+2025-01-18 22:16:41,595 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x112e4f690>
+2025-01-18 22:16:41,595 - ERROR - []
+2025-01-18 22:20:02,502 - INFO - 3 changes detected
+2025-01-18 22:20:03,075 - INFO - 1 change detected
+2025-01-18 22:20:06,122 - INFO - Application started -----------
+2025-01-18 22:20:06,212 - INFO - 3 changes detected
+2025-01-18 22:20:14,207 - ERROR - comments_cursor
+2025-01-18 22:20:14,209 - ERROR - comments_cursor below
+2025-01-18 22:20:14,209 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x110261910>
+2025-01-18 22:20:14,209 - ERROR - []
+2025-01-18 22:23:19,624 - INFO - 3 changes detected
+2025-01-18 22:23:20,195 - INFO - 1 change detected
+2025-01-18 22:23:22,774 - INFO - Application started -----------
+2025-01-18 22:23:22,853 - INFO - 3 changes detected
+2025-01-18 22:23:24,783 - ERROR - comments_cursor
+2025-01-18 22:23:24,783 - ERROR - comments_cursor below
+2025-01-18 22:23:24,783 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x1080c3b50>
+2025-01-18 22:23:24,784 - ERROR - []
+2025-01-18 22:24:15,060 - INFO - 3 changes detected
+2025-01-18 22:24:15,546 - INFO - 1 change detected
+2025-01-18 22:24:18,368 - INFO - Application started -----------
+2025-01-18 22:24:18,415 - INFO - 3 changes detected
+2025-01-18 22:24:19,867 - ERROR - comments_cursor
+2025-01-18 22:24:19,868 - ERROR - comments_cursor below
+2025-01-18 22:24:19,868 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10653c4d0>
+2025-01-18 22:24:19,868 - ERROR - []
+2025-01-18 22:24:19,870 - ERROR - {'_id': ObjectId('678c1722a9c10043b20f3a8b'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [{'user_id': '678acac2681bd5cb47ccc51b', 'images': ['678c177da9c10043b20f3a8c_flipper.jpeg'], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'my first reply on second to last post', 'created_at': datetime.datetime(2025, 1, 18, 21, 5, 1, 958000), '_id': ObjectId('678c177da9c10043b20f3a8d')}, {'user_id': '678acac2681bd5cb47ccc51b', 'images': [], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'parent comment nest', 'created_at': datetime.datetime(2025, 1, 18, 21, 15, 2, 223000), '_id': ObjectId('678c19d622e35a048389113d')}], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)}
+2025-01-18 22:24:19,870 - ERROR -  comment post_id='6788b609dbedcd9a2624e71b' user_id='678acac2681bd5cb47ccc51b' content='my first comment on second to the last post' images=[] replies=[Reply(id=ObjectId('678c177da9c10043b20f3a8d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='my first reply on second to last post', images=['678c177da9c10043b20f3a8c_flipper.jpeg'], created_at=datetime.datetime(2025, 1, 18, 21, 5, 1, 958000)), Reply(id=ObjectId('678c19d622e35a048389113d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='parent comment nest', images=[], created_at=datetime.datetime(2025, 1, 18, 21, 15, 2, 223000))] id=ObjectId('678c1722a9c10043b20f3a8b') created_at=datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)
+2025-01-18 22:25:51,091 - INFO - 3 changes detected
+2025-01-18 22:25:51,596 - INFO - 1 change detected
+2025-01-18 22:25:54,660 - INFO - Application started -----------
+2025-01-18 22:25:54,741 - INFO - 3 changes detected
+2025-01-18 22:27:20,092 - INFO - 3 changes detected
+2025-01-18 22:27:20,649 - INFO - 1 change detected
+2025-01-18 22:27:23,284 - INFO - Application started -----------
+2025-01-18 22:27:23,366 - INFO - 3 changes detected
+2025-01-18 22:27:24,716 - ERROR - comments_cursor
+2025-01-18 22:27:24,716 - ERROR - comments_cursor below
+2025-01-18 22:27:24,716 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10a7befd0>
+2025-01-18 22:27:24,716 - ERROR - []
+2025-01-18 22:27:24,718 - ERROR -  comment post_id='6788b609dbedcd9a2624e71b' user_id='678acac2681bd5cb47ccc51b' content='my first comment on second to the last post' images=[] replies=[Reply(id=ObjectId('678c177da9c10043b20f3a8d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='my first reply on second to last post', images=['678c177da9c10043b20f3a8c_flipper.jpeg'], created_at=datetime.datetime(2025, 1, 18, 21, 5, 1, 958000)), Reply(id=ObjectId('678c19d622e35a048389113d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='parent comment nest', images=[], created_at=datetime.datetime(2025, 1, 18, 21, 15, 2, 223000))] id=ObjectId('678c1722a9c10043b20f3a8b') created_at=datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)
+2025-01-18 22:28:41,334 - INFO - 3 changes detected
+2025-01-18 22:28:41,829 - INFO - 1 change detected
+2025-01-18 22:28:44,636 - INFO - Application started -----------
+2025-01-18 22:28:44,678 - INFO - 3 changes detected
+2025-01-18 22:28:46,088 - ERROR - comments_cursor
+2025-01-18 22:28:46,088 - ERROR - comments_cursor below
+2025-01-18 22:28:46,089 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x1061e8a10>
+2025-01-18 22:28:46,089 - ERROR - []
+2025-01-18 22:28:46,098 - ERROR -  comment post_id='6788b609dbedcd9a2624e71b' user_id='678acac2681bd5cb47ccc51b' content='my first comment on second to the last post' images=[] replies=[Reply(id=ObjectId('678c177da9c10043b20f3a8d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='my first reply on second to last post', images=['678c177da9c10043b20f3a8c_flipper.jpeg'], created_at=datetime.datetime(2025, 1, 18, 21, 5, 1, 958000)), Reply(id=ObjectId('678c19d622e35a048389113d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='parent comment nest', images=[], created_at=datetime.datetime(2025, 1, 18, 21, 15, 2, 223000))] id=ObjectId('678c1722a9c10043b20f3a8b') created_at=datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)
+2025-01-18 22:28:46,098 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x1061d2e10>
+2025-01-18 22:28:46,098 - ERROR -  replies []
+2025-01-18 22:29:37,479 - INFO - 3 changes detected
+2025-01-18 22:29:37,983 - INFO - 1 change detected
+2025-01-18 22:29:40,487 - INFO - Application started -----------
+2025-01-18 22:29:40,548 - INFO - 3 changes detected
+2025-01-18 22:29:42,747 - ERROR - comments_cursor
+2025-01-18 22:29:42,747 - ERROR - comments_cursor below
+2025-01-18 22:29:42,747 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x110baf810>
+2025-01-18 22:29:42,747 - ERROR - []
+2025-01-18 22:29:42,749 - ERROR -  comment post_id='6788b609dbedcd9a2624e71b' user_id='678acac2681bd5cb47ccc51b' content='my first comment on second to the last post' images=[] replies=[Reply(id=ObjectId('678c177da9c10043b20f3a8d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='my first reply on second to last post', images=['678c177da9c10043b20f3a8c_flipper.jpeg'], created_at=datetime.datetime(2025, 1, 18, 21, 5, 1, 958000)), Reply(id=ObjectId('678c19d622e35a048389113d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='parent comment nest', images=[], created_at=datetime.datetime(2025, 1, 18, 21, 15, 2, 223000))] id=ObjectId('678c1722a9c10043b20f3a8b') created_at=datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)
+2025-01-18 22:29:42,750 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x110ba70d0>
+2025-01-18 22:29:42,750 - ERROR -  replies []
+2025-01-18 22:30:16,463 - INFO - 3 changes detected
+2025-01-18 22:30:16,998 - INFO - 1 change detected
+2025-01-18 22:30:19,634 - INFO - Application started -----------
+2025-01-18 22:30:19,694 - INFO - 3 changes detected
+2025-01-18 22:30:20,116 - ERROR - comments_cursor
+2025-01-18 22:30:20,116 - ERROR - comments_cursor below
+2025-01-18 22:30:20,116 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x107424ad0>
+2025-01-18 22:30:20,116 - ERROR - []
+2025-01-18 22:30:20,118 - ERROR -  comment post_id='6788b609dbedcd9a2624e71b' user_id='678acac2681bd5cb47ccc51b' content='my first comment on second to the last post' images=[] replies=[Reply(id=ObjectId('678c177da9c10043b20f3a8d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='my first reply on second to last post', images=['678c177da9c10043b20f3a8c_flipper.jpeg'], created_at=datetime.datetime(2025, 1, 18, 21, 5, 1, 958000)), Reply(id=ObjectId('678c19d622e35a048389113d'), parent_comment_id='678c1722a9c10043b20f3a8b', user_id='678acac2681bd5cb47ccc51b', content='parent comment nest', images=[], created_at=datetime.datetime(2025, 1, 18, 21, 15, 2, 223000))] id=ObjectId('678c1722a9c10043b20f3a8b') created_at=datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)
+2025-01-18 22:30:20,118 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x10899e510>
+2025-01-18 22:31:01,581 - INFO - 3 changes detected
+2025-01-18 22:31:02,086 - INFO - 1 change detected
+2025-01-18 22:31:04,456 - INFO - Application started -----------
+2025-01-18 22:31:04,513 - INFO - 3 changes detected
+2025-01-18 22:32:07,809 - INFO - 3 changes detected
+2025-01-18 22:32:08,381 - INFO - 1 change detected
+2025-01-18 22:32:10,768 - INFO - Application started -----------
+2025-01-18 22:32:10,858 - INFO - 3 changes detected
+2025-01-18 22:32:13,305 - ERROR - comments_cursor
+2025-01-18 22:32:13,305 - ERROR - comments_cursor below
+2025-01-18 22:32:13,305 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10c953810>
+2025-01-18 22:32:13,306 - ERROR - []
+2025-01-18 22:32:13,307 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x10ca5dc50>
+2025-01-18 22:32:13,307 - ERROR -  replies []
+2025-01-18 22:33:52,091 - INFO - 3 changes detected
+2025-01-18 22:33:52,613 - INFO - 1 change detected
+2025-01-18 22:33:55,721 - INFO - Application started -----------
+2025-01-18 22:33:55,815 - INFO - 3 changes detected
+2025-01-18 22:33:56,358 - ERROR - comments_cursor
+2025-01-18 22:33:56,358 - ERROR - comments_cursor below
+2025-01-18 22:33:56,358 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10c5c0790>
+2025-01-18 22:33:56,359 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x10c4e8b50>
+2025-01-18 22:33:56,360 - ERROR -  replies []
+2025-01-18 22:36:33,227 - INFO - 3 changes detected
+2025-01-18 22:36:33,719 - INFO - 1 change detected
+2025-01-18 22:36:36,921 - INFO - 3 changes detected
+2025-01-18 22:38:08,971 - INFO - 3 changes detected
+2025-01-18 22:38:11,964 - INFO - Application started -----------
+2025-01-18 22:38:12,033 - INFO - 3 changes detected
+2025-01-18 22:38:12,159 - ERROR - comments_cursor
+2025-01-18 22:38:12,159 - ERROR - comments_cursor below
+2025-01-18 22:38:12,160 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x1109c58d0>
+2025-01-18 22:38:12,161 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x110846bd0>
+2025-01-18 22:38:12,161 - ERROR -  replies []
+2025-01-18 22:38:15,712 - ERROR - comments_cursor
+2025-01-18 22:38:15,712 - ERROR - comments_cursor below
+2025-01-18 22:38:15,712 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x1109c5750>
+2025-01-18 22:38:15,713 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x1109f8e50>
+2025-01-18 22:38:15,713 - ERROR -  replies []
+2025-01-18 22:39:16,141 - INFO - 3 changes detected
+2025-01-18 22:39:16,676 - INFO - 1 change detected
+2025-01-18 22:39:19,191 - INFO - Application started -----------
+2025-01-18 22:39:19,249 - INFO - 3 changes detected
+2025-01-18 22:39:24,014 - INFO - 3 changes detected
+2025-01-18 22:39:24,565 - INFO - 1 change detected
+2025-01-18 22:39:27,975 - INFO - Application started -----------
+2025-01-18 22:39:28,026 - INFO - 3 changes detected
+2025-01-18 22:39:28,082 - ERROR - comments_cursor
+2025-01-18 22:39:28,082 - ERROR - comments_cursor below
+2025-01-18 22:39:28,083 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10e630350>
+2025-01-18 22:39:28,084 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x10e6e5590>
+2025-01-18 22:39:28,084 - ERROR -  replies []
+2025-01-18 22:39:28,084 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x10e58c690>
+2025-01-18 22:39:28,085 - ERROR -  replies []
+2025-01-18 22:39:58,271 - INFO - 3 changes detected
+2025-01-18 22:39:58,783 - INFO - 1 change detected
+2025-01-18 22:40:01,091 - INFO - Application started -----------
+2025-01-18 22:40:01,183 - INFO - 3 changes detected
+2025-01-18 22:40:04,157 - ERROR - comments_cursor
+2025-01-18 22:40:04,157 - ERROR - comments_cursor below
+2025-01-18 22:40:04,158 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x107ae3790>
+2025-01-18 22:40:04,159 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x106c1b9d0>
+2025-01-18 22:40:04,159 - ERROR -  replies []
+2025-01-18 22:40:04,160 - ERROR -  replies_cursor <pymongo.asynchronous.cursor.AsyncCursor object at 0x107d23bd0>
+2025-01-18 22:40:04,160 - ERROR -  replies []
+2025-01-18 22:50:37,084 - INFO - 3 changes detected
+2025-01-18 22:50:37,679 - INFO - 1 change detected
+2025-01-18 22:50:40,650 - INFO - Application started -----------
+2025-01-18 22:50:40,704 - INFO - 3 changes detected
+2025-01-18 22:51:29,431 - INFO - 3 changes detected
+2025-01-18 22:51:29,986 - INFO - 1 change detected
+2025-01-18 22:51:32,469 - INFO - Application started -----------
+2025-01-18 22:51:32,524 - INFO - 3 changes detected
+2025-01-18 22:51:35,446 - ERROR - comments_cursor
+2025-01-18 22:53:08,765 - INFO - 3 changes detected
+2025-01-18 22:53:09,323 - INFO - 1 change detected
+2025-01-18 22:53:11,972 - INFO - Application started -----------
+2025-01-18 22:53:12,061 - INFO - 3 changes detected
+2025-01-18 22:53:36,495 - INFO - 3 changes detected
+2025-01-18 22:53:36,985 - INFO - 1 change detected
+2025-01-18 22:53:39,188 - INFO - Application started -----------
+2025-01-18 22:53:39,258 - INFO - 3 changes detected
+2025-01-18 22:55:39,799 - INFO - 3 changes detected
+2025-01-18 22:55:40,348 - INFO - 1 change detected
+2025-01-18 22:55:43,574 - INFO - Application started -----------
+2025-01-18 22:55:43,589 - INFO - 3 changes detected
+2025-01-18 22:55:44,295 - ERROR - comments_cursor
+2025-01-18 23:00:30,406 - INFO - 3 changes detected
+2025-01-18 23:00:30,968 - INFO - 1 change detected
+2025-01-18 23:00:33,973 - INFO - Application started -----------
+2025-01-18 23:00:34,021 - INFO - 3 changes detected
+2025-01-18 23:00:34,084 - ERROR - comments_cursor
+2025-01-18 23:01:34,989 - ERROR - comments_cursor
+2025-01-18 23:02:39,287 - ERROR - comments_cursor
+2025-01-18 23:04:21,155 - INFO - comment_ids: [{'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000), '_id': ObjectId('678c1722a9c10043b20f3a8b')}, {'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000), '_id': ObjectId('678c197322e35a048389113c')}]
+2025-01-18 23:04:21,160 - ERROR - {'_id': ObjectId('678c1722a9c10043b20f3a8b'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'my first comment on second to the last post', 'images': [], 'replies': [{'user_id': '678acac2681bd5cb47ccc51b', 'images': ['678c177da9c10043b20f3a8c_flipper.jpeg'], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'my first reply on second to last post', 'created_at': datetime.datetime(2025, 1, 18, 21, 5, 1, 958000), '_id': ObjectId('678c177da9c10043b20f3a8d')}, {'user_id': '678acac2681bd5cb47ccc51b', 'images': [], 'parent_comment_id': '678c1722a9c10043b20f3a8b', 'content': 'parent comment nest', 'created_at': datetime.datetime(2025, 1, 18, 21, 15, 2, 223000), '_id': ObjectId('678c19d622e35a048389113d')}], 'created_at': datetime.datetime(2025, 1, 18, 21, 3, 30, 39000)}
+2025-01-18 23:04:21,162 - ERROR - {'_id': ObjectId('678c197322e35a048389113c'), 'post_id': '6788b609dbedcd9a2624e71b', 'user_id': '678acac2681bd5cb47ccc51b', 'content': 'another comment', 'images': [], 'replies': [], 'created_at': datetime.datetime(2025, 1, 18, 21, 13, 23, 122000)}
+2025-01-18 23:12:12,106 - INFO - 3 changes detected
+2025-01-18 23:12:12,672 - INFO - 1 change detected
+2025-01-18 23:12:15,327 - INFO - Application started -----------
+2025-01-18 23:12:15,411 - INFO - 3 changes detected
+2025-01-18 23:16:56,373 - INFO - 3 changes detected
+2025-01-18 23:16:56,922 - INFO - 1 change detected
+2025-01-18 23:16:59,302 - INFO - Application started -----------
+2025-01-18 23:16:59,349 - INFO - 3 changes detected
+2025-01-18 23:17:24,376 - INFO - User model ---- get current user payload error
+2025-01-18 23:17:34,685 - INFO - 3 changes detected
+2025-01-18 23:17:35,266 - INFO - 1 change detected
+2025-01-18 23:17:38,555 - INFO - Application started -----------
+2025-01-18 23:17:38,609 - INFO - 3 changes detected
+2025-01-18 23:17:56,642 - ERROR - comments_cursor
+2025-01-18 23:18:00,196 - ERROR - comments_cursor
+2025-01-18 23:19:02,662 - INFO - 3 changes detected
+2025-01-18 23:19:03,236 - INFO - 1 change detected
+2025-01-18 23:19:06,007 - INFO - Application started -----------
+2025-01-18 23:19:06,088 - INFO - 3 changes detected

@@ -12,7 +12,6 @@ from ..schemas import PyObjectId
 class Reply(BaseModel):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     parent_comment_id: str  # References the parent comment's _id
-    # author: List[CommentAuthor]
     user_id: str
     content: Optional[str] = Field(None, description="Detailed comment")
     images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
@@ -31,14 +30,15 @@ class Comment(BaseModel):
                         "username": "Jane Smith",
                         "email": "JaneSmith@kwanks.com"
                     }
-                      ],
+                ],
                 "content": "Great post!",
-                "images": ["image1.png", "image11.mp4"]
+                "images": ["image1.png", "image11.mp4"],
+                "replies": ['ObjectId("678bdb92cb995ba6da6ba9cc")',
+                            'ObjectId("678bdbbecb995ba6da6ba9ce")']
             }
         })
 
     post_id: str
-    # author: List[CommentAuthor]
     user_id: str
     content: Optional[str] = Field(..., description="Detailed comment")
     images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
@@ -48,7 +48,6 @@ class Comment(BaseModel):
 class CommentInDB(Comment):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     created_at: datetime
-
 
 # class CommentWithReplies(Comment):
 #     replies: List[Reply] = Field(default_factory=list)
