@@ -44,6 +44,9 @@ class Post:
             post["_id"] = str(post["_id"])
 
             try:
+                # Assuming 'comments' is a list of dictionaries with comment data
+                # post['comments'] = [str(comment['_id']) for comment in post['comments']]  # Convert ObjectIds to strings
+                post['comments'] = [str(comment) for comment in post['comments']]
                 return BlogPostInDB(**post)
             except ValidationError as e:
                 raise ValueError(f"Invalid data for BlogPostInDB: {e}")

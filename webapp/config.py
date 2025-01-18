@@ -17,6 +17,10 @@ class Config:
 
     # blog post image directory
     UPLOAD_BLOG_POST_IMAGE = os.path.join(basedir, 'static', 'images', 'post_images')
+
+    # blog post comment image directory
+    UPLOAD_BLOG_POST_COMMENT_IMAGE = os.path.join(basedir, 'static', 'images', 'post_comment_images')
+
     # project image directory
     UPLOAD_PROJECT_IMAGE = os.path.join(basedir, 'static', 'images', 'project_images')
 

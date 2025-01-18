@@ -8,7 +8,7 @@ from ..schemas import PyObjectId
 class UserBase(BaseModel):
     email: EmailStr
     username: str
-    disabled: bool | None = None
+    disabled: Optional[bool] | None = None
     profile_pic: Optional[str] = None
 
     class Config:

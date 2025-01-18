@@ -1,77 +1,84 @@
-2025-01-16 22:47:37,677 - INFO - 3 changes detected
-2025-01-16 22:49:24,908 - INFO - 3 changes detected
-2025-01-16 22:49:25,465 - INFO - 1 change detected
-2025-01-16 22:49:29,047 - INFO - Application started -----------
-2025-01-16 22:49:29,115 - INFO - 3 changes detected
-2025-01-16 22:49:29,195 - ERROR - None
-2025-01-16 22:49:29,472 - INFO - 1 change detected
-2025-01-16 22:50:02,982 - INFO - 3 changes detected
-2025-01-16 22:50:03,581 - INFO - 1 change detected
-2025-01-16 22:50:07,048 - INFO - Application started -----------
-2025-01-16 22:50:07,123 - INFO - 3 changes detected
-2025-01-16 22:50:07,153 - ERROR - 67897f0fdc5da147c77be62a_flipper.jpeg
-2025-01-16 22:50:07,485 - INFO - 1 change detected
-2025-01-16 22:51:50,951 - INFO - 6 changes detected
-2025-01-16 22:51:51,481 - INFO - 1 change detected
-2025-01-16 22:51:54,721 - INFO - 3 changes detected
-2025-01-16 22:51:54,743 - INFO - Application started -----------
-2025-01-16 22:51:54,826 - ERROR - 67897f7ad4b93422deb14e6e_flipper.jpeg
-2025-01-16 22:51:55,084 - INFO - 5 changes detected
-2025-01-16 22:52:53,517 - INFO - 3 changes detected
-2025-01-16 22:52:54,068 - INFO - 1 change detected
-2025-01-16 22:52:56,817 - INFO - Application started -----------
-2025-01-16 22:52:56,883 - INFO - 3 changes detected
-2025-01-16 22:52:57,945 - INFO - 1 change detected
-2025-01-16 22:54:41,111 - INFO - 3 changes detected
-2025-01-16 22:54:41,707 - INFO - 1 change detected
-2025-01-16 22:54:45,073 - INFO - Application started -----------
-2025-01-16 22:54:45,138 - INFO - 3 changes detected
-2025-01-16 22:54:45,290 - ERROR - 678980250a8346360b779c7e_flipper.jpeg
-2025-01-16 22:54:45,292 - ERROR - 678980250a8346360b779c7e_flipper.jpeg
-2025-01-16 22:54:45,498 - INFO - 1 change detected
-2025-01-16 22:55:13,315 - ERROR - 678980410a8346360b779c7f_Screenshot 2024-11-06 at 00.00.57.png
-2025-01-16 22:55:13,316 - ERROR - 678980410a8346360b779c7f_Screenshot 2024-11-06 at 00.00.57.png
-2025-01-16 22:55:13,472 - INFO - 1 change detected
-2025-01-16 22:56:13,207 - INFO - 3 changes detected
-2025-01-16 22:56:14,645 - INFO - 3 changes detected
-2025-01-16 22:56:15,277 - INFO - 1 change detected
-2025-01-16 22:56:18,285 - INFO - Application started -----------
-2025-01-16 22:56:18,338 - INFO - 3 changes detected
-2025-01-16 22:56:31,834 - INFO - 1 change detected
-2025-01-16 22:58:36,261 - INFO - 3 changes detected
-2025-01-16 22:58:36,799 - INFO - 1 change detected
-2025-01-16 22:58:39,953 - INFO - Application started -----------
-2025-01-16 22:58:39,992 - INFO - 3 changes detected
-2025-01-16 22:58:40,285 - ERROR - 678981103849df8f43c0ef86_flipper.jpeg
-2025-01-16 22:58:40,285 - ERROR - 678981103849df8f43c0ef86_flipper.jpeg
-2025-01-16 22:58:40,354 - INFO - 2 changes detected
-2025-01-16 22:59:15,892 - INFO - 2 changes detected
-2025-01-16 22:59:20,816 - ERROR - 678981383849df8f43c0ef87_flipper.jpeg
-2025-01-16 22:59:20,817 - ERROR - 678981383849df8f43c0ef87_flipper.jpeg
-2025-01-16 22:59:20,886 - INFO - 1 change detected
-2025-01-16 22:59:38,044 - ERROR - 6789814a3849df8f43c0ef88_Screenshot 2024-11-06 at 00.00.57.png
-2025-01-16 22:59:38,044 - ERROR - 6789814a3849df8f43c0ef88_Screenshot 2024-11-06 at 00.00.57.png
-2025-01-16 22:59:38,183 - INFO - 3 changes detected
-2025-01-16 22:59:52,793 - INFO - 1 change detected
-2025-01-16 23:05:52,874 - INFO - 2 changes detected
-2025-01-16 23:06:38,236 - INFO - 2 changes detected
-2025-01-16 23:07:50,499 - INFO - 2 changes detected
-2025-01-16 23:11:34,791 - INFO - 2 changes detected
-2025-01-16 23:12:52,934 - INFO - 2 changes detected
-2025-01-16 23:13:17,767 - INFO - 2 changes detected
-2025-01-16 23:32:02,868 - INFO - 2 changes detected
-2025-01-16 23:32:58,804 - INFO - 8 changes detected
-2025-01-16 23:34:21,969 - INFO - 5 changes detected
-2025-01-16 23:46:28,682 - INFO - 3 changes detected
-2025-01-16 23:46:29,418 - INFO - 1 change detected
-2025-01-16 23:46:33,061 - INFO - Application started -----------
-2025-01-16 23:51:38,533 - INFO - 3 changes detected
-2025-01-16 23:51:39,132 - INFO - 1 change detected
-2025-01-16 23:51:42,309 - INFO - Application started -----------
-2025-01-16 23:54:13,974 - INFO - 3 changes detected
-2025-01-16 23:54:14,563 - INFO - 1 change detected
-2025-01-16 23:54:17,389 - INFO - Application started -----------
-2025-01-17 00:13:13,006 - INFO - 12 changes detected
-2025-01-17 00:13:13,653 - INFO - 1 change detected
-2025-01-17 00:13:15,922 - INFO - 3 changes detected
-2025-01-17 00:13:16,053 - INFO - Application started -----------
+2025-01-18 01:50:11,793 - INFO - 6 changes detected
+2025-01-18 01:50:12,368 - INFO - 1 change detected
+2025-01-18 01:50:15,636 - INFO - Application started -----------
+2025-01-18 01:50:15,667 - INFO - 3 changes detected
+2025-01-18 01:50:37,563 - INFO - 3 changes detected
+2025-01-18 01:50:38,111 - INFO - 1 change detected
+2025-01-18 01:50:41,392 - INFO - Application started -----------
+2025-01-18 01:50:41,424 - INFO - 3 changes detected
+2025-01-18 01:50:41,756 - ERROR - comments_cursor
+2025-01-18 01:52:10,807 - INFO - 3 changes detected
+2025-01-18 01:52:11,318 - INFO - 1 change detected
+2025-01-18 01:52:14,419 - INFO - Application started -----------
+2025-01-18 01:52:14,461 - INFO - 3 changes detected
+2025-01-18 01:52:23,221 - INFO - 3 changes detected
+2025-01-18 01:52:23,723 - INFO - 1 change detected
+2025-01-18 01:52:26,904 - INFO - Application started -----------
+2025-01-18 01:52:26,980 - INFO - 3 changes detected
+2025-01-18 01:52:27,060 - ERROR - comments_cursor
+2025-01-18 01:52:47,230 - INFO - 3 changes detected
+2025-01-18 01:52:47,766 - INFO - 1 change detected
+2025-01-18 01:52:50,079 - INFO - Application started -----------
+2025-01-18 01:52:50,127 - INFO - 3 changes detected
+2025-01-18 01:52:53,808 - ERROR - comments_cursor
+2025-01-18 01:52:53,808 - ERROR - comments_cursor below
+2025-01-18 01:52:53,809 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10ca7ae10>
+2025-01-18 01:52:53,809 - ERROR - []
+2025-01-18 01:54:37,193 - INFO - 3 changes detected
+2025-01-18 01:54:37,695 - INFO - 1 change detected
+2025-01-18 01:54:40,836 - INFO - Application started -----------
+2025-01-18 01:54:40,892 - INFO - 3 changes detected
+2025-01-18 01:54:40,955 - ERROR - comments_cursor
+2025-01-18 01:54:40,955 - ERROR - comments_cursor below
+2025-01-18 01:54:40,955 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10d1b7b90>
+2025-01-18 01:54:40,955 - ERROR - []
+2025-01-18 01:54:56,136 - ERROR - comments_cursor
+2025-01-18 01:54:56,136 - ERROR - comments_cursor below
+2025-01-18 01:54:56,136 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x10d157550>
+2025-01-18 01:54:56,137 - ERROR - []
+2025-01-18 02:05:04,979 - INFO - 3 changes detected
+2025-01-18 02:05:05,612 - INFO - 1 change detected
+2025-01-18 02:05:08,415 - INFO - 3 changes detected
+2025-01-18 17:38:20,934 - INFO - Application started -----------
+2025-01-18 17:38:22,643 - INFO - Application started -----------
+2025-01-18 17:40:01,256 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:40:01,258 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:40:55,791 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:40:55,796 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:42:42,297 - ERROR - comments_cursor
+2025-01-18 17:42:42,299 - ERROR - comments_cursor below
+2025-01-18 17:42:42,299 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x11109b490>
+2025-01-18 17:42:42,299 - ERROR - []
+2025-01-18 17:43:19,136 - INFO - {'_id': ObjectId('6788b835f1d78b357b5ca3e5'), 'image': 'special.jpg', 'title': 'Special Chars $^+.?{}[]()\\|', 'content': 'Content with special chars', 'tags': ['special'], 'created_at': datetime.datetime(2025, 1, 16, 7, 41, 41, 389000), 'updated_at': datetime.datetime(2025, 1, 16, 7, 41, 41, 389000), 'comments': [ObjectId('678ad4f8bf37c6320c8ee09c'), ObjectId('678ad50abf37c6320c8ee09e')]}
+2025-01-18 17:43:19,154 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:43:19,155 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:43:19,294 - INFO - 1 change detected
+2025-01-18 17:44:59,177 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:44:59,179 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:45:10,056 - ERROR - comments_cursor
+2025-01-18 17:45:10,058 - ERROR - comments_cursor below
+2025-01-18 17:45:10,058 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x110ff8dd0>
+2025-01-18 17:45:10,058 - ERROR - []
+2025-01-18 17:45:20,665 - ERROR - comments_cursor
+2025-01-18 17:45:20,666 - ERROR - comments_cursor below
+2025-01-18 17:45:20,666 - ERROR - <pymongo.asynchronous.cursor.AsyncCursor object at 0x110ff8dd0>
+2025-01-18 17:45:20,666 - ERROR - []
+2025-01-18 17:47:18,117 - INFO - 3 changes detected
+2025-01-18 17:47:18,651 - INFO - 1 change detected
+2025-01-18 17:47:21,538 - INFO - Application started -----------
+2025-01-18 17:47:21,590 - INFO - 3 changes detected
+2025-01-18 17:48:10,263 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:48:10,263 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:49:18,618 - INFO - 3 changes detected
+2025-01-18 17:49:19,198 - INFO - 1 change detected
+2025-01-18 17:49:22,501 - INFO - Application started -----------
+2025-01-18 17:49:22,556 - INFO - 3 changes detected
+2025-01-18 17:49:22,616 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:49:22,616 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:50:06,165 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:50:06,165 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:50:06,923 - INFO - 1 change detected
+2025-01-18 17:51:39,552 - INFO - {'_id': ObjectId('678acac2681bd5cb47ccc51b'), 'email': 'testcomment@mail.com', 'username': 'testcomment', 'disabled': None, 'profile_pic': None}
+2025-01-18 17:51:39,554 - INFO - 678acac2681bd5cb47ccc51b
+2025-01-18 17:51:40,392 - INFO - 1 change detected
+2025-01-18 17:54:36,285 - INFO - 7 changes detected

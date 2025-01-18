@@ -16,6 +16,7 @@ class BlogPost(BaseModel):
     content: Optional[str] = None
     tags: Optional[List[str]] = None
     image: Optional[str] = None
+    comments: Optional[List[str]] = Field(default_factory=list, description="List of comment IDs")
 
     model_config = ConfigDict(
         json_schema_extra={
@@ -48,16 +49,3 @@ class BlogPostInDB(BlogPost):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     created_at: datetime
     updated_at: datetime
-
-
-# comment
-class CommentBase(BaseModel):
-    body: str
-    author_name: Optional[str] = "Anonymous"
-    author_email: Optional[str] = "Random name"
-    post_id: str
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-
-
-class CommentInDB(CommentBase):
-    id: str

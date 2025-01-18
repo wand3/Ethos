@@ -4,17 +4,26 @@ from typing import Optional, List
 from ..schemas import PyObjectId
 
 
-class CommentAuthor(BaseModel):
-    id: Optional[PyObjectId] = Field(..., alias="_id")
-    username: str
-    email: EmailStr
+# class CommentAuthor(BaseModel):
+#     id: Optional[PyObjectId] = Field(..., alias="_id")
+#     username: str
+#     email: EmailStr
+
+class Reply(BaseModel):
+    id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
+    parent_comment_id: str  # References the parent comment's _id
+    # author: List[CommentAuthor]
+    user_id: str
+    content: Optional[str] = Field(None, description="Detailed comment")
+    images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class CommentBase(BaseModel):
+class Comment(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "_id": "ObjectId('64b8e349887754f76789abcd')",
+                "_id": "64b8e349887754f76789abcd",
                 "post_id": "ObjectId('64b8e349887754f76789abcd')",
                 "author": [
                     {
@@ -28,13 +37,19 @@ class CommentBase(BaseModel):
             }
         })
 
-    post_id: Optional[PyObjectId] = Field(alias="_id", default=None)
-    author: List[CommentAuthor]
+    post_id: str
+    # author: List[CommentAuthor]
+    user_id: str
     content: Optional[str] = Field(..., description="Detailed comment")
     images: Optional[List[str]] = Field(None, description="List of URLs to project screenshots/images")
+    replies: Optional[List[Reply]] = Field(default_factory=list)  # Nested replies
 
 
-class CommentInDB(CommentBase):
+class CommentInDB(Comment):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     created_at: datetime
-    updated_at: datetime
+
+
+# class CommentWithReplies(Comment):
+#     replies: List[Reply] = Field(default_factory=list)
+#

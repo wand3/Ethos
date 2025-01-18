@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from webapp.routes import ethos_router, user_router, auth_router, blog_router, project_router
+from webapp.routes import ethos_router, user_router, auth_router, blog_router, project_router, comment_router
 import uvicorn
 from webapp.database.db_engine import db_lifespan, connect_to_mongo, close_mongo_connection
 from .logger import logger
@@ -27,6 +27,7 @@ def create_app() -> FastAPI:
     app.include_router(user_router)
     app.include_router(blog_router)
     app.include_router(project_router)
+    app.include_router(comment_router)
     app.include_router(ethos_router, tags=["Ethos"])
 
     # Create tables
