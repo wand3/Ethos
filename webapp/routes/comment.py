@@ -24,7 +24,7 @@ comment = APIRouter(prefix="/comment", tags=["Comments"])  # , dependencies=[Dep
 
 
 # create comment
-@comment.post("/{post_id}/add", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
+@comment.post("/{post_id}/", response_model=CommentInDB, status_code=status.HTTP_201_CREATED)
 async def create_comment(
     post_id: str,
     comment_data: Annotated[CommentFormData, Form()],
