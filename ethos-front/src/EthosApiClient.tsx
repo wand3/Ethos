@@ -35,19 +35,20 @@ export default class EthosApiClient {
 
   async request<TREQ, TRES>(options: Options<TREQ>): Promise<Response<TRES>> {
     let response = await this.requestInternal<TREQ, TRES>(options);
-    if (response.status === 401 && options.url !== '/tokens') {
-      const refreshResponse = await this.put<Token, Token>('/tokens', {
-        access_token: localStorage.getItem('token'),
-      });
-      if (refreshResponse.ok && refreshResponse.body) {
-        localStorage.setItem('token', refreshResponse.body.access_token || '');
-        response = await this.requestInternal<TREQ, TRES>(options);
-        console.log(response.body)
-      }
-    }
-    if (response.status >= 500 && this.onError) {
-      this.onError(response);
-    }
+    console.log(response)
+    // if (response.status === 401 && options.url !== '/token') {
+    //   const refreshResponse = await this.put<Token, Token>('/token', {
+    //     access_token: localStorage.getItem('token'),
+    //   });
+    //   if (refreshResponse.ok && refreshResponse.body) {
+    //     localStorage.setItem('token', refreshResponse.body.access_token || '');
+    //     response = await this.requestInternal<TREQ, TRES>(options);
+    //     console.log(response.body)
+    //   }
+    // }
+    // if (response.status >= 500 && this.onError) {
+    //   this.onError(response);
+    // }
     return response;
   }
 
@@ -68,7 +69,9 @@ export default class EthosApiClient {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
           ...options.headers,
         },
-        credentials: options.url === '/tokens' ? 'include' : 'omit',
+        credentials: options.url === '/token' ? 'omit' : 'include',
+
+        // credentials: options.url === '/token' ? 'include' : 'omit',
         body: options.body ? JSON.stringify(options.body) : null,
       });
     }
@@ -111,7 +114,7 @@ export default class EthosApiClient {
 
   async login(email: string, password: string): Promise<'ok' | 'fail' | 'error'> {
     // console.log(`login apiclient ${email}`)
-    const response = await this.post<null, Token>('/tokens', null, {
+    const response = await this.post<null, Token>('/token', null, {
       headers: {
         Authorization:  'Basic ' + btoa(email + ":" + password),
         'Access-Control-Allow-Origin': 'http://127.0.0.1:8000/',
@@ -128,7 +131,7 @@ export default class EthosApiClient {
   }
 
   async logout() {
-    await this.delete('/tokens');
+    await this.delete('/token');
     localStorage.removeItem('token');
   }
 

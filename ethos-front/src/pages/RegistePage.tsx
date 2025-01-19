@@ -49,7 +49,7 @@ const RegisterPage = () => {
     setFormerrors(errors);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/user", {
+      const response = await fetch("http://127.0.0.1:8000/user/me", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const RegisterPage = () => {
       }
 
       const data = await response.json();
-      let next = '/login';
+      let next = '/token';
       if (location.state && location.state.next) {
           next = location.state.next;
       }
@@ -91,11 +91,13 @@ const RegisterPage = () => {
               <div className="max-w-xl lg:max-w-3xl shadow-lg pb-5 px-3 rounded-md">
                 <a className="block text-[#ba2a25]" href="/">
                   <span className="sr-only">Home</span>
-                  <StoreIcon className="h-[4rem] w-fit"/>
+                  {/* <StoreIcon className="h-[4rem] w-fit"/> */}
                 </a>
 
                 <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                  Welcome to Ksuwa <span className="inline-flex absolute mt-1 ml-1"><ShoppingBag /></span>
+                  Welcome to Ksuwa <span className="inline-flex absolute mt-1 ml-1">
+                  {/* <ShoppingBag /> */}
+                  </span>
                 </h1>
 
                 <form onSubmit={onSubmit} className="mt-8 grid grid-cols-6 gap-6">

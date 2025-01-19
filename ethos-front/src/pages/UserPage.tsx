@@ -45,7 +45,7 @@ export const UserPage = () => {
                                 Fullname
                             </div>
                             <div className="space-y-2">
-                                <h4 className="text-gray-800 font-semibold">{user?.fullname || 'Chazo Butler'}</h4>
+                                <h4 className="text-gray-800 font-semibold">{user?.username || 'Chazo Butler'}</h4>
                             </div>
 
                         </div>
@@ -80,7 +80,7 @@ export const UserPage = () => {
                                 Phone number
                             </div>
                             <div className="space-y-2">
-                                <h4 className="text-gray-800 font-semibold">{user?.fullname || '+123 457 6544 65'}</h4>
+                                <h4 className="text-gray-800 font-semibold">{user?.username || '+123 457 6544 65'}</h4>
                             </div>
 
                         </div>
@@ -105,7 +105,7 @@ export const UserPage = () => {
                               <div>
                               
 
-                                <p className="mt-1 text-xs font-medium text-gray-600">{user?.fullname || "Chazo Butler"}</p>
+                                <p className="mt-1 text-xs font-medium text-gray-600">{user?.username || "Chazo Butler"}</p>
                               </div>
 
                               

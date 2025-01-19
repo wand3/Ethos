@@ -2,7 +2,7 @@ import './App.css'
 import { Routes, Route, Navigate } from "react-router-dom"
 import Ethos from './pages/Ethos';
 import ApiProvider from './context/ApiProvider';
-import About from './pages/About';
+// import About from './pages/About';
 
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegistePage';

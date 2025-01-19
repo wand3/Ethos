@@ -7,7 +7,13 @@ const Ethos = () => {
     return (
         <> 
             <EthosBody nav>
-                <div className="h-8 bg-slate-100">
+                <div className="h-8 w-20 bg-slate-900">
+                    <h1>giberish giberish giberish</h1>
+                    <h1>giberish giberish giberish</h1>
+                    <h1>giberish giberish giberish</h1>
+                    <h1>giberish giberish giberish</h1>
+                    <h1>giberish giberish giberish</h1>
+
                 </div>
                 
 
