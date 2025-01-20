@@ -4,18 +4,32 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@headlessui/react";
 import useFlash from "../hooks/UseFlash";
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from "../store";
+import { registerUser } from "../services/auth";
+
+// import { useForm } from 'react-hook-form'
+
 
 
 type FormErrorType = {
   email?: string;
+  username?: string;
   password?: string;
   confirm?: string;
 };
 
 const RegisterPage = () => {
+  // const { loading, userInfo, error, success } = useSelector(
+  //     (state) => state.auth
+  //   )
+  const { loading, error } = useSelector((state: RootState) => state.auth); // Type-safe selector
+  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch  
   const [formerrors, setFormerrors] = useState<FormErrorType>({});
 
   const emailField = useRef<HTMLInputElement>(null);
+  const usernameField = useRef<HTMLInputElement>(null);
+
   const passwordField = useRef<HTMLInputElement>(null);
   const confirmField = useRef<HTMLInputElement>(null);
 
@@ -32,6 +46,8 @@ const RegisterPage = () => {
   const onSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     const email = emailField.current ? emailField.current.value : "";
+    const username = usernameField.current ? usernameField.current.value : "";
+
     const password = passwordField.current ? passwordField.current.value : "";
     const confirm = confirmField.current ? confirmField.current.value : "";
 
@@ -45,35 +61,40 @@ const RegisterPage = () => {
     if (!confirm) {
       errors.confirm = "confirm must not be empty";
     }
+    if (password !== confirm) {
+      flash('Password mismatch', 'error');
+      return;
+    }
 
     setFormerrors(errors);
+    dispatch(registerUser({username, email, password}))
 
-    try {
-      const response = await fetch("http://127.0.0.1:8000/user/me", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+    // try {
+    //   const response = await fetch("http://127.0.0.1:8000/user/me", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ email, password }),
+    //   });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        flash('Registeration failed', 'error')
-        throw new Error(errorData.message || "Failed to create user");
-      }
+    //   if (!response.ok) {
+    //     const errorData = await response.json();
+    //     flash('Registeration failed', 'error')
+    //     throw new Error(errorData.message || "Failed to create user");
+    //   }
 
-      const data = await response.json();
-      let next = '/token';
-      if (location.state && location.state.next) {
-          next = location.state.next;
-      }
-      flash('Registeration successful', 'success')
-      navigate(next);
-      console.log("data:", data);
-    } catch (error) {
-      console.log(error);
-    }
+    //   const data = await response.json();
+    //   let next = '/token';
+    //   if (location.state && location.state.next) {
+    //       next = location.state.next;
+    //   }
+    //   flash('Registeration successful', 'success')
+    //   navigate(next);
+    //   console.log("data:", data);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -109,6 +130,15 @@ const RegisterPage = () => {
                       placeholder="Enter email"
                       error={formerrors.email}
                       Fieldref={emailField}
+                    />
+
+                    <RegInputField
+                      name="username"
+                      label="Username"
+                      type="name"
+                      placeholder="Enter email"
+                      error={formerrors.email}
+                      Fieldref={usernameField}
                     />
 
                     <RegInputField

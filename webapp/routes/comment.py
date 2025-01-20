@@ -297,7 +297,7 @@ async def delete_comment(
     comment_id: str,
     comment_model: Annotated[CommentModel, Depends(get_comment_model)],
     reply_model: Annotated[ReplyModel, Depends(get_reply_model)],  # Inject ReplyModel
-    # user_model: Annotated[UserModel, Depends(get_current_active_user)]
+    user_model: Annotated[UserModel, Depends(get_current_active_user)]
 
 ):
     try:

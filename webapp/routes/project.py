@@ -16,7 +16,7 @@ from webapp.models.project import ProjectModel, get_project_model, ProjectInDB
 from webapp.models.user import get_current_active_user
 from webapp.schemas.forms import ProjectFormData, ProjectImagesFormData, ProjectUpdateFormData
 
-project = APIRouter(prefix="/project", tags=["Project"])  # , dependencies=[Depends(get_current_active_user)]
+project = APIRouter(prefix="/project", tags=["Project"], dependencies=[Depends(get_current_active_user)])
 
 
 @project.post("/add", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
