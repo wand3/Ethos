@@ -4,107 +4,100 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@headlessui/react";
 import useFlash from "../hooks/UseFlash";
+import Config from "../config";
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, RootState } from "../store";
 import { registerUser } from "../services/auth";
+import SpinnerLineWave from "../components/spinner";
+import ErrorComponent from "../components/error";
+// form and yup validation 
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form'
+import { schema , RegisterUserInputSchema } from '../schemas/auth'
+import axios from "axios";
 
-// import { useForm } from 'react-hook-form'
 
+// type FormErrorType = {
+//   email?: string;
+//   username?: string;
+//   password?: string;
+//   confirm?: string;
+// };
 
-
-type FormErrorType = {
-  email?: string;
-  username?: string;
-  password?: string;
-  confirm?: string;
-};
 
 const RegisterPage = () => {
-  // const { loading, userInfo, error, success } = useSelector(
-  //     (state) => state.auth
-  //   )
-  const { loading, error } = useSelector((state: RootState) => state.auth); // Type-safe selector
-  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch  
-  const [formerrors, setFormerrors] = useState<FormErrorType>({});
 
-  const emailField = useRef<HTMLInputElement>(null);
-  const usernameField = useRef<HTMLInputElement>(null);
+  const { loading, error, success } = useSelector((state: RootState) => state.auth); // Type-safe selector
+  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
 
-  const passwordField = useRef<HTMLInputElement>(null);
-  const confirmField = useRef<HTMLInputElement>(null);
+  // const { register, handleSubmit, formState: { errors }, setError, clearErrors } = useForm<RegisterUserInputSchema>({
+  //   resolver: yupResolver(schema)
+  //   // defaultValues: {
+  //   //   email: '',
+  //   //   username: '',
+  //   //   password: '',
+  //   //   confirm: '',
+  //   // }
+  // });
+
+  const {
+      register,
+      handleSubmit,
+      formState: { errors },  setError, clearErrors
+    } = useForm<RegisterUserInputSchema>({ resolver: yupResolver(schema) });
+  
+
 
   const flash = useFlash();
   const navigate = useNavigate();
-  const location = useLocation();
 
+ 
+  // Redirect to login page if registration is successful
   useEffect(() => {
-    if (emailField.current) {
-      emailField.current.focus();
+    // setFormerrors({})
+    if (success) {
+      navigate('/login'); // Replace '/login' with the actual path to your login page
+      flash('Registeration successful', 'success')
+
     }
-  }, []);
+  }, [success, navigate]);
 
-  const onSubmit = async (ev: React.FormEvent) => {
-    ev.preventDefault();
-    const email = emailField.current ? emailField.current.value : "";
-    const username = usernameField.current ? usernameField.current.value : "";
 
-    const password = passwordField.current ? passwordField.current.value : "";
-    const confirm = confirmField.current ? confirmField.current.value : "";
+  const onSubmit = async (data: RegisterUserInputSchema) => {
+      try {
+        console.log('onsubmit in')
+        clearErrors(); // Clear any previous errors
+        console.log('onsubmit clear errors')
 
-    const errors: FormErrorType = {};
-    if (!email) {
-      errors.email = "email must not be empty";
-    }
-    if (!password) {
-      errors.password = "password must not be empty";
-    }
-    if (!confirm) {
-      errors.confirm = "confirm must not be empty";
-    }
-    if (password !== confirm) {
-      flash('Password mismatch', 'error');
-      return;
-    }
-
-    setFormerrors(errors);
-    dispatch(registerUser({username, email, password}))
-
-    // try {
-    //   const response = await fetch("http://127.0.0.1:8000/user/me", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ email, password }),
-    //   });
-
-    //   if (!response.ok) {
-    //     const errorData = await response.json();
-    //     flash('Registeration failed', 'error')
-    //     throw new Error(errorData.message || "Failed to create user");
-    //   }
-
-    //   const data = await response.json();
-    //   let next = '/token';
-    //   if (location.state && location.state.next) {
-    //       next = location.state.next;
-    //   }
-    //   flash('Registeration successful', 'success')
-    //   navigate(next);
-    //   console.log("data:", data);
-    // } catch (error) {
-    //   console.log(error);
-    // }
-  };
+        const existingUserResponse = await axios.get(`${Config.baseURL}/auth/check-username?username=${data.username}`);
+        console.log(existingUserResponse)
+        if (existingUserResponse.data.exists) {
+          setError("username", { type: "manual", message: "Username already exists" });
+          return;
+        }
+        dispatch(registerUser({
+          username: data.username, email: data.email, password: data.password,
+          confirm: ""
+        }));
+      } catch (err: any) {
+        console.error("Registration error:", err);
+        if (axios.isAxiosError(err)) {
+          setError("general", { type: "manual", message: err.response?.data?.message || err.message || 'Registration failed due to network error' });
+        } else {
+          setError("general", { type: "manual", message: "An unexpected error occurred during registration." });
+        }
+      }
+    };
+ 
 
   return (
     <>
       <EthosBody nav={false}>
         <section className="bg-white">
           <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-            <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+            {/* <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
               <img src="/pexels-gabby-k-9430875.jpg" className="absolute inset-0 h-full w-full object-cover"/>
-            </aside>
+            </aside> */}
 
             <main
               className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
@@ -116,48 +109,36 @@ const RegisterPage = () => {
                 </a>
 
                 <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                  Welcome to Ksuwa <span className="inline-flex absolute mt-1 ml-1">
+                  Welcome to Ethos <span className="inline-flex absolute mt-1 ml-1">
                   {/* <ShoppingBag /> */}
                   </span>
                 </h1>
 
-                <form onSubmit={onSubmit} className="mt-8 grid grid-cols-6 gap-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-6 gap-6">
+                  {/* {error && <ErrorComponent error={error}></ErrorComponent>} */}
+                  {/* {errors.general && <ErrorComponent error={errors.general.message} />} */}
                   <div className="col-span-6">
-                     <RegInputField
-                      name="email"
-                      label="Email"
-                      type="email"
-                      placeholder="Enter email"
-                      error={formerrors.email}
-                      Fieldref={emailField}
-                    />
+                  
+                    <label>Email</label>
+                    <input {...register("email")} />
+                    {errors.email && <p>{errors.email.message}</p>}
 
-                    <RegInputField
-                      name="username"
-                      label="Username"
-                      type="name"
-                      placeholder="Enter email"
-                      error={formerrors.email}
-                      Fieldref={usernameField}
-                    />
+                 
+                    <label>Username</label>
+                    <input {...register("username")} />
+                    {errors.username && <p>{errors.username.message}</p>}
 
-                    <RegInputField
-                      name="password"
-                      label="Password"
-                      type="password"
-                      placeholder="Enter password"
-                      error={formerrors.password}
-                      Fieldref={passwordField}
-                    />
+  
 
-                    <RegInputField
-                      name="confirm"
-                      label="Confirm password"
-                      type="password"
-                      placeholder="Confirm password"
-                      error={formerrors.confirm}
-                      Fieldref={confirmField}
-                    />
+                    <label>Password</label>
+                    <input {...register("password")} />
+                    {errors.password && <p>{errors.password.message}</p>}
+
+
+                 
+                    <label>Confirm Password</label>
+                    <input {...register("confirm")} />
+                    {errors.confirm && <p>{errors.confirm.message}</p>}
 
                     <div className="col-span-6">
                       <label htmlFor="MarketingAccept" className="flex gap-4">
@@ -178,8 +159,6 @@ const RegisterPage = () => {
                       <p className="text-sm text-gray-500">
                         By creating an account, you agree to our
                         <a href="#" className="text-gray-700 underline"> terms and conditions </a>
-                        and
-                        <a href="#" className="text-gray-700 underline">privacy policy</a>.
                       </p>
                     </div>
 
@@ -188,9 +167,9 @@ const RegisterPage = () => {
 
                       <Button
                         className="inline-block shrink-0 rounded-md border border-slate-900 bg-slate-800 hover:bg-transparent py-3 px-12 text-sm font-semibold text-white transition shadow-slate-600 focus:outline-1 hover:text-slate-900 data-[focus]:outline-2"
-                        type="submit"
+                        type="submit" disabled={loading}
                       >
-                        Create an account
+                        {loading ? <SpinnerLineWave /> : 'Create Account'}
 
                       </Button>
                         <p className="mt-4 text-sm text-gray-500 sm:mt-0">
@@ -208,9 +187,9 @@ const RegisterPage = () => {
           </div>
         </section>
 
-        <form onSubmit={onSubmit}>
+        {/* <form onSubmit={onSubmit}>
          
-        </form>
+        </form> */}
       </EthosBody>
     </>
   );

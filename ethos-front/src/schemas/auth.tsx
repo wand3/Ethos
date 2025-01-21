@@ -1,8 +1,11 @@
+import * as yup from "yup";
+
 
 export interface RegisterUserInputSchema {
   username: string;
   email: string;
   password: string;
+  confirm: string;
 }
 
 export interface RegisterUserOutputSchema {
@@ -11,3 +14,17 @@ export interface RegisterUserOutputSchema {
   disabled?: boolean
   profile_pic?: string
 }
+
+export const schema = yup.object().shape({
+  email: yup.string().email("Invalid email").required("Email is required"),
+  username: yup
+    .string()
+    .matches(/^[a-zA-Z0-9_!\-.]+$/, "Username can only contain letters, numbers, _, -, !, and .")
+    .required("Username is required"),
+  password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
+  confirm: yup
+    .string()
+    .oneOf([yup.ref('password')], "Passwords must match")
+    .required("Confirm password is required"),
+});
+
