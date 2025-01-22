@@ -1,7 +1,6 @@
 import { createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
 import axios, {AxiosError} from 'axios';
-// import { UserSchema } from '../schemas/user';
-import { RegisterUserInputSchema, RegisterUserOutputSchema } from '../schemas/auth';
+import { RegisterUserInputSchema, RegisterUserOutputSchema, LoginUserInputSchema, LoginUserOutputSchema } from '../schemas/auth';
 import Config from '../config';
 
 
@@ -41,16 +40,36 @@ export const registerUser = createAsyncThunk<RegisterUserOutputSchema, RegisterU
 
 
 // Async thunk for login
-export const loginUser = createAsyncThunk(
-    'auth/login',
-    async (credentials: { username: string; password: string }, { rejectWithValue }) => {
-        try {
-          const response = await axios.post('/api/auth/login', credentials); // Your FastAPI endpoint
-          const { access_token, user } = response.data;
-          localStorage.setItem('token', access_token); // Store token in local storage
-          return { token: access_token, user };
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.detail || 'Login failed');
-        }
-    }
-);
+export const loginUser = createAsyncThunk<
+  LoginUserOutputSchema,
+  // LoginUserInputSchema,
+  {username: string, password: string}, 
+  { rejectValue: string }
+>('auth/login', async (credentials, { rejectWithValue }) => {
+  try {
+    const config = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    };
+    const formData = new FormData(); // Create FormData object
+    formData.append('username', credentials.username);
+    formData.append('password', credentials.password);
+    const response = await axios.post<LoginUserOutputSchema>(
+      `${Config.baseURL}/token`,
+      formData,
+      // {username, password},
+      config
+    );
+    console.log('token call')
+
+    localStorage.setItem('token', response.data.access_token); // Store token in local storage
+    console.log('token set submit clear errors')
+    return response.data; // Return the entire response data
+  } catch (error: any) {
+    return rejectWithValue(error.response?.data?.detail || 'Login failed');
+  }
+}); 
+
+
+

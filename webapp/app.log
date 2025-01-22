@@ -531,3 +531,372 @@ Traceback (most recent call last):
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-21 08:19:39,534 - INFO - Application started -----------
+2025-01-21 08:19:48,193 - INFO - Application started -----------
+2025-01-21 08:19:53,825 - INFO - User model ---- get current user payload error
+2025-01-21 08:19:53,829 - INFO - User model ---- get current user payload error
+2025-01-21 08:23:46,955 - INFO - User model ---- get current user payload error
+2025-01-21 08:23:46,964 - INFO - User model ---- get current user payload error
+2025-01-21 08:25:30,304 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-21 08:28:14,123 - INFO - User model ---- get current user payload error
+2025-01-21 08:28:14,128 - INFO - User model ---- get current user payload error
+2025-01-21 08:31:28,906 - INFO - User model ---- get current user payload error
+2025-01-21 08:31:28,955 - INFO - User model ---- get current user payload error
+2025-01-21 08:33:59,100 - INFO - User model ---- get current user payload error
+2025-01-21 08:33:59,122 - INFO - User model ---- get current user payload error
+2025-01-21 08:39:10,519 - INFO - User model ---- get current user payload error
+2025-01-21 08:39:10,526 - INFO - User model ---- get current user payload error
+2025-01-21 08:39:17,203 - INFO - User model ---- get current user payload error
+2025-01-21 08:39:17,207 - INFO - User model ---- get current user payload error
+2025-01-21 08:52:09,204 - INFO - User model ---- get current user payload error
+2025-01-21 08:52:09,341 - INFO - User model ---- get current user payload error
+2025-01-21 09:03:24,596 - INFO - User model ---- get current user payload error
+2025-01-21 09:03:24,605 - INFO - User model ---- get current user payload error
+2025-01-21 09:05:30,575 - INFO - User model ---- get current user payload error
+2025-01-21 09:05:30,582 - INFO - User model ---- get current user payload error
+2025-01-21 09:07:21,714 - INFO - User model ---- get current user payload error
+2025-01-21 09:07:21,733 - INFO - User model ---- get current user payload error
+2025-01-21 09:08:16,991 - INFO - User model ---- get current user payload error
+2025-01-21 09:08:16,997 - INFO - User model ---- get current user payload error
+2025-01-21 09:08:25,490 - INFO - User model ---- get current user payload error
+2025-01-21 09:08:25,538 - INFO - User model ---- get current user payload error
+2025-01-21 09:13:03,488 - INFO - User model ---- get current user payload error
+2025-01-21 09:13:03,517 - INFO - User model ---- get current user payload error
+2025-01-21 09:17:23,761 - INFO - User model ---- get current user payload error
+2025-01-21 09:17:23,854 - INFO - User model ---- get current user payload error
+2025-01-21 09:18:55,648 - INFO - User model ---- get current user payload error
+2025-01-21 09:18:55,689 - INFO - User model ---- get current user payload error
+2025-01-21 12:29:00,678 - INFO - Application started -----------
+2025-01-21 12:29:02,748 - INFO - Application started -----------
+2025-01-21 12:43:40,092 - INFO - User model ---- get current user payload error
+2025-01-21 12:43:40,148 - INFO - User model ---- get current user payload error
+2025-01-21 12:46:37,368 - INFO - User model ---- get current user payload error
+2025-01-21 12:46:37,473 - INFO - User model ---- get current user payload error
+2025-01-21 12:52:56,653 - INFO - User model ---- get current user payload error
+2025-01-21 12:52:56,675 - INFO - User model ---- get current user payload error
+2025-01-21 12:59:44,341 - INFO - User model ---- get current user payload error
+2025-01-21 12:59:44,353 - INFO - User model ---- get current user payload error
+2025-01-21 13:03:31,590 - INFO - User model ---- get current user payload error
+2025-01-21 13:03:31,615 - INFO - User model ---- get current user payload error
+2025-01-21 13:04:42,109 - INFO - User model ---- get current user payload error
+2025-01-21 13:04:42,127 - INFO - User model ---- get current user payload error
+2025-01-21 13:11:05,564 - INFO - User model ---- get current user payload error
+2025-01-21 13:11:05,576 - INFO - User model ---- get current user payload error
+2025-01-21 13:16:15,198 - INFO - 3 changes detected
+2025-01-21 13:16:15,971 - INFO - 1 change detected
+2025-01-21 13:16:19,331 - INFO - 3 changes detected
+2025-01-21 13:16:19,500 - INFO - Application started -----------
+2025-01-21 13:18:28,978 - INFO - 3 changes detected
+2025-01-21 13:18:29,484 - INFO - 1 change detected
+2025-01-21 13:18:32,245 - INFO - 3 changes detected
+2025-01-21 13:18:32,385 - INFO - Application started -----------
+2025-01-21 13:19:03,765 - INFO - 3 changes detected
+2025-01-21 13:19:04,347 - INFO - 1 change detected
+2025-01-21 13:19:07,344 - INFO - 3 changes detected
+2025-01-21 13:19:07,479 - INFO - Application started -----------
+2025-01-21 13:19:17,643 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 03:10:39,914 - INFO - Application started -----------
+2025-01-22 03:10:42,309 - INFO - Application started -----------
+2025-01-22 03:12:07,100 - INFO - 3 changes detected
+2025-01-22 03:12:07,698 - INFO - 1 change detected
+2025-01-22 03:12:10,048 - INFO - 3 changes detected
+2025-01-22 03:12:10,195 - INFO - Application started -----------
+2025-01-22 03:23:32,655 - INFO - User model ---- get current user payload error
+2025-01-22 03:23:32,695 - INFO - User model ---- get current user payload error
+2025-01-22 03:26:41,037 - INFO - User model ---- get current user payload error
+2025-01-22 03:26:41,059 - INFO - User model ---- get current user payload error
+2025-01-22 03:35:06,240 - INFO - User model ---- get current user payload error
+2025-01-22 03:35:06,252 - INFO - User model ---- get current user payload error
+2025-01-22 03:42:20,405 - INFO - User model ---- get current user payload error
+2025-01-22 03:42:20,522 - INFO - User model ---- get current user payload error
+2025-01-22 03:47:24,887 - INFO - User model ---- get current user payload error
+2025-01-22 03:47:24,895 - INFO - User model ---- get current user payload error
+2025-01-22 03:51:29,588 - INFO - User model ---- get current user payload error
+2025-01-22 03:51:29,605 - INFO - User model ---- get current user payload error
+2025-01-22 03:54:48,789 - INFO - User model ---- get current user payload error
+2025-01-22 03:54:48,798 - INFO - User model ---- get current user payload error
+2025-01-22 03:58:06,002 - INFO - User model ---- get current user payload error
+2025-01-22 03:58:06,009 - INFO - User model ---- get current user payload error
+2025-01-22 03:58:41,176 - INFO - User model ---- get current user payload error
+2025-01-22 03:58:41,181 - INFO - User model ---- get current user payload error
+2025-01-22 04:04:58,176 - INFO - User model ---- get current user payload error
+2025-01-22 04:04:58,211 - INFO - User model ---- get current user payload error
+2025-01-22 04:07:34,846 - INFO - User model ---- get current user payload error
+2025-01-22 04:07:34,852 - INFO - User model ---- get current user payload error
+2025-01-22 04:14:23,600 - INFO - User model ---- get current user payload error
+2025-01-22 04:14:23,607 - INFO - User model ---- get current user payload error
+2025-01-22 04:14:39,629 - INFO - User model ---- get current user payload error
+2025-01-22 04:14:39,715 - INFO - User model ---- get current user payload error
+2025-01-22 04:19:49,057 - INFO - User model ---- get current user payload error
+2025-01-22 04:19:49,073 - INFO - User model ---- get current user payload error
+2025-01-22 04:23:16,622 - INFO - User model ---- get current user payload error
+2025-01-22 04:23:16,668 - INFO - User model ---- get current user payload error
+2025-01-22 04:28:49,803 - INFO - User model ---- get current user payload error
+2025-01-22 04:28:49,835 - INFO - User model ---- get current user payload error
+2025-01-22 04:31:23,723 - INFO - 3 changes detected
+2025-01-22 04:31:24,662 - INFO - 1 change detected
+2025-01-22 04:31:29,054 - INFO - 3 changes detected
+2025-01-22 04:31:31,070 - INFO - Application started -----------
+2025-01-22 04:31:32,707 - INFO - 1 change detected
+2025-01-22 04:31:39,299 - INFO - Application started -----------
+2025-01-22 04:56:03,897 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 04:56:29,827 - INFO - User model ---- get current user payload error
+2025-01-22 04:56:29,862 - INFO - User model ---- get current user payload error
+2025-01-22 13:25:29,736 - INFO - Application started -----------
+2025-01-22 13:25:33,352 - INFO - Application started -----------
+2025-01-22 13:32:50,869 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:35:37,617 - INFO - 3 changes detected
+2025-01-22 13:35:38,361 - INFO - 1 change detected
+2025-01-22 13:35:43,572 - INFO - 3 changes detected
+2025-01-22 13:35:43,783 - INFO - Application started -----------
+2025-01-22 13:35:51,417 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:38:27,966 - INFO - 3 changes detected
+2025-01-22 13:38:28,591 - INFO - 1 change detected
+2025-01-22 13:38:33,770 - INFO - 3 changes detected
+2025-01-22 13:38:33,934 - INFO - Application started -----------
+2025-01-22 13:38:34,151 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:38:34,646 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 13:39:47,681 - INFO - 3 changes detected
+2025-01-22 13:39:48,227 - INFO - 1 change detected
+2025-01-22 13:39:50,981 - INFO - 3 changes detected
+2025-01-22 13:39:51,114 - INFO - Application started -----------
+2025-01-22 13:39:51,208 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:39:51,631 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 13:39:57,538 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 13:41:30,659 - INFO - 3 changes detected
+2025-01-22 13:41:31,196 - INFO - 1 change detected
+2025-01-22 13:41:33,997 - INFO - 3 changes detected
+2025-01-22 13:41:34,258 - INFO - Application started -----------
+2025-01-22 13:41:38,626 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:41:39,035 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 13:44:32,304 - INFO - 3 changes detected
+2025-01-22 13:44:32,880 - INFO - 1 change detected
+2025-01-22 13:44:35,898 - INFO - Application started -----------
+2025-01-22 13:44:35,904 - INFO - 3 changes detected
+2025-01-22 13:46:16,803 - INFO - 6 changes detected
+2025-01-22 13:46:17,431 - INFO - 1 change detected
+2025-01-22 13:46:19,829 - INFO - 6 changes detected
+2025-01-22 13:46:20,020 - INFO - Application started -----------
+2025-01-22 13:46:31,884 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 13:46:32,334 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 14:20:36,363 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:36,427 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:41,147 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:41,158 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:45,782 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:45,786 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:53,072 - INFO - User model ---- get current user payload error
+2025-01-22 14:20:53,087 - INFO - User model ---- get current user payload error
+2025-01-22 14:21:58,627 - INFO - User model ---- get current user payload error
+2025-01-22 14:21:58,648 - INFO - User model ---- get current user payload error
+2025-01-22 14:27:19,841 - INFO - User model ---- get current user payload error
+2025-01-22 14:27:19,969 - INFO - User model ---- get current user payload error
+2025-01-22 14:32:13,555 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 14:33:32,135 - INFO - User model ---- get current user payload error
+2025-01-22 14:33:32,152 - INFO - User model ---- get current user payload error
+2025-01-22 14:35:26,455 - INFO - User model ---- get current user payload error
+2025-01-22 14:35:26,464 - INFO - User model ---- get current user payload error
+2025-01-22 14:36:30,574 - INFO - User model ---- get current user payload error
+2025-01-22 14:36:30,610 - INFO - User model ---- get current user payload error
+2025-01-22 14:43:17,842 - INFO - User model ---- get current user payload error
+2025-01-22 14:43:17,847 - INFO - User model ---- get current user payload error
+2025-01-22 14:44:46,168 - INFO - User model ---- get current user payload error
+2025-01-22 14:44:46,176 - INFO - User model ---- get current user payload error
+2025-01-22 14:47:12,010 - INFO - User model ---- get current user payload error
+2025-01-22 14:47:12,019 - INFO - User model ---- get current user payload error
+2025-01-22 14:49:15,754 - INFO - User model ---- get current user payload error
+2025-01-22 14:49:15,775 - INFO - User model ---- get current user payload error
+2025-01-22 14:50:58,586 - INFO - User model ---- get current user payload error
+2025-01-22 14:50:58,618 - INFO - User model ---- get current user payload error
+2025-01-22 14:51:30,564 - INFO - User model ---- get current user payload error
+2025-01-22 14:51:30,568 - INFO - User model ---- get current user payload error
+2025-01-22 14:59:26,079 - INFO - User model ---- get current user payload error
+2025-01-22 14:59:26,096 - INFO - User model ---- get current user payload error
+2025-01-22 14:59:35,301 - INFO - User model ---- get current user payload error
+2025-01-22 14:59:35,348 - INFO - User model ---- get current user payload error
+2025-01-22 15:01:42,146 - INFO - User model ---- get current user payload error
+2025-01-22 15:01:42,153 - INFO - User model ---- get current user payload error
+2025-01-22 15:02:43,419 - INFO - User model ---- get current user payload error
+2025-01-22 15:02:43,434 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:18,927 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:18,943 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:43,403 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:43,419 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:54,149 - INFO - User model ---- get current user payload error
+2025-01-22 15:11:54,368 - INFO - User model ---- get current user payload error
+2025-01-22 15:12:06,799 - INFO - User model ---- get current user payload error
+2025-01-22 15:12:06,822 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:06,323 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:06,330 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:32,273 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:32,280 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:51,628 - INFO - User model ---- get current user payload error
+2025-01-22 15:13:51,667 - INFO - User model ---- get current user payload error
+2025-01-22 15:14:17,393 - INFO - User model ---- get current user payload error
+2025-01-22 15:14:17,405 - INFO - User model ---- get current user payload error
+2025-01-22 15:14:28,031 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:16:21,795 - INFO - 3 changes detected
+2025-01-22 15:16:24,817 - INFO - 1 change detected
+2025-01-22 15:16:34,053 - INFO - 3 changes detected
+2025-01-22 15:16:34,205 - INFO - Application started -----------
+2025-01-22 15:16:51,016 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:16:51,961 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:19:06,250 - INFO - 3 changes detected
+2025-01-22 15:19:06,796 - INFO - 1 change detected
+2025-01-22 15:19:09,513 - INFO - 3 changes detected
+2025-01-22 15:19:09,650 - INFO - Application started -----------
+2025-01-22 15:21:35,291 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:21:35,892 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:22:27,264 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:22:31,384 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:22:45,240 - INFO - None
+2025-01-22 15:23:12,848 - INFO - 3 changes detected
+2025-01-22 15:23:13,421 - INFO - 1 change detected
+2025-01-22 15:23:19,080 - INFO - 3 changes detected
+2025-01-22 15:23:19,198 - INFO - Application started -----------
+2025-01-22 15:23:19,362 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:23:19,859 - INFO - None
+2025-01-22 15:23:26,483 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:24:10,418 - INFO - User model ---- get current user payload error
+2025-01-22 15:24:11,543 - INFO - User model ---- get current user payload error
+2025-01-22 15:24:11,571 - INFO - User model ---- get current user payload error
+2025-01-22 15:24:32,507 - INFO - User model ---- get current user payload error
+2025-01-22 15:24:32,510 - INFO - User model ---- get current user payload error
+2025-01-22 15:24:39,828 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:28:27,148 - INFO - 3 changes detected
+2025-01-22 15:28:27,802 - INFO - 1 change detected
+2025-01-22 15:28:33,437 - INFO - 3 changes detected
+2025-01-22 15:28:33,705 - INFO - Application started -----------
+2025-01-22 15:29:02,240 - INFO - 3 changes detected
+2025-01-22 15:29:02,759 - INFO - 1 change detected
+2025-01-22 15:29:06,617 - INFO - 3 changes detected
+2025-01-22 15:29:06,803 - INFO - Application started -----------
+2025-01-22 15:29:11,156 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:29:11,575 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:29:49,319 - INFO - 3 changes detected
+2025-01-22 15:29:49,892 - INFO - 1 change detected
+2025-01-22 15:29:52,618 - INFO - 3 changes detected
+2025-01-22 15:29:52,906 - INFO - Application started -----------
+2025-01-22 15:29:55,192 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:29:55,745 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:35:03,473 - INFO - 3 changes detected
+2025-01-22 15:35:04,060 - INFO - 1 change detected
+2025-01-22 15:35:07,929 - INFO - 3 changes detected
+2025-01-22 15:35:08,412 - INFO - Application started -----------
+2025-01-22 15:35:08,701 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:35:09,310 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:35:09,311 - INFO - [('email', 'email0@mail.com'), ('username', 'testuse'), ('disabled', False), ('profile_pic', None), ('id', '67906c5423b9854a144c1a50'), ('hashed_password', '$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u'), ('created_at', datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)), ('updated_at', datetime.datetime(2025, 1, 22, 3, 56, 4, 340000))]
+2025-01-22 15:37:44,118 - INFO - 3 changes detected
+2025-01-22 15:37:44,656 - INFO - 1 change detected
+2025-01-22 15:37:47,663 - INFO - 3 changes detected
+2025-01-22 15:37:47,909 - INFO - Application started -----------
+2025-01-22 15:37:48,076 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:37:48,530 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:38:34,312 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:39:24,189 - INFO - email='email0@mail.com' username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:44:03,927 - INFO - 6 changes detected
+2025-01-22 15:44:04,516 - INFO - 1 change detected
+2025-01-22 15:44:08,082 - INFO - 6 changes detected
+2025-01-22 15:44:08,441 - INFO - Application started -----------
+2025-01-22 15:44:09,103 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:44:09,586 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:45:01,964 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:47:19,558 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:48:43,786 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:49:18,146 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' hashed_password='$2b$12$u2TRFylRBXlxNlI7wZjHlul5WRw/kAHK7VQdwAXfncbrNTgYjNP0u' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-22 15:54:53,064 - INFO - 3 changes detected
+2025-01-22 15:54:53,671 - INFO - 1 change detected
+2025-01-22 15:54:56,075 - INFO - 3 changes detected
+2025-01-22 15:54:56,233 - INFO - Application started -----------
+2025-01-22 15:58:56,977 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-22 15:58:57,432 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)

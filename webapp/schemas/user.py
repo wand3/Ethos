@@ -6,7 +6,7 @@ from ..schemas import PyObjectId
 
 
 class UserBase(BaseModel):
-    email: EmailStr
+    # email: EmailStr
     username: str
     disabled: Optional[bool] | None = None
     profile_pic: Optional[str] = None
@@ -29,7 +29,7 @@ class UserBase(BaseModel):
 
 class UserInDB(UserBase):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
-    hashed_password: str
+    # hashed_password: str
     created_at: datetime
     updated_at: datetime
 

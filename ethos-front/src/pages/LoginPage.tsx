@@ -1,142 +1,71 @@
 import EthosBody from "../components/Body";
-import { InputField } from "../components/Auth/FormInput";
-import { Button } from "@headlessui/react";
-import React, { useRef, useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import useFlash from "../hooks/UseFlash";
-import UseApi from "../hooks/UseApi";
-import useUser from "../hooks/UseUser";
-import { UserSchema } from "../context/UserProvider";
-// import { ShoppingBag, StoreIcon } from "lucide-react";
-import RegInputField from "../components/Auth/RegisterForm";
+import Config from "../config";
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from "../store";
+import { loginUser } from "../services/auth";
+import SpinnerLineWave from "../components/spinner";
+// form and yup validation 
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form'
+import { schemaLogin , LoginUserInputSchema } from '../schemas/auth'
+import axios from "axios";
 
-
-type FormErrorType = {
-  username?: string;
-  password?: string;
-};
 
 const LoginPage = () => {
-  const [formErrors, setFormErrors] = useState<FormErrorType>({});
-  const [loginError, setLoginError] = useState<string | null>(null);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const { loading, error, success } = useSelector((state: RootState) => state.auth)
+  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }, setError, clearErrors
+  } = useForm<LoginUserInputSchema>({ resolver: yupResolver(schemaLogin)})
+ 
   const flash = useFlash();
-  const api = UseApi();
-  const {setUser, user, fetchUser} = useUser();
+  const navigate = useNavigate();
+  
 
-  const usernameField = useRef<HTMLInputElement>(null);
-  const passwordField = useRef<HTMLInputElement>(null);
+  // Redirect to home page if registration is successful
+  useEffect(() => {
+    // setFormerrors({})
 
-  const handleSubmit = async (ev: React.FormEvent) => {
-    ev.preventDefault();
-    console.log("data: ", usernameField);
-    console.log("data2: ", passwordField);
-    const username = usernameField.current ? usernameField.current.value : "";
-    const password = passwordField.current ? passwordField.current.value : "";
+    if (success) {
+      navigate('/ethos'); // Replace '/login' with the actual path to your login page
+      flash('Welcome to ethos', 'success')
 
-    // useEffect(() => {
-    //   if (emailField.current) {
-    //     emailField.current.focus();
-    //   }
-    // }, []);
-    const form = newForm();
-
-    console.log("data: ", username);
-    console.log("data2: ", password);
-
-    const errors: FormErrorType = {};
-    if (!username) {
-      errors.username = "Email must not be empty";
     }
-    if (!password) {
-      errors.password = "Password must not be empty";
-    }
-    setFormErrors(errors);
-    if (Object.keys(errors).length > 0) {
-      return;
-    }
-    // const result = await login(email, password);
-    // console.log(result)
-    // if (result === 'fail') {
-    //   flash('Invalid username or password', 'danger');
-    // }
-    // else if (result === 'ok') {
-    //   let next = '/';
-    //   if (location.state && location.state.next) {
-    //     next = location.state.next;
-    //   }
-    //   flash('login success', 'success')
-    //   navigate(next);
-    // }
-
-    // const result = await api.login(email, password)
-    // console.log(`login ${result}`)
-    // if (result === 'fail') {
-    //   flash('Invalid username or password', 'danger');
-    // }
-    // else if (result === 'ok') {
-    //   let next = '/';
-    //   if (location.state && location.state.next) {
-    //     next = location.state.next;
-    //   }
-    //   navigate(next);
-
-    // }
-    const update_user = async () => {
-      // useEffect(() => {
-        fetchUser()
-        setUser(user)
-      // }, [user])  
+    if (error) {
+      flash('Failed', 'error')
     }
 
+  }, [success, navigate]);
+
+  const onSubmit = async (data: LoginUserInputSchema) => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/token", {
-        method: "POST",
-        headers: {
-          Authorization: "Basic " + btoa(`${username}:${password}`),
-        },
-      });
-      console.log(response)
-      if (response.ok) {
-        const data = await response.json();
-        if (data.token) {
-          localStorage.setItem("token", data.token);
-          console.log("Login successful:", data.token);
-
-          let next = '/';
-            if (location.state && location.state.next) {
-                next = location.state.next;
-                          // await update_user()
-
-            }
-            flash('login success', 'success')
-            navigate(next);
-            // fetchUser();
-
-
-            
-        } else {
-          flash('check credentials', 'danger')
-          setLoginError("Login failed. Please check your credentials.");
-
-        }
-      } else {
-
-        setLoginError("Login failed. Please try again.");
-        flash('check credentials', 'error')
-
+        console.log('onsubmit in')
+        clearErrors(); // Clear any previous errors
+        console.log('onsubmit clear errors')
+        // check if username exist 
         
 
+        const j = dispatch(loginUser({
+          username: data.username, password: data.password,
+        }));
+        console.log('post dispatch clear errors')
+        console.log(j)
+
+      } catch (err: any) {
+        console.error("Registration error:", err);
+        if (axios.isAxiosError(err)) {
+          setError("root", { type: "manual", message: err.response?.data?.message || err.message || 'Registration failed due to network error' });
+        } else {
+          setError("root", { type: "manual", message: "An unexpected error occurred during registration." });
+        }
       }
-     } catch (error) {
-      console.error("Login error:", error);
-      flash('check credentials', 'danger')
-
-      setLoginError("Login failed. Please try again.");
-    }
-  };
-
+    };
+  
   return (
     <>
       <EthosBody nav={false}>
@@ -186,27 +115,20 @@ const LoginPage = () => {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-6 gap-6">
-                  <div className="col-span-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid grid-cols-6 gap-6">
+                    {error && <p className="text-xs text-red-600 block">{error}</p>}
                     
-                     <RegInputField
-                      name="email"
-                      label="username"
-                      type="name"
-                      placeholder="Enter email"
-                      error={formErrors.username}
-                      Fieldref={usernameField}
-                    />
+                    <div className="col-span-6 sm:col-span-3">
+                      <label  htmlFor="Username" className="flex text-sm font-medium text-gray-700" >Username</label>
+                      <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("username")} />
+                      {errors.username && <p className="flex mt-2 text-xs text-red-600">{errors.username.message}</p>}
+                    </div>  
 
-                    <RegInputField
-                      name="password"
-                      label="Password"
-                      type="password"
-                      placeholder="Enter password"
-                      error={formErrors.password}
-                      Fieldref={passwordField}
-                    />
-                  </div>
+                    <div className="col-span-6 sm:col-span-3">
+                      <label  htmlFor="Password" className="flex text-sm font-medium text-gray-700" >Password</label>
+                      <input className="mt-1 w-full rounded-lg border-gray-200 bg-white text-sm text-gray-700 shadow-sm" type="password" {...register("password")} />
+                      {errors.password && <p className="flex mt-2 text-xs text-red-600">{errors.password.message}</p>}
+                    </div>  
 
                   <div className="col-span-6">
                     <label htmlFor="SignInAccept" className="flex gap-4">
@@ -226,13 +148,12 @@ const LoginPage = () => {
                   
 
                   <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                      <Button
-                        className="inline-block shrink-0 rounded-md border border-slate-900 bg-slate-800 hover:bg-transparent py-3 px-12 text-sm font-semibold text-white transition shadow-slate-600 focus:outline-1 hover:text-slate-900 data-[focus]:outline-2"
-                        type="submit"
+                      <button
+                        className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                        type="submit" aria-disabled={loading}
                       >
-                        Sign in
-
-                      </Button>
+                        {loading ? <SpinnerLineWave /> : 'Login'}
+                      </button>
 
                     <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                       Don't have an account?
@@ -242,17 +163,13 @@ const LoginPage = () => {
                 </form>
               </div>
             </main>
-
           </div>
-        </section>
-
-
-        
-          {loginError && <p className="text-red-500">{loginError}</p>}
-          
+        </section>          
       </EthosBody>
     </>
   );
 };
 
+
 export default LoginPage;
+

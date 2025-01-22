@@ -69,9 +69,9 @@ export default class EthosApiClient {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
           ...options.headers,
         },
-        credentials: options.url === '/token' ? 'omit' : 'include',
+        // credentials: options.url === '/token' ? 'omit' : 'include',
 
-        // credentials: options.url === '/token' ? 'include' : 'omit',
+        credentials: options.url === '/token' ? 'include' : 'omit',
         body: options.body ? JSON.stringify(options.body) : null,
       });
     }

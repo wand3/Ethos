@@ -32,10 +32,10 @@ const Nav = () => {
   // Fetch user function
   const fetchUser = async () => {
       try {
-          const response = await api.get<UserSchema>('/user');
+          const response = await api.get<UserSchema>('/user/me');
           console.log(response)
           const data = response.body;
-          setUsername(data?.email as string)
+          setUsername(data?.username as string)
       } catch (error) {
           setUsername('Guest'); // Handle error state
       }
@@ -48,12 +48,12 @@ const Nav = () => {
       if (api.isAuthenticated()) {
         setIsAuthenticated(true);
         console.log('authentication state updated')
-        const response = await api.get<UserSchema>('/user');
+        const response = await api.get<UserSchema>('/user/me');
         console.log(response)
         if (response.body === null){
           setUsername('Guest')
         } else {
-        setUsername(response.body?.email as string);
+        setUsername(response.body?.username as string);
         
         }
       }
@@ -63,11 +63,6 @@ const Nav = () => {
     })();
   }, [api]);
 
-  useEffect(() => {
-    (async () => {
-      await fetchUser();
-    })();
-  }, []);
 
 
   return (
@@ -88,7 +83,6 @@ const Nav = () => {
             {/* nav brand  */}
             <a href="/">
               <div className="flex flex-shrink-0 items-center">
-                <h1 className='text-2xl text-slate-400 font-extrabold'>KASU<span className='text-red-700'>WA</span></h1>
                 {/* <img
                   alt="Your Company"
                   src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"

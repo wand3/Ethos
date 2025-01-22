@@ -27,7 +27,7 @@ function App() {
               
               
                 <Routes>
-                  <Route path="/" element={
+                  <Route path="/ethos" element={
                     <PublicRoute><Ethos /></PublicRoute>
                   } />
                   <Route path="/login" element={
