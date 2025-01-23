@@ -900,3 +900,73 @@ Traceback (most recent call last):
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-22 15:58:57,432 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-23 01:46:08,305 - INFO - Application started -----------
+2025-01-23 01:46:13,333 - INFO - Application started -----------
+2025-01-23 02:18:45,348 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:45,372 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:45,378 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:45,380 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,058 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,074 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,097 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,102 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,145 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,147 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,165 - INFO - User model ---- get current user payload error
+2025-01-23 02:18:52,193 - INFO - User model ---- get current user payload error
+2025-01-23 02:21:31,725 - INFO - User model ---- get current user payload error
+2025-01-23 02:21:32,788 - INFO - User model ---- get current user payload error
+2025-01-23 02:21:32,796 - INFO - User model ---- get current user payload error
+2025-01-23 02:21:32,801 - INFO - User model ---- get current user payload error
+2025-01-23 02:21:32,806 - INFO - User model ---- get current user payload error
+2025-01-23 02:23:02,128 - INFO - User model ---- get current user payload error
+2025-01-23 02:23:02,157 - INFO - User model ---- get current user payload error
+2025-01-23 02:23:06,812 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-23 02:23:07,254 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-23 03:37:20,858 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:20,885 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:20,914 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:20,918 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:42,065 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:42,077 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:42,669 - INFO - User model ---- get current user payload error
+2025-01-23 03:37:42,758 - INFO - User model ---- get current user payload error
+2025-01-23 03:38:15,879 - INFO - User model ---- get current user payload error
+2025-01-23 03:38:15,890 - INFO - User model ---- get current user payload error
+2025-01-23 03:38:16,289 - INFO - User model ---- get current user payload error
+2025-01-23 03:38:16,293 - INFO - User model ---- get current user payload error
+2025-01-23 03:38:21,248 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-23 04:13:40,551 - INFO - User model ---- get current user payload error
+2025-01-23 04:13:46,416 - INFO - User model ---- get current user payload error
+2025-01-23 04:13:46,428 - INFO - User model ---- get current user payload error
+2025-01-23 04:13:46,479 - INFO - User model ---- get current user payload error
+2025-01-23 04:13:46,800 - INFO - User model ---- get current user payload error
+2025-01-23 04:13:46,808 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:06,787 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:06,800 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:06,804 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:07,006 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:07,015 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:29,980 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:29,993 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:30,731 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:30,747 - INFO - User model ---- get current user payload error
+2025-01-23 04:14:34,087 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-23 04:42:24,703 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:24,755 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:41,557 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:41,570 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:50,126 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:50,132 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:54,350 - INFO - username='testuse' disabled=False profile_pic=None id='67906c5423b9854a144c1a50' created_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000) updated_at=datetime.datetime(2025, 1, 22, 3, 56, 4, 340000)
+2025-01-23 04:42:59,595 - INFO - User model ---- get current user payload error
+2025-01-23 04:42:59,705 - INFO - User model ---- get current user payload error
+2025-01-23 04:44:14,069 - INFO - 3 changes detected
+2025-01-23 04:44:14,943 - INFO - 1 change detected
+2025-01-23 04:44:18,076 - INFO - 3 changes detected
+2025-01-23 04:44:18,237 - INFO - Application started -----------

@@ -1,10 +1,11 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems, Description, Field, Input, Label } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
-import useUser from '../hooks/UseUser';
-import UseApi from '../hooks/UseApi';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { UserSchema } from '../context/UserProvider';
+import { useDispatch, useSelector } from 'react-redux'
+import { useGetUserDetailsQuery } from '../services/user';
+import { AppDispatch, RootState } from '../store';
+import { logout, setCredentials } from '../slices/UserSlice';
+import { useEffect } from 'react';
 
 
 
@@ -20,50 +21,22 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Nav = () => {
-  const [username, setUsername] = useState<string>('')
-  const [ isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+const Nav = () => {  
+  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch
+  const token = useSelector((state: RootState) => {state.user.token})
+  // automatically authenticate user if token is found
+  const { data: user, isFetching, isLoading, error } = useGetUserDetailsQuery(token, { // Type data and add other states
+    pollingInterval: 900000,
+    skip: !localStorage.getItem('token') // Skip query if no token
+  });
 
 
-  const user = useUser();
-
-  const api = UseApi();
-
-  // Fetch user function
-  const fetchUser = async () => {
-      try {
-          const response = await api.get<UserSchema>('/user/me');
-          console.log(response)
-          const data = response.body;
-          setUsername(data?.username as string)
-      } catch (error) {
-          setUsername('Guest'); // Handle error state
-      }
-  };
-
-
+  console.log(user); // user object
   useEffect(() => {
-    (async () => {
-      await fetchUser();
-      if (api.isAuthenticated()) {
-        setIsAuthenticated(true);
-        console.log('authentication state updated')
-        const response = await api.get<UserSchema>('/user/me');
-        console.log(response)
-        if (response.body === null){
-          setUsername('Guest')
-        } else {
-        setUsername(response.body?.username as string);
-        
-        }
-      }
-      else {
-        setUsername('Guest');
-      }
-    })();
-  }, [api]);
-
-
+    if (user) {
+      dispatch(setCredentials(user))
+    }
+  }, [user, dispatch])
 
   return (
     <>
@@ -111,10 +84,10 @@ const Nav = () => {
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">Open user menu</span>
                     <UserIcon aria-hidden="true" className="h-6 w-6 bg-transparent fill-white" />
-                    { isAuthenticated === true && (
-                        <span className='flex absolute justify-center text-md mt-[-50%] ml-[85%] rounded-xl bg:ring-white'>{username}</span>
+                    { user && (
+                        <span className='flex absolute justify-center text-md mt-[-50%] ml-[85%] rounded-xl bg:ring-white'>{user?.username}</span>
                       )}
-                    { isAuthenticated === false && (
+                    { !user && (
                        <span className='flex absolute justify-center text-md mt-[-50%] ml-[85%] rounded-xl bg:ring-white'>Guest!</span>
                       )} 
                     <p className='text-[0.6rem] font-semibold font-mono'>Hi!</p>
@@ -124,7 +97,7 @@ const Nav = () => {
                   transition
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  { isAuthenticated === false && (
+                  { !user && (
                     <>
                     <MenuItem>
 
@@ -144,7 +117,7 @@ const Nav = () => {
                     </MenuItem> */}
                     </>
                   )}
-                  { isAuthenticated === true && (
+                  { user && (
                     <>
                     <MenuItem>
 
@@ -158,7 +131,7 @@ const Nav = () => {
                       </a>
                     </MenuItem>
                     <MenuItem>
-                      <a href="/logout" onClick={user.logout} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                      <a href="/logout" onClick={() => dispatch(logout())} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                         Sign out
                       </a>
                     </MenuItem>
@@ -182,14 +155,14 @@ const Nav = () => {
               <div className="flex flex-none items-center justify-center sm:items-stretch sm:justify-start">
               
                 <div className="hidden sm:ml-6 sm:block">
-                  { isAuthenticated ? isAuthenticated && (
+                  { user ? user && (
                     <div className="flex space-x-4">
                       
                       {notUser.map((item) => (
                         <a
                           key={item.name}
                           href={item.href}
-                          onClick={user.logout}
+                          onClick={() => dispatch(logout())}
                           aria-current={item.current ? 'page' : undefined}
                           className={classNames(
                             item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
@@ -229,7 +202,7 @@ const Nav = () => {
 
         <DisclosurePanel className="sm:hidden">
 
-          { isAuthenticated === true && (
+          { user && (
             <div className="space-y-1 px-2 pb-3 pt-2">
               {notUser.map((item) => (
                 <DisclosureButton
@@ -247,7 +220,7 @@ const Nav = () => {
               ))}
             </div>
           )}
-          { username === "Guest" && (
+          { user?.username === "Guest" && (
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <DisclosureButton

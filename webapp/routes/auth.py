@@ -27,7 +27,7 @@ async def login_for_access_token(
     """Authenticate user and issue a JWT access token."""
     # Call the instance method using the injected user_model
     user = await user_model.authenticate_user(self=user_model, username=form_data.username, password=form_data.password)
-    logger.info(user)
+    # logger.info(user)
     # user = UserInDB(user)
     # user_list = [us for us in user]
     # logger.info(user_list)

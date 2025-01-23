@@ -4,7 +4,7 @@ import { registerUser, loginUser } from '../services/auth';
 
 
 // initialize userToken from local storage
-const userToken = localStorage.getItem('token')
+export const userToken = localStorage.getItem('token')
   ? localStorage.getItem('token')
   : null
 
@@ -30,7 +30,11 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-  
+    logout: (state) => {
+      state.user = null;
+      state.token = null;
+      localStorage.removeItem('token'); // Remove token from local storage
+    },
   },
   extraReducers: (builder) => {
     builder
