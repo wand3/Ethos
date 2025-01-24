@@ -23,15 +23,12 @@ function App() {
     <>
         <FlashProvider>
           <ApiProvider>
-            <UserProvider>
-              
+             <UserProvider>
               
                 <Routes>
-                  <Route path="/ethos" element={
-                    <PublicRoute><Ethos /></PublicRoute>
-                  } />
+                  <Route path="/ethos" element={ <Ethos />} />
                   <Route path="/login" element={
-                    <PublicRoute><LoginPage /></PublicRoute>
+                    <LoginPage />
                   } />
                   <Route path="/logout" element={
                     <PublicRoute><Ethos /></PublicRoute>
@@ -58,7 +55,7 @@ function App() {
                   <Route path="*" element={
                     <PrivateRoute>
                       <Routes>
-                        <Route path="/" element={<Ethos />} />
+                        {/* <Route path="/" element={<Ethos />} /> */}
 
                         {/* <Route path='/shipping' /> */}
                         <Route path="/user" element={<UserPage />} />
@@ -68,8 +65,7 @@ function App() {
                   } />                  
                 </Routes>
               
-            </UserProvider>
-
+            </UserProvider> 
           </ApiProvider>
         </FlashProvider>  
        

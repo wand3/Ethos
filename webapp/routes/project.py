@@ -80,6 +80,8 @@ async def create_project(
                        images=images,
                        roles=roles_list)
         project_dict = post.model_dump(by_alias=True)
+        logger.info(f'project content ----  user {project_dict}')
+
         project_dict["created_at"] = datetime.utcnow()
         project_dict["updated_at"] = datetime.utcnow()
 

@@ -972,3 +972,72 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-23 04:44:18,237 - INFO - Application started -----------
 2025-01-24 11:11:09,468 - INFO - Application started -----------
 2025-01-24 11:11:12,045 - INFO - Application started -----------
+2025-01-24 13:21:40,151 - INFO - Application started -----------
+2025-01-24 13:21:44,577 - INFO - Application started -----------
+2025-01-24 13:25:31,953 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-24 13:51:41,325 - INFO - 3 changes detected
+2025-01-24 13:51:42,023 - INFO - 1 change detected
+2025-01-24 13:51:46,363 - INFO - Application started -----------
+2025-01-24 13:51:46,385 - INFO - 3 changes detected
+2025-01-24 14:03:08,695 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-24 14:04:28,543 - INFO - 3 changes detected
+2025-01-24 14:04:29,280 - INFO - 1 change detected
+2025-01-24 14:04:44,280 - INFO - Application started -----------
+2025-01-24 14:04:44,666 - INFO - 3 changes detected
+2025-01-24 14:04:55,570 - INFO - 1 change detected
+2025-01-24 14:08:18,114 - INFO - 3 changes detected
+2025-01-24 14:08:18,768 - INFO - 1 change detected
+2025-01-24 14:08:34,474 - INFO - Application started -----------
+2025-01-24 14:08:34,481 - INFO - 3 changes detected
+2025-01-24 14:08:35,022 - INFO - 1 change detected
+2025-01-24 14:09:39,486 - INFO - 3 changes detected
+2025-01-24 14:09:40,125 - INFO - 1 change detected
+2025-01-24 14:09:49,334 - INFO - 3 changes detected
+2025-01-24 14:09:49,453 - INFO - Application started -----------
+2025-01-24 14:09:49,961 - INFO - 1 change detected
+2025-01-24 14:10:26,489 - INFO - 3 changes detected
+2025-01-24 14:10:27,098 - INFO - 1 change detected
+2025-01-24 14:10:36,790 - INFO - 3 changes detected
+2025-01-24 14:10:36,802 - INFO - Application started -----------
+2025-01-24 14:10:37,215 - INFO - project content ----  user title='front test' description='testing front add project' project_url=None github_url='https://github.com/experiment' roles=None images=[UploadFile(filename='Screenshot 2025-01-23 at 05.01.53.png', size=474468, headers=Headers({'content-disposition': 'form-data; name="images"; filename="Screenshot 2025-01-23 at 05.01.53.png"', 'content-type': 'image/png'}))]
+2025-01-24 14:10:37,316 - INFO - 1 change detected
+2025-01-24 14:11:24,854 - INFO - 3 changes detected
+2025-01-24 14:11:25,461 - INFO - 1 change detected
+2025-01-24 14:11:29,632 - INFO - Application started -----------
+2025-01-24 14:11:29,651 - INFO - 3 changes detected
+2025-01-24 17:19:54,141 - INFO - Application started -----------
+2025-01-24 17:20:03,177 - INFO - Application started -----------
+2025-01-24 17:20:13,783 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-24 17:22:13,073 - INFO - User model ---- get current user payload error
+2025-01-24 17:22:15,447 - INFO - User model ---- get current user payload error
+2025-01-24 17:29:01,539 - INFO - 1 change detected
+2025-01-24 17:29:37,489 - INFO - 1 change detected
+2025-01-24 17:52:15,326 - INFO - User model ---- get current user payload error
+2025-01-24 17:52:15,453 - INFO - User model ---- get current user payload error
+2025-01-24 17:56:13,036 - INFO - User model ---- get current user payload error
+2025-01-24 17:56:13,043 - INFO - User model ---- get current user payload error
+2025-01-24 17:56:40,201 - INFO - User model ---- get current user payload error
+2025-01-24 17:57:14,401 - INFO - User model ---- get current user payload error
+2025-01-24 17:57:29,864 - INFO - User model ---- get current user payload error
+2025-01-24 17:58:41,652 - INFO - project content ----  user {'title': 'front test', 'description': 'testing front add project', 'project_url': None, 'github_url': 'https://github.com/experiment', 'technologies': None, 'roles': ["['one'", "'two']"], 'testing_details': None, 'images': ['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png']}
+2025-01-24 17:58:41,884 - INFO - 1 change detected
+2025-01-24 18:17:56,757 - INFO - project content ----  user {'title': 'front test', 'description': 'testing front add project', 'project_url': None, 'github_url': 'https://github.com/experiment', 'technologies': None, 'roles': ['one', 'two'], 'testing_details': None, 'images': ['6793cb44a3d899501e64f1f7_Screenshot 2025-01-23 at 05.01.53.png']}
+2025-01-24 18:17:56,985 - INFO - 1 change detected
+2025-01-24 18:34:10,685 - INFO - User model ---- get current user payload error
+2025-01-24 18:34:10,911 - INFO - User model ---- get current user payload error
+2025-01-24 18:41:29,783 - INFO - 8 changes detected

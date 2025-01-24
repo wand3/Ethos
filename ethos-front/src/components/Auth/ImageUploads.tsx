@@ -7,11 +7,12 @@ import UseApi from '../../hooks/UseApi';
 type ImageFieldProps = {
     multiple?: boolean;
     onChange?: () => React.ChangeEvent<ImageFieldProps> | undefined;
-    Fieldref?: React.RefObject<HTMLInputElement>;
+    // Fieldref?: React.RefObject<HTMLInputElement>;
+    error?: () => string;
 }
 
 
-export const ImageUpload = ({Fieldref, multiple = false, onChange}: ImageFieldProps ) => {
+export const ImageUpload = ({multiple = false, onChange, error}: ImageFieldProps ) => {
 
   return (
     <>
@@ -19,7 +20,8 @@ export const ImageUpload = ({Fieldref, multiple = false, onChange}: ImageFieldPr
         <input
         type="file"
         accept="image/*"
-        ref={Fieldref}
+        // ref={Fieldref}
+        onError={error}
         multiple={multiple}
         onChange={onChange}
         className="mt-4"

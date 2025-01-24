@@ -1,4 +1,6 @@
 import EthosBody from "../components/Body";
+import ProjectPart from "../components/Projects";
+import AddProject from '../components/Admin/AddProject';
 
 
 const Ethos = () => {
@@ -7,15 +9,9 @@ const Ethos = () => {
     return (
         <> 
             <EthosBody nav>
-                <div className="h-8 w-20 bg-slate-900">
-                    <h1>giberish giberish giberish</h1>
-                    <h1>giberish giberish giberish</h1>
-                    <h1>giberish giberish giberish</h1>
-                    <h1>giberish giberish giberish</h1>
-                    <h1>giberish giberish giberish</h1>
 
-                </div>
-                
+                <AddProject />
+                <ProjectPart />
 
             </EthosBody>
 

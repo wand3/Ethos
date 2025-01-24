@@ -6,7 +6,7 @@ const storedToken = localStorage.getItem('token');
 const initialToken = storedToken || null;
 
 
-interface UserState {
+export interface UserState {
   loading: boolean;
   user: UserInDBSchema | null;
   error: string | null;

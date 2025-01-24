@@ -31,7 +31,7 @@ class ProjectFormData(BaseModel):
     description: str = Field(..., description="Detailed project description")
     project_url: Optional[str] = Field(None, description="Link to the live project or demo")
     github_url: Optional[str] = Field(None, description="Link to the GitHub repository")
-    roles: List[str] = Field(..., description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
+    roles: Optional[List[str]] = Field(None, description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
                                               'Developer", "Backend Developer", "Test Engineer", "Automation '
                                               'Engineer", "DevOps Engineer"')
     images: Optional[List[UploadFile]] = Field(None, description="List of URLs to project screenshots/images")

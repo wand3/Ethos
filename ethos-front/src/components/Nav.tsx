@@ -8,7 +8,6 @@ import { logout, setCredentials } from '../slices/UserSlice';
 import { useEffect } from 'react';
 
 
-
 const navigation = [
   { name: 'Login', href: '/login', current: true },
 ]
