@@ -7,6 +7,8 @@ import ApiProvider from './context/ApiProvider';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegistePage';
 import UserPage from './pages/UserPage';
+import ProjectPage from './pages/ProjectPage';
+import BlogPage from './pages/BlogPage';
 
 
 import { FlashProvider } from './context/FlashProvider';
@@ -16,6 +18,8 @@ import AdminRoute from './components/AdminRoute';
 import PublicRoute from './components/PrivateRoute';
 import PrivateRoute from './components/PrivateRoute';
 import AdminPage from './pages/Admin/AdminPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ServicesPage from './pages/ServicesPage';
 
 
 function App() {
@@ -30,11 +34,18 @@ function App() {
                   <Route path="/login" element={
                     <LoginPage />
                   } />
+                  <Route path="/project/:id" element={ <ProjectPage />} />
+                  <Route path="/blog" element={ <BlogPage />} />
+                  <Route path="/services" element={ <ServicesPage />} />
+                  <Route path="/projects" element={ <ProjectsPage />} />
+v
+
+
                   <Route path="/logout" element={
                     <PublicRoute><Ethos /></PublicRoute>
                   } />
-                  <Route path="/register" element={
-                    <PublicRoute><RegisterPage /></PublicRoute>
+
+                  <Route path="/register" element={<RegisterPage />
                   } />
                   
 

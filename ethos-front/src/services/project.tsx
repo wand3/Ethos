@@ -1,7 +1,7 @@
 import Config from '../config';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails } from '../schemas/project';
+import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails, UpdateProjectSchema } from '../schemas/project';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosError } from 'axios';
 
@@ -32,6 +32,15 @@ export const projectApi = createApi({
         method: 'GET',
       }),
     }),
+    // get project by id 
+    getProjectDetail: builder.query<ProjectSchema, string>({ // Type the query result and argument
+      query: (id) => ({
+        url: `${Config.baseURL}/projects/${id}`,
+        method: 'GET',
+      }),
+    }),
+
+
   }),
 });
 
@@ -90,9 +99,65 @@ export const createProject = createAsyncThunk<ProjectSchema, CreateProjectSchema
 
 );
 
+// update project thunk
+export const updateProject = createAsyncThunk<ProjectSchema, UpdateProjectSchema, { rejectValue: string}> (
+  'project/add',
+  async ({ _id, title, description, github_url, project_url, roles }: UpdateProjectSchema, { rejectWithValue }) => { 
+    try {
+      const formData = new FormData();
+      if (title) {
+        formData.append('title', title);
+      }
+      if (description) {
+        formData.append('description', description);
+      }
+      if (github_url) {
+        formData.append('github_url', github_url);
+      }
+      if (project_url) {
+        formData.append('project_url', project_url);
+      }
+      if (roles) {
+        formData.append('roles', roles);
+      }
 
+      console.log(formData)
+      console.log(userToken)
+      const project_id = _id
 
-export const { useGetProjectsDetailsQuery } = projectApi; // Export the hook
+      const config = {
+        headers: {
+          // 'Content-Type': 'application/json',
+          'Content-Type': 'multipart/form-data', // Set for form data with images
+          'authorization': `Bearer ${userToken}`
+        },
+  
+      };
+      const response = await axios.post(
+        `${Config.baseURL}/project/${project_id}/project/`,
+        formData,
+        // { title, description, project_url, github_url, images },
+        config
+      );
+      if (response.status === 201) {
+        return response.data
+      }
+    } catch (error) {
+      // Handle Axios errors with type safety
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message: string }>;
+        if (axiosError.response && axiosError.response.data.message) {
+          return rejectWithValue(axiosError.response.data.message);
+        }
+      }
+      // Handle non-Axios errors or generic error messages
+      return rejectWithValue((error as Error).message);
+    }
+  }
+
+);
+
+export const { useGetProjectsDetailsQuery, useGetProjectDetailQuery } = projectApi; // Export the hook
 
 
 

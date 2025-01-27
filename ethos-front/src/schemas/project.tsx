@@ -36,6 +36,16 @@ export interface CreateProjectSchema {
 }
 
 
+export interface UpdateProjectSchema {
+  _id: string;
+  title?: string;
+  description?: string;
+  project_url?: string;
+  github_url?: string;
+  roles?: string;
+}
+
+
 export const projectSchema = yup.object().shape({
     title: yup.string().required('Title is required'),
     description: yup.string().required('Description is required'),
@@ -56,7 +66,7 @@ export const projectSchema = yup.object().shape({
         })
         .test('fileType', 'Unsupported File Format', (value) => {
             if (!value) return true
-            return ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'].includes(value.type);
+            return ['image/jpeg', 'image/png', 'image/jpg', 'image/gif', 'image/mov', 'image/mp4', 'image/webp'].includes(value.type);
         })
         ).transform((currentValue, originalValue) => { // Correct Transform function
             if (originalValue) {

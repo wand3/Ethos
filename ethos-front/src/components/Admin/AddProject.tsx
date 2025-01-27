@@ -126,7 +126,7 @@ export const AddProject = () => {
         onClick={open}
         className="flex select-none items-center gap-2 rounded bg-slate-800 py-2.5 px-4 text-xs font-semibold text-white shadow-md shadow-slate-900/10 transition-all hover:shadow-lg hover:shadow-slate-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       >
-        Add product
+        Add Project
       </Button>
 
       <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>
@@ -137,34 +137,34 @@ export const AddProject = () => {
               className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
               <DialogTitle as="h3" className="text-base/7 font-medium text-white justify-center">
-                Add new product
+                Add New Project
               </DialogTitle>
 
               <form onSubmit={handleSubmit(onSubmit)}>
                 
                 {/* <Field> */}
                 <div className="col-span-6 sm:col-span-3">
-                    <label  htmlFor="Title" className="flex text-sm font-medium text-gray-700" >Title</label>
+                    <label  htmlFor="Title" className="flex text-sm font-medium text-gray-700 py-1" >Title</label>
                     <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("title")} placeholder="Enter Project Title" />
                     {errors.title && <p className="flex mt-2 text-xs text-red-600">{errors.title.message}</p>}
                 </div>
                  
 
                 <div className="col-span-6 sm:col-span-3">
-                    <label  htmlFor="Description" className="flex text-sm font-medium text-gray-700" >Description</label>
+                    <label  htmlFor="Description" className="flex text-sm font-medium text-gray-700 py-1" >Description</label>
                     <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("description")} placeholder="Enter Project Description"/>
                     {errors.description && <p className="flex mt-2 text-xs text-red-600">{errors.description.message}</p>}
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
-                    <label  htmlFor="github_url" className="flex text-sm font-medium text-gray-700" >Github URL</label>
-                    <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("github_url")} />
+                    <label  htmlFor="github_url" className="flex text-sm font-medium text-gray-700 py-1" >Github URL</label>
+                    <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("github_url")} placeholder="e.g https://github.com/wand3"/>
                     {errors.github_url && <p className="flex mt-2 text-xs text-red-600">{errors.github_url.message}</p>}
                 </div>
 
                  <div className="col-span-6 sm:col-span-3">
-                    <label  htmlFor="github_url" className="flex text-sm font-medium text-gray-700" >Roles</label>
-                    <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("roles")} />
+                    <label  htmlFor="github_url" className="flex text-sm font-medium text-gray-700 py-1" >Roles</label>
+                    <input className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" {...register("roles")} placeholder="e.g Frontend Developer, Test Engineer"/>
                     {errors.roles && <p className="flex mt-2 text-xs text-red-600">{errors.roles.message}</p>}
                 </div>
                  
@@ -172,10 +172,10 @@ export const AddProject = () => {
                 {/* <ImageUpload  multiple={true} onChange={handleImageUpload} onError={errors.images?.message}/> */}
                 <div className="col-span-6 sm:col-span-3 py-3">
 
-                    <label htmlFor="images">Project Samples</label>
+                    <label className="block py-1" htmlFor="images">Project Samples</label>
                     <input type="file" id="images" multiple {...register('images')} onChange={handleImageUpload}/>
-                    {/* {errors.images && <p>{errors.images.message}</p>} */}
-                    {errors.images && errors.images.map((error, index) => <p key={index}>{error.message}</p>)}
+                    {errors.images && <p className="flex mt-2 text-xs text-red-600">{errors.images.message}</p>}
+                    {/* {errors.images && errors.images.map((error, index) => <p key={index}>{error.message}</p>)} */}
 
                 </div>
 
