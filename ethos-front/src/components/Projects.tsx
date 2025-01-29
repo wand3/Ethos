@@ -41,28 +41,7 @@ const ProjectPart = (all_projects: AllProjects) => {
 
 
 }
-  // if (areProjectsLoading) return <div>Loading projects...</div>;
-  // if (error) return <div>Error loading projects: {error?.message}</div>;
 
-  // return (
-  //   <>
-  //       <div>
-        
-  //       {/* Display projects */}
-  //       {projects && (
-  //           <ul>
-  //           {projects.map((project) => (
-  //               <><li key={project._id}>{project.title}</li>
-  //               <li>{project.description}</li>
-  //               <li>{project.roles?.map((role, index) => (
-  //                 <p className='text-red-500' key={index}>{role}</p>
-  //               ))}</li></>
-  //           ))}
-  //           </ul>
-  //       )}
-  //       </div>
-  //   </>
-  // );
 
 export default ProjectPart;
 

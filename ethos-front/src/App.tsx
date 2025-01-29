@@ -20,6 +20,7 @@ import PrivateRoute from './components/PrivateRoute';
 import AdminPage from './pages/Admin/AdminPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ServicesPage from './pages/ServicesPage';
+import AboutPage from './pages/AboutPage';
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
                   <Route path="/project/:id" element={ <ProjectPage />} />
                   <Route path="/blog" element={ <BlogPage />} />
                   <Route path="/services" element={ <ServicesPage />} />
+                  <Route path="/about" element={ <AboutPage />} />
+
                   <Route path="/projects" element={ <ProjectsPage />} />
 v
 

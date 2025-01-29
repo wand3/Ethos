@@ -1,45 +1,50 @@
 ``// project single to be made grid like inethos home 
-{/* <a href="#" class="group relative block h-64 sm:h-80 lg:h-96">
-  <span class="absolute inset-0 border-2 border-dashed border-black"></span>
-
-  <div
-    class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
-  >
-    <div
-      class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
+<article className="flex bg-white transition hover:shadow-xl">
+  <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-10 sm:size-12"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
+      <span>2022</span>
+      <span className="w-px flex-1 bg-gray-900/10"></span>
+      <span>Oct 10</span>
+    </time>
+  </div>
 
-      <h2 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
+  <div className="hidden sm:block sm:basis-56">
+    <img
+      alt=""
+      src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+      className="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div className="flex flex-1 flex-col justify-between">
+    <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+      <a href="#">
+        <h3 className="font-bold uppercase text-gray-900">
+          Finding the right guitar for your style - 5 tips
+        </h3>
+      </a>
+
+      <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+        pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis
+        quidem, mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius
+        atque dignissimos. Molestias explicabo corporis voluptatem?
+      </p>
     </div>
 
-    <div
-      class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
-    >
-      <h3 class="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
-
-      <p class="mt-4 text-sm sm:text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem
-        omnis atque culpa repellendus.
-      </p>
-
-      <p class="mt-8 font-bold">Read more</p>
+    <div className="sm:flex sm:items-end sm:justify-end">
+      <a
+        href="#"
+        className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+      >
+        Read Blog
+      </a>
     </div>
   </div>
-</a> */}
+</article>
 
 
 // products cards to be replaced with each project which is the above 
@@ -148,46 +153,146 @@
 
 
 // stats section sample to be used as my goal section with loop of my wise quotes above 
-<div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-  <div className="mx-auto max-w-3xl text-center">
-    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Trusted by eCommerce Businesses</h2>
-
-    <p className="mt-4 text-gray-500 sm:text-xl">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolores laborum labore
-      provident impedit esse recusandae facere libero harum sequi.
-    </p>
-  </div>
-
-  <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
-    <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Sales</dt>
-
-      <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">$4.8m</dd>
-    </div>
-
-    <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-      <dt className="order-last text-lg font-medium text-gray-500">Official Addons</dt>
-
-      <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">24</dd>
-    </div>
-
-    <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-      <dt className="order-last text-lg font-medium text-gray-500">Total Addons</dt>
-
-      <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">86</dd>
-    </div>
-
-    <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-      <dt className="order-last text-lg font-medium text-gray-500">Downloads</dt>
-
-      <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">86k</dd>
-    </div>
-  </dl>
-</div>
 
 
 // badges to be used as tech stack and tools or roles also under a project 
+{/* Success - Solid */}
 
+<span
+  className="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Paid</p>
+</span>
+
+{/* Success - Outlined */}
+
+<span
+  className="inline-flex items-center justify-center rounded-full border border-emerald-500 px-2.5 py-0.5 text-emerald-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Paid</p>
+</span>
+
+{/* Warning - Solid */}
+
+<span
+  className="inline-flex items-center justify-center rounded-full bg-amber-100 px-2.5 py-0.5 text-amber-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Refunded</p>
+</span>
+
+{/* Warning - Outlined  */}
+
+<span
+  className="inline-flex items-center justify-center rounded-full border border-amber-500 px-2.5 py-0.5 text-amber-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8.25 9.75h4.875a2.625 2.625 0 010 5.25H12M8.25 9.75L10.5 7.5M8.25 9.75L10.5 12m9-7.243V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Refunded</p>
+</span>
+
+{/* Error- Solid */}
+
+<span
+  className="inline-flex items-center justify-center rounded-full bg-red-100 px-2.5 py-0.5 text-red-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Failed</p>
+</span>
+
+{/* Error - Outlined */}
+
+<span
+  className="inline-flex items-center justify-center rounded-full border border-red-500 px-2.5 py-0.5 text-red-700"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="-ms-1 me-1.5 size-4"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+    />
+  </svg>
+
+  <p className="whitespace-nowrap text-sm">Failed</p>
+</span>
 
 // ``
 

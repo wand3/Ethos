@@ -1133,3 +1133,110 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-27 11:42:46,703 - INFO - User model ---- get current user payload error
 2025-01-27 11:44:15,784 - INFO - User model ---- get current user payload error
 2025-01-27 11:44:15,953 - INFO - User model ---- get current user payload error
+2025-01-27 11:51:02,725 - INFO - User model ---- get current user payload error
+2025-01-27 11:51:02,753 - INFO - User model ---- get current user payload error
+2025-01-27 11:54:05,424 - INFO - User model ---- get current user payload error
+2025-01-27 11:54:05,442 - INFO - User model ---- get current user payload error
+2025-01-27 11:55:39,770 - INFO - User model ---- get current user payload error
+2025-01-27 11:55:39,793 - INFO - User model ---- get current user payload error
+2025-01-27 11:57:45,865 - INFO - User model ---- get current user payload error
+2025-01-27 11:57:45,875 - INFO - User model ---- get current user payload error
+2025-01-27 20:43:08,569 - INFO - Application started -----------
+2025-01-27 20:43:11,294 - INFO - Application started -----------
+2025-01-27 20:43:31,524 - INFO - User model ---- get current user payload error
+2025-01-27 20:43:31,668 - INFO - User model ---- get current user payload error
+2025-01-27 20:51:47,001 - INFO - User model ---- get current user payload error
+2025-01-27 20:51:47,019 - INFO - User model ---- get current user payload error
+2025-01-27 20:52:40,123 - INFO - User model ---- get current user payload error
+2025-01-27 20:52:40,129 - INFO - User model ---- get current user payload error
+2025-01-27 21:05:08,464 - INFO - User model ---- get current user payload error
+2025-01-27 21:05:08,478 - INFO - User model ---- get current user payload error
+2025-01-27 21:05:37,983 - INFO - User model ---- get current user payload error
+2025-01-27 21:05:38,012 - INFO - User model ---- get current user payload error
+2025-01-27 21:09:03,191 - INFO - User model ---- get current user payload error
+2025-01-27 21:09:03,199 - INFO - User model ---- get current user payload error
+2025-01-27 21:09:54,448 - INFO - User model ---- get current user payload error
+2025-01-27 21:09:54,459 - INFO - User model ---- get current user payload error
+2025-01-27 21:12:18,212 - INFO - User model ---- get current user payload error
+2025-01-27 21:12:18,227 - INFO - User model ---- get current user payload error
+2025-01-27 21:12:55,120 - INFO - User model ---- get current user payload error
+2025-01-27 21:12:55,157 - INFO - User model ---- get current user payload error
+2025-01-27 21:13:55,638 - INFO - User model ---- get current user payload error
+2025-01-27 21:13:55,661 - INFO - User model ---- get current user payload error
+2025-01-27 21:14:18,794 - INFO - User model ---- get current user payload error
+2025-01-27 21:14:18,801 - INFO - User model ---- get current user payload error
+2025-01-27 22:41:23,481 - INFO - User model ---- get current user payload error
+2025-01-27 22:41:23,489 - INFO - User model ---- get current user payload error
+2025-01-27 22:42:30,467 - INFO - User model ---- get current user payload error
+2025-01-27 22:42:30,473 - INFO - User model ---- get current user payload error
+2025-01-27 22:42:34,067 - INFO - User model ---- get current user payload error
+2025-01-27 22:42:34,074 - INFO - User model ---- get current user payload error
+2025-01-27 22:44:56,914 - INFO - User model ---- get current user payload error
+2025-01-27 22:44:56,935 - INFO - User model ---- get current user payload error
+2025-01-27 22:45:18,214 - INFO - User model ---- get current user payload error
+2025-01-27 22:45:18,220 - INFO - User model ---- get current user payload error
+2025-01-27 22:48:51,335 - INFO - User model ---- get current user payload error
+2025-01-27 22:48:51,355 - INFO - User model ---- get current user payload error
+2025-01-27 22:50:11,056 - INFO - User model ---- get current user payload error
+2025-01-27 22:50:11,060 - INFO - User model ---- get current user payload error
+2025-01-27 22:50:46,919 - INFO - User model ---- get current user payload error
+2025-01-27 22:50:47,061 - INFO - User model ---- get current user payload error
+2025-01-28 08:09:50,392 - INFO - Application started -----------
+2025-01-28 08:09:54,751 - INFO - Application started -----------
+2025-01-28 08:10:06,766 - INFO - User model ---- get current user payload error
+2025-01-28 08:10:06,774 - INFO - User model ---- get current user payload error
+2025-01-28 08:11:14,695 - INFO - User model ---- get current user payload error
+2025-01-28 08:11:14,702 - INFO - User model ---- get current user payload error
+2025-01-28 08:11:22,257 - INFO - User model ---- get current user payload error
+2025-01-28 08:11:22,261 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:24,348 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:24,368 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:28,347 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:28,351 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:31,050 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:31,054 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:33,992 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:33,998 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:38,385 - INFO - User model ---- get current user payload error
+2025-01-28 08:14:38,388 - INFO - User model ---- get current user payload error
+2025-01-28 22:40:40,714 - INFO - Application started -----------
+2025-01-28 22:40:44,873 - INFO - Application started -----------
+2025-01-28 22:40:49,141 - INFO - User model ---- get current user payload error
+2025-01-28 22:40:49,150 - INFO - User model ---- get current user payload error
+2025-01-28 22:48:54,570 - INFO - User model ---- get current user payload error
+2025-01-28 22:48:54,586 - INFO - User model ---- get current user payload error
+2025-01-28 22:49:00,153 - INFO - User model ---- get current user payload error
+2025-01-28 22:49:00,176 - INFO - User model ---- get current user payload error
+2025-01-28 22:49:25,477 - INFO - User model ---- get current user payload error
+2025-01-28 22:49:25,481 - INFO - User model ---- get current user payload error
+2025-01-28 22:49:32,211 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 00:04:26,995 - INFO - User model ---- get current user payload error
+2025-01-29 00:04:27,209 - INFO - User model ---- get current user payload error
+2025-01-29 00:05:41,156 - INFO - User model ---- get current user payload error
+2025-01-29 00:05:41,208 - INFO - User model ---- get current user payload error
+2025-01-29 00:06:38,816 - INFO - User model ---- get current user payload error
+2025-01-29 00:06:38,834 - INFO - User model ---- get current user payload error
+2025-01-29 00:07:42,246 - INFO - User model ---- get current user payload error
+2025-01-29 00:07:42,267 - INFO - User model ---- get current user payload error
+2025-01-29 00:09:36,472 - INFO - User model ---- get current user payload error
+2025-01-29 00:09:36,485 - INFO - User model ---- get current user payload error
+2025-01-29 00:16:47,592 - INFO - User model ---- get current user payload error
+2025-01-29 00:16:47,603 - INFO - User model ---- get current user payload error
+2025-01-29 00:47:32,033 - INFO - User model ---- get current user payload error
+2025-01-29 00:47:32,148 - INFO - User model ---- get current user payload error
+2025-01-29 00:53:39,548 - INFO - User model ---- get current user payload error
+2025-01-29 00:53:39,553 - INFO - User model ---- get current user payload error
+2025-01-29 01:30:44,310 - WARNING - Did not find CR at end of boundary (58)
+2025-01-29 01:30:45,721 - WARNING - Did not find CR at end of boundary (59)
+2025-01-29 01:31:22,227 - WARNING - Did not find CR at end of boundary (57)
+2025-01-29 01:31:54,090 - WARNING - Did not find CR at end of boundary (58)
+2025-01-29 01:35:51,888 - INFO - User model ---- get current user payload error
+2025-01-29 01:36:35,091 - INFO - User model ---- get current user payload error
+2025-01-29 01:36:35,308 - INFO - User model ---- get current user payload error
+2025-01-29 01:40:28,208 - INFO - update data ------- title='test project 2 update' description='Another Developed a full-featured test project 2' project_url='https://example.com/ecommerceq' github_url='https://github.com/yourusername/ecommerceq' roles=None images=None
+2025-01-29 01:40:28,220 - INFO - None

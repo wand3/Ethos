@@ -1,4 +1,3 @@
-import Nav from "./Nav";
 import NavMain from "./NavMain";
 import React, { FC } from "react";
 import FlashMessage from "./FlashMessage";
@@ -15,8 +14,7 @@ const EthosBody: FC<BodyProps> = ({ nav, children }) => {
       <div className="font-sans">
         {nav && <NavMain />}
         {children}
-        <FlashMessage />       
-        
+        <FlashMessage />
       </div>
     </>
 )};

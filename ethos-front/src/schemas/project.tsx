@@ -80,3 +80,16 @@ export const projectSchema = yup.object().shape({
             return currentValue;
     }).optional(),
 });
+
+
+export const yupUpdateProjectSchema = yup.object().shape({
+    title: yup.string().optional(),
+    description: yup.string().optional(),
+    project_url: yup.string().optional(),
+    github_url: yup.string().optional(),
+    
+    roles: yup.string().optional()
+        .matches(/^[^@$!%*?&#^+=\\[\]{}|;:'"<>\/]*$/, 'Roles cannot contain special characters') // Added regex for special characters
+        
+        ,
+});

@@ -6,8 +6,8 @@ export const SpinnerLineWave = () => {
     return (
         <LineWave
             visible={true}
-            height="50"
-            width="100"
+            height="60"
+            width="60"
             color="#4fa94d"
             ariaLabel="line-wave-loading"
             wrapperStyle={{}}

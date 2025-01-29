@@ -4,6 +4,7 @@ import { RootState } from '../store';
 import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails, UpdateProjectSchema } from '../schemas/project';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosError } from 'axios';
+import { useParams } from 'react-router-dom';
 
 
 // initialize userToken from local storage
@@ -34,7 +35,7 @@ export const projectApi = createApi({
     }),
     // get project by id 
     getProjectDetail: builder.query<ProjectSchema, string>({ // Type the query result and argument
-      query: (id) => ({
+      query: (id: string) => ({
         url: `${Config.baseURL}/projects/${id}`,
         method: 'GET',
       }),
@@ -101,7 +102,7 @@ export const createProject = createAsyncThunk<ProjectSchema, CreateProjectSchema
 
 // update project thunk
 export const updateProject = createAsyncThunk<ProjectSchema, UpdateProjectSchema, { rejectValue: string}> (
-  'project/add',
+  'project/update',
   async ({ _id, title, description, github_url, project_url, roles }: UpdateProjectSchema, { rejectWithValue }) => { 
     try {
       const formData = new FormData();
@@ -123,7 +124,7 @@ export const updateProject = createAsyncThunk<ProjectSchema, UpdateProjectSchema
 
       console.log(formData)
       console.log(userToken)
-      const project_id = _id
+      // const project_id = _id
 
       const config = {
         headers: {
@@ -133,8 +134,8 @@ export const updateProject = createAsyncThunk<ProjectSchema, UpdateProjectSchema
         },
   
       };
-      const response = await axios.post(
-        `${Config.baseURL}/project/${project_id}/project/`,
+      const response = await axios.put(
+        `${Config.baseURL}/project/${_id}/project/`,
         formData,
         // { title, description, project_url, github_url, images },
         config

@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { useState } from 'react'
+import { ArrowRightIcon } from '@heroicons/react/16/solid'
 
 export const NavMain = () => {
     const [state, setState] = useState(false)
@@ -13,14 +14,18 @@ export const NavMain = () => {
         { title: "Projects", path: "/projects" },
         { title: "Blog", path: "/blog" }
     ]
+    // JavaScript to toggle dark mode
+      const toggleDarkMode = () => {
+        document.documentElement.classList.toggle('dark');
+      };
 
     return (
         <>
-            <header className="bg-white">
-                <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <header className="glass m-2 md:m-3 py-2 px-1 text-lightbackground dark:text-darkbackground">
+                <div className="mx-auto max-w-screen-xl  lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                     <div className="md:flex md:items-center md:gap-12">
-                        <a className="block text-teal-600" href="#">
+                        <a className="block p-1" href="#">
                         <span className="sr-only">Home</span>
                         <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -39,7 +44,7 @@ export const NavMain = () => {
                                 {
                                     navigation.map((item, idx) => {
                                         return (
-                                        <li key={idx} className="text-gray-600 hover:text-indigo-600">
+                                        <li key={idx} className=" hover:text-indigo-600">
                                             <a href={item.path}>
                                                 { item.title }
                                             </a>
@@ -53,29 +58,43 @@ export const NavMain = () => {
                         </nav>
                     </div>
 
-                    <div className="flex items-center gap-4">
-                        <div className="sm:flex sm:gap-4">
-                        <a
-                            className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                            href="#"
-                        >
-                            Let's Connect
-                        </a>
+                    <div className="flex items-center">
+                        <div className="flex sm:flex ">
+                    
+                        <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="mr-2 flex w-fit shrink background-light drop-shadow-lg dark:drop-shadow-lg dark:bg-slate-700/20  dark:border h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer">
 
-                        {/* <div className="hidden sm:flex">
+
+                            <svg className="moon shrink h-7 w-6 mr-2 dark:drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+
+                            </svg>
+
+                            <div id="toggleBall" className="w-8 shrink-sm px-1 h-7 drop-shadow-lg bg-indigo-600 dark:ml-7 rounded-full absolute transform transition-transform duration-300">
+                            </div>
+
+                            <svg className="ml-2 h-6 w-6 shrink dark:border-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                            </svg>
+                            
+                        </div>
+                        
+                        <div className='w-fit h-fit flex my-3'>
                             <a
-                            className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                            href="#"
+                                className="px-2 py-2.5 text-sm font-normal shadow rounded-xl outline-offset-4 border border-stone-900 dark:border-white "
+                                href="#"
                             >
-                            Register
+                                Let's Connect
+                                <ArrowRightIcon className='h-5 w-5 relative right-0 inline-block pl-1' />
                             </a>
-                        </div> */}
+                        
+                        </div>
+                      
                         </div>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                <Menu as="div" className="relative ml-0">
                 <div>
-                    <MenuButton className="md:hidden text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border" onClick={() => setState(!state)} >
+                    <MenuButton className="md:hidden outline-none p-2 rounded-xl border-white focus:border" onClick={() => setState(!state)} >
                         {
                             state ? (
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
@@ -91,7 +110,7 @@ export const NavMain = () => {
                 </div>
                 <MenuItems
                     transition
-                    className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                    className="absolute right-0 z-[-10] mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
                 >
                     <MenuItem>
                     <a

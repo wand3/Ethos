@@ -5,8 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <!-- <script>
+      // JavaScript to toggle dark mode
+      const toggleDarkMode = () => {
+        document.documentElement.classList.toggle('dark');
+      };
+    </script> -->
   </head>
-  <body>
+  <body class="bg-dark-pattern dark:bg-light-pattern">
+    <!-- <button
+    onclick="toggleDarkMode()"
+    class="absolute top-9 right-4 bg-blue-500 text-white px-4 py-2 rounded"
+  >
+    Toggle Dark Mode
+  </button> -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

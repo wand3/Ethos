@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ProjectSchema } from '../schemas/project';
-import { createProject } from '../services/project';
+import { createProject, updateProject } from '../services/project';
 
 
 interface ProjectState {
@@ -39,6 +39,21 @@ const projectSlice = createSlice({
     .addCase(createProject.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload || "Could not add project";
+    })
+
+    // updating project 
+    .addCase(updateProject.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+    })
+    .addCase(updateProject.fulfilled, (state, action: PayloadAction<ProjectSchema>) => {
+        state.loading = false;
+        state.project = action.payload;
+        state.success = true;
+    })
+    .addCase(updateProject.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Could not update project";
     })
 },
 

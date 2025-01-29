@@ -1,6 +1,6 @@
 from datetime import datetime
-from bson import ObjectId
-from pydantic import BaseModel, EmailStr, constr, Field, field_validator
+from bson import ObjectId # type: ignore
+from pydantic import BaseModel, EmailStr, constr, Field, field_validator # type: ignore
 from typing import Optional
 from ..schemas import PyObjectId
 
