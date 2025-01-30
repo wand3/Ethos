@@ -1,5 +1,4 @@
 import useFlash from "../hooks/UseFlash";
-import UseApi from "../hooks/UseApi";
 import InputField from "../components/Auth/FormInput";
 import React, { useRef, useState, useEffect } from "react";
 import { Button, Dialog, DialogPanel, DialogTitle, Field } from '@headlessui/react'
@@ -7,15 +6,13 @@ import Config from "../config";
 import EthosBody from "../components/Body";
 import { Link, useNavigate, useParams } from "react-router-dom";
 // import { AddProjectSchema, FormProjectErrorType } from "../../components/Admin/AddProject";
-import { ProjectSchema, UpdateProjectSchema, yupUpdateProjectSchema } from '../schemas/project'
+import { ProjectSchema } from '../schemas/project'
 import { useGetProjectDetailQuery } from "../services/project";
 import { useGetUserDetailsQuery } from "../services/user";
 
 
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import SpinnerLineWave from "../components/spinner";
-import { string } from "yup";
-import { userToken } from "../slices/AuthSlice";
 import axios from "axios";
 
 export type FormProjectErrorType = {
@@ -40,7 +37,6 @@ export const UpdateProject = () => {
   const { data: userDetails, isLoading } = useGetUserDetailsQuery();
   
   const flash = useFlash();
-  const api = UseApi();
   const navigate = useNavigate();
 
 
@@ -62,10 +58,6 @@ export const UpdateProject = () => {
     }
   };
 
-  // const formData = new FormData();
-
-  // let [ projectData, setProjectData ] = useState<UpdateProjectSchema>()
-
   const titleField = useRef<HTMLInputElement>(null);
   const descriptionField = useRef<HTMLInputElement>(null);
   const github_urlField = useRef<HTMLInputElement>(null);
@@ -74,13 +66,14 @@ export const UpdateProject = () => {
 
   
 
+  // useEffect(() => {
+  //   getProject();
+  //   // console.log(project)
+  // }, []);
+
+
   useEffect(() => {
     getProject();
-    console.log(project)
-  }, []);
-
-
-  useEffect(() => {
     if (project) {
       console.log('project found')
       if (titleField.current) titleField.current.value = project.title || "";
@@ -150,7 +143,7 @@ export const UpdateProject = () => {
         },
       );
       // console.log(response)
-      const data = await response.data;
+      // const data = await response.data;
       flash('Project Updated!', 'success')
       goBack()
       // console.log(data);
@@ -191,7 +184,7 @@ export const UpdateProject = () => {
                         // placeholder="Enter P"
                         error={formErrors.title}
                         // value={project?.title}
-                        Fieldref={titleField} value={''} />
+                        Fieldref={titleField} value={""} />
 
 
                             <InputField

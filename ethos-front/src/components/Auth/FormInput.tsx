@@ -25,7 +25,6 @@ export const InputField = ({ name, label, type, placeholder, error, Fieldref}: I
                 <Field>
                     <Label className="text-sm font-medium text-slate-500" htmlFor={name}>{label}</Label>
                     <Input 
-                    // defaultValue={value}
                     placeholder={placeholder}
                     type={type}
                     ref={Fieldref}

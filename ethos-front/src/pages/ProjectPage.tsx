@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Config from "../config";
 import EthosBody from "../components/Body";
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+// import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 // import { ArrowLeftIcon } from "lucide-react";
 
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useGetProjectDetailQuery } from "../services/project";
-
-import UpdateProject from "./UpdateProject";
-
-// interface ApiResponse {
-//   products: ProductType[];
-// }
+import { useGetUserDetailsQuery } from "../services/user";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 
 export const ProjectPage = () => {
@@ -23,10 +19,17 @@ export const ProjectPage = () => {
     skip: !localStorage.getItem('token') // Skip query if no token
   });
   
-  let [isOpen, setIsOpen] = useState(false) 
+  // Get the user state from Redux
+  const token = useSelector((state: RootState) => {state.user.token})
+  // automatically authenticate user if token is found
+  const { data: user } = useGetUserDetailsQuery(token, { // Type data and add other states
+    // pollingInterval: 9000,
+    skip: !localStorage.getItem('token') // Skip query if no token
+  });
 
- 
-  const [status, setStatus] = useState<'initial'| 'uploading'| 'success' | 'fail'>('initial')
+
+
+  let [isOpen, setIsOpen] = useState(false) 
 
   // dialog popup and close 
   function open() {
@@ -46,6 +49,11 @@ export const ProjectPage = () => {
   const goToUpdatePage = () => {
     return navigate(`/project/${id}/update`);
   }
+
+   const goToUpdateTechnologiesPage = () => {
+    return navigate(`/project/${id}/update/technologies`);
+  }
+  
   
 
 
@@ -71,12 +79,6 @@ export const ProjectPage = () => {
         </div>
 
         <section className="relative max-w-screen-xl mx-auto py-3 px-4 md:px-8">
-        
-          {/* <button onClick={() => {goBack()}}>
-            <span className="absolute mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
-            <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
-            </span>
-          </button> */}
           
           <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
             <div className="relative z-10 gap-5 items-center lg:flex">
@@ -87,6 +89,69 @@ export const ProjectPage = () => {
                   <p className="text-gray-500 leading-relaxed mt-3">
                       {project?.description}
                   </p>
+                  <p>Project roles</p>
+                  {project?.roles?.map((role, index) => (
+                    <p className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center" key={index}>{role}</p>
+                  ))}
+{/* 
+                  { project?.technologies. !==  (
+                    <>
+                     <p>Project roles</p>
+                      {project?.technologies.map((technology, index) => (
+                        <p className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center" key={index}>{technology}</p>
+                      ))}
+                    </>
+                  
+                  ) } */}
+
+                  {/* Conditionally render technologies if they exist  */}
+
+                  { project?.technologies && (
+                    <>
+                      <p>Languages</p>
+                      {project?.technologies?.language?.map((technology, index) => (
+                        <p
+                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+                          key={index}
+                        >
+                          {technology}
+                        </p>
+                      ))}
+
+                      <p>Frameworks</p>
+                      {project?.technologies?.frameworks?.map((technology, index) => (
+                        <p
+                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+                          key={index}
+                        >
+                          {technology}
+                        </p>
+                      ))}
+
+                      <p>Databases</p>
+                      {project?.technologies?.databases?.map((technology, index) => (
+                        <p
+                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+                          key={index}
+                        >
+                          {technology}
+                        </p>
+                      ))}
+
+                      <p>Tools</p>
+                      {project?.technologies?.tools?.map((technology, index) => (
+                        <p
+                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+                          key={index}
+                        >
+                          {technology}
+                        </p>
+                      ))}
+                    </>
+                  )}
+
+                  
+                 
                   <a
                       className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
                       href="javascript:void()">
@@ -107,11 +172,25 @@ export const ProjectPage = () => {
             </div>
             
         </section>
-        <button onClick={() => {goToUpdatePage()}}>
-            <span className="absolute mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
-            <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
-            </span>
-        </button>
+       
+
+        { user && (
+          <>
+             <button onClick={() => {goToUpdatePage()}}>
+                <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+                <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
+                </span>
+            </button>
+
+            <button onClick={() => {goToUpdateTechnologiesPage()}}>
+                <span className="rounded border mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+                Techlologies
+                </span>
+            </button>
+          </>
+        )}
+
+
 
               
       </EthosBody>

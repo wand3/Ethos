@@ -1396,3 +1396,90 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-30 02:30:55,310 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
 2025-01-30 02:30:55,313 - INFO - ['one, two, fish']
 2025-01-30 02:30:55,313 - INFO - ['one', 'two', 'fish']
+2025-01-30 04:05:39,021 - INFO - User model ---- get current user payload error
+2025-01-30 04:06:52,133 - INFO - User model ---- get current user payload error
+2025-01-30 04:06:52,165 - INFO - User model ---- get current user payload error
+2025-01-30 04:31:16,048 - INFO - User model ---- get current user payload error
+2025-01-30 04:31:16,065 - INFO - User model ---- get current user payload error
+2025-01-30 04:32:24,761 - INFO - User model ---- get current user payload error
+2025-01-30 04:32:24,785 - INFO - User model ---- get current user payload error
+2025-01-30 04:35:03,071 - INFO - User model ---- get current user payload error
+2025-01-30 04:35:03,110 - INFO - User model ---- get current user payload error
+2025-01-30 04:39:53,836 - INFO - User model ---- get current user payload error
+2025-01-30 04:39:53,864 - INFO - User model ---- get current user payload error
+2025-01-30 04:49:02,648 - INFO - User model ---- get current user payload error
+2025-01-30 04:49:37,967 - INFO - User model ---- get current user payload error
+2025-01-30 04:49:37,979 - INFO - User model ---- get current user payload error
+2025-01-30 04:49:38,005 - INFO - User model ---- get current user payload error
+2025-01-30 04:49:51,472 - INFO - User model ---- get current user payload error
+2025-01-30 04:50:18,762 - INFO - User model ---- get current user payload error
+2025-01-30 04:50:18,800 - INFO - User model ---- get current user payload error
+2025-01-30 04:50:23,416 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-30 05:00:54,686 - INFO - 3 changes detected
+2025-01-30 05:00:55,354 - INFO - 1 change detected
+2025-01-30 05:01:01,024 - INFO - 3 changes detected
+2025-01-30 05:01:02,070 - INFO - Application started -----------
+2025-01-30 05:20:09,106 - INFO - 3 changes detected
+2025-01-30 05:20:09,785 - INFO - 1 change detected
+2025-01-30 05:22:38,438 - INFO - 3 changes detected
+2025-01-30 05:22:43,757 - INFO - 3 changes detected
+2025-01-30 05:22:43,977 - INFO - Application started -----------
+2025-01-30 05:31:29,216 - INFO - User model ---- get current user payload error
+2025-01-30 05:46:30,052 - INFO - User model ---- get current user payload error
+2025-01-30 05:47:20,071 - INFO - User model ---- get current user payload error
+2025-01-30 05:47:20,358 - INFO - User model ---- get current user payload error
+2025-01-30 05:47:20,694 - INFO - User model ---- get current user payload error
+2025-01-30 05:48:43,479 - INFO - User model ---- get current user payload error
+2025-01-30 05:48:43,491 - INFO - User model ---- get current user payload error
+2025-01-30 05:48:43,689 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:27,095 - INFO - Application started -----------
+2025-01-30 09:20:30,041 - INFO - Application started -----------
+2025-01-30 09:20:31,588 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:31,595 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:31,600 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:46,841 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:46,844 - INFO - User model ---- get current user payload error
+2025-01-30 09:20:52,178 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-30 10:52:53,918 - INFO - User model ---- get current user payload error
+2025-01-30 10:52:53,949 - INFO - User model ---- get current user payload error
+2025-01-30 10:52:53,961 - INFO - User model ---- get current user payload error
+2025-01-30 10:53:20,373 - INFO - User model ---- get current user payload error
+2025-01-30 10:53:20,381 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:08,084 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:08,515 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:08,572 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:24,669 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:24,681 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:24,697 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:33,326 - INFO - User model ---- get current user payload error
+2025-01-30 11:26:33,332 - INFO - User model ---- get current user payload error
+2025-01-30 12:06:20,072 - INFO - User model ---- get current user payload error
+2025-01-30 12:06:20,315 - INFO - User model ---- get current user payload error
+2025-01-30 12:06:20,319 - INFO - User model ---- get current user payload error
+2025-01-30 12:06:48,831 - INFO - User model ---- get current user payload error
+2025-01-30 12:06:48,837 - INFO - User model ---- get current user payload error
+2025-01-30 12:37:13,961 - INFO - User model ---- get current user payload error
+2025-01-30 12:37:14,132 - INFO - User model ---- get current user payload error
+2025-01-30 12:37:14,134 - INFO - User model ---- get current user payload error
+2025-01-30 12:37:21,585 - INFO - User model ---- get current user payload error
+2025-01-30 12:37:21,587 - INFO - User model ---- get current user payload error
+2025-01-30 13:11:44,854 - INFO - User model ---- get current user payload error
+2025-01-30 13:11:44,964 - INFO - User model ---- get current user payload error
+2025-01-30 13:11:44,969 - INFO - User model ---- get current user payload error
+2025-01-30 13:12:28,260 - INFO - User model ---- get current user payload error
+2025-01-30 13:12:28,266 - INFO - User model ---- get current user payload error
+2025-01-30 13:13:25,124 - INFO - User model ---- get current user payload error
+2025-01-30 13:22:32,858 - INFO - User model ---- get current user payload error
+2025-01-30 13:22:41,856 - INFO - User model ---- get current user payload error
+2025-01-30 13:22:41,861 - INFO - User model ---- get current user payload error
+2025-01-30 13:24:54,777 - INFO - User model ---- get current user payload error

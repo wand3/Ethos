@@ -56,7 +56,7 @@ class Project(BaseModel):
     description: Optional[str] = Field(..., description="Detailed project description")
     project_url: Optional[str] = Field(None, description="Link to the live project or demo")
     github_url: Optional[str] = Field(None, description="Link to the GitHub repository")
-    technologies: Optional[TechStack] = Field(None, description="List of technologies used")
+    technologies: Optional[TechStack] = Field([], description="List of technologies used")
     roles: Optional[List[str]] = Field(...,
                                        description='Your roles on the project e.g "Full-Stack Developer", "Frontend '
                                                    'Developer", "Backend Developer", "Test Engineer", "Automation '
@@ -69,3 +69,5 @@ class ProjectInDB(Project):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)  # Alias _id to id
     created_at: datetime
     updated_at: datetime
+
+
