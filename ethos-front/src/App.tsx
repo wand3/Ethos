@@ -18,6 +18,7 @@ import AdminRoute from './components/AdminRoute';
 import PublicRoute from './components/PrivateRoute';
 import PrivateRoute from './components/PrivateRoute';
 import AdminPage from './pages/Admin/AdminPage';
+import UpdateProject from './pages/UpdateProject';
 import ProjectsPage from './pages/ProjectsPage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
@@ -40,9 +41,8 @@ function App() {
                   <Route path="/services" element={ <ServicesPage />} />
                   <Route path="/about" element={ <AboutPage />} />
 
-                  <Route path="/projects" element={ <ProjectsPage />} />
-v
-
+                  <Route path="/projects" element={ <ProjectsPage />} />  
+                  <Route path="/project/:id/update" element={ <UpdateProject />} />
 
                   <Route path="/logout" element={
                     <PublicRoute><Ethos /></PublicRoute>

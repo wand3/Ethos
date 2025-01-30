@@ -1,6 +1,7 @@
 import NavMain from "./NavMain";
 import React, { FC } from "react";
 import FlashMessage from "./FlashMessage";
+import Footer from "./Footer";
 
 
 type BodyProps = {
@@ -16,6 +17,7 @@ const EthosBody: FC<BodyProps> = ({ nav, children }) => {
         {children}
         <FlashMessage />
       </div>
+      <Footer />
     </>
 )};
 

@@ -7,10 +7,8 @@ import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useGetProjectDetailQuery } from "../services/project";
-import Footer from "../components/Footer";
 
-
-import UpdateProject from "../components/Admin/UpdateProject";
+import UpdateProject from "./UpdateProject";
 
 // interface ApiResponse {
 //   products: ProductType[];
@@ -27,7 +25,6 @@ export const ProjectPage = () => {
   
   let [isOpen, setIsOpen] = useState(false) 
 
-
  
   const [status, setStatus] = useState<'initial'| 'uploading'| 'success' | 'fail'>('initial')
 
@@ -43,6 +40,11 @@ export const ProjectPage = () => {
   // back button 
   const goBack = () => {
     return navigate(-1);
+  }
+
+
+  const goToUpdatePage = () => {
+    return navigate(`/project/${id}/update`);
   }
   
 
@@ -105,10 +107,13 @@ export const ProjectPage = () => {
             </div>
             
         </section>
-        <UpdateProject />
+        <button onClick={() => {goToUpdatePage()}}>
+            <span className="absolute mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+            <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
+            </span>
+        </button>
 
               
-        <Footer />
       </EthosBody>
     </>
   

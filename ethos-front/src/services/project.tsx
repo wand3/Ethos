@@ -38,7 +38,9 @@ export const projectApi = createApi({
       query: (id: string) => ({
         url: `${Config.baseURL}/projects/${id}`,
         method: 'GET',
+        
       }),
+      
     }),
 
 
@@ -128,8 +130,8 @@ export const updateProject = createAsyncThunk<ProjectSchema, UpdateProjectSchema
 
       const config = {
         headers: {
-          // 'Content-Type': 'application/json',
-          'Content-Type': 'multipart/form-data', // Set for form data with images
+          'Content-Type': 'application/json',
+          // 'Content-Type': 'multipart/form-data', // Set for form data with images
           'authorization': `Bearer ${userToken}`
         },
   

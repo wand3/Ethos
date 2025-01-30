@@ -1240,3 +1240,159 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-29 01:36:35,308 - INFO - User model ---- get current user payload error
 2025-01-29 01:40:28,208 - INFO - update data ------- title='test project 2 update' description='Another Developed a full-featured test project 2' project_url='https://example.com/ecommerceq' github_url='https://github.com/yourusername/ecommerceq' roles=None images=None
 2025-01-29 01:40:28,220 - INFO - None
+2025-01-29 08:35:39,109 - INFO - Application started -----------
+2025-01-29 08:35:41,846 - INFO - Application started -----------
+2025-01-29 08:35:55,897 - INFO - User model ---- get current user payload error
+2025-01-29 08:35:58,223 - INFO - User model ---- get current user payload error
+2025-01-29 08:35:58,987 - INFO - User model ---- get current user payload error
+2025-01-29 08:37:04,261 - INFO - User model ---- get current user payload error
+2025-01-29 08:37:04,379 - INFO - User model ---- get current user payload error
+2025-01-29 08:37:15,425 - INFO - User model ---- get current user payload error
+2025-01-29 08:37:15,448 - INFO - User model ---- get current user payload error
+2025-01-29 08:37:19,231 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 08:45:27,485 - INFO - update data ------- title='testblog update' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=None images=None
+2025-01-29 08:45:27,489 - INFO - None
+2025-01-29 09:54:42,657 - INFO - Application started -----------
+2025-01-29 09:54:45,797 - INFO - Application started -----------
+2025-01-29 09:54:57,414 - INFO - User model ---- get current user payload error
+2025-01-29 09:54:57,422 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:24,056 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:24,065 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:35,684 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:35,692 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:41,493 - INFO - User model ---- get current user payload error
+2025-01-29 10:00:41,500 - INFO - User model ---- get current user payload error
+2025-01-29 10:27:39,800 - INFO - User model ---- get current user payload error
+2025-01-29 10:27:39,813 - INFO - User model ---- get current user payload error
+2025-01-29 10:28:32,358 - INFO - User model ---- get current user payload error
+2025-01-29 10:28:32,364 - INFO - User model ---- get current user payload error
+2025-01-29 10:28:37,790 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 11:23:08,684 - INFO - User model ---- get current user payload error
+2025-01-29 11:23:08,790 - INFO - User model ---- get current user payload error
+2025-01-29 11:29:58,928 - INFO - User model ---- get current user payload error
+2025-01-29 11:29:58,932 - INFO - User model ---- get current user payload error
+2025-01-29 11:30:25,109 - INFO - User model ---- get current user payload error
+2025-01-29 11:30:25,119 - INFO - User model ---- get current user payload error
+2025-01-29 12:29:39,780 - INFO - Application started -----------
+2025-01-29 12:29:43,394 - INFO - Application started -----------
+2025-01-29 12:31:33,854 - INFO - User model ---- get current user payload error
+2025-01-29 12:31:33,859 - INFO - User model ---- get current user payload error
+2025-01-29 12:45:39,756 - INFO - User model ---- get current user payload error
+2025-01-29 12:45:39,764 - INFO - User model ---- get current user payload error
+2025-01-29 12:53:42,487 - INFO - User model ---- get current user payload error
+2025-01-29 12:53:42,502 - INFO - User model ---- get current user payload error
+2025-01-29 12:54:39,216 - INFO - User model ---- get current user payload error
+2025-01-29 12:54:39,227 - INFO - User model ---- get current user payload error
+2025-01-29 13:04:52,431 - INFO - User model ---- get current user payload error
+2025-01-29 13:04:52,451 - INFO - User model ---- get current user payload error
+2025-01-29 13:05:34,012 - INFO - User model ---- get current user payload error
+2025-01-29 13:05:34,035 - INFO - User model ---- get current user payload error
+2025-01-29 13:05:46,809 - INFO - User model ---- get current user payload error
+2025-01-29 13:05:46,814 - INFO - User model ---- get current user payload error
+2025-01-29 13:06:52,023 - INFO - User model ---- get current user payload error
+2025-01-29 13:06:52,041 - INFO - User model ---- get current user payload error
+2025-01-29 13:12:18,372 - INFO - User model ---- get current user payload error
+2025-01-29 13:12:18,389 - INFO - User model ---- get current user payload error
+2025-01-29 13:18:57,142 - INFO - User model ---- get current user payload error
+2025-01-29 13:18:57,151 - INFO - User model ---- get current user payload error
+2025-01-29 13:20:32,174 - INFO - User model ---- get current user payload error
+2025-01-29 13:20:32,196 - INFO - User model ---- get current user payload error
+2025-01-29 13:21:23,441 - INFO - User model ---- get current user payload error
+2025-01-29 13:21:23,452 - INFO - User model ---- get current user payload error
+2025-01-29 13:21:29,452 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 14:29:22,683 - INFO - User model ---- get current user payload error
+2025-01-29 14:29:22,974 - INFO - User model ---- get current user payload error
+2025-01-29 14:29:37,812 - INFO - User model ---- get current user payload error
+2025-01-29 14:29:38,059 - INFO - User model ---- get current user payload error
+2025-01-29 14:35:29,532 - INFO - User model ---- get current user payload error
+2025-01-29 14:36:10,120 - INFO - User model ---- get current user payload error
+2025-01-29 14:36:10,129 - INFO - User model ---- get current user payload error
+2025-01-29 15:56:09,299 - INFO - Application started -----------
+2025-01-29 15:56:12,357 - INFO - Application started -----------
+2025-01-29 15:56:12,971 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-29 16:44:15,555 - INFO - User model ---- get current user payload error
+2025-01-29 16:44:17,016 - INFO - User model ---- get current user payload error
+2025-01-29 16:44:18,277 - INFO - User model ---- get current user payload error
+2025-01-29 16:44:29,729 - INFO - User model ---- get current user payload error
+2025-01-29 16:44:41,867 - INFO - User model ---- get current user payload error
+2025-01-29 16:44:41,906 - INFO - User model ---- get current user payload error
+2025-01-29 16:47:26,952 - INFO - 3 changes detected
+2025-01-29 16:47:28,133 - INFO - 1 change detected
+2025-01-29 16:47:41,542 - INFO - 3 changes detected
+2025-01-29 16:47:42,836 - INFO - Application started -----------
+2025-01-29 16:48:23,591 - INFO - 3 changes detected
+2025-01-29 16:48:24,202 - INFO - 1 change detected
+2025-01-29 16:48:30,048 - INFO - 3 changes detected
+2025-01-29 16:48:30,067 - INFO - Application started -----------
+2025-01-29 16:48:54,025 - INFO - 3 changes detected
+2025-01-29 16:48:54,605 - INFO - 1 change detected
+2025-01-29 16:48:57,107 - INFO - 3 changes detected
+2025-01-29 16:48:57,121 - INFO - Application started -----------
+2025-01-30 01:34:29,743 - INFO - Application started -----------
+2025-01-30 01:34:34,764 - INFO - Application started -----------
+2025-01-30 01:34:48,933 - INFO - User model ---- get current user payload error
+2025-01-30 01:34:57,405 - INFO - User model ---- get current user payload error
+2025-01-30 01:35:10,867 - INFO - User model ---- get current user payload error
+2025-01-30 01:35:17,231 - INFO - User model ---- get current user payload error
+2025-01-30 01:35:17,236 - INFO - User model ---- get current user payload error
+2025-01-30 01:35:21,175 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-30 02:10:29,998 - INFO - User model ---- get current user payload error
+2025-01-30 02:10:46,650 - INFO - User model ---- get current user payload error
+2025-01-30 02:10:46,876 - INFO - User model ---- get current user payload error
+2025-01-30 02:10:56,472 - INFO - User model ---- get current user payload error
+2025-01-30 02:10:56,479 - INFO - User model ---- get current user payload error
+2025-01-30 02:12:42,814 - INFO - update data ------- title='testblog update' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=None images=None
+2025-01-30 02:12:42,824 - INFO - None
+2025-01-30 02:12:48,573 - INFO - update data ------- title='testblog update m' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=None images=None
+2025-01-30 02:12:48,577 - INFO - None
+2025-01-30 02:13:21,317 - INFO - update data ------- title='testblog update m' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=None images=None
+2025-01-30 02:13:21,321 - INFO - None
+2025-01-30 02:17:09,113 - INFO - update data ------- title='testblog update m' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=None images=None
+2025-01-30 02:17:09,118 - INFO - None
+2025-01-30 02:21:57,601 - INFO - update data ------- title='testblog update m' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
+2025-01-30 02:21:57,604 - INFO - ['one, two, fish']
+2025-01-30 02:21:57,610 - INFO - ['one', 'two', 'fish']
+2025-01-30 02:22:54,396 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
+2025-01-30 02:22:54,406 - INFO - ['one, two, fish']
+2025-01-30 02:22:54,407 - INFO - ['one', 'two', 'fish']
+2025-01-30 02:23:45,924 - INFO - 3 changes detected
+2025-01-30 02:23:46,608 - INFO - 1 change detected
+2025-01-30 02:23:49,387 - INFO - Application started -----------
+2025-01-30 02:23:49,401 - INFO - 3 changes detected
+2025-01-30 02:24:06,555 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
+2025-01-30 02:24:06,569 - INFO - ['one, two, fish']
+2025-01-30 02:24:06,569 - INFO - ['one', 'two', 'fish']
+2025-01-30 02:25:33,615 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
+2025-01-30 02:25:33,621 - INFO - ['one, two, fish']
+2025-01-30 02:25:33,622 - INFO - ['one', 'two', 'fish']
+2025-01-30 02:29:10,865 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish, mb'] images=None
+2025-01-30 02:29:10,872 - INFO - ['one, two, fish, mb']
+2025-01-30 02:29:10,873 - INFO - ['one', 'two', 'fish', 'mb']
+2025-01-30 02:30:55,310 - INFO - update data ------- title='testblog up' description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ' project_url='https://test-project.com/chuck' github_url='https://github/test-project.com/chuck' roles=['one, two, fish'] images=None
+2025-01-30 02:30:55,313 - INFO - ['one, two, fish']
+2025-01-30 02:30:55,313 - INFO - ['one', 'two', 'fish']
