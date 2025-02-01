@@ -23,13 +23,13 @@ export const InputField = ({ name, label, type, placeholder, error, Fieldref}: I
             <div className="w-full max-w-md px-4">
                 { label && (
                 <Field>
-                    <Label className="text-sm font-medium text-slate-500" htmlFor={name}>{label}</Label>
+                    <Label className="text-sm font-medium" htmlFor={name}>{label}</Label>
                     <Input 
                     placeholder={placeholder}
                     type={type}
                     ref={Fieldref}
                     className={clsx(
-                        'mt-3 block w-full rounded-lg border-none bg-[#efefec] py-2 mb-3 px-3 text-sm/6 text-slate-950',
+                        'mt-3 block w-full rounded-lg border-none py-2 mb-3 px-3 text-sm bg-white/5',
                         'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
                     )}
                     />

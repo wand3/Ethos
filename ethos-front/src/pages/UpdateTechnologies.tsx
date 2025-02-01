@@ -111,10 +111,9 @@ export const UpdateTechnologies = () => {
             tools: tools,
             }));
         // console.log(response.payload)
-
-        if (success) {
+        if (response.payload) {
+            navigate(`/project/${id}`); // Replace with project route
             flash("Project Technologies updated", "success")
-            // console.log('Project created successfully:', response);
 
             return response.payload;
         }

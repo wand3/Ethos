@@ -1,6 +1,6 @@
 import useFlash from "../hooks/UseFlash";
 import React, { useEffect, useRef, useState } from "react";
-import { Field } from '@headlessui/react';
+import { Button, Field } from '@headlessui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from "../store";
 
@@ -13,21 +13,24 @@ import EthosBody from "../components/Body";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 
+
+export type FormUpdateTesting = {
+  test_types?: string;
+  automation_frameworks?: string;
+  ci_cd_integration?: string;
+}
+
 export const UpdateTesting = () => {
   const { loading, error, success } = useSelector((state: RootState) => state.project); // Type-safe selector
+  const [formErrors, setFormErrors] = useState<FormUpdateTesting>({});
   const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
   const {id} = useParams();
   const navigate = useNavigate();
-  const { data: project } = useGetProjectDetailQuery(id, { // Type data and add other states
-          pollingInterval: 9000,
+  const { data: project } = useGetProjectDetailQuery(id as string, { // Type data and add other states
+        pollingInterval: 400,
         skip: !localStorage.getItem('token') // Skip query if no token
   });
 
-
-// _id?: string;
-//   test_types?: string[];
-//   automation_automation_frameworks?: string[];
-//   ci_cd_integration?: string[];
   // Pre-filled testing_details data
   const [testDetails, setTestDetails] = useState<ProjectSchema['testing_details']>({
     test_types: project?.testing_details?.test_types,
@@ -41,16 +44,7 @@ export const UpdateTesting = () => {
   const automation_frameworksField = useRef<HTMLInputElement>(null);
   const ci_cd_integrationField = useRef<HTMLInputElement>(null);
   
-    
-  // // dialog popup and close 
-  // function open() {
-  //   setIsOpen(true)
-  // }
-  // function close() {
-  //   setIsOpen(false)
-  // }
-
-  
+      
   // Pre-fill the form when the component mounts or testing_details change
   useEffect(() => {
     if (project)
@@ -62,7 +56,7 @@ export const UpdateTesting = () => {
         ? project?.testing_details?.test_types.join(", ")
         : "";
       if (test_typesField.current) test_typesField.current.value = test_typesCommaSeparated || ''
-    //   setDefLanguage(test_typesCommaSeparated)
+    //   setDeftest_types(test_typesCommaSeparated)
 
       const automation_frameworksCommaSeparated = Array.isArray(project?.testing_details?.automation_frameworks)
         ? project?.testing_details?.automation_frameworks.join(", ")
@@ -77,10 +71,19 @@ export const UpdateTesting = () => {
 
 
   }, [project]);
-  
 
+
+  const validateCommaSeparatedStrings = (input: string): boolean => {
+    const regex = /^[a-zA-Z0-9\s]+(,\s*[a-zA-Z0-9\s]+)*$/;
+      return regex.test(input);
+  };
+  function clearErrors() {
+    setFormErrors({});
+  }
 
   const handleSubmit = async (event: React.FormEvent) => {
+    clearErrors();
+
     event.preventDefault();
 
     console.log('project form subit test begin')
@@ -92,10 +95,29 @@ export const UpdateTesting = () => {
   
 
     console.log('form subit test begin')
+    const errors: FormUpdateTesting = {};
 
+    if (!validateCommaSeparatedStrings(test_types)) {
+            console.log(test_types)
+
+      errors.test_types = "Invalid format for Programming test_types(s). Use comma-separated words.";
+      console.log('form subit past test')
+
+    }
+    if (!validateCommaSeparatedStrings(automation_frameworks)) {
+      errors.automation_frameworks = "Invalid format for Framework(s). Use comma-separated words.";
+    }
+    if (!ci_cd_integration) {
+      errors.ci_cd_integration = `${error}`;
+    }
+
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+   
     try {
         console.log('onsubmit in')
-        // clearErrors(); // Clear any previous errors
        
         const response = await dispatch(updateProjectTesting({
             _id: id,
@@ -105,9 +127,9 @@ export const UpdateTesting = () => {
             }));
         // console.log(response.payload)
 
-        if (success) {
-            flash("Project Technologies updated", "success")
-            // console.log('Project created successfully:', response);
+        if (response.payload) {
+            navigate(`/project/${id}`); // Replace with project route
+            flash("Project Test Methods updated", "success")
 
             return response.payload;
         }
@@ -129,19 +151,19 @@ export const UpdateTesting = () => {
       <EthosBody nav={true}>
         
 
-        <div className="bg-[#eeeeeb] pb-20 relative">
+        <div className="text-white dark:bg-black pb-20 relative">
           <div className="p-6 backdrop-opacity-30 duration-300 ease-out flex justify-center">
             <button onClick={() => {goBack()}}>
               <span className="absolute m-2 top-[5%] md:top-[10%] md:ml-[-40px] hover:text-red-600"><ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
               </span>
             </button>
-            <div className="w-full max-w-md rounded-xl bg-[#F7F7F7] h-fit mt-[20%] md:mt-[10%] ">
+            <div className="w-full max-w-md rounded-xl h-fit mt-[20%] md:mt-[10%] form-light dark:form-dark">
                 <div className="min-w-[50%] min-h-[50%] items-center justify-between p-4">
                   
-                  <h3 className="flex text-base/10 pb-4 font-medium text-slate-800 justify-center">
+                  <h3 className="flex text-base/10 pb-4 font-medium justify-center">
                       Update Projects' Testing Details
                   </h3>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
                     
                     {/* // <Field> */}
                     <Field>
@@ -149,7 +171,7 @@ export const UpdateTesting = () => {
                         name="test_typess"
                         label="Test type e.g Unittest, Security"
                         type="name"
-                        // error={errors.root?.message}
+                        error={formErrors.test_types}
                         Fieldref={test_typesField} value={""} />
 
 
@@ -157,26 +179,36 @@ export const UpdateTesting = () => {
                         name="Frameworks"
                         label="Test Framework(s)"
                         type="name"
-                        // error={""}
-                        // value={project?.title}
-
+                        error={formErrors.automation_frameworks}
                         Fieldref={automation_frameworksField} value={''} />
 
                         <InputField
                             name="ci_cd_integration"
                             label="CI/CD Integration"
                             type="text"
-                            // error={""}
-                            // value={project?.title}
-
+                            error={formErrors.ci_cd_integration}
                             Fieldref={ci_cd_integrationField} value={''} />
 
-                    <button
-                        className="inline-block my-2 shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                        type="submit" aria-disabled={loading}
+                    {/* Left */}
+
+                    
+                    <div className='h-fit flex my-3'>
+                      <Button
+                      className="group relative drop-shadow-md rounded-lg bg-[#C5EC38] dark:bg-white inline-block overflow-hidden border border-l-0 dark:border-white px-8 py-3 focus:ring-3 focus:outline-hidden"
+                      type="submit" aria-disabled={loading}
+                      >
+                        <span
+                          className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:bg-[#C5EC38] dark:group-hover:bg-[#C5EC38] transition-all group-hover:w-full"
+                        ></span>
+
+                        <span
+                          className="relative text-sm font-medium text-[#170414] transition-colors group-hover:text-white dark:group-hover:text-black"
                         >
-                        {loading ? <SpinnerLineWave /> : 'Save'}
-                    </button>
+                          {loading ? <SpinnerLineWave /> : 'Save'}
+                        </span>
+                      </Button>
+                    </div>
+                         
                 </Field>
                 </form>
               </div>

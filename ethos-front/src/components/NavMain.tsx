@@ -61,7 +61,7 @@ export const NavMain = () => {
                     <div className="flex items-center">
                         <div className="flex sm:flex ">
                     
-                        <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="mr-2 flex w-fit shrink background-light drop-shadow-lg dark:drop-shadow-lg dark:bg-slate-700/20 h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer">
+                        <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="mr-2 flex w-fit shrink background-light drop-shadow-lg dark:toggle-nav-dark h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer">
 
 
                             <svg className="moon shrink h-7 w-6 mr-2 dark:drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -69,7 +69,7 @@ export const NavMain = () => {
 
                             </svg>
 
-                            <div id="toggleBall" className="w-8 shrink-sm px-1 h-7 drop-shadow-lg bg-indigo-600 dark:ml-7 rounded-full absolute transform transition-transform duration-300">
+                            <div id="toggleBall" className="w-8 shrink-sm px-1 h-7 drop-shadow-lg bg-[#C5EC38] dark:ml-7 rounded-full absolute transform transition-transform duration-300">
                             </div>
 
                             <svg className="ml-2 h-6 w-6 shrink dark:border-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">

@@ -13,12 +13,12 @@ export const Footer = () => {
           - @tailwindcss/forms
       */}
 
-      <footer className="bg-white">
+      <footer className="dark bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div
-            className="flex flex-col items-center gap-4 rounded-lg bg-indigo-600 p-6 shadow-lg sm:flex-row sm:justify-between"
+            className="flex flex-col items-center gap-4 rounded-lg bg-[#C5EC38] p-6 shadow-lg sm:flex-row sm:justify-between"
           >
-            <strong className="text-xl text-white sm:text-xl"> Make Your Next Career Move! </strong>
+            <strong className="text-xl text-black sm:text-xl"> Make Your Next Career Move! </strong>
 
             <a
               className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-indigo-600 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
