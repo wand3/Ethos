@@ -86,22 +86,19 @@ export const UpdateTesting = () => {
 
     event.preventDefault();
 
-    console.log('project form subit test begin')
-
-
+    // console.log('project form subit test begin')
     const test_types = test_typesField.current ? test_typesField.current.value : "";
     const automation_frameworks = automation_frameworksField.current ? automation_frameworksField.current.value : "";
     const ci_cd_integration = ci_cd_integrationField.current ? ci_cd_integrationField.current.value : "";
   
-
-    console.log('form subit test begin')
+    // console.log('form subit test begin')
     const errors: FormUpdateTesting = {};
 
     if (!validateCommaSeparatedStrings(test_types)) {
             console.log(test_types)
 
       errors.test_types = "Invalid format for Programming test_types(s). Use comma-separated words.";
-      console.log('form subit past test')
+      // console.log('form subit past test')
 
     }
     if (!validateCommaSeparatedStrings(automation_frameworks)) {
@@ -117,26 +114,26 @@ export const UpdateTesting = () => {
     }
    
     try {
-        console.log('onsubmit in')
-       
-        const response = await dispatch(updateProjectTesting({
-            _id: id,
-            test_types: test_types,
-            ci_cd_integration: ci_cd_integration,
-            automation_frameworks: automation_frameworks,
-            }));
-        // console.log(response.payload)
+      // console.log('onsubmit in')
+      
+      const response = await dispatch(updateProjectTesting({
+          _id: id,
+          test_types: test_types,
+          ci_cd_integration: ci_cd_integration,
+          automation_frameworks: automation_frameworks,
+          }));
+      // console.log(response.payload)
 
-        if (response.payload) {
-            navigate(`/project/${id}`); // Replace with project route
-            flash("Project Test Methods updated", "success")
+      if (response.payload) {
+        navigate(`/project/${id}`); // Replace with project route
+        flash("Project Test Methods updated", "success")
 
-            return response.payload;
-        }
-      } catch (err: any) {
-        console.error("Registration error:", err);
-        flash("Project Technologies update Failed", "error")
+        return response.payload;
       }
+    } catch (err: any) {
+      console.error("Registration error:", err);
+      flash("Project Technologies update Failed", "error")
+    }
   }
 
   // back button 
@@ -163,9 +160,8 @@ export const UpdateTesting = () => {
                   <h3 className="flex text-base/10 pb-4 font-medium justify-center">
                       Update Projects' Testing Details
                   </h3>
-                <form onSubmit={handleSubmit} >
+                  <form onSubmit={handleSubmit} >
                     
-                    {/* // <Field> */}
                     <Field>
                         <InputField
                         name="test_typess"
@@ -183,22 +179,22 @@ export const UpdateTesting = () => {
                         Fieldref={automation_frameworksField} value={''} />
 
                         <InputField
-                            name="ci_cd_integration"
-                            label="CI/CD Integration"
-                            type="text"
-                            error={formErrors.ci_cd_integration}
-                            Fieldref={ci_cd_integrationField} value={''} />
+                        name="ci_cd_integration"
+                        label="CI/CD Integration"
+                        type="text"
+                        error={formErrors.ci_cd_integration}
+                        Fieldref={ci_cd_integrationField} value={''} />
 
                     {/* Left */}
 
                     
-                    <div className='h-fit flex my-3'>
+                    <div className='h-fit flex my-3 justify-end'>
                       <Button
-                      className="group relative drop-shadow-md rounded-lg bg-[#C5EC38] dark:bg-white inline-block overflow-hidden border border-l-0 dark:border-white px-8 py-3 focus:ring-3 focus:outline-hidden"
+                      className="group relative drop-shadow-lg rounded-lg  inline-block overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light dark:button-color-dark"
                       type="submit" aria-disabled={loading}
                       >
                         <span
-                          className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:bg-[#C5EC38] dark:group-hover:bg-[#C5EC38] transition-all group-hover:w-full"
+                          className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full"
                         ></span>
 
                         <span
@@ -209,9 +205,9 @@ export const UpdateTesting = () => {
                       </Button>
                     </div>
                          
-                </Field>
-                </form>
-              </div>
+                    </Field>
+                  </form>
+                </div>
             </div>
           </div>             
         </div>

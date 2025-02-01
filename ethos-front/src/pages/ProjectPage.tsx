@@ -14,7 +14,7 @@ import { RootState } from "../store";
 export const ProjectPage = () => {
   const {id} = useParams();
   const navigate = useNavigate();
-  const { data: project, error } = useGetProjectDetailQuery(id, { // Type data and add other states
+  const { data: project, error } = useGetProjectDetailQuery(id as string, { // Type data and add other states
     pollingInterval: 9000,
     skip: !localStorage.getItem('token') // Skip query if no token
   });
@@ -23,22 +23,10 @@ export const ProjectPage = () => {
   const token = useSelector((state: RootState) => {state.user.token})
   // automatically authenticate user if token is found
   const { data: user } = useGetUserDetailsQuery(token, { // Type data and add other states
-    // pollingInterval: 9000,
+    pollingInterval: 9000,
     skip: !localStorage.getItem('token') // Skip query if no token
   });
 
-
-
-  let [isOpen, setIsOpen] = useState(false) 
-
-  // dialog popup and close 
-  function open() {
-    setIsOpen(true)
-  }
-  function close() {
-    setIsOpen(false);
-    
-  }
 
   // back button 
   const goBack = () => {

@@ -29,7 +29,7 @@ export const UpdateProject = () => {
   const [ project, setProject ] = useState<ProjectSchema | null >();
 
   const [roles, setRoles] = useState<string>('')
-  const { data: currentProject, error } = useGetProjectDetailQuery(id, { // Type data and add other states
+  const { data: currentProject, error } = useGetProjectDetailQuery(id as string, { // Type data and add other states
     pollingInterval: 9000,
     skip: !localStorage.getItem('token') // Skip query if no token
   });
@@ -64,18 +64,11 @@ export const UpdateProject = () => {
   const project_urlField = useRef<HTMLInputElement>(null);
   const rolesField = useRef<HTMLInputElement>(null);
 
-  
-
-  // useEffect(() => {
-  //   getProject();
-  //   // console.log(project)
-  // }, []);
-
 
   useEffect(() => {
     getProject();
     if (project) {
-      console.log('project found')
+      // console.log('project found')
       if (titleField.current) titleField.current.value = project.title || "";
       if (descriptionField.current) descriptionField.current.value = project.description || '';
       if (github_urlField.current) github_urlField.current.value = project.github_url || '';
@@ -91,10 +84,18 @@ export const UpdateProject = () => {
   }, [project]);
 
 
+  const validateCommaSeparatedStrings = (input: string): boolean => {
+    const regex = /^[a-zA-Z0-9\s]+(,\s*[a-zA-Z0-9\s]+)*$/;
+      return regex.test(input);
+  };
+  function clearErrors() {
+    setFormErrors({});
+  }
   
    
   
   const handleSubmit = async (event: React.FormEvent) => {
+    clearErrors();
     event.preventDefault();
 
     const title = titleField.current ? titleField.current.value : "";
@@ -102,8 +103,6 @@ export const UpdateProject = () => {
     const project_url = project_urlField.current ? project_urlField.current.value : "";
     const github_url = github_urlField.current ? github_urlField.current.value : "";
     const role = rolesField.current ? rolesField.current.value : "";
-
-    // console.log('submit in')
 
     const formData = new FormData();
     formData.append("title", title);
@@ -124,34 +123,35 @@ export const UpdateProject = () => {
     if (!github_url){
       errors.github_url = "Github URL must be provided";
     }
+    if (!validateCommaSeparatedStrings(role)) {
+      errors.roles = "Invalid format for Role(s). Use comma-separated words.";
+    }
     
     setFormErrors(errors);
-    // console.log(`form data ${formData}`)
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
 
     try {
-      // const update = async function () {
-      // console.log('try in')
-
       const response = await axios.put(`${Config.baseURL}/project/${id}/project/`,
         formData, // Send formData (FormData object)
         {
           headers: {
-            // 'Content-Type': 'application/json',  // Incorrect: Remove this!
-            // 'Content-Type': 'form-data', // Correct:  Or let Axios handle it
             'authorization': `Bearer ${localStorage.getItem('token')}`,
           },
         },
       );
-      // console.log(response)
-      // const data = await response.data;
-      flash('Project Updated!', 'success')
-      goBack()
+      if (response.status === 201) {
+          // navigate(`/project/${id}`); // Replace with project route
+          flash('Project Updated!', 'success')
+          goBack()
+
+          return response.data;
+      }
       // console.log(data);
     } catch (error) {
       console.error("Error updating projects:", error);
-      flash('Project Updated!', 'error')
-
-      // alert("Failed to update projects. Please try again.");
+      flash('Project Update Failed!', 'error')
     }
   };
 
@@ -161,84 +161,80 @@ export const UpdateProject = () => {
       <EthosBody nav={true}>
         
 
-        <div className="bg-[#eeeeeb] pb-20 relative">
+        <div className="text-white dark:bg-black pb-20 relative">
           <div className="p-6 backdrop-opacity-30 duration-300 ease-out flex justify-center">
             <button onClick={() => {goBack()}}>
               <span className="absolute m-2 top-[5%] md:top-[10%] md:ml-[-40px] hover:text-red-600"><ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
               </span>
             </button>
-            <div className="w-full max-w-md rounded-xl bg-[#F7F7F7] h-fit mt-[20%] md:mt-[10%] ">
+            <div className="w-full max-w-md rounded-xl h-fit mt-[20%] md:mt-[10%] form-light dark:form-dark ">
                 <div className="min-w-[50%] min-h-[50%] items-center justify-between p-4">
                   
-                  <h3 className="flex text-base/10 pb-4 font-medium text-slate-800 justify-center">
+                  <h3 className="flex text-base/10 pb-4 font-medium justify-center">
                       Update Project Method
                   </h3>
                     
-                      <form onSubmit={handleSubmit} className="text-slate-800">
+                    <form onSubmit={handleSubmit} className="">
                       
-                        <Field>
-                            <InputField
-                        name="title"
-                        label="Project Title"
-                        type="name"
-                        // placeholder="Enter P"
-                        error={formErrors.title}
-                        // value={project?.title}
-                        Fieldref={titleField} value={""} />
+                      <Field>
+                        <InputField
+                          name="title"
+                          label="Project Title"
+                          type="name"
+                          error={formErrors.title}
+                          Fieldref={titleField} value={""} />
 
+                        <InputField
+                          name="project_description"
+                          label="Project Description"
+                          type="text"
+                          error={formErrors.description}
+                          Fieldref={descriptionField} value={""} />
 
-                            <InputField
-                        name="project_description"
-                        label="Project Description"
-                        type="text"
-                        // placeholder="1 2 3 4 .."
-                        error={formErrors.description}
-                        Fieldref={descriptionField} value={""} />
-
-                            
-                            <InputField
-                        name="github_url"
-                        label="Github URL"
-                        type="text"
-                        // placeholder="number of day(s) before arrival"
-                        error={formErrors.github_url}
-                        Fieldref={github_urlField} value={""} />
+                          
+                        <InputField
+                          name="github_url"
+                          label="Github URL"
+                          type="text"
+                          error={formErrors.github_url}
+                          Fieldref={github_urlField} value={""} />
 
 
                         <InputField
                           name="project_url"
                           label="Project URL"
                           type="text"
-                          // placeholder="number of day(s) before arrival"
                           error={formErrors.project_url}
                           Fieldref={project_urlField} value={""} />
 
-                         <InputField
+                        <InputField
                           name="roles"
                           label="Roles"
                           type="text"
-                          // placeholder="number of day(s) before arrival"
                           error={formErrors.roles}
                           Fieldref={rolesField} value={""} />
 
-
-
-                        <div className="flex justify-end pr-3 pt-3">
-                          {/* <Button
-                              className="gap-2 rounded-md bg-gray-700 py-2 px-5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
-                              type="submit"
+                        {/* Left */}
+                        
+                                            
+                      <div className='h-fit flex my-3 justify-end'>
+                        <Button
+                        className="group relative drop-shadow-lg rounded-lg  inline-block overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light dark:button-color-dark"
+                        type="submit" aria-disabled={isLoading}
+                        >
+                          <span
+                            className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full"
+                          ></span>
+  
+                          <span
+                            className="relative text-sm font-medium text-[#170414] transition-colors group-hover:text-white dark:group-hover:text-black"
                           >
-                              Submit
-                          </Button> */}
-                            <Button
-                              className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                              type="submit"
-                              >
-                              { (isLoading && userDetails) ? <SpinnerLineWave /> : 'Update project'}
-                          </Button>
-                        </div>
-                      </Field>
-                    </form>             
+                            {isLoading ? <SpinnerLineWave /> : 'Save'}
+                          </span>
+                        </Button>
+                      </div>
+                    </Field>
+                  </form>             
                 </div>
             </div>
           </div>             

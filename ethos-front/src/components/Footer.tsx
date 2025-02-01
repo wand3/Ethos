@@ -45,7 +45,7 @@ export const Footer = () => {
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-gray-900">Contact Us</p>
+              <p className="text-lg font-medium text-gray-900">Contact</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -127,7 +127,7 @@ export const Footer = () => {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium text-gray-900">Our Services</p>
+              <p className="text-lg font-medium text-gray-900">Services</p>
 
               <ul className="mt-8 space-y-4 text-sm">
                 <li>

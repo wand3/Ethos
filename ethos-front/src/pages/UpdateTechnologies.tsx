@@ -1,6 +1,6 @@
 import useFlash from "../hooks/UseFlash";
 import React, { useEffect, useRef, useState } from "react";
-import { Field } from '@headlessui/react';
+import { Button, Field } from '@headlessui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from "../store";
 
@@ -12,13 +12,21 @@ import InputField from "../components/Auth/FormInput";
 import EthosBody from "../components/Body";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
+export type FormUpdateTechnologies = {
+  language?: string;
+  frameworks?: string;
+  databases?: string;
+  tools?: string;
+}
+
 
 export const UpdateTechnologies = () => {
   const { loading, error, success } = useSelector((state: RootState) => state.project); // Type-safe selector
+  const [formErrors, setFormErrors] = useState<FormUpdateTechnologies>({});
   const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
   const {id} = useParams();
   const navigate = useNavigate();
-  const { data: project } = useGetProjectDetailQuery(id, { // Type data and add other states
+  const { data: project } = useGetProjectDetailQuery(id as string, { // Type data and add other states
           pollingInterval: 9000,
         skip: !localStorage.getItem('token') // Skip query if no token
   });
@@ -37,15 +45,6 @@ export const UpdateTechnologies = () => {
   const frameworksField = useRef<HTMLInputElement>(null);
   const databasesField = useRef<HTMLInputElement>(null);
   const toolsField = useRef<HTMLInputElement>(null);
-  
-    
-  // // dialog popup and close 
-  // function open() {
-  //   setIsOpen(true)
-  // }
-  // function close() {
-  //   setIsOpen(false)
-  // }
 
   
   // Pre-fill the form when the component mounts or technologies change
@@ -82,13 +81,20 @@ export const UpdateTechnologies = () => {
   }, [project]);
   
 
-  //   const formData = new FormData();
+  const validateCommaSeparatedStrings = (input: string): boolean => {
+    const regex = /^[a-zA-Z0-9\s]+(,\s*[a-zA-Z0-9\s]+)*$/;
+      return regex.test(input);
+  };
+  function clearErrors() {
+    setFormErrors({});
+  }
 
   const handleSubmit = async (event: React.FormEvent) => {
+    clearErrors();
+
     event.preventDefault();
 
-    console.log('project form subit test begin')
-
+    // console.log('project form subit test begin')
 
     const language = languageField.current ? languageField.current.value : "";
     const frameworks = frameworksField.current ? frameworksField.current.value : "";
@@ -97,30 +103,48 @@ export const UpdateTechnologies = () => {
     // });
   
 
-    console.log('form subit test begin')
+    // console.log('form subit test begin')
+    const errors: FormUpdateTechnologies = {};
 
+
+    if (!validateCommaSeparatedStrings(language)) {
+            // console.log(language)
+      errors.language = "Invalid format for Programming language(s). Use comma-separated words.";
+    }
+    if (!validateCommaSeparatedStrings(frameworks)) {
+      errors.frameworks = "Invalid format for Framework(s). Use comma-separated words.";
+    }
+    if (!validateCommaSeparatedStrings(databases)) {
+      errors.databases = "Invalid format for Database(s). Use comma-separated words.";
+    }
+    if (!tools) {
+      errors.tools = "Invalid format for Tool(s). Use comma-separated words.";
+    }
+
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+    
     try {
-        console.log('onsubmit in')
-        // clearErrors(); // Clear any previous errors
-       
-        const response = await dispatch(updateProjectTechStack({
-            _id: id,
-            language: language,
-            databases: databases,
-            frameworks: frameworks,
-            tools: tools,
-            }));
-        // console.log(response.payload)
-        if (response.payload) {
-            navigate(`/project/${id}`); // Replace with project route
-            flash("Project Technologies updated", "success")
+      const response = await dispatch(updateProjectTechStack({
+          _id: id,
+          language: language,
+          databases: databases,
+          frameworks: frameworks,
+          tools: tools,
+          }));
+      // console.log(response.payload)
+      if (response.payload) {
+          navigate(`/project/${id}`); // Replace with project route
+          flash("Project Technologies updated", "success")
 
-            return response.payload;
-        }
-      } catch (err: any) {
-        console.error("Registration error:", err);
-        flash("Project Technologies update Failed", "error")
+          return response.payload;
       }
+    } catch (err: any) {
+      console.error("Registration error:", err);
+      flash("Project Technologies update Failed", "error")
+    }
   }
 
   // back button 
@@ -129,33 +153,29 @@ export const UpdateTechnologies = () => {
   }
 
  
-
   return (
     <>
-      <EthosBody nav={false}>
-        
-
-        <div className="bg-[#eeeeeb] pb-20 relative">
+      <EthosBody nav={true}>
+        <div className="text-white dark:bg-black pb-20 relative">
           <div className="p-6 backdrop-opacity-30 duration-300 ease-out flex justify-center">
             <button onClick={() => {goBack()}}>
               <span className="absolute m-2 top-[5%] md:top-[10%] md:ml-[-40px] hover:text-red-600"><ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
               </span>
             </button>
-            <div className="w-full max-w-md rounded-xl bg-[#F7F7F7] h-fit mt-[20%] md:mt-[10%] ">
-                <div className="min-w-[50%] min-h-[50%] items-center justify-between p-4">
+            <div className="w-full max-w-md rounded-xl h-fit mt-[20%] md:mt-[10%] form-light dark:form-dark">
+              <div className="min-w-[50%] min-h-[50%] items-center justify-between p-4">
                   
-                  <h3 className="flex text-base/10 pb-4 font-medium text-slate-800 justify-center">
-                      Update Project technologies
-                  </h3>
+                <h3 className="flex text-base/10 pb-4 font-medium justify-center">
+                      Update Projects' technologies
+                </h3>
                 <form onSubmit={handleSubmit}>
                     
-                    {/* // <Field> */}
                     <Field>
                         <InputField
                         name="languages"
                         label="Programming Language(s)"
                         type="name"
-                        // error={errors.root?.message}
+                        error={formErrors.language}
                         Fieldref={languageField} value={""} />
 
 
@@ -163,8 +183,7 @@ export const UpdateTechnologies = () => {
                         name="Frameworks"
                         label="Framework(s)"
                         type="name"
-                        // error={""}
-                        // value={project?.title}
+                        error={formErrors.frameworks}
 
                         Fieldref={frameworksField} value={''} />
 
@@ -172,9 +191,7 @@ export const UpdateTechnologies = () => {
                             name="databases"
                             label="Database Technologie(s)"
                             type="text"
-                            // error={""}
-                            // value={project?.title}
-
+                            error={formErrors.databases}
                             Fieldref={databasesField} value={''} />
 
 
@@ -182,23 +199,32 @@ export const UpdateTechnologies = () => {
                             name="tools"
                             label="Tools"
                             type="text"
-                            // error={""}
-                            // value={project?.title}
+                            error={formErrors.tools}
 
                             Fieldref={toolsField} value={''} />
 
 
+                    <div className='h-fit flex my-3 justify-end'>
+                      <Button
+                      className="group relative drop-shadow-lg rounded-lg  inline-block overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light dark:button-color-dark"
+                      type="submit" aria-disabled={loading}
+                      >
+                        <span
+                          className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full"
+                        ></span>
 
-                    
-                    <button
-                        className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                        type="submit" aria-disabled={loading}
+                        <span
+                          className="relative text-sm font-medium text-[#170414] transition-colors group-hover:text-white dark:group-hover:text-black"
                         >
-                        {loading ? <SpinnerLineWave /> : 'Save'}
-                    </button>
+                          {loading ? <SpinnerLineWave /> : 'Save'}
+                        </span>
+                      </Button>
+                    </div>
                 </Field>
-                </form>
-              </div>
+
+              </form>
+
+            </div>
             </div>
           </div>             
         </div>

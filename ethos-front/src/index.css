@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer components {
+    .button-color-light {
+        @apply bg-[#C5EC38]
+    }
+    .button-color-dark {
+        @apply bg-white border-white
+    }
+    .button-span-inside {
+      @apply group-hover:bg-[#C5EC38] bg-[#C5EC38]
+    }
     /* .button-submit {
         @apply justify-between rounded-md bg-[#4158D0] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
     } */
