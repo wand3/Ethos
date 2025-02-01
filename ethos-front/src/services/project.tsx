@@ -1,7 +1,7 @@
 import Config from '../config';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails, UpdateProjectSchema, UpdateTechStack } from '../schemas/project';
+import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails, UpdateProjectSchema, UpdateTechStack, UpdateTestingDetails } from '../schemas/project';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosError } from 'axios';
 import { useParams } from 'react-router-dom';
@@ -216,41 +216,36 @@ export const updateProjectTechStack = createAsyncThunk<ProjectSchema, UpdateTech
 
 
 
-// update project technologies 
-export const updateProjectTesting = createAsyncThunk<ProjectSchema, UpdateTechStack, { rejectValue: string}> (
+// update project teststack 
+export const updateProjectTesting = createAsyncThunk<ProjectSchema, UpdateTestingDetails, { rejectValue: string}> (
   'project/update/tests',
-  async ({ _id, language, frameworks, databases, tools }: UpdateTechStack, { rejectWithValue }) => { 
+  async ({ _id, test_types, automation_frameworks, ci_cd_integration }: UpdateTestingDetails, { rejectWithValue }) => { 
     try {
       const formData = new FormData();
-      if (language) {
-        formData.append('language', language);
+      if (test_types) {
+        formData.append('test_types', test_types);
       }
-      if (frameworks) {
-        formData.append('frameworks', frameworks);
+      if (automation_frameworks) {
+        formData.append('automation_frameworks', automation_frameworks);
       }
-      if (databases) {
-        formData.append('databases', databases);
+      if (ci_cd_integration) {
+        formData.append('ci_cd_integration', ci_cd_integration);
       }
-      if (tools) {
-        formData.append('tools', tools);
-      }
-     
+
+ 
       console.log(formData)
-      console.log(userToken)
+      // console.log(userToken)
       // const project_id = _id
 
       const config = {
         headers: {
-          // 'Content-Type': 'application/json',
-          // 'Content-Type': 'multipart/form-data', // Set for form data with images
           'authorization': `Bearer ${userToken}`
         },
   
       };
       const response = await axios.put(
-        `${Config.baseURL}/project/${_id}/add/technologies/`,
+        `${Config.baseURL}/project/${_id}/add/testing/`,
         formData,
-        // { title, description, project_url, github_url, images },
         config
       );
       if (response.status === 201) {

@@ -50,8 +50,12 @@ export const ProjectPage = () => {
     return navigate(`/project/${id}/update`);
   }
 
-   const goToUpdateTechnologiesPage = () => {
+  const goToUpdateTechnologiesPage = () => {
     return navigate(`/project/${id}/update/technologies`);
+  }
+
+  const goToUpdateTestingsPage = () => {
+    return navigate(`/project/${id}/update/testings`);
   }
   
   
@@ -72,7 +76,7 @@ export const ProjectPage = () => {
   return (
     <>
       <EthosBody nav>
-        <div className="absolute z-10 mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+        <div className="absolute z-10 mt-0 mx-4 lg:ml-[6%] p-1 hover:text-red-600 text-black dark:text-white">
           <div onClick={() => {goBack()}}>
             <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
           </div>
@@ -178,13 +182,19 @@ export const ProjectPage = () => {
           <>
              <button onClick={() => {goToUpdatePage()}}>
                 <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
-                <ArrowLeftIcon className="w-6 h-6 font-extrabold"/>
+                Update Project
                 </span>
             </button>
 
             <button onClick={() => {goToUpdateTechnologiesPage()}}>
                 <span className="rounded border mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
                 Techlologies
+                </span>
+            </button>
+
+            <button onClick={() => {goToUpdateTestingsPage()}}>
+                <span className="rounded border mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+                Testing
                 </span>
             </button>
           </>

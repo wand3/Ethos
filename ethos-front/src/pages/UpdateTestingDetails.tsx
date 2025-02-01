@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from "../store";
 
 import { ProjectSchema } from '../schemas/project'
-import { updateProjectTechStack, useGetProjectDetailQuery } from "../services/project";
+import { updateProjectTesting, useGetProjectDetailQuery } from "../services/project";
 import SpinnerLineWave from "../components/spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import InputField from "../components/Auth/FormInput";
@@ -13,7 +13,7 @@ import EthosBody from "../components/Body";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 
-export const UpdateTechnologies = () => {
+export const UpdateTesting = () => {
   const { loading, error, success } = useSelector((state: RootState) => state.project); // Type-safe selector
   const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
   const {id} = useParams();
@@ -23,20 +23,23 @@ export const UpdateTechnologies = () => {
         skip: !localStorage.getItem('token') // Skip query if no token
   });
 
-  // Pre-filled technologies data
-  const [technologies, setTechnologies] = useState<ProjectSchema['technologies']>({
-    language: project?.technologies?.language,
-    frameworks: project?.technologies?.frameworks,
-    databases: project?.technologies?.databases,
-    tools: project?.technologies?.tools,
+
+// _id?: string;
+//   test_types?: string[];
+//   automation_automation_frameworks?: string[];
+//   ci_cd_integration?: string[];
+  // Pre-filled testing_details data
+  const [testDetails, setTestDetails] = useState<ProjectSchema['testing_details']>({
+    test_types: project?.testing_details?.test_types,
+    automation_frameworks: project?.testing_details?.automation_frameworks,
+    ci_cd_integration: project?.testing_details?.ci_cd_integration,
   });
 
   const flash = useFlash();
 
-  const languageField = useRef<HTMLInputElement>(null);
-  const frameworksField = useRef<HTMLInputElement>(null);
-  const databasesField = useRef<HTMLInputElement>(null);
-  const toolsField = useRef<HTMLInputElement>(null);
+  const test_typesField = useRef<HTMLInputElement>(null);
+  const automation_frameworksField = useRef<HTMLInputElement>(null);
+  const ci_cd_integrationField = useRef<HTMLInputElement>(null);
   
     
   // // dialog popup and close 
@@ -48,41 +51,34 @@ export const UpdateTechnologies = () => {
   // }
 
   
-  // Pre-fill the form when the component mounts or technologies change
+  // Pre-fill the form when the component mounts or testing_details change
   useEffect(() => {
     if (project)
-      // Object.entries(project?.technologies).forEach(([category, items]) => {
-      //   setValue(`technologies.${category}`, items);
+      // Object.entries(project?.testing_details).forEach(([category, items]) => {
+      //   setValue(`testing_details.${category}`, items);
       // });
-      setTechnologies(project.technologies)
-      const languageCommaSeparated = Array.isArray(project?.technologies?.language)
-        ? project?.technologies?.language.join(", ")
+      setTestDetails(project.testing_details)
+      const test_typesCommaSeparated = Array.isArray(project?.testing_details?.test_types)
+        ? project?.testing_details?.test_types.join(", ")
         : "";
-      if (languageField.current) languageField.current.value = languageCommaSeparated || ''
-    //   setDefLanguage(languageCommaSeparated)
+      if (test_typesField.current) test_typesField.current.value = test_typesCommaSeparated || ''
+    //   setDefLanguage(test_typesCommaSeparated)
 
-      const frameworksCommaSeparated = Array.isArray(project?.technologies?.frameworks)
-        ? project?.technologies?.frameworks.join(", ")
+      const automation_frameworksCommaSeparated = Array.isArray(project?.testing_details?.automation_frameworks)
+        ? project?.testing_details?.automation_frameworks.join(", ")
         : "";
-      if (frameworksField.current) frameworksField.current.value = frameworksCommaSeparated || ''
-    //   setDefFrameworks(frameworksCommaSeparated)
+      if (automation_frameworksField.current) automation_frameworksField.current.value = automation_frameworksCommaSeparated || ''
+    //   setDefFrameworks(automation_frameworksCommaSeparated)
 
-      const databasesCommaSeparated = Array.isArray(project?.technologies?.databases)
-        ? project?.technologies?.databases.join(", ")
+      const ci_cd_integrationCommaSeparated = Array.isArray(project?.testing_details?.ci_cd_integration)
+        ? project?.testing_details?.ci_cd_integration.join(", ")
         : "";
-      if (databasesField.current) databasesField.current.value = databasesCommaSeparated || ''
-
-
-      const toolsCommaSeparated = Array.isArray(project?.technologies?.tools)
-        ? project?.technologies?.tools.join(", ")
-        : "";
-      if (toolsField.current) toolsField.current.value = toolsCommaSeparated || ''
+      if (ci_cd_integrationField.current) ci_cd_integrationField.current.value = ci_cd_integrationCommaSeparated || ''
 
 
   }, [project]);
   
 
-  //   const formData = new FormData();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -90,11 +86,9 @@ export const UpdateTechnologies = () => {
     console.log('project form subit test begin')
 
 
-    const language = languageField.current ? languageField.current.value : "";
-    const frameworks = frameworksField.current ? frameworksField.current.value : "";
-    const databases = databasesField.current ? databasesField.current.value : "";
-    const tools = toolsField.current ? toolsField.current.value : "";
-    // });
+    const test_types = test_typesField.current ? test_typesField.current.value : "";
+    const automation_frameworks = automation_frameworksField.current ? automation_frameworksField.current.value : "";
+    const ci_cd_integration = ci_cd_integrationField.current ? ci_cd_integrationField.current.value : "";
   
 
     console.log('form subit test begin')
@@ -103,12 +97,11 @@ export const UpdateTechnologies = () => {
         console.log('onsubmit in')
         // clearErrors(); // Clear any previous errors
        
-        const response = await dispatch(updateProjectTechStack({
+        const response = await dispatch(updateProjectTesting({
             _id: id,
-            language: language,
-            databases: databases,
-            frameworks: frameworks,
-            tools: tools,
+            test_types: test_types,
+            ci_cd_integration: ci_cd_integration,
+            automation_frameworks: automation_frameworks,
             }));
         // console.log(response.payload)
 
@@ -133,7 +126,7 @@ export const UpdateTechnologies = () => {
 
   return (
     <>
-      <EthosBody nav={false}>
+      <EthosBody nav={true}>
         
 
         <div className="bg-[#eeeeeb] pb-20 relative">
@@ -146,53 +139,40 @@ export const UpdateTechnologies = () => {
                 <div className="min-w-[50%] min-h-[50%] items-center justify-between p-4">
                   
                   <h3 className="flex text-base/10 pb-4 font-medium text-slate-800 justify-center">
-                      Update Project technologies
+                      Update Projects' Testing Details
                   </h3>
                 <form onSubmit={handleSubmit}>
                     
                     {/* // <Field> */}
                     <Field>
                         <InputField
-                        name="languages"
-                        label="Programming Language(s)"
+                        name="test_typess"
+                        label="Test type e.g Unittest, Security"
                         type="name"
                         // error={errors.root?.message}
-                        Fieldref={languageField} value={""} />
+                        Fieldref={test_typesField} value={""} />
 
 
                         <InputField
                         name="Frameworks"
-                        label="Framework(s)"
+                        label="Test Framework(s)"
                         type="name"
                         // error={""}
                         // value={project?.title}
 
-                        Fieldref={frameworksField} value={''} />
+                        Fieldref={automation_frameworksField} value={''} />
 
                         <InputField
-                            name="databases"
-                            label="Database Technologie(s)"
+                            name="ci_cd_integration"
+                            label="CI/CD Integration"
                             type="text"
                             // error={""}
                             // value={project?.title}
 
-                            Fieldref={databasesField} value={''} />
+                            Fieldref={ci_cd_integrationField} value={''} />
 
-
-                        <InputField
-                            name="tools"
-                            label="Tools"
-                            type="text"
-                            // error={""}
-                            // value={project?.title}
-
-                            Fieldref={toolsField} value={''} />
-
-
-
-                    
                     <button
-                        className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                        className="inline-block my-2 shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                         type="submit" aria-disabled={loading}
                         >
                         {loading ? <SpinnerLineWave /> : 'Save'}
@@ -209,4 +189,4 @@ export const UpdateTechnologies = () => {
     </>
     )}
 
-export default UpdateTechnologies;
+export default UpdateTesting;

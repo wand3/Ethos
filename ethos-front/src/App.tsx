@@ -23,6 +23,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import UpdateTechnologies from './pages/UpdateTechnologies';
+import UpdateTesting from './pages/UpdateTestingDetails';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
                   <Route path="/projects" element={ <ProjectsPage />} />  
                   <Route path="/project/:id/update" element={ <UpdateProject />} />
                   <Route path="/project/:id/update/technologies" element={ <UpdateTechnologies />} />
+                  <Route path="/project/:id/update/testings" element={ <UpdateTesting />} />
+
 
 
                   <Route path="/logout" element={

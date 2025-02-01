@@ -158,7 +158,7 @@ export const UpdateProject = () => {
 
   return (
     <>
-      <EthosBody nav={false}>
+      <EthosBody nav={true}>
         
 
         <div className="bg-[#eeeeeb] pb-20 relative">

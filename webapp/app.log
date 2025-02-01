@@ -1502,3 +1502,17 @@ Traceback (most recent call last):
     version = _bcrypt.__about__.__version__
               ^^^^^^^^^^^^^^^^^
 AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-01 09:15:00,492 - INFO - Application started -----------
+2025-02-01 09:15:04,567 - INFO - Application started -----------
+2025-02-01 09:15:10,308 - INFO - User model ---- get current user payload error
+2025-02-01 09:15:10,338 - INFO - User model ---- get current user payload error
+2025-02-01 09:15:14,008 - INFO - User model ---- get current user payload error
+2025-02-01 09:15:23,940 - INFO - User model ---- get current user payload error
+2025-02-01 09:15:23,943 - INFO - User model ---- get current user payload error
+2025-02-01 09:15:28,861 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-01 09:15:50,076 - INFO - User model ---- get current user payload error

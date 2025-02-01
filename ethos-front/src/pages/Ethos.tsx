@@ -14,7 +14,6 @@ const Ethos = () => {
                 <HeroArea />
                 <GoalsQuotes />
                 <ProjectPart projects={[]} />
-                <Footer />
 
             </EthosBody>
 

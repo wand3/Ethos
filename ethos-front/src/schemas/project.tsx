@@ -23,9 +23,9 @@ export interface TestingDetails {
 
 export interface UpdateTestingDetails {
   _id?: string;
-  test_types?: string[];
-  automation_frameworks?: string[];
-  ci_cd_integration?: string[];
+  test_types?: string;
+  automation_frameworks?: string;
+  ci_cd_integration?: string;
 }
 
 

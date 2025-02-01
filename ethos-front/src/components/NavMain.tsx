@@ -21,7 +21,7 @@ export const NavMain = () => {
 
     return (
         <>
-            <header className="glass m-2 md:m-3 py-2 px-1 text-lightbackground dark:text-darkbackground">
+            <header className="m-2 md:m-3 py-2 px-1 text-lightbackground dark:text-darkbackground">
                 <div className="mx-auto max-w-screen-xl  lg:px-8">
                     <div className="flex h-16 items-center justify-between">
                     <div className="md:flex md:items-center md:gap-12">
@@ -61,7 +61,7 @@ export const NavMain = () => {
                     <div className="flex items-center">
                         <div className="flex sm:flex ">
                     
-                        <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="mr-2 flex w-fit shrink background-light drop-shadow-lg dark:drop-shadow-lg dark:bg-slate-700/20  dark:border h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer">
+                        <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="mr-2 flex w-fit shrink background-light drop-shadow-lg dark:drop-shadow-lg dark:bg-slate-700/20 h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer">
 
 
                             <svg className="moon shrink h-7 w-6 mr-2 dark:drop-shadow-xl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -80,7 +80,7 @@ export const NavMain = () => {
                         
                         <div className='w-fit h-fit flex my-3'>
                             <a
-                                className="px-2 py-2.5 text-sm font-normal shadow rounded-xl outline-offset-4 border border-stone-900 dark:border-white "
+                                className="px-2 py-2.5 text-[0.6rem]  font-bold shadow rounded-xl outline-offset-4 border border-stone-900 dark:border-white "
                                 href="#"
                             >
                                 Let's Connect
