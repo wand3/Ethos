@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import EthosBody from "../components/Body";
-// import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-// import { ArrowLeftIcon } from "lucide-react";
+import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useGetProjectDetailQuery } from "../services/project";
 import { useGetUserDetailsQuery } from "../services/user";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
+import AddProject from "../components/Admin/AddProject";
+import UpdateProjectImages from "../components/Admin/UpdateProjectImages";
+import Config from "../config";
 
 
 export const ProjectPage = () => {
@@ -46,10 +48,6 @@ export const ProjectPage = () => {
     return navigate(`/project/${id}/update/testings`);
   }
   
-  
-
-
-  
   useEffect( () => {
     // loadProduct();
     // if (product) {
@@ -59,6 +57,7 @@ export const ProjectPage = () => {
 
   }, [])
 
+  // const img: string = `${Config.baseURL}/static/images/project_images/${project?.images[0]}`
 
   
   return (
@@ -155,11 +154,12 @@ export const ProjectPage = () => {
                 </div>
 
                 <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-                    <img 
+                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="w-full" />
+                    {/* <img 
                         src="https://i.postimg.cc/kgd4WhyS/container.png" 
                         alt="" 
                         className="w-full" 
-                    />
+                    /> */}
                 </div>
             </div>
             
@@ -168,7 +168,7 @@ export const ProjectPage = () => {
 
         { user && (
           <>
-             <button onClick={() => {goToUpdatePage()}}>
+            <button onClick={() => {goToUpdatePage()}}>
                 <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
                 Update Project
                 </span>
@@ -185,6 +185,8 @@ export const ProjectPage = () => {
                 Testing
                 </span>
             </button>
+            <AddProject />
+            <UpdateProjectImages />
           </>
         )}
 

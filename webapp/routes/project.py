@@ -55,7 +55,8 @@ async def create_project(
 
                 image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
                 with open(image_path, "wb") as buffer:
-                    shutil.copyfileobj(image.file, buffer)
+                    # shutil.copyfileobj(image.file, buffer)
+                    buffer.write(file_content)  # Write the file content directly
 
                 images.append(image_filename)
 
@@ -267,7 +268,8 @@ async def update_project_images(
 
                 image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
                 with open(image_path, "wb") as buffer:
-                    shutil.copyfileobj(image.file, buffer)
+                    # shutil.copyfileobj(image.file, buffer)
+                    buffer.write(file_content)  # Write the file content directly
 
                 images.append(image_filename)
 
@@ -356,3 +358,74 @@ async def delete_project(
 
     return {"message": f"Project deleted successfully {response}"}
 
+
+
+# @project.put("/{project_id}/add/images", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
+# async def update_project_images(
+#     project_id: str,
+#     project_model: Annotated[ProjectModel, Depends(get_project_model)],
+#     images: List[UploadFile] = File(...)  # Use List[UploadFile] for multiple files
+# ):
+#     try:
+#         # Validate project ID
+#         if not ObjectId.is_valid(project_id):
+#             raise HTTPException(status_code=400, detail="Invalid project ID format.")
+#
+#         # Check if the project exists
+#         existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+#         if not existing_project:
+#             raise HTTPException(status_code=404, detail="Project not found.")
+#
+#         # Handle image uploads
+#         uploaded_images = []
+#
+#         for image in images:
+#             # Validate image size
+#             file_content = await image.read()
+#             file_size = len(file_content)
+#             if file_size == 0:
+#                 raise HTTPException(status_code=400, detail="Uploaded file is empty.")
+#             if file_size > Config.MAX_IMAGE_SIZE:
+#                 raise HTTPException(status_code=400, detail="Image size exceeds 5 MB limit.")
+#
+#             # Validate image format
+#             file_ext = os.path.splitext(image.filename)[1].lower()
+#             if file_ext not in Config.UPLOAD_EXTENSIONS:
+#                 raise HTTPException(
+#                     status_code=400,
+#                     detail=f"Unsupported image format. Allowed: {', '.join(Config.UPLOAD_EXTENSIONS)}."
+#                 )
+#
+#             # Generate a unique filename
+#             image_filename = f"{ObjectId()}_{image.filename}"
+#
+#             # Ensure the upload directory exists
+#             os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+#
+#             # Save the image to the upload directory
+#             image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
+#             with open(image_path, "wb") as buffer:
+#                 buffer.write(file_content)  # Write the file content directly
+#
+#             uploaded_images.append(image_filename)
+#
+#         # Update the project with the new images
+#         await project_model.db.update_one(
+#             {"_id": ObjectId(project_id)},
+#             {"$set": {"images": uploaded_images, "updated_at": datetime.utcnow()}}
+#         )
+#
+#         # Retrieve the updated project
+#         updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+#         if updated_project:
+#             return ProjectInDB(**updated_project)
+#         else:
+#             raise HTTPException(
+#                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#                 detail="Failed to retrieve updated project."
+#             )
+#
+#     except HTTPException as http_error:
+#         raise http_error
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))

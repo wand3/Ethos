@@ -1,9 +1,8 @@
 import { ProjectSchema } from "../schemas/project"
 import { ReactElement, memo } from "react"
 import Config from "../config"
-import { useCart } from "../hooks/UseCart"
 import { Link } from "react-router-dom"
-import { ShoppingCartIcon } from "@heroicons/react/24/solid"
+
 
 type PropsType = {
     project: ProjectSchema,
@@ -14,6 +13,7 @@ type PropsType = {
 const Project = ({ project }: PropsType): ReactElement => {
     
     const img: string = new URL(`${Config.baseURL}/static/images/project_images/${project.images[0]}`, import.meta.url).href
+    // const img: string = `${Config.baseURL}/static/images/project_images/${project.images}`
     // console.log(img)
     const content =
 
@@ -32,7 +32,7 @@ const Project = ({ project }: PropsType): ReactElement => {
                     className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
                     >
                         <img src={img} alt={project.title} className="mb-3 h-[40%]" />
-                        <img src={'./..'} alt={''} className="mb-3 h-[40%]" />
+                        {/* <img src={'./..'} alt={''} className="mb-3 h-[40%]" /> */}
 
                         {/* <svg
                             xmlns="http://www.w3.org/2000/svg"

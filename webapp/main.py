@@ -1,14 +1,19 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from webapp.routes import ethos_router, user_router, auth_router, blog_router, project_router, comment_router
 import uvicorn
 from webapp.database.db_engine import db_lifespan, connect_to_mongo, close_mongo_connection
 from .logger import logger
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
 
 def create_app() -> FastAPI:
     app: FastAPI = FastAPI(db_lifespan=db_lifespan)
     logger.info(f'Application started -----------')
+
 
     origins = [
         "http://localhost:5173/",
@@ -36,6 +41,9 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+base_folder = Path(__name__).resolve().parent
+logger.info(base_folder)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 if __name__ == "__main__":

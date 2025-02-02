@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ProjectSchema } from '../schemas/project';
-import { createProject, updateProject } from '../services/project';
+import { createProject, updateProject, updateProjectTechStack, updateProjectTesting } from '../services/project';
 
 
 interface ProjectState {
@@ -55,6 +55,40 @@ const projectSlice = createSlice({
         state.loading = false;
         state.error = action.payload || "Could not update project";
     })
+
+
+    // updating project technologies
+    .addCase(updateProjectTechStack.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+    })
+    .addCase(updateProjectTechStack.fulfilled, (state, action: PayloadAction<ProjectSchema>) => {
+        state.loading = false;
+        state.project = action.payload;
+        state.success = true;
+    })
+    .addCase(updateProjectTechStack.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Could not update project technologies";
+    })
+
+    // updating project testtings
+    .addCase(updateProjectTesting.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+    })
+    .addCase(updateProjectTesting.fulfilled, (state, action: PayloadAction<ProjectSchema>) => {
+        state.loading = false;
+        state.project = action.payload;
+        state.success = true;
+    })
+    .addCase(updateProjectTesting.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Could not update project technologies";
+    })
+
+
+    // update project images
 },
 
 })

@@ -48,7 +48,8 @@ async def create_post(
 
             image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, image_filename)
             with open(image_path, "wb") as buffer:
-                shutil.copyfileobj(post_data.image.file, buffer)
+                # shutil.copyfileobj(post_data.image.file, buffer)
+                buffer.write(file_content)  # Write the file content directly
 
         # Handle tags input (either a string or a list)
         if isinstance(post_data.tags, str):
@@ -132,7 +133,8 @@ async def update_post(
             image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, image_filename)
 
             with open(image_path, "wb") as buffer:
-                shutil.copyfileobj(update_data.image.file, buffer)
+                # shutil.copyfileobj(update_data.image.file, buffer)
+                buffer.write(file_content)  # Write the file content directly
 
             if existing_post.get("image"):
                 old_image_path = os.path.join(Config.UPLOAD_BLOG_POST_IMAGE, existing_post["image"])

@@ -1,7 +1,7 @@
 import Config from '../config';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { CreateProjectSchema, ProjectSchema , TechStack, TestingDetails, UpdateProjectSchema, UpdateTechStack, UpdateTestingDetails } from '../schemas/project';
+import { CreateProjectSchema, ProjectSchema , AddProjectImagesSchema, projectImagesSchema, UpdateProjectSchema, UpdateTechStack, UpdateTestingDetails } from '../schemas/project';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosError } from 'axios';
 import { useParams } from 'react-router-dom';
@@ -265,6 +265,49 @@ export const updateProjectTesting = createAsyncThunk<ProjectSchema, UpdateTestin
   });
 
 
+// create project thunk
+export const updateProjectImages = createAsyncThunk<ProjectSchema, AddProjectImagesSchema, { rejectValue: string}> (
+  'project/images/add',
+  async ({ _id, images }: AddProjectImagesSchema, { rejectWithValue }) => { 
+    try {
+      const formData = new FormData();
+  
+      console.log(formData)
+      console.log(images)
+      // Handle multiple image uploads
+      images?.forEach((image) => formData.append('images', image));
+
+      const config = {
+        headers: {
+          // 'Content-Type': 'application/json',
+          'Content-Type': 'multipart/form-data', // Set for form data with images
+          'authorization': `Bearer ${userToken}`
+        },
+  
+      };
+      const response = await axios.put(
+        `${Config.baseURL}/project/${_id}/add/images`,
+        formData,
+        // { title, description, project_url, github_url, images },
+        config
+      );
+      if (response.status === 201) {
+        return response.data
+      }
+    } catch (error) {
+      // Handle Axios errors with type safety
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message: string }>;
+        if (axiosError.response && axiosError.response.data.message) {
+          return rejectWithValue(axiosError.response.data.message);
+        }
+      }
+      // Handle non-Axios errors or generic error messages
+      return rejectWithValue((error as Error).message);
+    }
+  }
+
+);
 
 export const { useGetProjectsDetailsQuery, useGetProjectDetailQuery } = projectApi; // Export the hook
 
@@ -277,29 +320,7 @@ export const { useGetProjectsDetailsQuery, useGetProjectDetailQuery } = projectA
 
 
 // // Async Thunks
-// export const fetchProjects = createAsyncThunk<Project[], void, {rejectValue: string, state: RootState}>(
-//   'project/fetchProjects',
-//   async (_, { rejectWithValue }) => {
-//     try {
-//       const response = await axios.get<Project[]>(`${Config.baseURL}/projects`);
-//       return response.data;
-//     } catch (error: any) {
-//         return rejectWithValue(error.response?.data?.message || error.message || "Could not fetch projects")
-//     }
-//   }
-// );
 
-// export const addProject = createAsyncThunk<Project, Project, {rejectValue: string, state: RootState}>(
-//   'project/addProject',
-//   async (project, { rejectWithValue }) => {
-//     try {
-//       const response = await axios.post<Project>(`${Config.baseURL}/projects`, project);
-//       return response.data;
-//     } catch (error: any) {
-//         return rejectWithValue(error.response?.data?.message || error.message || "Could not add project")
-//     }
-//   }
-// );
 
 // export const updateProject = createAsyncThunk<Project, Project, {rejectValue: string, state: RootState}>(
 //   'project/updateProject',
