@@ -1,7 +1,7 @@
 import Config from '../config';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { CreateProjectSchema, ProjectSchema , AddProjectImagesSchema, projectImagesSchema, UpdateProjectSchema, UpdateTechStack, UpdateTestingDetails } from '../schemas/project';
+import { CreateProjectSchema, ProjectSchema , AddProjectImagesSchema, projectImagesSchema, UpdateProjectSchema, UpdateTechStack, UpdateTestingDetails, DeleteProjectSuccess, DeleteProjectSchema } from '../schemas/project';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios, { AxiosError } from 'axios';
 import { useParams } from 'react-router-dom';
@@ -308,6 +308,44 @@ export const updateProjectImages = createAsyncThunk<ProjectSchema, AddProjectIma
   }
 
 );
+
+// Create the async thunk
+export const deleteProjectThunk = createAsyncThunk<DeleteProjectSuccess, DeleteProjectSchema, // Return type on success 
+  { rejectValue: string } // Type for the rejected value
+>(
+  'project/delete', // Action type prefix
+  async ( {_id}: DeleteProjectSchema, { rejectWithValue }) => {
+    try {
+
+      const config = {
+        headers: {
+          'authorization': `Bearer ${userToken}`
+        },
+  
+      };
+      const response = await axios.delete(
+        `${Config.baseURL}/project/${_id}/project/`,
+        config
+      );
+
+      if (response.status === 200) {
+        return response.data; // Type assertion
+      }
+
+    } catch (error: any) {  // Catch any type of error
+      // Handle Axios errors with type safety
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message: string }>;
+        if (axiosError.response && axiosError.response.data.message) {
+          return rejectWithValue(axiosError.response.data.message);
+        }
+      }
+      // Handle non-Axios errors or generic error messages
+      return rejectWithValue((error as Error).message);
+    }
+  }
+);
+
 
 export const { useGetProjectsDetailsQuery, useGetProjectDetailQuery } = projectApi; // Export the hook
 

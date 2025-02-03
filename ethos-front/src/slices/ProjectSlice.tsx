@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ProjectSchema } from '../schemas/project';
-import { createProject, updateProject, updateProjectTechStack, updateProjectTesting } from '../services/project';
+import { DeleteProjectSuccess, ProjectSchema } from '../schemas/project';
+import { createProject, deleteProjectThunk, updateProject, updateProjectImages, updateProjectTechStack, updateProjectTesting } from '../services/project';
 
 
 interface ProjectState {
@@ -89,6 +89,35 @@ const projectSlice = createSlice({
 
 
     // update project images
+    .addCase(updateProjectImages.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+    })
+    .addCase(updateProjectImages.fulfilled, (state, action: PayloadAction<ProjectSchema>) => {
+        state.loading = false;
+        state.project = action.payload;
+        state.success = true;
+    })
+    .addCase(updateProjectImages.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Could not update project images";
+    })
+
+    // // delete project
+    // .addCase(deleteProjectThunk.pending, (state) => {
+    //     state.loading = true;
+    //     state.error = null;
+    // })
+    // .addCase(deleteProjectThunk.fulfilled, (state, action: PayloadAction<DeleteProjectSuccess>) => {
+    //     state.loading = false;
+    //     state = action.payload;
+    //     state.success = true;
+    // })
+    // .addCase(deleteProjectThunk.rejected, (state, action) => {
+    //     state.loading = false;
+    //     state.error = action.payload || "Could not update project images";
+    // })
+
 },
 
 })

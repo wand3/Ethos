@@ -136,10 +136,10 @@ export const UpdateTechnologies = () => {
           }));
       // console.log(response.payload)
       if (response.payload) {
-          navigate(`/project/${id}`); // Replace with project route
-          flash("Project Technologies updated", "success")
+        navigate(`/project/${id}`); 
+        flash("Project Technologies updated", "success")
 
-          return response.payload;
+        return response.payload;
       }
     } catch (err: any) {
       console.error("Registration error:", err);

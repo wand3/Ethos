@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import EthosBody from "../components/Body";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-
+import useFlash from "../hooks/UseFlash";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { useGetProjectDetailQuery } from "../services/project";
+import { deleteProjectThunk, useGetProjectDetailQuery } from "../services/project";
 import { useGetUserDetailsQuery } from "../services/user";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../store";
 import AddProject from "../components/Admin/AddProject";
 import UpdateProjectImages from "../components/Admin/UpdateProjectImages";
 import Config from "../config";
+import { DeleteProjectSchema } from "../schemas/project";
+import { date } from "yup";
 
 
 export const ProjectPage = () => {
@@ -20,6 +22,8 @@ export const ProjectPage = () => {
     pollingInterval: 9000,
     skip: !localStorage.getItem('token') // Skip query if no token
   });
+  const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
+  
   
   // Get the user state from Redux
   const token = useSelector((state: RootState) => {state.user.token})
@@ -28,6 +32,8 @@ export const ProjectPage = () => {
     pollingInterval: 9000,
     skip: !localStorage.getItem('token') // Skip query if no token
   });
+
+  const flash = useFlash();
 
 
   // back button 
@@ -47,15 +53,30 @@ export const ProjectPage = () => {
   const goToUpdateTestingsPage = () => {
     return navigate(`/project/${id}/update/testings`);
   }
-  
-  useEffect( () => {
-    // loadProduct();
-    // if (product) {
-    //   laodCategory(product?.category_id);
-    // }
-    // laodCategory(product?.category_id || 2);
 
-  }, [])
+  const handleDelete = async (_id: string) => {
+    if (!project) {
+      flash("Project delete Failed", "error")
+      return
+    }
+    const response = await dispatch(deleteProjectThunk({
+      _id: id as string}
+      ));
+
+    
+    if (response.payload) {
+      navigate(`/projects`); // Replace with project route
+      flash(`Project deleted`, "success")
+      return response.payload;
+    }
+  };
+  
+  // useEffect( () => {
+  //   const getproj = async (id: string) =>{
+  //     await dispatch(useGetProjectDetailQuery({id=id}))
+
+  //   }
+  // }, [])
 
   // const img: string = `${Config.baseURL}/static/images/project_images/${project?.images[0]}`
 
@@ -168,6 +189,11 @@ export const ProjectPage = () => {
 
         { user && (
           <>
+            <button onClick={() => {handleDelete(id)}}>
+                <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
+                Delete Project
+                </span>
+            </button>
             <button onClick={() => {goToUpdatePage()}}>
                 <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
                 Update Project

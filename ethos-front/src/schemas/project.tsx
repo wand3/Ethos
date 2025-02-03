@@ -56,6 +56,13 @@ export interface AddProjectImagesSchema {
 }
 
 
+export interface DeleteProjectSchema {
+  _id: string;
+}
+
+export interface DeleteProjectSuccess {
+  message: string;
+}
 
 export interface UpdateProjectSchema {
   _id: string;
