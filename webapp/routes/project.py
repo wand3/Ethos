@@ -1,12 +1,12 @@
 import logging
 import os
-import shutil
+from pathlib import Path
 from datetime import datetime
 from typing import Annotated
 
 from starlette.requests import Request
 
-from webapp.config import Config
+from webapp.config import Config, basedir
 from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, status, Form, Body
 from webapp.logger import logger
@@ -359,73 +359,40 @@ async def delete_project(
     return {"message": f"Project deleted successfully {response}"}
 
 
+# delete projects particular image
+@project.delete("/{project_id}/images/{image_name}", status_code=status.HTTP_200_OK)
+async def delete_project_image(
+    project_id: str,
+    image_name: str,
+    project_model: Annotated[ProjectModel, Depends(get_project_model)]
+):
+    try:
+        get_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
+        if not get_project:
+            raise HTTPException(status_code=404, detail="Project not found")
 
-# @project.put("/{project_id}/add/images", response_model=ProjectInDB, status_code=status.HTTP_201_CREATED)
-# async def update_project_images(
-#     project_id: str,
-#     project_model: Annotated[ProjectModel, Depends(get_project_model)],
-#     images: List[UploadFile] = File(...)  # Use List[UploadFile] for multiple files
-# ):
-#     try:
-#         # Validate project ID
-#         if not ObjectId.is_valid(project_id):
-#             raise HTTPException(status_code=400, detail="Invalid project ID format.")
-#
-#         # Check if the project exists
-#         existing_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-#         if not existing_project:
-#             raise HTTPException(status_code=404, detail="Project not found.")
-#
-#         # Handle image uploads
-#         uploaded_images = []
-#
-#         for image in images:
-#             # Validate image size
-#             file_content = await image.read()
-#             file_size = len(file_content)
-#             if file_size == 0:
-#                 raise HTTPException(status_code=400, detail="Uploaded file is empty.")
-#             if file_size > Config.MAX_IMAGE_SIZE:
-#                 raise HTTPException(status_code=400, detail="Image size exceeds 5 MB limit.")
-#
-#             # Validate image format
-#             file_ext = os.path.splitext(image.filename)[1].lower()
-#             if file_ext not in Config.UPLOAD_EXTENSIONS:
-#                 raise HTTPException(
-#                     status_code=400,
-#                     detail=f"Unsupported image format. Allowed: {', '.join(Config.UPLOAD_EXTENSIONS)}."
-#                 )
-#
-#             # Generate a unique filename
-#             image_filename = f"{ObjectId()}_{image.filename}"
-#
-#             # Ensure the upload directory exists
-#             os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
-#
-#             # Save the image to the upload directory
-#             image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
-#             with open(image_path, "wb") as buffer:
-#                 buffer.write(file_content)  # Write the file content directly
-#
-#             uploaded_images.append(image_filename)
-#
-#         # Update the project with the new images
-#         await project_model.db.update_one(
-#             {"_id": ObjectId(project_id)},
-#             {"$set": {"images": uploaded_images, "updated_at": datetime.utcnow()}}
-#         )
-#
-#         # Retrieve the updated project
-#         updated_project = await project_model.db.find_one({"_id": ObjectId(project_id)})
-#         if updated_project:
-#             return ProjectInDB(**updated_project)
-#         else:
-#             raise HTTPException(
-#                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-#                 detail="Failed to retrieve updated project."
-#             )
-#
-#     except HTTPException as http_error:
-#         raise http_error
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
+        if image_name not in get_project["images"]:
+            # logger.info(f'project seen {get_project["images"]}')
+
+            raise HTTPException(status_code=404, detail="Image not found in project")
+
+        updated_images = [img for img in get_project["images"] if img != image_name]
+
+        update_result = await project_model.db.update_one(
+            {"_id": ObjectId(project_id)},
+            {"$set": {"images": updated_images}}
+        )
+        if update_result.modified_count == 0:
+            raise HTTPException(status_code=404, detail="Project not found or image not found")
+
+        # Optionally delete the image file from storage here (if needed)
+        image_path = os.path.join(basedir, 'static', 'images', 'project_images', f'{image_name}')
+        # Clean up
+        if os.path.exists(image_path):
+            logger.info('image found in directory')
+            os.remove(image_path)
+        return {"message": f"Image '{image_name}' deleted from project '{project_id}'"}
+    except ValueError:  # Handle invalid ObjectId
+        raise HTTPException(status_code=400, detail="Invalid project ID")
+    except Exception as e:  # Catch other potential errors (database, file deletion, etc.)
+        raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")

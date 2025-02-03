@@ -1,5 +1,4 @@
 import os
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from webapp.routes import ethos_router, user_router, auth_router, blog_router, project_router, comment_router
@@ -41,8 +40,8 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
-base_folder = Path(__name__).resolve().parent
-logger.info(base_folder)
+# base_folder = Path(__name__).resolve().parent
+# logger.info(base_folder)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 

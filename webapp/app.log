@@ -2613,3 +2613,408 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-02-03 11:10:21,530 - INFO - [ProjectInDB(title='testprojectupdate', description='Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuckupdate', github_url='https://github/test-project.com/chuckupdate', technologies=TechStack(language=['Python', ' Typescript'], frameworks=['one', '         three', '         update', '     up'], databases=['mongo', '         sql', '         update'], tools=['selenium', '         update']), roles=['Backend'], testing_details=TestingDetails(test_types=['Security', '     updated'], automation_frameworks=['Jira', '     Sele'], ci_cd_integration=['Git actions CI/CD']), images=['679fac8ff535ea601b928c7c_flipper.jpeg'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 2, 2, 17, 34, 7, 580000)), ProjectInDB(title='test project 2 update', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=TechStack(language=['Typescript'], frameworks=['Roszay'], databases=['SQL'], tools=['seli', ' toyo']), roles=['full-stack', 'front', 'devops', 'roles'], testing_details=TestingDetails(test_types=['koto'], automation_frameworks=['kit', ' '], ci_cd_integration=['te']), images=['679fab70a08d6ea476a88924_Screenshot 2025-01-28 at 10.53.58.png'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 2, 2, 17, 29, 20, 801000)), ProjectInDB(title='testblog up', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893ba1843c3b29f9ea1ec4_test_image.png'], id=ObjectId('67893ba1843c3b29f9ea1ec5'), created_at=datetime.datetime(2025, 1, 16, 17, 2, 25, 289000), updated_at=datetime.datetime(2025, 1, 30, 1, 30, 55, 314117)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d5b16a03bde3cef9f07_test_image.png'], id=ObjectId('67893d5b16a03bde3cef9f08'), created_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000), updated_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d81d01fe084e9b442f3_test_image.png'], id=ObjectId('67893d81d01fe084e9b442f4'), created_at=datetime.datetime(2025, 1, 16, 17, 10, 25, 480000), updated_at=datetime.datetime(2025, 1, 16, 17, 10, 25, 480000)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=["['one'", "'two']"], testing_details=None, images=['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793c6c1a3d899501e64f1f6'), created_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000), updated_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one', 'two'], testing_details=None, images=['6793cb44a3d899501e64f1f7_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793cb44a3d899501e64f1f8'), created_at=datetime.datetime(2025, 1, 24, 17, 17, 56, 764000), updated_at=datetime.datetime(2025, 1, 24, 17, 17, 56, 764000)), ProjectInDB(title='front test again', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['nm', 'lm', 'xl'], testing_details=None, images=[], id=ObjectId('679550e75a7b84846ec3d592'), created_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000), updated_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000)), ProjectInDB(title='imaage', description='asdfgm,jmhngbfvdvdbfg', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one'], testing_details=None, images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'], id=ObjectId('679eaeed7f7b5a36b11d39f4'), created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000), updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000))]
 2025-02-03 11:11:55,935 - INFO - [ProjectInDB(title='testprojectupdate', description='Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuckupdate', github_url='https://github/test-project.com/chuckupdate', technologies=TechStack(language=['Python', ' Typescript'], frameworks=['one', '         three', '         update', '     up'], databases=['mongo', '         sql', '         update'], tools=['selenium', '         update']), roles=['Backend'], testing_details=TestingDetails(test_types=['Security', '     updated'], automation_frameworks=['Jira', '     Sele'], ci_cd_integration=['Git actions CI/CD']), images=['679fac8ff535ea601b928c7c_flipper.jpeg'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 2, 2, 17, 34, 7, 580000)), ProjectInDB(title='test project 2 update', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=TechStack(language=['Typescript'], frameworks=['Roszay'], databases=['SQL'], tools=['seli', ' toyo']), roles=['full-stack', 'front', 'devops', 'roles'], testing_details=TestingDetails(test_types=['koto'], automation_frameworks=['kit', ' '], ci_cd_integration=['te']), images=['679fab70a08d6ea476a88924_Screenshot 2025-01-28 at 10.53.58.png'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 2, 2, 17, 29, 20, 801000)), ProjectInDB(title='testblog up', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893ba1843c3b29f9ea1ec4_test_image.png'], id=ObjectId('67893ba1843c3b29f9ea1ec5'), created_at=datetime.datetime(2025, 1, 16, 17, 2, 25, 289000), updated_at=datetime.datetime(2025, 1, 30, 1, 30, 55, 314117)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d5b16a03bde3cef9f07_test_image.png'], id=ObjectId('67893d5b16a03bde3cef9f08'), created_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000), updated_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d81d01fe084e9b442f3_test_image.png'], id=ObjectId('67893d81d01fe084e9b442f4'), created_at=datetime.datetime(2025, 1, 16, 17, 10, 25, 480000), updated_at=datetime.datetime(2025, 1, 16, 17, 10, 25, 480000)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=["['one'", "'two']"], testing_details=None, images=['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793c6c1a3d899501e64f1f6'), created_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000), updated_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000)), ProjectInDB(title='front test again', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['nm', 'lm', 'xl'], testing_details=None, images=[], id=ObjectId('679550e75a7b84846ec3d592'), created_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000), updated_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000)), ProjectInDB(title='imaage', description='asdfgm,jmhngbfvdvdbfg', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one'], testing_details=None, images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'], id=ObjectId('679eaeed7f7b5a36b11d39f4'), created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000), updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000))]
 2025-02-03 11:12:09,879 - INFO - [ProjectInDB(title='testprojectupdate', description='Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuckupdate', github_url='https://github/test-project.com/chuckupdate', technologies=TechStack(language=['Python', ' Typescript'], frameworks=['one', '         three', '         update', '     up'], databases=['mongo', '         sql', '         update'], tools=['selenium', '         update']), roles=['Backend'], testing_details=TestingDetails(test_types=['Security', '     updated'], automation_frameworks=['Jira', '     Sele'], ci_cd_integration=['Git actions CI/CD']), images=['679fac8ff535ea601b928c7c_flipper.jpeg'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 2, 2, 17, 34, 7, 580000)), ProjectInDB(title='test project 2 update', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=TechStack(language=['Typescript'], frameworks=['Roszay'], databases=['SQL'], tools=['seli', ' toyo']), roles=['full-stack', 'front', 'devops', 'roles'], testing_details=TestingDetails(test_types=['koto'], automation_frameworks=['kit', ' '], ci_cd_integration=['te']), images=['679fab70a08d6ea476a88924_Screenshot 2025-01-28 at 10.53.58.png'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 2, 2, 17, 29, 20, 801000)), ProjectInDB(title='testblog up', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893ba1843c3b29f9ea1ec4_test_image.png'], id=ObjectId('67893ba1843c3b29f9ea1ec5'), created_at=datetime.datetime(2025, 1, 16, 17, 2, 25, 289000), updated_at=datetime.datetime(2025, 1, 30, 1, 30, 55, 314117)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d5b16a03bde3cef9f07_test_image.png'], id=ObjectId('67893d5b16a03bde3cef9f08'), created_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000), updated_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=["['one'", "'two']"], testing_details=None, images=['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793c6c1a3d899501e64f1f6'), created_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000), updated_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000)), ProjectInDB(title='front test again', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['nm', 'lm', 'xl'], testing_details=None, images=[], id=ObjectId('679550e75a7b84846ec3d592'), created_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000), updated_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000)), ProjectInDB(title='imaage', description='asdfgm,jmhngbfvdvdbfg', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one'], testing_details=None, images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'], id=ObjectId('679eaeed7f7b5a36b11d39f4'), created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000), updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000))]
+2025-02-03 11:39:03,321 - INFO - 3 changes detected
+2025-02-03 11:39:04,424 - INFO - 1 change detected
+2025-02-03 11:40:16,845 - INFO - 3 changes detected
+2025-02-03 11:41:05,244 - INFO - 3 changes detected
+2025-02-03 11:42:29,094 - INFO - 3 changes detected
+2025-02-03 11:44:56,871 - INFO - 3 changes detected
+2025-02-03 11:45:25,421 - INFO - 3 changes detected
+2025-02-03 11:49:59,596 - INFO - 6 changes detected
+2025-02-03 11:50:02,345 - INFO - 3 changes detected
+2025-02-03 11:50:42,968 - INFO - 3 changes detected
+2025-02-03 11:50:46,127 - INFO - Application started -----------
+2025-02-03 11:50:46,209 - INFO - 3 changes detected
+2025-02-03 11:50:46,219 - INFO - User model ---- get current user payload error
+2025-02-03 11:50:55,333 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:04,360 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:13,441 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:22,551 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:31,583 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:40,929 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:49,972 - INFO - User model ---- get current user payload error
+2025-02-03 11:51:58,999 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:08,062 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:17,177 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:26,201 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:35,237 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:38,639 - INFO - 3 changes detected
+2025-02-03 11:52:39,174 - INFO - 1 change detected
+2025-02-03 11:52:42,256 - INFO - Application started -----------
+2025-02-03 11:52:42,281 - INFO - 3 changes detected
+2025-02-03 11:52:44,338 - INFO - User model ---- get current user payload error
+2025-02-03 11:52:53,355 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:02,379 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:11,399 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:20,445 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:29,655 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:38,704 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:47,746 - INFO - User model ---- get current user payload error
+2025-02-03 11:53:56,772 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:05,956 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:15,077 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:24,123 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:33,224 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:42,262 - INFO - User model ---- get current user payload error
+2025-02-03 11:54:51,287 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:00,563 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:09,577 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:18,598 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:27,618 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:36,775 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:45,851 - INFO - User model ---- get current user payload error
+2025-02-03 11:55:46,445 - INFO - 3 changes detected
+2025-02-03 11:55:46,962 - INFO - 1 change detected
+2025-02-03 11:55:50,232 - INFO - Application started -----------
+2025-02-03 11:55:50,260 - INFO - 3 changes detected
+2025-02-03 11:55:54,893 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:03,917 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:12,940 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:21,965 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:30,981 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:39,995 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:49,012 - INFO - User model ---- get current user payload error
+2025-02-03 11:56:58,034 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:04,111 - INFO - 3 changes detected
+2025-02-03 11:57:04,660 - INFO - 1 change detected
+2025-02-03 11:57:08,697 - INFO - Application started -----------
+2025-02-03 11:57:08,767 - INFO - 3 changes detected
+2025-02-03 11:57:08,781 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:08,783 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:17,830 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:26,853 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:35,868 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:44,665 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-03 11:57:45,113 - INFO - User model ---- get current user payload error
+2025-02-03 11:57:54,179 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:03,200 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:12,220 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:21,242 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:30,470 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:39,501 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:48,530 - INFO - User model ---- get current user payload error
+2025-02-03 11:58:57,603 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:06,650 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:15,667 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:24,686 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:33,721 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:42,886 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:51,906 - INFO - User model ---- get current user payload error
+2025-02-03 11:59:55,198 - INFO - 3 changes detected
+2025-02-03 11:59:55,703 - INFO - 1 change detected
+2025-02-03 11:59:58,620 - INFO - Application started -----------
+2025-02-03 11:59:58,650 - INFO - 3 changes detected
+2025-02-03 12:00:00,936 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:09,965 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:19,061 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:28,116 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:37,169 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:37,266 - INFO - 3 changes detected
+2025-02-03 12:00:37,804 - INFO - 1 change detected
+2025-02-03 12:00:40,278 - INFO - Application started -----------
+2025-02-03 12:00:40,338 - INFO - 3 changes detected
+2025-02-03 12:00:45,597 - INFO - project seen title='imaage' description='asdfgm,jmhngbfvdvdbfg' project_url=None github_url='https://github.com/experiment' technologies=None roles=['one'] testing_details=None images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'] id=ObjectId('679eaeed7f7b5a36b11d39f4') created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000) updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000)
+2025-02-03 12:00:46,186 - INFO - User model ---- get current user payload error
+2025-02-03 12:00:55,330 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:04,374 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:12,104 - INFO - project seen title='imaage' description='asdfgm,jmhngbfvdvdbfg' project_url=None github_url='https://github.com/experiment' technologies=None roles=['one'] testing_details=None images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'] id=ObjectId('679eaeed7f7b5a36b11d39f4') created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000) updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000)
+2025-02-03 12:01:13,396 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:14,879 - INFO - project seen title='imaage' description='asdfgm,jmhngbfvdvdbfg' project_url=None github_url='https://github.com/experiment' technologies=None roles=['one'] testing_details=None images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'] id=ObjectId('679eaeed7f7b5a36b11d39f4') created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000) updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000)
+2025-02-03 12:01:22,412 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:28,109 - INFO - project seen title='imaage' description='asdfgm,jmhngbfvdvdbfg' project_url=None github_url='https://github.com/experiment' technologies=None roles=['one'] testing_details=None images=['679eaeed7f7b5a36b11d39f2_flipper.jpeg', '679eaeed7f7b5a36b11d39f3_Screenshot 2024-10-05 at 04.06.47.png'] id=ObjectId('679eaeed7f7b5a36b11d39f4') created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000) updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000)
+2025-02-03 12:01:31,464 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:40,490 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:49,517 - INFO - User model ---- get current user payload error
+2025-02-03 12:01:58,534 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:07,557 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:12,278 - INFO - 3 changes detected
+2025-02-03 12:02:12,871 - INFO - 1 change detected
+2025-02-03 12:02:17,137 - INFO - Application started -----------
+2025-02-03 12:02:17,204 - INFO - 3 changes detected
+2025-02-03 12:02:17,400 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:26,442 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:35,463 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:44,483 - INFO - User model ---- get current user payload error
+2025-02-03 12:02:53,511 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:02,533 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:11,756 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:20,857 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:29,876 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:39,034 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:48,173 - INFO - User model ---- get current user payload error
+2025-02-03 12:03:57,199 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:06,370 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:15,508 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:24,532 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:33,555 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:35,171 - INFO - 3 changes detected
+2025-02-03 12:04:35,746 - INFO - 1 change detected
+2025-02-03 12:04:39,952 - INFO - Application started -----------
+2025-02-03 12:04:40,009 - INFO - 3 changes detected
+2025-02-03 12:04:42,600 - INFO - User model ---- get current user payload error
+2025-02-03 12:04:51,628 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:00,648 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:09,671 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:18,692 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:27,722 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:36,785 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:45,824 - INFO - User model ---- get current user payload error
+2025-02-03 12:05:54,846 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:03,860 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:12,896 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:21,941 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:30,964 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:39,985 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:49,009 - INFO - User model ---- get current user payload error
+2025-02-03 12:06:58,095 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:07,173 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:16,298 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:25,386 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:31,531 - INFO - project seen []
+2025-02-03 12:07:34,465 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:43,572 - INFO - User model ---- get current user payload error
+2025-02-03 12:07:52,676 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:01,783 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:10,944 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:20,043 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:29,140 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:38,224 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:47,358 - INFO - User model ---- get current user payload error
+2025-02-03 12:08:56,517 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:05,676 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:14,710 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:23,787 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:32,894 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:42,031 - INFO - User model ---- get current user payload error
+2025-02-03 12:09:51,157 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:00,252 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:09,280 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:18,298 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:27,379 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:36,504 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:45,593 - INFO - User model ---- get current user payload error
+2025-02-03 12:10:54,689 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:03,807 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:13,039 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:22,066 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:26,214 - INFO - 3 changes detected
+2025-02-03 12:11:26,808 - INFO - 1 change detected
+2025-02-03 12:11:32,526 - INFO - 3 changes detected
+2025-02-03 12:11:32,922 - INFO - Application started -----------
+2025-02-03 12:11:35,392 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:45,880 - INFO - User model ---- get current user payload error
+2025-02-03 12:11:56,385 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:06,129 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:15,337 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:24,734 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:34,064 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:43,425 - INFO - User model ---- get current user payload error
+2025-02-03 12:12:52,622 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:02,034 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:11,458 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:21,059 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:32,751 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:42,900 - INFO - User model ---- get current user payload error
+2025-02-03 12:13:52,557 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:01,792 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:10,882 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:21,073 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:30,148 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:39,175 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:48,284 - INFO - User model ---- get current user payload error
+2025-02-03 12:14:57,395 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:06,496 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:15,540 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:24,566 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:33,599 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:42,626 - INFO - User model ---- get current user payload error
+2025-02-03 12:15:51,796 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:00,885 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:10,074 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:14,492 - INFO - 3 changes detected
+2025-02-03 12:16:15,089 - INFO - 1 change detected
+2025-02-03 12:16:18,834 - INFO - 3 changes detected
+2025-02-03 12:16:18,878 - INFO - Application started -----------
+2025-02-03 12:16:19,248 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:29,117 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:38,482 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:47,510 - INFO - User model ---- get current user payload error
+2025-02-03 12:16:56,551 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:05,606 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:14,625 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:24,665 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:33,745 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:42,898 - INFO - User model ---- get current user payload error
+2025-02-03 12:17:52,024 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:01,105 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:10,126 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:19,269 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:28,302 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:37,471 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:46,681 - INFO - User model ---- get current user payload error
+2025-02-03 12:18:56,662 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:05,765 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:15,222 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:24,425 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:33,625 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:43,256 - INFO - User model ---- get current user payload error
+2025-02-03 12:19:52,301 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:01,328 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:10,773 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:19,836 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:28,888 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:37,958 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:47,354 - INFO - User model ---- get current user payload error
+2025-02-03 12:20:56,533 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:05,628 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:14,684 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:23,716 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:32,942 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:42,024 - INFO - User model ---- get current user payload error
+2025-02-03 12:21:51,042 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:00,066 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:09,132 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:18,196 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:27,253 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:36,276 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:45,299 - INFO - User model ---- get current user payload error
+2025-02-03 12:22:54,316 - INFO - User model ---- get current user payload error
+2025-02-03 12:23:03,334 - INFO - User model ---- get current user payload error
+2025-02-03 12:23:12,356 - INFO - User model ---- get current user payload error
+2025-02-03 12:23:21,449 - INFO - User model ---- get current user payload error
+2025-02-03 12:23:30,622 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:13,167 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:13,430 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:13,448 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:39,030 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:50,276 - INFO - User model ---- get current user payload error
+2025-02-03 12:24:59,757 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:08,859 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:18,946 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:18,975 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:19,001 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:28,386 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:37,467 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:46,570 - INFO - User model ---- get current user payload error
+2025-02-03 12:25:55,638 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:04,768 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:13,789 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:22,886 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:31,922 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:40,981 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:50,044 - INFO - User model ---- get current user payload error
+2025-02-03 12:26:59,073 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:08,185 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:15,945 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:15,996 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:16,135 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:25,249 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:34,286 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:43,458 - INFO - User model ---- get current user payload error
+2025-02-03 12:27:52,564 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:01,587 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:10,605 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:19,627 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:28,669 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:37,757 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:46,801 - INFO - User model ---- get current user payload error
+2025-02-03 12:28:55,830 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:04,851 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:13,927 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:20,899 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:30,912 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:40,905 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:49,922 - INFO - User model ---- get current user payload error
+2025-02-03 12:29:58,940 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:07,954 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:16,983 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:26,105 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:35,257 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:44,288 - INFO - User model ---- get current user payload error
+2025-02-03 12:30:52,527 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:02,449 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:12,445 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:21,466 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:30,545 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:39,713 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:49,516 - INFO - User model ---- get current user payload error
+2025-02-03 12:31:58,542 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:07,571 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:16,627 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:25,648 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:35,023 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:44,048 - INFO - User model ---- get current user payload error
+2025-02-03 12:32:53,071 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:02,186 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:11,254 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:20,279 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:29,471 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:38,592 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:47,697 - INFO - User model ---- get current user payload error
+2025-02-03 12:33:56,871 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:06,073 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:15,205 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:24,285 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:33,367 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:42,506 - INFO - User model ---- get current user payload error
+2025-02-03 12:34:51,583 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:00,707 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:09,962 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:19,051 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:28,203 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:37,290 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:46,410 - INFO - User model ---- get current user payload error
+2025-02-03 12:35:55,528 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:04,637 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:13,656 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:22,729 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:25,879 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:34,932 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:38,918 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:38,941 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:38,944 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:48,144 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:48,653 - INFO - User model ---- get current user payload error
+2025-02-03 12:36:57,203 - INFO - User model ---- get current user payload error
+2025-02-03 12:37:00,424 - INFO - User model ---- get current user payload error
+2025-02-03 12:37:00,433 - INFO - User model ---- get current user payload error
+2025-02-03 12:37:06,250 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-03 12:37:07,157 - INFO - [ProjectInDB(title='testprojectupdate', description='Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuckupdate', github_url='https://github/test-project.com/chuckupdate', technologies=TechStack(language=['Python', ' Typescript'], frameworks=['one', '         three', '         update', '     up'], databases=['mongo', '         sql', '         update'], tools=['selenium', '         update']), roles=['Backend'], testing_details=TestingDetails(test_types=['Security', '     updated'], automation_frameworks=['Jira', '     Sele'], ci_cd_integration=['Git actions CI/CD']), images=['679fac8ff535ea601b928c7c_flipper.jpeg'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 2, 2, 17, 34, 7, 580000)), ProjectInDB(title='test project 2 update', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=TechStack(language=['Typescript'], frameworks=['Roszay'], databases=['SQL'], tools=['seli', ' toyo']), roles=['full-stack', 'front', 'devops', 'roles'], testing_details=TestingDetails(test_types=['koto'], automation_frameworks=['kit', ' '], ci_cd_integration=['te']), images=['679fab70a08d6ea476a88924_Screenshot 2025-01-28 at 10.53.58.png'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 2, 2, 17, 29, 20, 801000)), ProjectInDB(title='testblog up', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893ba1843c3b29f9ea1ec4_test_image.png'], id=ObjectId('67893ba1843c3b29f9ea1ec5'), created_at=datetime.datetime(2025, 1, 16, 17, 2, 25, 289000), updated_at=datetime.datetime(2025, 1, 30, 1, 30, 55, 314117)), ProjectInDB(title='testblog', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893d5b16a03bde3cef9f07_test_image.png'], id=ObjectId('67893d5b16a03bde3cef9f08'), created_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000), updated_at=datetime.datetime(2025, 1, 16, 17, 9, 47, 924000)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=["['one'", "'two']"], testing_details=None, images=['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793c6c1a3d899501e64f1f6'), created_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000), updated_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000)), ProjectInDB(title='front test again', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['nm', 'lm', 'xl'], testing_details=None, images=[], id=ObjectId('679550e75a7b84846ec3d592'), created_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000), updated_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000)), ProjectInDB(title='imaage', description='asdfgm,jmhngbfvdvdbfg', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one'], testing_details=None, images=[], id=ObjectId('679eaeed7f7b5a36b11d39f4'), created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000), updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000))]
+2025-02-03 12:37:22,739 - INFO - User model ---- get current user payload error
+2025-02-03 12:39:48,735 - INFO - project content ----  user {'title': 'testall', 'description': 'testall', 'project_url': None, 'github_url': 'https://github.com/experimenttestall', 'technologies': None, 'roles': ['Jaguar'], 'testing_details': None, 'images': ['67a0ab04f7a9521d591a19bb_Screenshot 2025-02-02 at 01.25.34.png', '67a0ab04f7a9521d591a19bc_Screenshot 2025-02-02 at 01.27.15.png', '67a0ab04f7a9521d591a19bd_Screenshot 2025-02-02 at 01.29.07.png']}
+2025-02-03 12:39:48,848 - INFO - 3 changes detected
+2025-02-03 12:40:04,015 - INFO - [ProjectInDB(title='testprojectupdate', description='Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuckupdate', github_url='https://github/test-project.com/chuckupdate', technologies=TechStack(language=['Python', ' Typescript'], frameworks=['one', '         three', '         update', '     up'], databases=['mongo', '         sql', '         update'], tools=['selenium', '         update']), roles=['Backend'], testing_details=TestingDetails(test_types=['Security', '     updated'], automation_frameworks=['Jira', '     Sele'], ci_cd_integration=['Git actions CI/CD']), images=['679fac8ff535ea601b928c7c_flipper.jpeg'], id=ObjectId('6786f24e63aee9ba9ef8a53f'), created_at=datetime.datetime(2025, 1, 14, 23, 25, 2, 767000), updated_at=datetime.datetime(2025, 2, 2, 17, 34, 7, 580000)), ProjectInDB(title='test project 2 update', description='Another Developed a full-featured test project 2', project_url='https://example.com/ecommerceq', github_url='https://github.com/yourusername/ecommerceq', technologies=TechStack(language=['Typescript'], frameworks=['Roszay'], databases=['SQL'], tools=['seli', ' toyo']), roles=['full-stack', 'front', 'devops', 'roles'], testing_details=TestingDetails(test_types=['koto'], automation_frameworks=['kit', ' '], ci_cd_integration=['te']), images=['679fab70a08d6ea476a88924_Screenshot 2025-01-28 at 10.53.58.png'], id=ObjectId('67887ef7f91481f49e49f1d1'), created_at=datetime.datetime(2025, 1, 16, 3, 37, 27, 220000), updated_at=datetime.datetime(2025, 2, 2, 17, 29, 20, 801000)), ProjectInDB(title='testblog up', description='Test project Enumerating objects: 36, done Counting objects: 100% (36/36), done. ', project_url='https://test-project.com/chuck', github_url='https://github/test-project.com/chuck', technologies=None, roles=['one', 'two', 'fish'], testing_details=None, images=['67893ba1843c3b29f9ea1ec4_test_image.png'], id=ObjectId('67893ba1843c3b29f9ea1ec5'), created_at=datetime.datetime(2025, 1, 16, 17, 2, 25, 289000), updated_at=datetime.datetime(2025, 1, 30, 1, 30, 55, 314117)), ProjectInDB(title='front test', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=["['one'", "'two']"], testing_details=None, images=['6793c6c1a3d899501e64f1f5_Screenshot 2025-01-23 at 05.01.53.png'], id=ObjectId('6793c6c1a3d899501e64f1f6'), created_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000), updated_at=datetime.datetime(2025, 1, 24, 16, 58, 41, 654000)), ProjectInDB(title='front test again', description='testing front add project', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['nm', 'lm', 'xl'], testing_details=None, images=[], id=ObjectId('679550e75a7b84846ec3d592'), created_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000), updated_at=datetime.datetime(2025, 1, 25, 21, 0, 23, 178000)), ProjectInDB(title='imaage', description='asdfgm,jmhngbfvdvdbfg', project_url=None, github_url='https://github.com/experiment', technologies=None, roles=['one'], testing_details=None, images=[], id=ObjectId('679eaeed7f7b5a36b11d39f4'), created_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000), updated_at=datetime.datetime(2025, 2, 1, 23, 31, 57, 608000)), ProjectInDB(title='testall', description='testall', project_url=None, github_url='https://github.com/experimenttestall', technologies=None, roles=['Jaguar'], testing_details=None, images=['67a0ab04f7a9521d591a19bb_Screenshot 2025-02-02 at 01.25.34.png', '67a0ab04f7a9521d591a19bc_Screenshot 2025-02-02 at 01.27.15.png', '67a0ab04f7a9521d591a19bd_Screenshot 2025-02-02 at 01.29.07.png'], id=ObjectId('67a0ab04f7a9521d591a19be'), created_at=datetime.datetime(2025, 2, 3, 11, 39, 48, 742000), updated_at=datetime.datetime(2025, 2, 3, 11, 39, 48, 742000))]
+2025-02-03 12:43:57,525 - INFO - 3 changes detected
+2025-02-03 12:43:58,220 - INFO - 1 change detected
+2025-02-03 12:44:01,531 - INFO - Application started -----------
+2025-02-03 12:44:01,565 - INFO - 3 changes detected
+2025-02-03 12:49:52,321 - INFO - 3 changes detected
+2025-02-03 12:49:52,906 - INFO - 1 change detected
+2025-02-03 12:49:57,065 - INFO - Application started -----------
+2025-02-03 12:49:57,118 - INFO - 3 changes detected
+2025-02-03 12:49:58,655 - INFO - image found in directory
+2025-02-03 12:49:58,729 - INFO - 1 change detected
+2025-02-03 12:51:07,387 - INFO - 3 changes detected
+2025-02-03 12:51:08,160 - INFO - 1 change detected
+2025-02-03 12:51:12,872 - INFO - 3 changes detected
+2025-02-03 12:51:12,875 - INFO - Application started -----------
+2025-02-03 12:51:27,808 - INFO - 2 changes detected
+2025-02-03 12:51:43,771 - INFO - 2 changes detected
+2025-02-03 12:52:05,947 - INFO - 2 changes detected
+2025-02-03 12:52:28,948 - INFO - 2 changes detected
+2025-02-03 12:52:42,740 - INFO - image found in directory
+2025-02-03 12:52:42,891 - INFO - 2 changes detected
+2025-02-03 12:53:23,657 - INFO - 3 changes detected
+2025-02-03 12:53:24,201 - INFO - 1 change detected
+2025-02-03 12:53:27,205 - INFO - Application started -----------
+2025-02-03 12:53:27,231 - INFO - 3 changes detected

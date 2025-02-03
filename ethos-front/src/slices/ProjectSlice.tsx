@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { DeleteProjectSuccess, ProjectSchema } from '../schemas/project';
-import { createProject, deleteProjectThunk, updateProject, updateProjectImages, updateProjectTechStack, updateProjectTesting } from '../services/project';
+import { createProject, deleteProjectThunk, updateProject, updateProjectImages, updateProjectTechStack, updateProjectTesting, deleteProjectImageThunk } from '../services/project';
 
 
 interface ProjectState {
@@ -101,6 +101,21 @@ const projectSlice = createSlice({
     .addCase(updateProjectImages.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload || "Could not update project images";
+    })
+
+    // delete project image(s)
+    .addCase(deleteProjectImageThunk.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+    })
+    .addCase(deleteProjectImageThunk.fulfilled, (state, action: PayloadAction<ProjectSchema>) => {
+        state.loading = false;
+        state.project = action.payload;
+        state.success = true;
+    })
+    .addCase(deleteProjectImageThunk.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload || "Could not delete project image";
     })
 
     // // delete project

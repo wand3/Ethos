@@ -60,6 +60,11 @@ export interface DeleteProjectSchema {
   _id: string;
 }
 
+export interface DeleteProjectImage {
+  _id: string;
+  filename: string;
+}
+
 export interface DeleteProjectSuccess {
   message: string;
 }

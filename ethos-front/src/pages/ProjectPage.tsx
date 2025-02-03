@@ -4,7 +4,7 @@ import EthosBody from "../components/Body";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import useFlash from "../hooks/UseFlash";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { deleteProjectThunk, useGetProjectDetailQuery } from "../services/project";
+import { deleteProjectImageThunk, deleteProjectThunk, useGetProjectDetailQuery } from "../services/project";
 import { useGetUserDetailsQuery } from "../services/user";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store";
@@ -67,6 +67,16 @@ export const ProjectPage = () => {
     if (response.payload) {
       navigate(`/projects`); // Replace with project route
       flash(`Project deleted`, "success")
+      return response.payload;
+    }
+  };
+
+  const handleDeleteImage = async (filename: string) => {
+
+    const response = await dispatch(deleteProjectImageThunk({ _id: id as string, filename: filename }));
+    if (response.payload) {
+      // navigate(`/projects`); // Replace with project route
+      flash(`${response.payload.toString} Image deleted`, "success")
       return response.payload;
     }
   };
@@ -175,7 +185,21 @@ export const ProjectPage = () => {
                 </div>
 
                 <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+                    <button onClick={() => handleDeleteImage(project?.images[0])}>Delete Image</button>
                     <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="w-full" />
+
+
+                    {/* <img 
+                        src="https://i.postimg.cc/kgd4WhyS/container.png" 
+                        alt="" 
+                        className="w-full" 
+                    /> */}
+                </div>
+                <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+                    <button onClick={() => handleDeleteImage(project?.images[1])}>Delete Image</button>
+                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[1]}`} className="w-full" />
+
+                    
                     {/* <img 
                         src="https://i.postimg.cc/kgd4WhyS/container.png" 
                         alt="" 
@@ -228,4 +252,3 @@ export const ProjectPage = () => {
 }
 
 export default ProjectPage;
-
