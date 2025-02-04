@@ -85,8 +85,8 @@ export const UpdateProjectImages = () => {
 
         if (success) {
             flash("Project Image(s) Added", "success")
-            // console.log('Project created successfully:', response);
-
+            close()
+            resetForm()
             return response.payload;
         }
       } catch (err: any) {
@@ -151,18 +151,22 @@ export const UpdateProjectImages = () => {
                 ))}
                 </div>
                   
-                {/* <Button
-                  className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
-                  type="submit"
-                >
-                  Submit
-                </Button> */}
-                <button
-                    className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-10 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                    type="submit" aria-disabled={loading}
+                <div className='h-fit flex my-3 justify-end'>
+                  <Button
+                  className="group relative drop-shadow-lg rounded-lg  inline-block overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light dark:button-color-dark"
+                  type="submit" aria-disabled={loading}
+                  >
+                    <span
+                      className="absolute inset-y-0 left-0 w-[4px] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full"
+                    ></span>
+
+                    <span
+                      className="relative text-sm font-medium text-[#170414] transition-colors group-hover:text-white dark:group-hover:text-black"
                     >
-                    {loading ? <SpinnerLineWave /> : 'Add project'}
-                </button>
+                      {loading ? <SpinnerLineWave /> : 'Save'}
+                    </span>
+                  </Button>
+                </div>
               
               </form>
 

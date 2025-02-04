@@ -20,7 +20,7 @@ class ProjectModel:
             async for project_data in self.db.find():
                 blog = ProjectInDB(**project_data)
                 projects.append(blog)
-            logger.info(projects)
+            # logger.info(projects)
             return projects
         except Exception as e:
             print(f"Error fetching projects: {e}")

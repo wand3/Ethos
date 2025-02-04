@@ -76,7 +76,7 @@ export const ProjectPage = () => {
     const response = await dispatch(deleteProjectImageThunk({ _id: id as string, filename: filename }));
     if (response.payload) {
       // navigate(`/projects`); // Replace with project route
-      flash(`${response.payload.toString} Image deleted`, "success")
+      flash(`Image deleted`, "success")
       return response.payload;
     }
   };

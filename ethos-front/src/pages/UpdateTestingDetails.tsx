@@ -81,6 +81,38 @@ export const UpdateTesting = () => {
     setFormErrors({});
   }
 
+   // form onchange event handlers 
+  const handleTestTypesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // console.log('handle change in')
+
+    const errors: FormUpdateTesting = {};
+    // console.log('handle change in')
+    const value = event.target.value;
+    // console.log(`handle change in value: ${value}`)
+
+    if (!validateCommaSeparatedStrings(value)) {
+      errors.test_types = "Invalid format for Programming language(s). Use comma-separated words.";
+    }
+
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+  const handleAutomationFrameworksChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const errors: FormUpdateTesting = {};
+    const value = event.target.value;
+
+    if (!validateCommaSeparatedStrings(value)) {
+      errors.automation_frameworks = "Invalid format for Framework(s). Use comma-separated words.";
+    }
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+  
+
   const handleSubmit = async (event: React.FormEvent) => {
     clearErrors();
 
@@ -168,6 +200,8 @@ export const UpdateTesting = () => {
                         label="Test type e.g Unittest, Security"
                         type="name"
                         error={formErrors.test_types}
+                        onChange={handleTestTypesChange}
+                        description="input should have this format 'Unittest, Security'"
                         Fieldref={test_typesField} value={""} />
 
 
@@ -175,6 +209,7 @@ export const UpdateTesting = () => {
                         name="Frameworks"
                         label="Test Framework(s)"
                         type="name"
+                        onChange={handleAutomationFrameworksChange}
                         error={formErrors.automation_frameworks}
                         Fieldref={automation_frameworksField} value={''} />
 

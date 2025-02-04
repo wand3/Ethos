@@ -1,10 +1,10 @@
 import useFlash from "../hooks/UseFlash";
 import InputField from "../components/Auth/FormInput";
 import React, { useRef, useState, useEffect } from "react";
-import { Button, Dialog, DialogPanel, DialogTitle, Field } from '@headlessui/react'
+import { Button, Field } from '@headlessui/react'
 import Config from "../config";
 import EthosBody from "../components/Body";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import { AddProjectSchema, FormProjectErrorType } from "../../components/Admin/AddProject";
 import { ProjectSchema } from '../schemas/project'
 import { useGetProjectDetailQuery } from "../services/project";
@@ -92,6 +92,21 @@ export const UpdateProject = () => {
     setFormErrors({});
   }
   
+   // form onchange event handlers 
+  const handleRolesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+
+    const errors: FormProjectErrorType = {};
+    const value = event.target.value;
+    if (!validateCommaSeparatedStrings(value)) {
+      errors.roles = "Invalid format for Programming language(s). Use comma-separated words.";
+    }
+
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+    
    
   
   const handleSubmit = async (event: React.FormEvent) => {
@@ -211,7 +226,9 @@ export const UpdateProject = () => {
                           name="roles"
                           label="Roles"
                           type="text"
+                          onChange={handleRolesChange}
                           error={formErrors.roles}
+                          description="format - 'Backend Engineer, DevOps'"
                           Fieldref={rolesField} value={""} />
 
                         {/* Left */}

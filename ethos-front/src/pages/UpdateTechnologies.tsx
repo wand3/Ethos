@@ -89,6 +89,62 @@ export const UpdateTechnologies = () => {
     setFormErrors({});
   }
 
+  // form onchange event handlers 
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // console.log('handle change in')
+
+    const errors: FormUpdateTechnologies = {};
+    // console.log('handle change in')
+    const value = event.target.value;
+    // console.log(`handle change in value: ${value}`)
+
+    if (!validateCommaSeparatedStrings(value)) {
+      errors.language = "Invalid format for Programming language(s). Use comma-separated words.";
+    }
+
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+  const handleFrameworksChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const errors: FormUpdateTechnologies = {};
+    const value = event.target.value;
+
+    if (!validateCommaSeparatedStrings(value)) {
+      errors.frameworks = "Invalid format for Framework(s). Use comma-separated words.";
+    }
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+  const handleDatabasesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const errors: FormUpdateTechnologies = {};
+    const value = event.target.value;
+
+   if (!validateCommaSeparatedStrings(value)) {
+      errors.databases = "Invalid format for Database(s). Use comma-separated words.";
+    }
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+  const handleToolsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const errors: FormUpdateTechnologies = {};
+    const value = event.target.value;
+
+   if (!validateCommaSeparatedStrings(value)) {
+      errors.tools = "Invalid format for Database(s). Use comma-separated words.";
+    }
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
+      return;
+    }
+  }
+
+
   const handleSubmit = async (event: React.FormEvent) => {
     clearErrors();
 
@@ -176,6 +232,7 @@ export const UpdateTechnologies = () => {
                         label="Programming Language(s)"
                         type="name"
                         error={formErrors.language}
+                        onChange={handleLanguageChange}
                         Fieldref={languageField} value={""} />
 
 
@@ -183,6 +240,7 @@ export const UpdateTechnologies = () => {
                         name="Frameworks"
                         label="Framework(s)"
                         type="name"
+                        onChange={handleFrameworksChange}
                         error={formErrors.frameworks}
 
                         Fieldref={frameworksField} value={''} />
@@ -191,6 +249,7 @@ export const UpdateTechnologies = () => {
                             name="databases"
                             label="Database Technologie(s)"
                             type="text"
+                            onChange={handleDatabasesChange}
                             error={formErrors.databases}
                             Fieldref={databasesField} value={''} />
 
@@ -200,7 +259,7 @@ export const UpdateTechnologies = () => {
                             label="Tools"
                             type="text"
                             error={formErrors.tools}
-
+                            onChange={handleToolsChange}
                             Fieldref={toolsField} value={''} />
 
 
