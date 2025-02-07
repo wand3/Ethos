@@ -6221,3 +6221,46 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-02-06 22:42:08,958 - INFO - User model ---- get current user payload error
 2025-02-06 22:42:13,744 - INFO - User model ---- get current user payload error
 2025-02-06 22:42:13,753 - INFO - User model ---- get current user payload error
+2025-02-07 11:02:20,451 - INFO - Application started -----------
+2025-02-07 11:02:28,306 - INFO - Application started -----------
+2025-02-07 11:28:02,250 - INFO - User model ---- get current user payload error
+2025-02-07 11:28:02,270 - INFO - User model ---- get current user payload error
+2025-02-07 11:31:09,171 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-07 12:01:27,167 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:27,246 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:27,408 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:38,187 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:47,479 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:49,200 - INFO - User model ---- get current user payload error
+2025-02-07 12:01:49,209 - INFO - User model ---- get current user payload error
+2025-02-07 12:32:49,022 - INFO - User model ---- get current user payload error
+2025-02-07 12:32:49,048 - INFO - User model ---- get current user payload error
+2025-02-07 12:32:49,195 - INFO - User model ---- get current user payload error
+2025-02-07 12:32:58,665 - INFO - User model ---- get current user payload error
+2025-02-07 12:33:23,229 - INFO - User model ---- get current user payload error
+2025-02-07 12:33:32,483 - INFO - User model ---- get current user payload error
+2025-02-07 12:33:39,228 - INFO - User model ---- get current user payload error
+2025-02-07 12:33:39,238 - INFO - User model ---- get current user payload error
+2025-02-07 12:33:52,712 - INFO - User model ---- get current user payload error
+2025-02-07 12:34:02,642 - INFO - User model ---- get current user payload error
+2025-02-07 12:34:02,652 - INFO - User model ---- get current user payload error
+2025-02-07 12:37:57,683 - INFO - update data ------- title='testprojectupdate' description='<p>gh</p>\r\n' project_url='https://test-project.com/chuckupdate' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-07 12:37:57,700 - INFO - ['Backend, Frontend Engineer']
+2025-02-07 12:37:57,701 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-07 12:40:48,901 - INFO - update data ------- title='testprojectupdate' description='<p>ghfgh</p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-07 12:40:48,905 - INFO - ['Backend, Frontend Engineer']
+2025-02-07 12:40:48,906 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-07 12:42:24,123 - INFO - update data ------- title='testprojectupdate' description='<p>ghfgh gandus</p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-07 12:42:24,127 - INFO - ['Backend, Frontend Engineer']
+2025-02-07 12:42:24,127 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-07 12:43:09,502 - INFO - update data ------- title='testprojectupdate' description='<p>ghfgh gandus</p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-07 12:43:09,508 - INFO - ['Backend, Frontend Engineer']
+2025-02-07 12:43:09,508 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-07 12:44:46,220 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-07 12:44:46,228 - INFO - ['Backend, Frontend Engineer']
+2025-02-07 12:44:46,228 - INFO - ['Backend', 'Frontend Engineer']

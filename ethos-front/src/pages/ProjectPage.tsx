@@ -12,7 +12,8 @@ import AddProject from "../components/Admin/AddProject";
 import UpdateProjectImages from "../components/Admin/UpdateProjectImages";
 import Config from "../config";
 import { DeleteProjectSchema } from "../schemas/project";
-import { date } from "yup";
+import { CKEditor } from "ckeditor4-react";
+// import { date } from "yup";
 
 
 export const ProjectPage = () => {
@@ -108,9 +109,22 @@ export const ProjectPage = () => {
                   <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
                       {project?.title}
                   </h3>
-                  <p className="text-gray-500 leading-relaxed mt-3">
+                  
+                  {/* <p className="text-gray-500 leading-relaxed mt-3">
+
                       {project?.description}
-                  </p>
+                  </p> */}
+                  {/* <CKEditor initData={<p className="text-gray-500 leading-relaxed mt-3">
+
+                      {project?.description}
+                  </p>}  />; */}
+                  <div className="w-[40%]">
+                    <div
+                      className="w-fit relative"
+                      dangerouslySetInnerHTML={{ __html: project?.description} }
+                    />
+                  </div>
+                  
                   <p>Project roles</p>
                   {project?.roles?.map((role, index) => (
                     <p className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center" key={index}>{role}</p>
