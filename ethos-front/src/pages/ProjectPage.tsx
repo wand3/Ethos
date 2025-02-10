@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import EthosBody from "../components/Body";
 import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
@@ -12,8 +11,8 @@ import AddProject from "../components/Admin/AddProject";
 import UpdateProjectImages from "../components/Admin/UpdateProjectImages";
 import Config from "../config";
 import { DeleteProjectSchema, ProjectSchema } from "../schemas/project";
-import { CKEditor } from "ckeditor4-react";
 // import { date } from "yup";
+import DisplayComponent from "../components/DisplayCkeditorDescription";
 
 
 export const ProjectPage = () => {
@@ -119,10 +118,11 @@ export const ProjectPage = () => {
                       {project?.description}
                   </p>}  />; */}
                   <div className="w-[40%]">
-                    <div
+                    {/* <div
                       className="w-fit relative"
                       dangerouslySetInnerHTML={{ __html: project?.description} }
-                    />
+                    /> */}
+                    <DisplayComponent content={project?.description}  />
                   </div>
                   
                   <p>Project roles</p>

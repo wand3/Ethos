@@ -11,7 +11,7 @@ interface EditorFieldProps {
 }
 
 export const EditorField = ({initData, ref, onChange, config}: EditorFieldProps) => {
- 
+  // contentsCss = '../../ckstyledescription.css'
   return (
     <>
       <CKEditor
@@ -20,7 +20,6 @@ export const EditorField = ({initData, ref, onChange, config}: EditorFieldProps)
         ref={ref}
         onChange={onChange}
         config={config}
-        
       />
   </>);
 }

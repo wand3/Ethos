@@ -197,6 +197,20 @@ export const UpdateProject = () => {
   };
 
 
+  // editor custom css 
+  const customConfig = {
+    // Other CKEditor configurations
+    // contentsCss: '../../ckstyledescription.css', // Path to your custom CSS file
+    // You can add more configurations here
+    stylesSet: [
+        { name: 'Heading 1', element: 'h1', styles: { color: '#007bff', fontSize: '24px' } },
+        { name: 'heading', element: 'strong', styles: { color: '#0056b3', fontSize: '20px' } },
+        { name: 'div', element: 'div', styles: { color: '#0056b3', border: '2px solid' } },
+
+    ],
+  };
+
+
   return (
     <>
       <EthosBody nav={true}>
@@ -234,6 +248,7 @@ export const UpdateProject = () => {
                             <EditorField 
                               onChange={handleCkeditor}
                               initData={`${currentProject?.description}`}
+                              config={customConfig}
                             />
                           <>
                           {formErrors.description && (
