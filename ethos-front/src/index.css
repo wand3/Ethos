@@ -25,7 +25,9 @@
 
     }
     .glass {
-        @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-10 rounded-lg p-6;
+        /* @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-10 rounded-lg p-6; */
+        @apply bg-opacity-[10%] backdrop-blur-[35] bg-gradient-to-bl bg-slate-500;
+
     }
     .glass-3d {
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
@@ -44,9 +46,5 @@
     }
     .text-darkbackground {
         @apply text-white
-    }
-
-    .custom-heading {
-        @apply text-2xl font-bold text-blue-600 mb-4;
     }
 }
