@@ -11,7 +11,7 @@ import { AppDispatch, RootState } from "../store";
 import AddProject from "../components/Admin/AddProject";
 import UpdateProjectImages from "../components/Admin/UpdateProjectImages";
 import Config from "../config";
-import { DeleteProjectSchema } from "../schemas/project";
+import { DeleteProjectSchema, ProjectSchema } from "../schemas/project";
 import { CKEditor } from "ckeditor4-react";
 // import { date } from "yup";
 

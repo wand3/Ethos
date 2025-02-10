@@ -6264,3 +6264,82 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-02-07 12:44:46,220 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
 2025-02-07 12:44:46,228 - INFO - ['Backend, Frontend Engineer']
 2025-02-07 12:44:46,228 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-09 17:29:34,821 - INFO - Application started -----------
+2025-02-09 17:29:47,182 - INFO - Application started -----------
+2025-02-09 17:29:49,181 - INFO - Application started -----------
+2025-02-09 17:34:45,087 - INFO - User model ---- get current user payload error
+2025-02-09 17:34:45,101 - INFO - User model ---- get current user payload error
+2025-02-09 17:34:48,826 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-09 17:38:54,757 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-09 17:38:54,762 - INFO - ['Backend, Frontend Engineer']
+2025-02-09 17:38:54,762 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-09 17:42:27,911 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-09 17:42:27,921 - INFO - ['Backend, Frontend Engineer']
+2025-02-09 17:42:27,922 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-09 18:08:39,985 - INFO - User model ---- get current user payload error
+2025-02-09 18:08:40,045 - INFO - User model ---- get current user payload error
+2025-02-09 18:08:40,120 - INFO - User model ---- get current user payload error
+2025-02-09 18:20:55,190 - INFO - User model ---- get current user payload error
+2025-02-09 18:43:46,583 - INFO - User model ---- get current user payload error
+2025-02-09 18:54:43,560 - INFO - User model ---- get current user payload error
+2025-02-09 19:14:09,231 - INFO - User model ---- get current user payload error
+2025-02-09 19:46:50,314 - INFO - Application started -----------
+2025-02-09 19:47:00,963 - INFO - Application started -----------
+2025-02-09 19:47:03,734 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-09 19:52:05,649 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-09 19:52:05,653 - INFO - ['Backend, Frontend Engineer']
+2025-02-09 19:52:05,653 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-10 08:19:55,096 - INFO - Application started -----------
+2025-02-10 08:20:01,269 - INFO - Application started -----------
+2025-02-10 08:34:12,007 - INFO - User model ---- get current user payload error
+2025-02-10 08:34:12,030 - INFO - User model ---- get current user payload error
+2025-02-10 08:34:15,648 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-02-10 08:52:30,394 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:36px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh gandus</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-10 08:52:30,402 - INFO - ['Backend, Frontend Engineer']
+2025-02-10 08:52:30,402 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-10 08:53:55,318 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:24px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-10 08:53:55,323 - INFO - ['Backend, Frontend Engineer']
+2025-02-10 08:53:55,323 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-10 08:54:19,350 - INFO - update data ------- title='testprojectupdate' description='<p><span style="font-size:24px"><span style="font-family:Comic Sans MS,cursive"><strong>ghfgh one</strong></span></span></p>\r\n' project_url='https://test-project.com/chuckupdate9' github_url='https://github/test-project.com/chuckupdate' roles=['Backend, Frontend Engineer'] images=None
+2025-02-10 08:54:19,354 - INFO - ['Backend, Frontend Engineer']
+2025-02-10 08:54:19,355 - INFO - ['Backend', 'Frontend Engineer']
+2025-02-10 09:00:48,199 - INFO - update data ------- title='front test again' description='<p>testing front add <span style="font-size:72px">project</span></p>\r\n' project_url='' github_url='https://github.com/experiment' roles=['nm, lm, xl'] images=None
+2025-02-10 09:00:48,205 - INFO - ['nm, lm, xl']
+2025-02-10 09:00:48,208 - INFO - ['nm', 'lm', 'xl']
+2025-02-10 09:05:15,886 - INFO - User model ---- get current user payload error
+2025-02-10 09:05:22,961 - INFO - User model ---- get current user payload error
+2025-02-10 09:05:25,434 - INFO - User model ---- get current user payload error
+2025-02-10 09:05:53,586 - INFO - User model ---- get current user payload error
+2025-02-10 09:05:53,679 - INFO - User model ---- get current user payload error
+2025-02-10 09:06:25,262 - INFO - update data ------- title='front test again' description='<p><code>testing front add <span style="font-size:72px">project</span></code></p>\r\n' project_url='' github_url='https://github.com/experiment' roles=['nm, lm, xl'] images=None
+2025-02-10 09:06:25,266 - INFO - ['nm, lm, xl']
+2025-02-10 09:06:25,267 - INFO - ['nm', 'lm', 'xl']
+2025-02-10 09:18:13,731 - INFO - update data ------- title='front test again' description='<p><code>testing front add <span style="font-size:72px">project</span></code></p>\r\n' project_url='' github_url='https://github.com/experiment' roles=['nm, lm, xl'] images=None
+2025-02-10 09:18:13,739 - INFO - ['nm, lm, xl']
+2025-02-10 09:18:13,740 - INFO - ['nm', 'lm', 'xl']
+2025-02-10 09:23:35,905 - INFO - update data ------- title='front test again' description='<h3><code><span style="font-family:Comic Sans MS,cursive">►</span> <kbd>testing front add</kbd></code></h3>\r\n\r\n<p><code><span style="font-family:Comic Sans MS,cursive">►</span> <kbd>testing front add</kbd></code></p>\r\n\r\n<p><code><span style="font-family:Comic Sans MS,cursive">►</span> <kbd>testing front add</kbd></code></p>\r\n' project_url='' github_url='https://github.com/experiment' roles=['nm, lm, xl'] images=None
+2025-02-10 09:23:35,916 - INFO - ['nm, lm, xl']
+2025-02-10 09:23:35,917 - INFO - ['nm', 'lm', 'xl']
+2025-02-10 09:42:45,089 - INFO - User model ---- get current user payload error
+2025-02-10 09:42:57,968 - INFO - User model ---- get current user payload error
+2025-02-10 09:43:21,690 - INFO - User model ---- get current user payload error
+2025-02-10 09:43:30,592 - INFO - User model ---- get current user payload error
+2025-02-10 09:43:30,734 - INFO - User model ---- get current user payload error
+2025-02-10 09:43:55,279 - INFO - update data ------- title='test project 2 update' description='Another Developed a full-featured test project 2' project_url='https://example.com/ecommerceq' github_url='https://github.com/yourusername/ecommerceq' roles=['fullstack, front, devops, roles'] images=None
+2025-02-10 09:43:55,287 - INFO - ['fullstack, front, devops, roles']
+2025-02-10 09:43:55,288 - INFO - ['fullstack', 'front', 'devops', 'roles']
