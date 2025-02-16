@@ -2,8 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  :root {
+  --color-bg1: rgb(108, 0, 162) 
+  --color-bg2: #001152; /* rgb(0, 17, 82) converted to hex */
+  --color1: rgb(18, 113, 255) /* converted to hex */
+  --color2: #dd4aff; /* rgb(221, 74, 255) converted to hex */
+  --color3: #64dcff; /* rgb(100, 220, 255) converted to hex */
+  --color4: #c83232; /* rgb(200, 50, 50) converted to hex */
+  --color5: #b4b432; /* rgb(180, 180, 50) converted to hex */
+  --color-interactive: #8c64ff; /* rgb(140, 100, 255) converted to hex */
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+}
+
+
+/* .gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+/* @layer utilities { */
+     /* .g1 {
+//     @apply absolute mix-blend-[var(--blending)] opacity-100 transform-origin-center animate-move-vertical;
+//     background-image: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0%, rgba(var(--color1), 0) 50%);
+//     width: var(--circle-size);
+//     height: var(--circle-size);
+//     top: calc(50% - var(--circle-size) / 2);
+//     left: calc(50% - var(--circle-size) / 2);
+//   }
+ } */
+
+/* .g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, var(--color1) 0.3, var(--color1) 50%);
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+  opacity: 1;
+  }
+
+  .g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, var(--color1) 0.8, var(--color1) 50%);
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(10% - var(--circle-size) / 2);
+  left: calc(10% - var(--circle-size) / 2);
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+  opacity: 1;
+  } */
+
+    /* .g2 {
+    @apply absolute mix-blend-hard-light opacity-100 origin-center animate-bounce;
+    background-image: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0%, rgba(var(--color1), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+  }  .g3 {
+    @apply absolute mix-blend-hard-light opacity-100 origin-center animate-bounce bg-[radial-gradient(circle_at_bottom, _var(--tw-gradient-stops))] from-teal-300 via-gray-100  
+                    to-blue-300 box;
+    /* background-image: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0%, rgba(var(--color1), 0) 50%); */
+    /* width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(10% - var(--circle-size) / 2);
+    left: calc(10% - var(--circle-size) / 2); */
+  /* }  */
+   /* .g4 {
+    @apply absolute mix-blend-hard-light opacity-100 origin-center animate-bounce;
+    background-image: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0%, rgba(var(--color1), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+  }  .g5 {
+    @apply absolute mix-blend-hard-light opacity-100 origin-center animate-bounce;
+    background-image: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0%, rgba(var(--color1), 0) 50%);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 1);
+    left: calc(50% - var(--circle-size) / 1);
+  } */
+
+
+
+/* .gradient-container {
+    width: 100%;
+    height: 100%;
+    filter: url(#goo) blur(40px);
+  }
+}
+
+
 @layer components {
-    .button-color-light {
+
+  .gradient-background {
+    @apply w-screen h-screen relative overflow-hidden bg-gradient-to-r from-[var(--color-bg1)] to-[var(--color-bg2)] top-0 left-0;    
+  } */
+
+  /* .gradient-container {
+    @apply w-full h-full; /* Tailwind classes for width and height */
+    /* filter: url(#goo) blur(40px); */
+  /* } */ 
+    /* .svg {
+        @apply fixed top-0 left-0 w-0 h-0
+    } */
+
+
+
+    /* .button-color-light {
         @apply bg-[#C5EC38]
     }
     .button-color-dark {
@@ -11,29 +131,29 @@
     }
     .button-span-inside {
       @apply group-hover:bg-[#C5EC38] bg-[#C5EC38]
-    }
+    } */
     /* .button-submit {
         @apply justify-between rounded-md bg-[#4158D0] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
     } */
-    .toggle-nav-dark {
+    /* .toggle-nav-dark {
         @apply drop-shadow-lg bg-slate-700/20
 
     }
-    .blurglass {
+    .blurglass { */
         /* @apply bg-[linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% )] z-10 lg:p-[10%] sm:p-[5%] m-auto backdrop-blur-[10px] border-[10px] border-blue-600 rounded-md */
-        @apply backdrop-blur-sm rounded-lg p-1 hover:bg-slate-400 bg-gray-800 text-4xl hover:outline-none hover:ring-1 hover:ring-white hover:ring-offset-2 hover:ring-offset-gray-400
+        /* @apply backdrop-blur-sm rounded-lg p-1 hover:bg-slate-400 bg-gray-800 text-4xl hover:outline-none hover:ring-1 hover:ring-white hover:ring-offset-2 hover:ring-offset-gray-400
 
     }
-    .glass {
+    .glass { */
         /* @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-10 rounded-lg p-6; */
-        @apply bg-opacity-[10%] backdrop-blur-[35] bg-gradient-to-bl bg-slate-500;
+        /* @apply bg-opacity-[10%] backdrop-blur-[35] bg-gradient-to-bl bg-slate-500;
 
     }
     .glass-3d {
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5); */
 
       /* transform: perspective(1000px) rotateX(10deg) rotateY(10deg); */
-    }
+    /* }
     .form-dark {
         @apply bg-white/10 text-white
     }
@@ -47,4 +167,4 @@
     .text-darkbackground {
         @apply text-white
     }
-}
+} */

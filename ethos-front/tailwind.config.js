@@ -7,10 +7,11 @@ content: [
 darkMode: 'class',
 theme: {
 	extend: {
-		backgroundImage: {
-			'light-pattern': "url('src/assets/darkness.webp')",
-			'dark-pattern': "#000000",
-		}
+		// for setting background images 
+		// backgroundImage: {
+		// 	'light-pattern': "url('src/assets/darkness.webp')",
+		// 	'dark-pattern': "#000000",
+		// }
 	},
 },
 plugins: [
