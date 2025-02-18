@@ -79,21 +79,25 @@ const HeroArea = () => {
 
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem] dark:bg-black bg-n-8"
+      className="bg-[url('../gradient.png')]  pt-[12rem] -mt-[5.25rem] backdrop-blur-xl dark:grid-pattern-dark "
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="hero"
     >
-
-  {/* <div class=""></div> */}
+    {/* <div className=" grid-pattern-light-pos sm:min-h-60"> */}
+        <div className="grid-pattern-light absolute h-[500px] w-[100vw] md:-mt-[15%]  -mt-[30%] lg:min-h-[900px] "> </div>
+    {/* </div>   */}
+    <div className="relative m-auto top-0 grid-circle-light dark:grid-circle-dark">
+     
   
-      <div className="container relative " ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
-            <span className="inline-block relative">
-              Brainwave{" "}
+      <div className="mx-auto z-1" ref={parallaxRef}>
+        <div className="pl-[2rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+          <p className="text-2xl font-mono dark:text-white">I'm,</p>
+          <h1 className="mb-6 text-[4rem]  md:text-[7rem] font-bold dark:text-white">
+            Babawande
+            {/* <span className="inline-block relative">
+              Brainwave{" "} */}
               {/* <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -101,7 +105,7 @@ const HeroArea = () => {
                 height={28}
                 alt="Curve"
               /> */}
-            </span>
+            {/* </span> */}
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Unleash the power of AI within Brainwave. Upgrade your productivity
@@ -111,10 +115,10 @@ const HeroArea = () => {
             Get started
           </Button> */}
         </div>
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 hidden">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
-            <div className="relative bg-n-8 rounded-[1rem]">
-              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
+        <div className="max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+          <div className="z-1 p-0.5 rounded-2xl bg-conic-gradient">
+            <div className=" bg-n-8 rounded-[1rem]">
+              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem] " />
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 {/* <img
@@ -148,7 +152,7 @@ const HeroArea = () => {
 
             <Gradient />
           </div>
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute z-4 -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             {/* <img
               src={heroBackground}
               className="w-full"
@@ -156,16 +160,19 @@ const HeroArea = () => {
               height={1800}
               alt="hero"
             /> */}
+            
           </div>
 
           {/* <BackgroundCircles /> */}
-          <HeroGradientPattern />
+          {/* <HeroGradientPattern /> */}
         </div>
 
         {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
       </div>
 
       <BottomLine />
+    </div>
+
     </Section>
   );
 };
