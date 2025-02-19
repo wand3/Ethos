@@ -77,7 +77,7 @@ export const NavMain = () => {
       }`}
     >
       <div className="flex items-center px-2 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <div className="flex w-[50%] h-10 opacity-100 right-[70%] float-end">
+        <div className="flex w-[30%] h-10 opacity-100 right-[70%] float-end">
           <a className="flex xl:mr-8 mr-2" href="#hero">
             <img src="../../w.svg" className='w-[3rem] pr-2 flex' alt="Wande" />
             <span className='text-2xl font-bold flex relative items-center'>Wa<span className='text-white px-1 dark:text-black'>nde</span>
@@ -93,15 +93,15 @@ export const NavMain = () => {
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-[#d9ccae8f] dark:bg-[#0d0a05cf] backdrop-blur-md dark:backdrop-blur-xl lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[5rem] left-0 right-0 bottom-0 dark:backdrop-blur-0 lg:static lg:flex lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <div className="relative z-2 flex flex-col items-center justify-center lg:flex-row m-auto">
             {navigation.map((item) => (
               <a
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block relative font-code text-lg capitalize text-n-1 hover:bg-color-3 dark:text-white transition-colors hover:shadow-lg dark:hover:text-color-1 border-b-[transparent] shadow-xl dark:shadow-2xl ${
+                className={`block relative font-code text-lg capitalize text-n-1 hover:bg-color-3 dark:text-white transition-colors hover:shadow-lg dark:hover:text-color-1 border-b-[transparent] dark:shadow-2xl lg:flex-row ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname.hash
@@ -117,7 +117,7 @@ export const NavMain = () => {
           <HamburgerMenu />
         </nav>
 
-         <div className="flex items-center absolute left-[50vw] gap-3">
+         <div className="flex items-center absolute left-[50vw] lg:left-[80vw] gap-3">
 
             <div onClick={() => {toggleDarkMode()}} id="toggleDark" className="flex w-fit shrink background-light drop-shadow-lg dark:toggle-nav-dark h-fit px-2 my-3 pt-2 pb-2 items-center rounded-2xl cursor-pointer bg-[#d9ccae8f]">
 

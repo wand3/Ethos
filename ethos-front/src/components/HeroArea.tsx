@@ -92,9 +92,9 @@ const HeroArea = () => {
      
   
       <div className="mx-auto z-1" ref={parallaxRef}>
-        <div className="pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition">
           <p className="text-2xl font-mono dark:text-white">I'm,</p>
-          <h1 className="text-[3rem]  md:text-[7rem] font-bold dark:text-white">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bolder dark:text-white tracking-wide">
             Babawande
             {/* <span className="inline-block relative">
               Brainwave{" "} */}

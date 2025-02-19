@@ -25,9 +25,9 @@
 <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
 </div></div> */
 
-.background-image-light {
+/* .background-image-light {
   
-}
+} */
 .grid-pattern-light {
   @apply bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] mix-blend-normal pointer-events-none   
   
@@ -131,31 +131,25 @@
 
 
 
-/* .gradient-container {
-    width: 100%;
-    height: 100%;
-    filter: url(#goo) blur(40px);
-  }
-}
 
 
 @layer components {
 
   .gradient-background {
-    @apply w-screen h-screen relative overflow-hidden bg-gradient-to-r from-[var(--color-bg1)] to-[var(--color-bg2)] top-0 left-0;    
-  } */
+    @apply w-screen h-screen relative overflow-hidden bg-gradient-to-r from-[var(--color-bg1)] to-[var(--color-bg2)] top-0 left-0    
+  }
 
-  /* .gradient-container {
+  .gradient-container {
     @apply w-full h-full; /* Tailwind classes for width and height */
-    /* filter: url(#goo) blur(40px); */
-  /* } */ 
-    /* .svg {
-        @apply fixed top-0 left-0 w-0 h-0
-    } */
+    filter: url(#goo) blur(40px);
+   }
+  .svg {
+    @apply fixed top-0 left-0 w-0 h-0
+    }
 
 
 
-    /* .button-color-light {
+    .button-color-light {
         @apply bg-[#C5EC38]
     }
     .button-color-dark {
@@ -163,29 +157,28 @@
     }
     .button-span-inside {
       @apply group-hover:bg-[#C5EC38] bg-[#C5EC38]
-    } */
-    /* .button-submit {
+    }
+    .button-submit {
         @apply justify-between rounded-md bg-[#4158D0] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
-    } */
-    /* .toggle-nav-dark {
+    }
+    .toggle-nav-dark {
         @apply drop-shadow-lg bg-slate-700/20
 
     }
-    .blurglass { */
-        /* @apply bg-[linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% )] z-10 lg:p-[10%] sm:p-[5%] m-auto backdrop-blur-[10px] border-[10px] border-blue-600 rounded-md */
-        /* @apply backdrop-blur-sm rounded-lg p-1 hover:bg-slate-400 bg-gray-800 text-4xl hover:outline-none hover:ring-1 hover:ring-white hover:ring-offset-2 hover:ring-offset-gray-400
-
+    .blurglass {
+        @apply bg-[linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% )] z-10 lg:p-[10%] sm:p-[5%] m-auto backdrop-blur-[10px] border-[10px] border-blue-600 rounded-md
+        /* @apply backdrop-blur-sm rounded-lg p-1 hover:bg-slate-400 bg-gray-800 text-4xl hover:outline-none hover:ring-1 hover:ring-white hover:ring-offset-2 hover:ring-offset-gray-400 */
     }
-    .glass { */
-        /* @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-10 rounded-lg p-6; */
-        /* @apply bg-opacity-[10%] backdrop-blur-[35] bg-gradient-to-bl bg-slate-500;
+    .glass {
+        @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-10 rounded-lg p-6;
+        @apply bg-opacity-[10%] backdrop-blur-[35] bg-gradient-to-bl bg-slate-500; 
 
     }
     .glass-3d {
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5); */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.5);
 
-      /* transform: perspective(1000px) rotateX(10deg) rotateY(10deg); */
-    /* }
+        transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+    }
     .form-dark {
         @apply bg-white/10 text-white
     }
@@ -199,4 +192,10 @@
     .text-darkbackground {
         @apply text-white
     }
-} */
+
+
+    /* text transition for smoooth scroll  */
+    .text-transition {
+      @apply transition-all duration-300 ease-in-out
+    }
+}
