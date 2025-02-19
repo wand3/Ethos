@@ -65,7 +65,7 @@
 // import { curve, heroBackground, robot } from "../assets";
 // import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient, HeroGradientPattern } from "./design/Hero";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 // import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
@@ -92,9 +92,9 @@ const HeroArea = () => {
      
   
       <div className="mx-auto z-1" ref={parallaxRef}>
-        <div className="pl-[2rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <p className="text-2xl font-mono dark:text-white">I'm,</p>
-          <h1 className="mb-6 text-[4rem]  md:text-[7rem] font-bold dark:text-white">
+          <h1 className="text-[3rem]  md:text-[7rem] font-bold dark:text-white">
             Babawande
             {/* <span className="inline-block relative">
               Brainwave{" "} */}
@@ -107,9 +107,8 @@ const HeroArea = () => {
               /> */}
             {/* </span> */}
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+          <p className="body-1 max-w-3xl mx-auto mb-6 dark:text-n-2 lg:mb-8 text-[3rem]">
+            A Software Engineer
           </p>
           {/* <Button href="/pricing" white>
             Get started
@@ -164,7 +163,6 @@ const HeroArea = () => {
           </div>
 
           {/* <BackgroundCircles /> */}
-          {/* <HeroGradientPattern /> */}
         </div>
 
         {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}

@@ -14,9 +14,9 @@ theme: {
 		// }
 		colors: {
         color: {
-          1: "#AC6AFF",
+          1: "#ffc876",
           2: "#FFC876",
-          3: "#FF776F",
+          3: "#d9ccae8f",
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
