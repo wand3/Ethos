@@ -88,16 +88,16 @@ const HeroArea = () => {
       id="hero"
     >
     <div className="absolute -top-[54%] w-[100vw] md:-top-[46%] md:w-[138%] lg:-top-[104%]">
-      <img className="bg-[url('../gradient-hero-1.png')] bg-cover h-[80vh] md:h-[90vh] lg:h-[130vh] " width="1440" />
+      <img className="bg-[url('../gradient-hero-1.png')] bg-cover h-[800px] md:h-[900px] lg:h-[150vh] " width="1440" />
     </div>
     {/* <div className=" grid-pattern-light-pos sm:min-h-60"> */}
-        <div className="grid-pattern-light absolute h-[500px] w-[100vw] md:-mt-[15%]  -mt-[30%] lg:min-h-[900px] "> </div>
+    <div className="grid-pattern-light absolute h-[500px] w-[100vw] md:-mt-[15%] lg:-mt-[15%] -mt-[37%] lg:min-h-[900px] "> </div>
     {/* </div>   */}
-    <div className="relative m-auto top-[-20%] grid-circle-light dark:grid-circle-dark">
+    {/* <div className="relative m-auto top-[-20%] grid-circle-light dark:grid-circle-dark"> */}
      
   
       <div className="mx-auto z-1" ref={parallaxRef}>
-        <div className="relative pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition">
+        <div className="flex-col relative pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition">
           <p className="text-2xl font-oswald font-light dark:text-white">I'm,</p>
           <h1 className="font-oswald font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-white tracking-wider">
             Babawande
@@ -112,18 +112,15 @@ const HeroArea = () => {
               /> */}
             {/* </span> */}
           </h1>
-          <p className="absolute font-medium max-w-3xl mx-[5%] mb-10 dark:text-n-2 lg:mb-8 font-oswald text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+          <p className="absolute w-full font-medium max-w-3xl mx-[5%] mb-10 dark:text-n-2 lg:mb-8 font-oswald text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             A Software Engineer 
-            <span className="text-color-1"> &</span>
-            <span className="text-color-3 font-normal pl-[5%]">Automations Engineer</span>  
-          </p>
-
-
-          
+            <span className="text-color-1"> & </span>
+            <span className="text-color-3 font-normal mb-[5%]">Automations Engineer</span>  
+          </p> 
         </div>
-        <div className="absolute flex gap-4 mx-auto xl:mb-24 mt-[25%] sm:mt-[15%] md:mt-[15%] lg:mt-[25%] ml-[5%] ">
+        <div className="flex gap-4 relative mx-auto  w-full xl:mb-24 ml-[5%] mt-[120px] sm:mt-[150px] md:mt-[170px] lg:mt-[200px]">
           <div className="">
-            <ButtonMain className="pl-1" href="/projects">
+            <ButtonMain className="rounded-md" href="/projects" white px="2" line>
               Explore My works
             </ButtonMain>
           </div> 
@@ -133,18 +130,15 @@ const HeroArea = () => {
             </ButtonMain>
           </div>
             
-
-            
-
             {/* <Gradient /> */}
-    
         </div>
+      
 
         {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
       </div>
 
       <BottomLine />
-    </div>
+    {/* </div> */}
 
     </Section>
   );
