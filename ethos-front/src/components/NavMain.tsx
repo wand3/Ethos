@@ -5,6 +5,8 @@ import { HamburgerMenu } from './design/NavMain';
 import ButtonMain from '../components/Button'
 import { StrikethroughIcon } from '@heroicons/react/16/solid';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import {w} from "../assets"
+import MenuSvg from '../assets/svg/MenuSvg';
 
 
 const navigation = [
@@ -79,7 +81,7 @@ export const NavMain = () => {
       <div className="flex items-center px-2 lg:px-7.5 xl:px-10 max-lg:py-4">
         <div className="flex w-[30%] h-10 opacity-100 right-[70%] float-end">
           <a className="flex xl:mr-8 mr-2" href="#hero">
-            <img src="../../w.svg" className='w-[3rem] pr-2 flex' alt="Wande" />
+            <img src={w} className='w-[3rem] pr-2 flex' alt="Wande" />
             <span className='text-2xl font-bold flex relative items-center'>Wa<span className='text-white px-1 dark:text-black'>nde</span>
               <div className='bg-black dark:bg-[#ffffff] w-[52%] h-[1.5em] left-[45%] -z-[2] absolute'>
                 
@@ -155,8 +157,8 @@ export const NavMain = () => {
           className="ml-auto lg:hidden"
           onClick={toggleNavigation}
         >
-          {/* <MenuSvg openNavigation={openNavigation} /> */}Ham
-          {/* <StrikethroughIcon className='h-5 w-5 text-red'/> */}
+          <MenuSvg openNavigation={openNavigation} />
+        
         </ButtonMain>
       </div>
     </div>

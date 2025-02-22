@@ -69,7 +69,8 @@ import { BottomLine, Gradient } from "./design/Hero";
 // import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
-import { Button } from "@headlessui/react";
+import Button from "./Button";
+import ButtonMain from "./Button";
 // import Generating from "./Generating";
 // import Notification from "./Notification";
 // import CompanyLogos from "./CompanyLogos";
@@ -92,7 +93,7 @@ const HeroArea = () => {
     {/* <div className=" grid-pattern-light-pos sm:min-h-60"> */}
         <div className="grid-pattern-light absolute h-[500px] w-[100vw] md:-mt-[15%]  -mt-[30%] lg:min-h-[900px] "> </div>
     {/* </div>   */}
-    <div className="relative m-auto top-0 grid-circle-light dark:grid-circle-dark">
+    <div className="relative m-auto top-[-20%] grid-circle-light dark:grid-circle-dark">
      
   
       <div className="mx-auto z-1" ref={parallaxRef}>
@@ -118,59 +119,25 @@ const HeroArea = () => {
           </p>
 
 
-          {/* <Button href="/pricing" white>
-            Get started
-          </Button> */}
+          
         </div>
-        <div className="max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 my-[15%] mx-auto hidden">
-          <div className="z-1 p-0.5 rounded-2xl bg-conic-gradient">
-            <div className=" bg-n-8 rounded-[1rem]">
-              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem] " />
-
-              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                {/* <img
-                  src={robot}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
-                  width={1024}
-                  height={490}
-                  alt="AI"
-                /> */}
-
-                {/* <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" /> */}
-
-                <ScrollParallax isAbsolutelyPositioned>
-                  {/* <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
-                    {heroIcons.map((icon, index) => (
-                      <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={icon} />
-                      </li>
-                    ))}
-                  </ul> */}
-                </ScrollParallax>
-
-                <ScrollParallax isAbsolutelyPositioned>
-                  {/* <Notification
-                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
-                  /> */}
-                </ScrollParallax>
-              </div>
-            </div>
-
-            <Gradient />
+        <div className="absolute flex gap-4 mx-auto xl:mb-24 mt-[25%] sm:mt-[15%] md:mt-[15%] lg:mt-[25%] ml-[5%] ">
+          <div className="">
+            <ButtonMain className="pl-1" href="/projects">
+              Explore My works
+            </ButtonMain>
+          </div> 
+          <div className="">
+            <ButtonMain href="/contact" white>
+              Let's Talk
+            </ButtonMain>
           </div>
-          <div className="absolute z-4 -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
-            {/* <img
-              src={heroBackground}
-              className="w-full"
-              width={1440}
-              height={1800}
-              alt="hero"
-            /> */}
             
-          </div>
 
-          {/* <BackgroundCircles /> */}
+            
+
+            {/* <Gradient /> */}
+    
         </div>
 
         {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
@@ -184,7 +151,3 @@ const HeroArea = () => {
 };
 
 export default HeroArea;
-
-{/* <div class="relative h-full w-full bg-black">
-<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-<div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div></div> */}
