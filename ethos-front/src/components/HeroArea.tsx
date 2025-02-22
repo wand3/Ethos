@@ -65,7 +65,7 @@
 // import { curve, heroBackground, robot } from "../assets";
 // import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { BottomLine, Gradient } from "./design/Hero";
 // import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
@@ -79,12 +79,16 @@ const HeroArea = () => {
 
   return (
     <Section
-      className="bg-[url('../gradient.png')]  pt-[12rem] -mt-[5.25rem] backdrop-blur-xl dark:grid-pattern-dark "
+      className="pt-[12rem] -mt-[5.25rem] backdrop-blur-xl dark:grid-pattern-dark h-[50vh] lg:h-[58vh]"
+      // className="bg-[url('../ethos-hero-1.png')] bg-clip-content  pt-[12rem] -mt-[5.25rem] backdrop-blur-xl dark:grid-pattern-dark h-[50vh] lg:h-[58vh]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="hero"
     >
+    <div className="absolute -top-[54%] w-[100vw] md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+      <img className="bg-[url('../gradient-hero-1.png')] bg-cover h-[80vh] md:h-[90vh] lg:h-[130vh] " width="1440" />
+    </div>
     {/* <div className=" grid-pattern-light-pos sm:min-h-60"> */}
         <div className="grid-pattern-light absolute h-[500px] w-[100vw] md:-mt-[15%]  -mt-[30%] lg:min-h-[900px] "> </div>
     {/* </div>   */}
@@ -92,9 +96,9 @@ const HeroArea = () => {
      
   
       <div className="mx-auto z-1" ref={parallaxRef}>
-        <div className="pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition">
-          <p className="text-2xl font-mono dark:text-white">I'm,</p>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bolder dark:text-white tracking-wide">
+        <div className="relative pl-[1rem] md:px-[5rem] text-black mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition">
+          <p className="text-2xl font-oswald font-light dark:text-white">I'm,</p>
+          <h1 className="font-oswald font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl dark:text-white tracking-wider">
             Babawande
             {/* <span className="inline-block relative">
               Brainwave{" "} */}
@@ -107,14 +111,18 @@ const HeroArea = () => {
               /> */}
             {/* </span> */}
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 dark:text-n-2 lg:mb-8 text-[3rem]">
-            A Software Engineer
+          <p className="absolute font-medium max-w-3xl mx-[5%] mb-10 dark:text-n-2 lg:mb-8 font-oswald text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            A Software Engineer 
+            <span className="text-color-1"> &</span>
+            <span className="text-color-3 font-normal pl-[5%]">Automations Engineer</span>  
           </p>
+
+
           {/* <Button href="/pricing" white>
             Get started
           </Button> */}
         </div>
-        <div className="max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+        <div className="max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24 my-[15%] mx-auto hidden">
           <div className="z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className=" bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem] " />

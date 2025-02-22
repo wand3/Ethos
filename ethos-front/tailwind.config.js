@@ -1,3 +1,6 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+const Unfonts = require("unplugin-fonts");
+
 /** @type {import('tailwindcss').Config} */
 export default {
 content: [
@@ -40,14 +43,14 @@ theme: {
           13: "#6C7275",
         },
       },
-    //   fontFamily: {
-    //     sans: ["var(--font-sora)", ...fontFamily.sans],
-    //     code: "var(--font-code)",
-    //     grotesk: "var(--font-grotesk)",
-    //   },
-      letterSpacing: {
-        tagline: ".15em",
-      },
+    
+    fontFamily: {
+      poppins: ["Poppins", ...fontFamily.sans],
+      oswald: ["Oswald", ...fontFamily.sans],
+    },
+    letterSpacing: {
+      tagline: ".15em",
+    },
       spacing: {
         0.25: "0.0625rem",
         7.5: "1.875rem",
