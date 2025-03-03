@@ -16,6 +16,7 @@ theme: {
 		// 	'dark-pattern': "#000000",
 		// }
 		colors: {
+    // 7: "#8A8A8A"
         color: {
           1: "#ffc876",
           2: "#FFC876",
@@ -47,6 +48,9 @@ theme: {
     fontFamily: {
       poppins: ["Poppins", ...fontFamily.sans],
       oswald: ["Oswald", ...fontFamily.sans],
+      iceberg: ["Iceberg", ...fontFamily.serif],
+      electrolize: ["Electrolize", ...fontFamily.sans],
+
     },
     letterSpacing: {
       tagline: ".15em",

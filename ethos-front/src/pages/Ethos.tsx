@@ -11,7 +11,7 @@ const Ethos = () => {
         <> 
             <EthosBody nav>
                 <HeroArea />
-                <GoalsQuotes />
+                {/* <GoalsQuotes /> */}
                 <ProjectPart projects={[]} />
 
             </EthosBody>

@@ -30,7 +30,11 @@ const ProjectPart = (all_projects: AllProjects) => {
     }
 
     const content = (
-        <main className="overflow-scroll flex gap-5 px-3 md:px-5 pb-12">
+        <main className="gap-5 px-[3%] py-[5%] md:px-5 pb-12 h-fit">
+            <div className='flex justify-center my-[7%]'>
+                <h1 className='text-white justify-center'>Project Highlights</h1>
+            </div>
+            
 
          {/* <main className="grid grid-cols-2 md:h-[80vh] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6 pt-10 px-3"> */}
             {pageContent}

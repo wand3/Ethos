@@ -7128,3 +7128,23 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-02-22 03:56:40,216 - INFO - User model ---- get current user payload error
 2025-02-22 04:33:24,763 - INFO - User model ---- get current user payload error
 2025-02-22 04:33:24,790 - INFO - User model ---- get current user payload error
+2025-03-03 12:49:24,208 - INFO - Application started -----------
+2025-03-03 12:49:27,079 - INFO - Application started -----------
+2025-03-03 12:50:17,213 - INFO - User model ---- get current user payload error
+2025-03-03 12:50:17,231 - INFO - User model ---- get current user payload error
+2025-03-03 13:00:27,387 - INFO - User model ---- get current user payload error
+2025-03-03 13:00:27,889 - INFO - User model ---- get current user payload error
+2025-03-03 13:00:36,353 - INFO - User model ---- get current user payload error
+2025-03-03 13:00:36,363 - INFO - User model ---- get current user payload error
+2025-03-03 13:31:12,050 - INFO - User model ---- get current user payload error
+2025-03-03 13:31:12,095 - INFO - User model ---- get current user payload error
+2025-03-03 13:32:13,955 - INFO - User model ---- get current user payload error
+2025-03-03 13:32:13,967 - INFO - User model ---- get current user payload error
+2025-03-03 13:32:16,883 - INFO - User model ---- get current user payload error
+2025-03-03 13:32:16,889 - INFO - User model ---- get current user payload error
+2025-03-03 13:53:54,497 - INFO - User model ---- get current user payload error
+2025-03-03 13:53:54,550 - INFO - User model ---- get current user payload error
+2025-03-03 14:00:16,703 - INFO - User model ---- get current user payload error
+2025-03-03 14:00:16,741 - INFO - User model ---- get current user payload error
+2025-03-03 14:17:52,573 - INFO - User model ---- get current user payload error
+2025-03-03 14:17:52,912 - INFO - User model ---- get current user payload error

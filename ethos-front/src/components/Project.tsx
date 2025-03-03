@@ -16,8 +16,7 @@ const Project = ({ project }: PropsType): ReactElement => {
     // const img: string = `${Config.baseURL}/static/images/project_images/${project.images}`
     // console.log(img)
     const content =
-
-        <div className="bg-white max-h-[fit] shadow-lg rounded-2xl px-3 py-4 cursor-pointer hover:-translate-y-2 transition-all relative">
+        <div className="bg-white max-h-[35vh] shadow-lg rounded-2xl px-3 py-4 cursor-pointer hover:-translate-y-2 transition-all relative">
             
             <Link to={`/project/${project._id}`} className="group relative block h-[full]">
                     {/* <div className="overflow-hidden flex justify-center ml-auto mr-auto md:mb-2 mb-4 w-[60%] h-[40%]">

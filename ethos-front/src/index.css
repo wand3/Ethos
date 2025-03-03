@@ -197,7 +197,9 @@
         @apply text-white
     }
 
-
+    .hero-section {
+      @apply mt-[2%]
+    }
     /* text transition for smoooth scroll  */
     .text-transition {
       @apply transition-all duration-300 ease-in-out
@@ -206,4 +208,34 @@
     .glass-effect {
      @apply backdrop-blur-[10px] bg-white/10 rounded-md
     }
+    .radial-blur {
+      background: radial-gradient(circle, #ffc876 20%, transparent 50%);
+      /* background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 60%); */
+
+      animation: pulse 5s infinite;
+    }
+
+    .move-across {
+      animation: move-across linear 10s infinite;
+    }
+    @keyframes move-across {
+    0% {
+      transform: translateX(90%);
+    }
+    100% {
+      transform: translateX(-90%);
+    }
+  }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+      }
+  }
+
 }
