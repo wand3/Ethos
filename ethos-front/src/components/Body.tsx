@@ -12,7 +12,8 @@ type BodyProps = {
 const EthosBody: FC<BodyProps> = ({ nav, children }) => {
   return (
     <>
-      <div className="bg-[#F4F2F0] dark:bg-[#000000] pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+    {/* dark:bg-[#F4F2F0] */}
+      <div className=" bg-[#000000] pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden"> 
         {/* <div className="font-sans bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100"> */}
         <div className="font-sans">
 
