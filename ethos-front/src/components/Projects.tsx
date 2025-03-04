@@ -31,8 +31,8 @@ const ProjectPart = (all_projects: AllProjects) => {
 
     const content = (
         <main className="gap-5 px-[3%] py-[5%] md:px-5 pb-12 h-fit">
-            <div className='flex justify-center my-[7%]'>
-                <h1 className='text-white justify-center'>Project Highlights</h1>
+            <div className='flex justify-center mt-[7%]'>
+                <h1 className='text-heading justify-center'>Project Highlights</h1>
             </div>
             
 

@@ -227,8 +227,6 @@
     }
     .radial-blur {
       background: radial-gradient(circle, #ffc876 20%, transparent 50%);
-      /* background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 60%); */
-
       animation: pulse 5s infinite;
     }
 
@@ -253,6 +251,10 @@
         opacity: 0.5;
         transform: scale(1.1);
       }
+  }
+
+  .text-heading {
+    @apply font-iceberg font-bold text-[1.5rem] relative z-1 text-[#1a1a1aeb] dark:text-white tracking-wider
   }
 
 }

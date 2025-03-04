@@ -94,7 +94,6 @@ import { BottomLine, Gradient } from "./design/Hero";
 // import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
-import Button from "./Button";
 import ButtonMain from "./Button";
 
 
@@ -105,7 +104,7 @@ const HeroArea = () => {
     <>
       <header className="hero-section h-[120vh] md:h-[115vh] lg:h-[100vh] overflow-hidden position relative -mt-[3%]">
       
-        <div className="flex-col flex mt-[32%] sm:mt-[25%] md:mt-[20%] lg:mt-[15%] justify-center text-center m-0 left-1/2 w-[93vw]  -translate-x-1/2 relative px-[2%] md:px-[5rem] text-white mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition z-1">
+        <div className="flex-col flex mt-[37%] sm:mt-[25%] md:mt-[20%] lg:mt-[15%] justify-center text-center m-0 left-1/2 w-[93vw]  -translate-x-1/2 relative px-[2%] md:px-[5rem] text-white mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition z-1">
           {/* <p className="text-2xl font-oswald font-dark">I'm,</p> */}
           <h1 className="font-electrolize font-bold text-[1.8rem] relative z-1 sm:text-[2.1rem] md:text-[2.5rem] lg:text-5xl text-[#1a1a1aeb] dark:text-color-7 tracking-tight md:tracking-wider">
           Hi! I'm Babawande, a Software engineer
@@ -113,7 +112,7 @@ const HeroArea = () => {
             <span className="dark:text-color-3 font-electrolize text-n-3"> Automations Engineer. </span>
 
           </h1>
-          <p className=" sm:text-center py-3 w-[80%] my-[3%] mx-auto font-electrolize text-n-4 dark:text-color-7" data-v-fb61fddf="">I bring value to software industry by merging technical expertise in Web Developement, Automations, AI and Testing with creativity and aesthetics.</p>
+          <p className=" sm:text-center py-3 w-[80%] my-[3%] mx-auto font-electrolize text-n-4 dark:text-color-7" data-v-fb61fddf="">I bring value to the software industry by merging technical expertise in Web Developement, Automations, AI and Testing with creativity and aesthetics.</p>
 
 
 
@@ -128,9 +127,9 @@ const HeroArea = () => {
               
             {/* <Gradient /> */}
         </div>
-        <div className="absolute inset-0 glass-effect-light dark:glass-effect top-[10%] mx-[2%] h-[90vh] sm:h-[95vh] md:h-[140vh]"></div>
+        <div className="absolute inset-0 glass-effect-light dark:glass-effect top-[10%] mx-[2%] h-[90vh] sm:h-[95vh] md:h-[140vh] lg:top-[15%]"></div>
         <div className=" absolute inset-0 flex items-center justify-center z-0 mx-[5%] mt-[10%]">
-          <h1 className="glass-text text-[15rem] md:text-[17rem] lg:text-[20rem] font-electrolize whitespace-nowrap move-across sm:text-[15rem] text-[#bcccca] dark:text-[#0d0a069e] drop-shadow-md bg-clip-text">
+          <h1 className=" text-[15rem] md:text-[17rem] lg:text-[20rem] font-electrolize whitespace-nowrap move-across sm:text-[15rem] text-[#bcccca] dark:text-[#0d0a069e] drop-shadow-md bg-clip-text">
               ideate, research, build, test, cherish every moment, create, iterate 
           </h1>
       </div>
