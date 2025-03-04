@@ -15,11 +15,11 @@ const ButtonMain = ({ className, href, onClick, children, px, white, line }: But
   //   px || "px-1"
   // } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
   // const spanClasses = "relative z-10 relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent";
-  const classes = `group relative rounded-lg overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light background-light dark:button-color-dark drop-shadow-lg ${
+  const classes = `group relative rounded-md overflow-hidden border border-l-0 mr-[5%] px-4 py-2 focus:ring-3 focus:outline-hidden button-color-light background-light dark:button-color-dark drop-shadow-lg ${
     px || "px-1"
   } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
   const spanClasses = "relative z-10 relative text-sm font-medium text-[#170414] transition-colors group-hover:text-white dark:group-hover:text-black transition-all ease-in duration-75";
-  const spanLine = `absolute inset-y-0 left-0 w-[4px] h-[100%] rounded-[30%] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full ${line || "hidden"}`
+  const spanLine = `absolute inset-y-0 left-0 w-[4px] h-[100%] bg-[#000000] dark:button-span-inside transition-all group-hover:w-full ${line || "hidden"}`
 
   const renderButton = () => (
   

@@ -6,6 +6,14 @@
   font-family: "Oswald";
   src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Iceberg-Regular";
+  src: url("../fonts/Iceberg/Iceberg-Regular.ttf")
+}
+@font-face {
+  font-family: "Electrolize";
+  src: url("../fonts/Electrolize/Electrolize-Regular.ttf")
+}
 
 @layer base {
   :root {
@@ -160,7 +168,7 @@
         @apply bg-white border-white
     }
     .button-span-inside {
-      @apply group-hover:bg-[#FFC876] bg-[#FFC876] rounded-xl
+      @apply group-hover:bg-[#FFC876] bg-[#FFC876] rounded-md
     }
     .button-submit {
         @apply justify-between rounded-md bg-[#4158D0] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
@@ -205,8 +213,17 @@
       @apply transition-all duration-300 ease-in-out
     }
     /* glass effect  */
+    .glass-effect-light {
+      @apply backdrop-blur-[10px] bg-[#826f6f38] rounded-lg
+    }
     .glass-effect {
      @apply backdrop-blur-[10px] bg-white/10 rounded-md
+    }
+
+
+    /* glass effect  */
+    .glass-text {
+     @apply backdrop-blur-[10px] bg-[#1a1a1adb] rounded-md
     }
     .radial-blur {
       background: radial-gradient(circle, #ffc876 20%, transparent 50%);
@@ -216,14 +233,14 @@
     }
 
     .move-across {
-      animation: move-across linear 10s infinite;
+      animation: move-across linear 300s infinite;
     }
     @keyframes move-across {
     0% {
-      transform: translateX(90%);
+      transform: translateX(60%);
     }
     100% {
-      transform: translateX(-90%);
+      transform: translateX(-100%);
     }
   }
 

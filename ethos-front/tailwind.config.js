@@ -24,6 +24,7 @@ theme: {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          7: "#d8d2d2ed",
         },
         stroke: {
           1: "#26242C",
@@ -31,8 +32,8 @@ theme: {
         n: {
           1: "#000000",
           2: "#CAC6DD",
-          3: "#ADA8C3",
-          4: "#757185",
+          3: "#1a1a1aeb",
+          4: "#010101bf",
           5: "#3F3A52",
           6: "#252134",
           7: "#15131D",
@@ -48,7 +49,7 @@ theme: {
     fontFamily: {
       poppins: ["Poppins", ...fontFamily.sans],
       oswald: ["Oswald", ...fontFamily.sans],
-      iceberg: ["Iceberg", ...fontFamily.serif],
+      iceberg: ["Iceberg-Regular", ...fontFamily.sans],
       electrolize: ["Electrolize", ...fontFamily.sans],
 
     },
