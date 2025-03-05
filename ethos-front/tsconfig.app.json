@@ -1,5 +1,10 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
+    // "composite": true, // Enable composite setting
+    // "declaration": true, // Ensure declarations are emitted
+    // "emitDeclarationOnly": true, // Ensure that emit is not disabled
+
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -22,5 +27,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "ckeditor.js"]
+  "include": ["src/**/*", "ckeditor.js"],
+  // "include": ["src/**/*"]
 }

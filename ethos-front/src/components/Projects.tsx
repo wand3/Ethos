@@ -1,13 +1,17 @@
-import React, { ReactElement, useEffect } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { ProjectSchema } from '../schemas/project';
 import Project from './Project';
 import { useGetProjectsDetailsQuery } from '../services/project';
+import Edges from '../assets/svg/Edges';
+
 
 type AllProjects = {
   projects: ProjectSchema[];
 }
 
 const ProjectPart = (all_projects: AllProjects) => {
+
+  
   const { data: projects, isLoading: areProjectsLoading, error } = useGetProjectsDetailsQuery();
 
 
@@ -18,7 +22,8 @@ const ProjectPart = (all_projects: AllProjects) => {
   let pageContent: ReactElement | ReactElement[] = <p>Loading...</p>
 
   if (projects?.length) {
-      pageContent = projects.map(project => {
+      const topProjects = projects.slice(0, 3);  // Get the top 3 projects
+      pageContent = topProjects.map(project => {
 
           return (
               <Project
@@ -29,15 +34,18 @@ const ProjectPart = (all_projects: AllProjects) => {
       })
     }
 
-    const content = (
-        <main className="gap-5 px-[3%] py-[5%] md:px-5 pb-12 h-fit">
-            <div className='flex justify-center mt-[7%]'>
-                <h1 className='text-heading justify-center'>Project Highlights</h1>
+    const content = ( 
+        <main className="gap-5 px-[3%] py-[5%] md:px-5 pb-12 h-fit ">
+            <div className='flex justify-center mt-[7%] pb-[6%]'>
+                <h1 className="text-heading justify-center duration-[300ms] taos:[transform:perspective(2500px)_rotateX(-100deg)] taos:invisible taos:[backface-visibility:hidden]" data-taos-offset="400">Project Highlights</h1>
             </div>
             
-
          {/* <main className="grid grid-cols-2 md:h-[80vh] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-xl:gap-4 gap-6 pt-10 px-3"> */}
-            {pageContent}
+            <ul className="mt-8 gap-4 sm:grid-cols-1 lg:grid-cols-1 lg:px-10">
+                    {pageContent}
+                
+
+            </ul>
         </main>
     )
 

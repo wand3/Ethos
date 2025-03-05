@@ -24,9 +24,10 @@
   --color3: #64dcff; /* rgb(100, 220, 255) converted to hex */
   --color4: #c83232; /* rgb(200, 50, 50) converted to hex */
   --color5: #b4b432; /* rgb(180, 180, 50) converted to hex */
-  --color-interactive: #8c64ff; /* rgb(140, 100, 255) converted to hex */
+  --color-interactive: #826b52e8; /* rgb(140, 100, 255) converted to hex */
   --circle-size: 80%;
   --blending: hard-light;
+  --size-desktop--21: 1.1rem;
 }
 
 }
@@ -255,6 +256,54 @@
 
   .text-heading {
     @apply font-iceberg font-bold text-[1.5rem] relative z-1 text-[#1a1a1aeb] dark:text-white tracking-wider
+  }
+
+  .w-embed::after {
+    clear: both;
+  }
+  .w-embed::before, .w-embed::after {
+    content: " ";
+    grid-area: 1/1/2/2;
+    display: table;
+  }
+  .small-corner {
+    z-index: 3;
+    color: var(--color-interactive);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: var(--size-desktop--21);
+    height: var(--size-desktop--21);
+  }
+
+  .is-top-left {
+    position: absolute;
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    left: 0%;
+  }
+  .is-top-right {
+    position: absolute;
+    inset: 0% 0% auto auto;
+  }
+  .is-bottom-right {
+    position: absolute;
+    inset: auto 0% 0% auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    left: auto;
+  }
+
+  .is-bottom-left {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 0%;
+    left: 0%;
   }
 
 }

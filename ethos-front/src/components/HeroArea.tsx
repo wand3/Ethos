@@ -102,7 +102,7 @@ const HeroArea = () => {
 
   return (
     <>
-      <header className="hero-section h-[120vh] md:h-[115vh] lg:h-[100vh] overflow-hidden position relative -mt-[3%]">
+      <header className="hero-section h-[650px] md:h-[745px] lg:h-[750px] overflow-hidden position relative -mt-[3%]">
       
         <div className="flex-col flex mt-[37%] sm:mt-[25%] md:mt-[20%] lg:mt-[15%] justify-center text-center m-0 left-1/2 w-[93vw]  -translate-x-1/2 relative px-[2%] md:px-[5rem] text-white mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] text-transition z-1">
           {/* <p className="text-2xl font-oswald font-dark">I'm,</p> */}
@@ -127,7 +127,7 @@ const HeroArea = () => {
               
             {/* <Gradient /> */}
         </div>
-        <div className="absolute inset-0 glass-effect-light dark:glass-effect top-[10%] mx-[2%] h-[90vh] sm:h-[95vh] md:h-[140vh] lg:top-[15%]"></div>
+        <div className="absolute inset-0 glass-effect-light dark:glass-effect top-[7%] mx-[2%] h-[95vh] sm:h-[95vh] md:h-[140vh] lg:top-[7%]"></div>
         <div className=" absolute inset-0 flex items-center justify-center z-0 mx-[5%] mt-[10%]">
           <h1 className=" text-[15rem] md:text-[17rem] lg:text-[20rem] font-electrolize whitespace-nowrap move-across sm:text-[15rem] text-[#bcccca] dark:text-[#0d0a069e] drop-shadow-md bg-clip-text">
               ideate, research, build, test, cherish every moment, create, iterate 

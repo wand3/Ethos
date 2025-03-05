@@ -7148,3 +7148,109 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-03-03 14:00:16,741 - INFO - User model ---- get current user payload error
 2025-03-03 14:17:52,573 - INFO - User model ---- get current user payload error
 2025-03-03 14:17:52,912 - INFO - User model ---- get current user payload error
+2025-03-05 00:29:45,474 - INFO - Application started -----------
+2025-03-05 00:29:53,531 - INFO - Application started -----------
+2025-03-05 00:30:58,843 - INFO - User model ---- get current user payload error
+2025-03-05 00:30:58,887 - INFO - User model ---- get current user payload error
+2025-03-05 00:42:40,273 - INFO - User model ---- get current user payload error
+2025-03-05 00:42:49,364 - INFO - User model ---- get current user payload error
+2025-03-05 00:42:58,427 - INFO - User model ---- get current user payload error
+2025-03-05 00:43:07,653 - INFO - User model ---- get current user payload error
+2025-03-05 00:43:16,806 - INFO - User model ---- get current user payload error
+2025-03-05 00:43:25,857 - INFO - User model ---- get current user payload error
+2025-03-05 00:43:35,105 - INFO - User model ---- get current user payload error
+2025-03-05 00:51:50,040 - INFO - User model ---- get current user payload error
+2025-03-05 00:51:50,530 - INFO - User model ---- get current user payload error
+2025-03-05 09:42:23,805 - INFO - Application started -----------
+2025-03-05 09:42:42,742 - INFO - Application started -----------
+2025-03-05 09:42:43,254 - INFO - User model ---- get current user payload error
+2025-03-05 09:42:43,266 - INFO - User model ---- get current user payload error
+2025-03-05 09:45:20,185 - INFO - User model ---- get current user payload error
+2025-03-05 09:45:20,219 - INFO - User model ---- get current user payload error
+2025-03-05 09:45:45,959 - INFO - User model ---- get current user payload error
+2025-03-05 09:45:45,975 - INFO - User model ---- get current user payload error
+2025-03-05 09:47:29,646 - INFO - User model ---- get current user payload error
+2025-03-05 09:47:29,664 - INFO - User model ---- get current user payload error
+2025-03-05 09:52:23,972 - INFO - User model ---- get current user payload error
+2025-03-05 09:52:23,989 - INFO - User model ---- get current user payload error
+2025-03-05 09:52:40,456 - INFO - User model ---- get current user payload error
+2025-03-05 09:52:40,473 - INFO - User model ---- get current user payload error
+2025-03-05 10:02:02,173 - INFO - User model ---- get current user payload error
+2025-03-05 10:02:02,190 - INFO - User model ---- get current user payload error
+2025-03-05 10:09:32,324 - INFO - User model ---- get current user payload error
+2025-03-05 10:09:41,840 - INFO - User model ---- get current user payload error
+2025-03-05 10:35:25,538 - INFO - User model ---- get current user payload error
+2025-03-05 11:33:04,061 - INFO - Application started -----------
+2025-03-05 11:33:07,077 - INFO - Application started -----------
+2025-03-05 11:33:23,867 - INFO - User model ---- get current user payload error
+2025-03-05 11:33:23,956 - INFO - User model ---- get current user payload error
+2025-03-05 11:37:22,798 - INFO - User model ---- get current user payload error
+2025-03-05 11:37:22,824 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:28,187 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:28,212 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:33,990 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:34,008 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:35,308 - INFO - User model ---- get current user payload error
+2025-03-05 12:02:35,315 - INFO - User model ---- get current user payload error
+2025-03-05 12:16:18,772 - INFO - User model ---- get current user payload error
+2025-03-05 12:16:18,794 - INFO - User model ---- get current user payload error
+2025-03-05 12:26:49,434 - INFO - User model ---- get current user payload error
+2025-03-05 12:26:49,446 - INFO - User model ---- get current user payload error
+2025-03-05 12:35:00,799 - INFO - User model ---- get current user payload error
+2025-03-05 12:35:00,817 - INFO - User model ---- get current user payload error
+2025-03-05 12:37:46,827 - INFO - User model ---- get current user payload error
+2025-03-05 12:37:46,834 - INFO - User model ---- get current user payload error
+2025-03-05 12:39:33,959 - INFO - User model ---- get current user payload error
+2025-03-05 12:39:33,979 - INFO - User model ---- get current user payload error
+2025-03-05 12:42:51,120 - INFO - User model ---- get current user payload error
+2025-03-05 12:42:51,134 - INFO - User model ---- get current user payload error
+2025-03-05 12:44:35,701 - INFO - User model ---- get current user payload error
+2025-03-05 12:44:35,729 - INFO - User model ---- get current user payload error
+2025-03-05 12:48:47,810 - INFO - User model ---- get current user payload error
+2025-03-05 12:48:47,826 - INFO - User model ---- get current user payload error
+2025-03-05 12:50:27,658 - INFO - User model ---- get current user payload error
+2025-03-05 12:50:27,667 - INFO - User model ---- get current user payload error
+2025-03-05 12:56:13,767 - INFO - User model ---- get current user payload error
+2025-03-05 12:56:13,807 - INFO - User model ---- get current user payload error
+2025-03-05 12:56:24,118 - INFO - User model ---- get current user payload error
+2025-03-05 12:56:24,124 - INFO - User model ---- get current user payload error
+2025-03-05 13:00:17,376 - INFO - User model ---- get current user payload error
+2025-03-05 13:00:17,398 - INFO - User model ---- get current user payload error
+2025-03-05 13:06:44,481 - INFO - User model ---- get current user payload error
+2025-03-05 13:06:44,530 - INFO - User model ---- get current user payload error
+2025-03-05 13:11:01,295 - INFO - User model ---- get current user payload error
+2025-03-05 13:11:01,306 - INFO - User model ---- get current user payload error
+2025-03-05 13:15:51,739 - INFO - User model ---- get current user payload error
+2025-03-05 13:15:51,974 - INFO - User model ---- get current user payload error
+2025-03-05 13:15:57,243 - INFO - User model ---- get current user payload error
+2025-03-05 13:15:57,264 - INFO - User model ---- get current user payload error
+2025-03-05 13:24:11,292 - INFO - User model ---- get current user payload error
+2025-03-05 13:24:11,323 - INFO - User model ---- get current user payload error
+2025-03-05 13:29:11,340 - INFO - User model ---- get current user payload error
+2025-03-05 13:29:11,362 - INFO - User model ---- get current user payload error
+2025-03-05 13:29:33,798 - INFO - User model ---- get current user payload error
+2025-03-05 13:29:33,830 - INFO - User model ---- get current user payload error
+2025-03-05 13:46:24,899 - INFO - User model ---- get current user payload error
+2025-03-05 13:46:24,914 - INFO - User model ---- get current user payload error
+2025-03-05 13:54:37,416 - INFO - User model ---- get current user payload error
+2025-03-05 13:54:37,447 - INFO - User model ---- get current user payload error
+2025-03-05 13:56:30,932 - INFO - User model ---- get current user payload error
+2025-03-05 13:56:30,949 - INFO - User model ---- get current user payload error
+2025-03-05 14:02:19,120 - INFO - User model ---- get current user payload error
+2025-03-05 14:02:19,139 - INFO - User model ---- get current user payload error
+2025-03-05 14:16:10,607 - INFO - User model ---- get current user payload error
+2025-03-05 14:16:10,618 - INFO - User model ---- get current user payload error
+2025-03-05 14:30:40,602 - INFO - User model ---- get current user payload error
+2025-03-05 14:30:40,620 - INFO - User model ---- get current user payload error
+2025-03-05 14:33:41,723 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Projects/Ethos/.env/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-03-05 14:35:17,236 - INFO - User model ---- get current user payload error
+2025-03-05 14:35:23,439 - INFO - User model ---- get current user payload error
+2025-03-05 14:35:37,881 - INFO - User model ---- get current user payload error
+2025-03-05 14:36:27,797 - INFO - 1 change detected
+2025-03-05 14:38:25,008 - INFO - 1 change detected
+2025-03-05 14:39:37,714 - INFO - 1 change detected

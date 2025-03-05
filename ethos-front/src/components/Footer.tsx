@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <>
             {/*
-        Heads up! 👋
+        Heads up!
 
         This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 
@@ -21,7 +21,7 @@ export const Footer = () => {
             <strong className="text-xl text-black sm:text-xl"> Book a free discovery call! </strong>
 
             <a
-              className="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-[#1a1a1aeb] hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
+              className="z-10 inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-[#1a1a1aeb] hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90"
               href="mailto:godswillbaiyewu@gmail.com?subject=Schedule a discovery"
             >
               <span className="text-sm font-medium"> Let's Talk </span>
