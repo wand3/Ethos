@@ -7254,3 +7254,65 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-03-05 14:36:27,797 - INFO - 1 change detected
 2025-03-05 14:38:25,008 - INFO - 1 change detected
 2025-03-05 14:39:37,714 - INFO - 1 change detected
+2025-03-06 07:07:21,953 - INFO - Application started -----------
+2025-03-06 07:07:26,374 - INFO - Application started -----------
+2025-03-06 07:08:29,163 - INFO - User model ---- get current user payload error
+2025-03-06 07:08:29,216 - INFO - User model ---- get current user payload error
+2025-03-06 07:12:49,200 - INFO - User model ---- get current user payload error
+2025-03-06 07:12:58,244 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:07,262 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:16,279 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:25,301 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:34,356 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:43,413 - INFO - User model ---- get current user payload error
+2025-03-06 07:13:52,442 - INFO - User model ---- get current user payload error
+2025-03-06 07:14:01,465 - INFO - User model ---- get current user payload error
+2025-03-06 07:14:10,483 - INFO - User model ---- get current user payload error
+2025-03-06 07:14:19,530 - INFO - User model ---- get current user payload error
+2025-03-06 07:14:25,391 - INFO - User model ---- get current user payload error
+2025-03-06 07:14:25,398 - INFO - User model ---- get current user payload error
+2025-03-06 07:16:05,447 - INFO - User model ---- get current user payload error
+2025-03-06 07:16:05,475 - INFO - User model ---- get current user payload error
+2025-03-06 07:16:15,834 - INFO - User model ---- get current user payload error
+2025-03-06 07:16:15,844 - INFO - User model ---- get current user payload error
+2025-03-06 07:29:35,943 - INFO - User model ---- get current user payload error
+2025-03-06 07:29:35,958 - INFO - User model ---- get current user payload error
+2025-03-06 07:47:25,196 - INFO - User model ---- get current user payload error
+2025-03-06 07:47:48,036 - INFO - User model ---- get current user payload error
+2025-03-06 07:55:22,544 - INFO - User model ---- get current user payload error
+2025-03-06 07:55:22,574 - INFO - User model ---- get current user payload error
+2025-03-06 07:55:39,688 - INFO - User model ---- get current user payload error
+2025-03-06 08:02:21,695 - INFO - User model ---- get current user payload error
+2025-03-06 08:17:30,491 - INFO - User model ---- get current user payload error
+2025-03-06 08:17:39,977 - INFO - User model ---- get current user payload error
+2025-03-06 08:41:44,294 - INFO - User model ---- get current user payload error
+2025-03-06 08:41:44,313 - INFO - User model ---- get current user payload error
+2025-03-06 08:47:28,242 - INFO - User model ---- get current user payload error
+2025-03-06 08:47:28,271 - INFO - User model ---- get current user payload error
+2025-03-06 08:48:56,067 - INFO - User model ---- get current user payload error
+2025-03-06 08:48:56,088 - INFO - User model ---- get current user payload error
+2025-03-06 08:53:22,803 - INFO - User model ---- get current user payload error
+2025-03-06 08:53:22,815 - INFO - User model ---- get current user payload error
+2025-03-06 08:53:29,751 - INFO - User model ---- get current user payload error
+2025-03-06 08:56:00,293 - INFO - User model ---- get current user payload error
+2025-03-06 08:56:00,308 - INFO - User model ---- get current user payload error
+2025-03-06 09:08:12,044 - INFO - User model ---- get current user payload error
+2025-03-06 09:08:12,141 - INFO - User model ---- get current user payload error
+2025-03-06 09:08:18,653 - INFO - User model ---- get current user payload error
+2025-03-06 09:13:07,631 - INFO - User model ---- get current user payload error
+2025-03-06 09:13:07,657 - INFO - User model ---- get current user payload error
+2025-03-06 09:13:12,605 - INFO - User model ---- get current user payload error
+2025-03-06 09:18:19,588 - INFO - User model ---- get current user payload error
+2025-03-06 09:19:08,892 - INFO - User model ---- get current user payload error
+2025-03-06 09:25:55,504 - INFO - User model ---- get current user payload error
+2025-03-06 09:25:55,549 - INFO - User model ---- get current user payload error
+2025-03-06 09:33:49,240 - INFO - User model ---- get current user payload error
+2025-03-06 09:37:02,072 - INFO - User model ---- get current user payload error
+2025-03-06 09:50:20,551 - INFO - User model ---- get current user payload error
+2025-03-06 09:58:31,015 - INFO - User model ---- get current user payload error
+2025-03-06 09:58:31,285 - INFO - User model ---- get current user payload error
+2025-03-06 10:09:33,895 - INFO - User model ---- get current user payload error
+2025-03-06 10:09:33,928 - INFO - User model ---- get current user payload error
+2025-03-06 10:10:03,299 - INFO - User model ---- get current user payload error
+2025-03-06 10:17:28,537 - INFO - User model ---- get current user payload error
+2025-03-06 10:17:28,560 - INFO - User model ---- get current user payload error
