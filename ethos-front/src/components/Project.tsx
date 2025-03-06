@@ -21,15 +21,11 @@ const Project = ({ project }: PropsType): ReactElement => {
     // console.log(img)
     const content =
         <>
-            <div className="h-[270px] md:h-[300px] lg:h-[360px] rounded-2xl px-3 py-4 my-2 cursor-pointer hover:-translate-y-1 transition-all relative">
+            <div className="h-[290px] md:h-[300px] lg:h-[360px] rounded-2xl px-3 py-4 my-2 cursor-pointer hover:-translate-y-1 transition-all relative">
 
 
 
             <Link to={`/project/${project._id}`} className="group relative block h-[fit]">
-                {/* <div className="overflow-hidden flex justify-center ml-auto mr-auto md:mb-2 mb-4 w-[60%] h-[40%]">
-        <img src={img} alt={project.title} className="mb-3 h-fit" />
-    </div> */}
-                {/* <span className="absolute inset-0 border-2 border-dashed border-black"></span> */}
                         <Edges></Edges>
 
                 <div
@@ -44,8 +40,8 @@ const Project = ({ project }: PropsType): ReactElement => {
                                 <div
                                     className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
                                 >
-                                    <span className="w-px flex-1 bg-gray-900/10"></span>
-                                    <span><FolderOpenIcon className="h-5 w-5 rotate-180" /></span>
+                                    <span className="w-px flex-1 bg-gray-900/10 dark:bg-color-7"></span>
+                                    <span><FolderOpenIcon className="h-5 w-5 rotate-180 dark:text-color-7" /></span>
                                 </div>
                             </div>
 
@@ -57,15 +53,15 @@ const Project = ({ project }: PropsType): ReactElement => {
                                     className="aspect-square h-[100px] w-full rounded-md drop-shadow-md object-cover transition duration-500 group-hover:scale-105 md:h-[8rem]" />
                             </div>
 
-                            <div className="flex flex-1 flex-col justify-between md:my-auto">
+                            <div className="flex  flex-1 flex-col justify-between md:my-auto">
                                 <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-[1em]">
                                     <a href="#">
-                                        <h3 className="font-bold uppercase text-gray-900 sm:text-3xl ">
+                                        <h4 className="font-bold tracking-wider font-iceberg capitalize text-n-1 dark:text-white sm:text-3xl ">
                                             {project.title}
-                                        </h3>
+                                        </h4>
                                     </a>
 
-                                    <p className="mt-1 line-clamp-3 text-sm/relaxed text-gray-700">
+                                    <p className="mt-1 font-electrolize line-clamp-3 text-sm/relaxed text-n-6 dark:text-color-7">
                                         {project.description.slice(0, 50)}
                                     </p>
                                 </div>
@@ -77,7 +73,7 @@ const Project = ({ project }: PropsType): ReactElement => {
 
                                     <a
                                         href="#"
-                                        className="block bg-yellow-300 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
+                                        className="block bg-color-2 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
                                     >
                                         <ArrowTopRightOnSquareIcon className="h-5 w-6" />
                                     </a>
@@ -85,12 +81,10 @@ const Project = ({ project }: PropsType): ReactElement => {
                                 </div>
                             </div>
                         </li>
-                        {/* <img src={img} alt={project.title} className="mb-3 h-[40%]" /> */}
-                        {/* <img src={'./..'} alt={''} className="mb-3 h-[40%]" /> */}
                     </div>
 
                     <div className="absolute inset-0 flex my-auto py-3 h-[250px] sm:h-[170px] md:h-[200px] opacity-0 backdrop-blur-lg transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-[90%] mx-auto mt-[1vh] glass">
-                                                {/* <div className="bg-black bg-opacity-50 p-4 sm:h-[170px] rounded-lg backdrop-blur-lg sm:p-6 lg:p-8 w-full mx-auto mt-2"> */}
+                        <div className="inset-0 h-full w-full bg-black/60 rounded-md drop-shadow-md z-1 absolute"></div>
                         <img
                             alt={project.title}
                             src={img}
@@ -99,28 +93,21 @@ const Project = ({ project }: PropsType): ReactElement => {
                         <div className="flex absolute z-5 flex-1 flex-col justify-between md:my-auto">
                             <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-[1em]">
                                 <a href="#">
-                                    <h3 className="font-bold uppercase text-gray-900 sm:text-3xl ">
+                                    <h4 className="font-bold font-iceberg tracking-wider capitalize text-white sm:text-3xl ">
                                         {project.title}
-                                    </h3>
+                                    </h4>
                                 </a>
 
-                                <p className="mt-1 line-clamp-3 text-sm/relaxed text-gray-700">
+                                <p className="mt-1  font-electrolize line-clamp-3 text-sm/relaxed text-color-7 text-wrap">
                                     {project.description.slice(0, 50)}
                                 </p>
-                            </div>
-
-                            {/* <div className="flex items-end gap-2 absolute right-[0]  md:right-[-50vw] buttom-[-20] md:buttom-0 justify-end m-1"> */}
-
-
-
-
-                                
+                            </div>                                
                         </div>
                         <div className="inline-flex items-end gap-2 justify-items-end relative left-[27vw] sm:bottom-[-0.5rem] sm:left[60vw] md:left[60vw] lg:left-[61vw] -mt-4 z-10">
 
                             <a
                                 href="#"
-                                className="block bg-yellow-300 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
+                                className="block bg-color-2 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" className="w-6 h-5 p-0" width="48px" height="48px">
                                     <linearGradient id="rL2wppHyxHVbobwndsT6Ca" x1="4" x2="44" y1="23.508" y2="23.508" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4c4c4c"/><stop offset="1" stop-color="#343434"/>
@@ -132,13 +119,13 @@ const Project = ({ project }: PropsType): ReactElement => {
 
                             <a
                                 href="#"
-                                className="block bg-yellow-300 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
+                                className="block bg-color-2 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
                             >
                                 <GlobeAltIcon className="h-5 w-6 "/>
                             </a>
                             <a
                                 href="#"
-                                className="block bg-yellow-300 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
+                                className="block bg-color-2 px-2 py-2 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400 rounded-lg"
                             >
                                 <ArrowTopRightOnSquareIcon  className="h-5 w-6"/>
                             </a>
@@ -146,8 +133,6 @@ const Project = ({ project }: PropsType): ReactElement => {
                             </div>
 
                         </div> 
-                        {/* </div> */}
-                        {/* </div> */}
                 </div>
             </Link>
         </div></>
