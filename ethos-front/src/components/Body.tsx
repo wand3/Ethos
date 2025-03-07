@@ -19,7 +19,7 @@ const EthosBody: FC<BodyProps> = ({ nav, children }) => {
       <div className="bg-[#bfcdca] dark:bg-[#000000] pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden"> 
         {/* <div className="font-sans bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100"> */}
 
-        <div className="font-sans">
+        {/* <div className="font-sans"> */}
 
 
           {nav && <NavMain />}
@@ -27,7 +27,7 @@ const EthosBody: FC<BodyProps> = ({ nav, children }) => {
           {children}
           <FlashMessage />
           <Footer />
-        </div>
+        {/* </div> */}
         
       </div>
     </>

@@ -68,10 +68,10 @@ const LoginPage = () => {
   
   return (
     <>
-      <EthosBody nav={false}>
-        <section className="bg-white">
+      <EthosBody nav={true}>
+        <section className="relative z-10 mt-[-4.75rem]">
           <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
-            <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+            <section className="relative flex h-32 items-end lg:col-span-5 lg:h-full xl:col-span-6">
               <img
                 alt="login-banner"
                 src="/pexels-gabby-k-9430875.jpg"
