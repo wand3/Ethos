@@ -13,7 +13,7 @@
       "dest": "webapp/main.py"
     },
     {
-      "src": "webapp/static/(.*)",
+      "src": "/static/(.*)",
       "dest": "webapp/static/$1"
     }
   ],
