@@ -11,6 +11,8 @@
     {
       "src": "/(.*)",
       "dest": "webapp/main.py"
-    }
-  ]
+    },
+    {"src": "webapp/static/(.*)", "dest": "webapp/static/$1"}
+  ],
+  "include": ["static"]
 }
