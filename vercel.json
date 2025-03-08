@@ -17,5 +17,5 @@
       "dest": "webapp/static/$1"
     }
   ],
-  "include": ["static"]
+  "include": ["webapp/static"]
 }
