@@ -1,8 +1,8 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowTopRightOnSquareIcon, FolderOpenIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../store";
-import { useGetProjectsDetailsQuery, deleteProjectImageThunk, deleteProjectThunk } from "../services/project";
+import { useGetProjectsDetailsQuery, deleteProjectThunk } from "../services/project";
 import { useGetUserDetailsQuery } from "../services/user";
 import useFlash from "../hooks/UseFlash";
 import AddProject from "../components/Admin/AddProject";
@@ -12,7 +12,6 @@ import Config from "../config";
 
 
 const ProjectsPage = () => {
-    // const { id } = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch
     
@@ -32,20 +31,11 @@ const ProjectsPage = () => {
             flash("Project delete failed", "error");
             return;
         }
-        const response = await dispatch(deleteProjectThunk({ _id: id as string }));
+        const response = await dispatch(deleteProjectThunk({ _id }));
         if (response.payload) {
             navigate(`/projects`);
             flash(`Project deleted`, "success");
             return response.payload;
-        }
-    };
-
-
-    const handleDeleteImage = async (filename: string) => {
-        const response = await dispatch(deleteProjectImageThunk({ _id: id as string, filename }));
-        if (response.payload) {
-        flash(`Image deleted`, "success");
-        return response.payload;
         }
     };
 
@@ -56,8 +46,8 @@ const ProjectsPage = () => {
         <> 
             <EthosBody nav>
                 <div className="mt-[4vh] pt-[2vh] md:mt-[7vh] lg:mt-[10vh] mx-[2%] glass-effect">
-                <h1 className="font-electrolize text-n-7 dark:text-n-8 px-5 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center transition-all duration-500 ease-in-out leading-tight my-8">
-                    My <span className="text-primary">—</span> Featured Works — A curated portfolio of impactful solutions delivered across diverse industries, showcasing my ability to transform concepts into impactful digital experiences through technical precision and innovative problem-solving.
+                <h1 className="font-electrolize text-n-7 dark:text-n-8 px-5 text-1xl sm:text-3xl lg:text-4xl xl:text-4xl text-center transition-all duration-500 ease-in-out leading-tight my-8">
+                    Featured Works <span className="text-primary">—</span> A curated portfolio of impactful solutions delivered across diverse industries, showcasing my ability to transform concepts into impactful digital experiences through technical precision and innovative problem-solving.
                 </h1>
                 <h4 className="text-start tracking-wider mx-[5%] font-oswald font-thin text-n-5 dark:text-color-3 my-5 text-[calc(0.8em+1vw)]">
                     Each project reflects a dedication to excellence in execution and user-centered design on works that I have delivered, highlighting diverse range of projects for various industries. Most of my projects are under no disclosure agreements which means I can only share here a few.

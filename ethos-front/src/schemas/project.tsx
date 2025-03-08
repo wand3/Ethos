@@ -35,9 +35,9 @@ export interface ProjectSchema {
   description: string;
   project_url?: string;
   github_url?: string;
-  technologies?: TechStack | null;
+  technologies?: TechStack;
   roles?: string[];
-  testing_details?: TestingDetails | null;
+  testing_details?: TestingDetails;
   images?: string[];
 }
 

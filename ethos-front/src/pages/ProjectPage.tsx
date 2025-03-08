@@ -13,6 +13,7 @@ import Config from "../config";
 import { DeleteProjectSchema, ProjectSchema } from "../schemas/project";
 // import { date } from "yup";
 import DisplayComponent from "../components/DisplayCkeditorDescription";
+import Edges from "../assets/svg/Edges";
 
 
 export const ProjectPage = () => {
@@ -100,127 +101,110 @@ export const ProjectPage = () => {
           </div>
         </div>
 
-        <section className="relative max-w-screen-xl mx-auto py-3 px-4 md:px-8">
-          
-          <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
-            <div className="relative z-10 gap-5 items-center lg:flex">
-                <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
-                  <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
-                      {project?.title}
-                  </h3>
-                  
-                  {/* <p className="text-gray-500 leading-relaxed mt-3">
+        <section className="relative max-w-screen-xl mt-[15%] md:mt-[10%] glass-effect rounded-lg lg:mt-[6%] px-auto py-3 mx-[2%] md:px-8">
+          <div className="absolute top-0 left-0 w-full h-full opacity-40 -z-1 rounded-md bg-white/40 dark:bg-black/80"></div>
+            <div className="shadow-md rounded-lg overflow-hidden md:flex">
+              <div className="md:w-1/2">
+                <div className="flex-1  mx-[2%] sm:mx-0 md:mx-0 lg:w-auto">
 
-                      {project?.description}
-                  </p> */}
-                  {/* <CKEditor initData={<p className="text-gray-500 leading-relaxed mt-3">
+                    {/* <button onClick={() => handleDeleteImage(project?.images[0])}>Delete Image</button> */}
+                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="object-cover w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto" />
+                </div>
+              </div>
+              <div className="py-4 px-[3%] space-y-3 text-n-6 dark:text-n-8 md:w-1/2">
+                                          <Edges></Edges>
 
-                      {project?.description}
-                  </p>}  />; */}
-                  <div className="w-[40%]">
-                    {/* <div
-                      className="w-fit relative"
-                      dangerouslySetInnerHTML={{ __html: project?.description} }
-                    /> */}
-                    <DisplayComponent content={project?.description}  />
-                  </div>
+                <h3 className="text-2xl tracking-tagline font-iceberg capitalize md:text-2xl">
+                  {project?.title}
+                </h3>
                   
-                  <p>Project roles</p>
-                  {project?.roles?.map((role, index) => (
-                    <p className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center" key={index}>{role}</p>
-                  ))}
-{/* 
-                  { project?.technologies. !==  (
-                    <>
-                     <p>Project roles</p>
-                      {project?.technologies.map((technology, index) => (
-                        <p className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center" key={index}>{technology}</p>
-                      ))}
-                    </>
-                  
-                  ) } */}
+                  {project?.description && (
+                    <div className="w-full">
+                      <DisplayComponent content={project?.description} />
+                    </div>
+                  )}
+                 
+                  {project?.roles && (
+                    <div className="flex flex-wrap transition">
+                      <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Role(s)</div>
+                      <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-xl backdrop-blur-md w-[30%] my-2 justify-start border-n-3 dark:border-color-7" />
 
+                      <div className="flex flex-wrap relative md:left-[24%] md:right-0  flex-col font-electrolize">
+                        {project?.roles?.map((role, index) => (
+                          <p className="w-full md:flex-1 px-2" key={index}>{role}</p>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   {/* Conditionally render technologies if they exist  */}
 
-                  { project?.technologies && (
-                    <>
-                      <p>Languages</p>
-                      {project?.technologies?.language?.map((technology, index) => (
-                        <p
-                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                          key={index}
-                        >
-                          {technology}
-                        </p>
-                      ))}
+                  {project?.technologies?.language && (
+                    <div className="flex flex-wrap transition">
+                      <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Language(s)</div>
+                      <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-2xl backdrop-blur-md border-n-3 dark:border-color-7 w-[30%] my-2 justify-start" />
 
-                      <p>Frameworks</p>
-                      {project?.technologies?.frameworks?.map((technology, index) => (
-                        <p
-                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                          key={index}
-                        >
-                          {technology}
-                        </p>
-                      ))}
-
-                      <p>Databases</p>
-                      {project?.technologies?.databases?.map((technology, index) => (
-                        <p
-                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                          key={index}
-                        >
-                          {technology}
-                        </p>
-                      ))}
-
-                      <p>Tools</p>
-                      {project?.technologies?.tools?.map((technology, index) => (
-                        <p
-                          className="text-indigo-600 p-2 m-1 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                          key={index}
-                        >
-                          {technology}
-                        </p>
-                      ))}
-                    </>
+                      <div className="flex w-fit flex-wrap relative md:right-[-10vw] flex-col font-electrolize">
+                        {project?.technologies?.language?.map((language, index) => (
+                          <p className="w-full md:flex-1 px-2" key={index}>{language}</p>
+                        ))}
+                      </div>
+                    </div>
                   )}
-
                   
+      
+                {project?.technologies?.frameworks && (
+                  <div className="flex flex-wrap transition">
+                    <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Framework(s)</div>
+                    <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-2xl backdrop-blur-md border-n-3 dark:border-color-7 w-[30%] my-2 justify-start" />
+
+                    <div className="flex flex-wrap relative md:right-[-10vw] flex-col font-electrolize">
+                      {project.technologies.frameworks.map((framework, index) => (
+                        <p className="w-full md:flex-1 px-2" key={index}>{framework}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {project?.technologies?.databases && (
+                  <div className="flex flex-wrap">
+                    <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Database(s)</div>
+                    <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-2xl backdrop-blur-md border-n-3 dark:border-color-7 w-[30%] my-2 justify-start" />
+
+                    <div className="flex flex-wrap relative md:right-[-10vw] flex-col font-electrolize">
+                      {project.technologies.databases.map((database, index) => (
+                        <p className="w-full md:flex-1 px-2" key={index}>{database}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {project?.technologies?.tools && (
+                  <div className="flex flex-wrap">
+                    <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Tool(s)</div>
+                    <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-2xl backdrop-blur-md border-n-3 dark:border-color-7 w-[30%] my-2 justify-start" />
+
+                    <div className="flex flex-wrap relative md:right-[-10vw] flex-col font-electrolize">
+                      {project.technologies.tools.map((tool, index) => (
+                        <p className="w-full md:flex-1 px-2" key={index}>{tool}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
                  
-                  <a
-                      className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-                      href="javascript:void()">
-                      Try it out
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                  </a>
                 </div>
 
-                <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+                {/* <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                     <button onClick={() => handleDeleteImage(project?.images[0])}>Delete Image</button>
                     <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="w-full" />
+                </div> */}
 
-
-                    {/* <img 
-                        src="https://i.postimg.cc/kgd4WhyS/container.png" 
-                        alt="" 
-                        className="w-full" 
-                    /> */}
-                </div>
-                <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-                    <button onClick={() => handleDeleteImage(project?.images[1])}>Delete Image</button>
-                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[1]}`} className="w-full" />
-
-                    
-                    {/* <img 
-                        src="https://i.postimg.cc/kgd4WhyS/container.png" 
-                        alt="" 
-                        className="w-full" 
-                    /> */}
-                </div>
+                
+                
             </div>
+            {/* <div className="relative z-10 gap-5 items-center lg:flex ">
+                <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
+                  
+            </div> */}
             
         </section>
        

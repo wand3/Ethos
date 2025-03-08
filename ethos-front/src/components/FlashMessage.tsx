@@ -9,7 +9,7 @@ export const FlashMessage = () => {
     const { flashMessage, hideFlash, visible } = useContext(FlashContext) as FlashContextType;
     // const { hideFlash, flashMessage, visible } = useContext(FlashContext);
 
-    const baseStyles = "fixed mx-auto top-6 right-1 p-4 rounded shadow-md text-white w-fit";
+    const baseStyles = "fixed mx-auto top-6 right-1 p-4 rounded shadow-md text-white w-fit z-15";
 
     const typeStyle: Record<string, string> = {
         success: "text-green-500",
