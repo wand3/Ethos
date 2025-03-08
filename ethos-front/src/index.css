@@ -41,10 +41,10 @@
 /* .background-image-light {
   color for dark mode gradient pattern #ffc36b17
 } */
-.grid-pattern-light {
+/* .grid-pattern-light {
   @apply bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] mix-blend-normal pointer-events-none   
   
-}
+} */
 /* .grid-pattern-light-pos {
   position: inherit;
   height: 100%;
@@ -243,6 +243,8 @@
     }
   }
 
+/* --------- edges and itsa annimation  */
+
     @keyframes pulse {
       0%, 100% {
         opacity: 0.1;
@@ -305,5 +307,34 @@
     bottom: 0%;
     left: 0%;
   }
+
+/* ---------------- Project page  */
+/* Add custom animation for the gallery hover effect */
+.gallery-item {
+  @apply relative overflow-hidden rounded-lg transition-transform duration-300;
+}
+
+.gallery-item:hover {
+  @apply transform scale-[1.03] z-10 shadow-xl;
+}
+
+.gallery-item img {
+  @apply w-full h-full object-cover transition-opacity duration-300;
+}
+
+.gallery-item:hover img {
+  @apply opacity-90;
+}
+
+/* Add a subtle overlay on hover */
+.gallery-item::after {
+  @apply absolute inset-0 bg-black/0 transition-colors duration-300;
+  content: '';
+}
+
+.gallery-item:hover::after {
+  @apply bg-black/20;
+}
+
 
 }

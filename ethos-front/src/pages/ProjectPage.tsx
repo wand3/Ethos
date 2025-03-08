@@ -14,6 +14,8 @@ import { DeleteProjectSchema, ProjectSchema } from "../schemas/project";
 // import { date } from "yup";
 import DisplayComponent from "../components/DisplayCkeditorDescription";
 import Edges from "../assets/svg/Edges";
+import Gallery from "../components/design/ImageViewer";
+
 
 
 export const ProjectPage = () => {
@@ -81,6 +83,14 @@ export const ProjectPage = () => {
       return response.payload;
     }
   };
+
+
+  // useEffect( () => {
+  //   const galleryElement = document.getElementById('lightgallery');
+  //   LightGallery.
+  
+  
+  // }, [project])
   
   // useEffect( () => {
   //   const getproj = async (id: string) =>{
@@ -102,19 +112,66 @@ export const ProjectPage = () => {
         </div>
 
         <section className="relative max-w-screen-xl mt-[15%] md:mt-[10%] glass-effect rounded-lg lg:mt-[6%] px-auto py-3 mx-[2%] md:px-8">
-          <div className="absolute top-0 left-0 w-full h-full opacity-40 -z-1 rounded-md bg-white/40 dark:bg-black/80"></div>
+          <div className="absolute top-0 left-0 w-full h-fit opacity-40 -z-1 rounded-md bg-white/40 dark:bg-black/80"></div>
             <div className="shadow-md rounded-lg overflow-hidden md:flex">
-              <div className="md:w-1/2">
-                <div className="flex-1  mx-[2%] sm:mx-0 md:mx-0 lg:w-auto">
+              <div className="md:w-1/2 px-[3%] relative group">
+                <div className="flex-1  py-[10%] sm:mx-0 md:mx-0 lg:w-auto ">
 
                     {/* <button onClick={() => handleDeleteImage(project?.images[0])}>Delete Image</button> */}
-                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="object-cover w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto" />
+                    <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="rounded-md object-cover w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:max-h-[28rem]" />
+
+                    {/* Icon overlay container */}
+                  <div className="absolute inset-0 bg-black/20 dark:bg-black/40 rounded-md flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm">
+                    {/* GitHub Icon */}
+                    {project?.github_url && (
+                      <a 
+                        href={project.github_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white/20 dark:bg-black/30 rounded-full hover:bg-white/30 dark:hover:bg-black/40 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+                        aria-label="GitHub Repository"
+                      >
+                        <svg 
+                          className="w-8 h-8 dark:text-white text-n-4"
+                          fill="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                      </a>
+                    )}
+
+                    {/* Web/External Link Icon */}
+                    {project?.project_url && (
+                      <a
+                        href={project.project_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white/20 dark:bg-black/30 rounded-full hover:bg-white/30 dark:hover:bg-black/40 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl"
+                        aria-label="Live Preview"
+                      >
+                        <svg 
+                          className="w-8 h-8 dark:text-white text-n-4"
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="py-4 px-[3%] space-y-3 text-n-6 dark:text-n-8 md:w-1/2">
-                                          <Edges></Edges>
 
                 <h3 className="text-2xl tracking-tagline font-iceberg capitalize md:text-2xl">
+                  <Edges></Edges>
                   {project?.title}
                 </h3>
                   
@@ -129,7 +186,7 @@ export const ProjectPage = () => {
                       <div className="w-full md:w-[15%] mr-2 text-lg font-iceberg tracking-wider">Role(s)</div>
                       <hr className="block md:hidden lg:hidden xl:hidden h-[2px] rounded-full py-0 shadow-xl backdrop-blur-md w-[30%] my-2 justify-start border-n-3 dark:border-color-7" />
 
-                      <div className="flex flex-wrap relative md:left-[24%] md:right-0  flex-col font-electrolize">
+                      <div className="flex w-fit flex-wrap relative md:right-[-10vw] flex-col font-electrolize">
                         {project?.roles?.map((role, index) => (
                           <p className="w-full md:flex-1 px-2" key={index}>{role}</p>
                         ))}
@@ -190,13 +247,13 @@ export const ProjectPage = () => {
                     </div>
                   </div>
                 )}
-                 
                 </div>
+             
 
-                {/* <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
+                <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
                     <button onClick={() => handleDeleteImage(project?.images[0])}>Delete Image</button>
                     <img  src={`${Config.baseURL}/static/images/project_images/${project?.images[0]}`} className="w-full" />
-                </div> */}
+                </div>
 
                 
                 
@@ -205,12 +262,59 @@ export const ProjectPage = () => {
                 <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
                   
             </div> */}
-            
+            {/* <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Gallery images={project?.images} title={project?.title || "Project Image(s)"} />
+                
+              </div> */}
+            {/* Gallery Section */}
+          <div className="mt-8 w-full max-w-screen-xl mx-auto">
+            <div className="bg-white/10 dark:bg-n-1 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                </span>
+                <h3 className="text-xl font-semibold text-n-6 dark:text-n-2">
+                  Project Gallery
+                  <span className="ml-3 text-sm text-n-4 dark:text-n-4/80 font-normal animate-pulse">
+                    (Click images to preview)
+                  </span>
+                </h3>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-transparent opacity-20 rounded-xl -z-10 group-hover:opacity-30 transition-opacity" />
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  <Gallery 
+                    images={project?.images} 
+                    title={project?.title || "Project Image(s)"}
+                    className="cursor-zoom-in"
+                  />
+                </div>
+                
+                {/* Hover indicator */}
+                {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-2 text-primary-500">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                    <span className="font-semibold">Click to explore</span>
+                  </div>
+
+                </div> */}
+
+              </div>
+            </div>
+          </div>
         </section>
        
 
         { user && (
           <>
+            <div className="z-10 absolute">
+            
             <button onClick={() => {handleDelete(id)}}>
                 <span className="mt-0 mx-4 lg:ml-12 p-1 hover:text-red-600 text-black dark:text-white">
                 Delete Project
@@ -235,6 +339,8 @@ export const ProjectPage = () => {
             </button>
             <AddProject />
             <UpdateProjectImages />
+            </div>
+
           </>
         )}
 
