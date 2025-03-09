@@ -4,7 +4,7 @@
     {
       "src": "webapp/main.py",
       "use": "@vercel/python",
-      "config": { "runtime": "python3.11" }
+      "config": { "runtime": "python3.11", "buildCommand": "mkdir -p webapp/static" }
     }
   ],
   "routes": [
@@ -13,9 +13,8 @@
       "dest": "webapp/main.py"
     },
     {
-      "src": "webapp/static/(.*)",
+      "src": "/static/(.*)",
       "dest": "webapp/static/$1"
     }
-  ],
-  "include": ["static"]
+  ]
 }

@@ -42,7 +42,15 @@ def create_app() -> FastAPI:
 app = create_app()
 # base_folder = Path(__name__).resolve().parent
 # logger.info(base_folder)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+# directories = ["static"]
+
+# for directory in directories:
+#     if not os.path.exists(directory):
+#         os.makedirs(directory)
+        
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 if __name__ == "__main__":
