@@ -16,5 +16,5 @@
       "src": "/static/(.*)",
       "dest": "webapp/static/$1"
     }
-  ],
+  ]
 }
