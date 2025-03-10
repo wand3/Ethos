@@ -6,7 +6,7 @@ from ..schemas import PyObjectId
 
 
 class UserBase(BaseModel):
-    # email: EmailStr
+    email: EmailStr
     username: str
     disabled: Optional[bool] = None
     profile_pic: Optional[str] = None
