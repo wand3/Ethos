@@ -28,8 +28,7 @@
   --circle-size: 80%;
   --blending: hard-light;
   --size-desktop--21: 1.1rem;
-}
-
+  }
 }
 
 
@@ -147,7 +146,6 @@
 
 
 @layer components {
-
   .gradient-background {
     @apply w-screen h-screen relative overflow-hidden bg-gradient-to-r from-[var(--color-bg1)] to-[var(--color-bg2)] top-0 left-0    
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import useUser from '../hooks/UseUser';
 import { useSelector } from 'react-redux'
@@ -31,8 +31,12 @@ import { UserState } from '../slices/UserSlice';
 
 // export default PrivateRoute;
 
+interface PrivateRouteProps {
+  children: ReactElement;
+  // Add other props if needed
+}
 
-const PrivateRoute: React.FC = ({children}: React.PropsWithChildren<{}>) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({children}) => {
   // Define the type of the state and `userInfo`
   const { user } = useSelector((state: RootState) => state.user);
   const location = useLocation();

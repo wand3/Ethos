@@ -46,7 +46,7 @@ export interface CreateProjectSchema {
   title: string;
   description: string;
   github_url: string;
-  roles?: string;
+  roles: string;
   images: (File | undefined)[];
 }
 

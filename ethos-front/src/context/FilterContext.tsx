@@ -1,7 +1,6 @@
 import { createContext, ReactElement, useState, useEffect, useContext, ReactNode } from "react";
 import UseApi from "../hooks/UseApi";
 import useFlash from "../hooks/UseFlash";
-import { ProductType } from "./ProductProvider";
 import Config from "../config";
 
 

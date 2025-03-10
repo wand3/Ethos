@@ -15,7 +15,7 @@ import { FlashProvider } from './context/FlashProvider';
 import { UserProvider } from './context/UserProvider';
 
 import AdminRoute from './components/AdminRoute';
-import PublicRoute from './components/PrivateRoute';
+import PublicRoute from './components/PublicRoute';
 import PrivateRoute from './components/PrivateRoute';
 import AdminPage from './pages/Admin/AdminPage';
 import UpdateProject from './pages/UpdateProject';

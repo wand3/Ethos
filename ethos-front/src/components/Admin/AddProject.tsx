@@ -13,13 +13,13 @@ import SpinnerLineWave from "../spinner";
 
 
 export const AddProject = () => {
-  const { loading, error, success } = useSelector((state: RootState) => state.project); // Type-safe selector
+  const { loading, success } = useSelector((state: RootState) => state.project); // Type-safe selector
   let [isOpen, setIsOpen] = useState(false)
   const dispatch = useDispatch<AppDispatch>(); // Type-safe dispatch 
 
   // image upload 
   const [images, setImages] = useState<File[] | []>([]);
-  const [status, setStatus] = useState<'initial'| 'uploading'| 'success' | 'fail'>('initial')
+  // const [status, setStatus] = useState<'initial'| 'uploading'| 'success' | 'fail'>('initial')
   const [previewURLs, setPreviewURLs] = useState<string[]>([]);
 
   const flash = useFlash();

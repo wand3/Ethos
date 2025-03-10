@@ -384,38 +384,3 @@ export const deleteProjectImageThunk = createAsyncThunk<ProjectSchema, DeletePro
 );
 
 export const { useGetProjectsDetailsQuery, useGetProjectDetailQuery } = projectApi; // Export the hook
-
-
-
-
-
-
-
-
-
-// // Async Thunks
-
-
-// export const updateProject = createAsyncThunk<Project, Project, {rejectValue: string, state: RootState}>(
-//   'project/updateProject',
-//   async (project, { rejectWithValue }) => {
-//     try {
-//       const response = await axios.put<Project>(`${Config.baseURL}/projects/${project.id}`, project);
-//       return response.data;
-//     } catch (error: any) {
-//         return rejectWithValue(error.response?.data?.message || error.message || "Could not update project")
-//     }
-//   }
-// );
-
-// export const deleteProject = createAsyncThunk<number, number, {rejectValue: string, state: RootState}>( // Returns the deleted ID
-//   'project/deleteProject',
-//   async (projectId, { rejectWithValue }) => {
-//     try {
-//       await axios.delete(`${Config.baseURL}/projects/${projectId}`);
-//       return projectId; // Return the deleted project ID
-//     } catch (error: any) {
-//         return rejectWithValue(error.response?.data?.message || error.message || "Could not delete project")
-//     }
-//   }
-// );
