@@ -45,12 +45,13 @@ app = create_app()
 
 
 # directories = ["static"]
+# Use absolute path detection
+current_dir = os.path.dirname(os.path.abspath(__file__))
+static_dir = os.path.join(current_dir, "static")
 
-# for directory in directories:
-#     if not os.path.exists(directory):
-#         os.makedirs(directory)
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
         
-app.mount("/webapp/static", StaticFiles(directory="../webapp/static"), name="static")
+# app.mount("/webapp/static", StaticFiles(directory="../webapp/static"), name="static")
 # app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
