@@ -50,7 +50,7 @@ app = create_app()
 #     if not os.path.exists(directory):
 #         os.makedirs(directory)
         
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="/webapp/static"), name="static")
 
 
 if __name__ == "__main__":
