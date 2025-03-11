@@ -5,7 +5,7 @@
       "src": "webapp/main.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.11",
+        "runtime": "python3.9",
         "include": ["webapp/static"]
       }
     }
