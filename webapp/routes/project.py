@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Annotated
 
 from starlette.requests import Request
-
+from cloudinary import uploader
 from webapp.config import Config, basedir
 from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, status, Form, Body
@@ -48,17 +48,36 @@ async def create_project(
                                         detail=f"Unsupported image format. Allowed: {', '.join(Config.UPLOAD_EXTENSIONS)}.")
 
                 # Generate unique filename
-                image_filename = f"{ObjectId()}_{image.filename}"
+                # image_filename = f"{ObjectId()}_{image.filename}"
 
-                # Create uploads directory (logic remains the same)
-                os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+                # Upload to Cloudinary
+                try:
+                    upload_result = uploader.upload(
+                        file_content,
+                        public_id=f"projects/{ObjectId()}",  # Custom public ID
+                        folder="projects",  # Optional folder organization
+                        resource_type="image"  # Auto-detects image/video
+                    )
+                    images.append(upload_result["secure_url"])
+                    logger.info("testbcloudinary in")
+                    # images.append(upload_result["secure_url"])  # Store secure HTTPS URL
+                except Exception as cloudinary_error:
+                    logger.info(cloudinary_error)
 
-                image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
-                with open(image_path, "wb") as buffer:
-                    # shutil.copyfileobj(image.file, buffer)
-                    buffer.write(file_content)  # Write the file content directly
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Failed to upload image to Cloudinary: {str(cloudinary_error)}"
+                    )
 
-                images.append(image_filename)
+                # # Create uploads directory (logic remains the same)
+                # os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+                #
+                # image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
+                # with open(image_path, "wb") as buffer:
+                #     # shutil.copyfileobj(image.file, buffer)
+                #     buffer.write(file_content)  # Write the file content directly
+
+                # images.append(image_filename)
 
         # Handle roles input (either a string or a list)
         if isinstance(project_data.roles, str):
@@ -98,6 +117,7 @@ async def create_project(
         else:
             raise HTTPException(status_code=404, detail="Project not found")
     except Exception as e:
+
         raise HTTPException(status_code=500, detail=str(e))
 
 

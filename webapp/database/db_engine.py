@@ -1,5 +1,5 @@
 from typing import AsyncGenerator
-
+from ..config import Config
 from fastapi import FastAPI
 from pymongo import AsyncMongoClient
 import logging
@@ -8,10 +8,8 @@ from contextlib import asynccontextmanager
 
 # MongoDB's connection string (localhost, no authentication)
 # MONGO_CONNECTION_STRING = "mongodb://127.0.0.1:27017/"
-MONGO_CONNECTION_STRING = "mongodb+srv://wand3:sLhYnaOKypLmAUpA@ethos.rimeb.mongodb.net/?retryWrites=true&w=majority&appName=ethos"
-
+MONGO_CONNECTION_STRING = Config.DATABASE_URI
 DATABASE_NAME = "ethos"
-
 # Load the MongoDB connection string from the environment variable MONGODB_URI
 
 # Create a MongoDB client

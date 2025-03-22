@@ -51,8 +51,6 @@ static_dir = os.path.join(current_dir, "static")
 
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
         
-# app.mount("/webapp/static", StaticFiles(directory="../webapp/static"), name="static")
-# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 if __name__ == "__main__":
