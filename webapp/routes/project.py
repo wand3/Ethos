@@ -284,14 +284,32 @@ async def update_project_images(
                 image_filename = f"{ObjectId()}_{image.filename}"
 
                 # Create uploads directory (logic remains the same)
-                os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+                # os.makedirs(Config.UPLOAD_PROJECT_IMAGE, exist_ok=True)
+                #
+                # image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
+                # with open(image_path, "wb") as buffer:
+                #     # shutil.copyfileobj(image.file, buffer)
+                #     buffer.write(file_content)  # Write the file content directly
+                #
+                # images.append(image_filename)
+                # Upload to Cloudinary
+                try:
+                    upload_result = uploader.upload(
+                        file_content,
+                        public_id=f"projects/{ObjectId()}",  # Custom public ID
+                        folder="projects",  # Optional folder organization
+                        resource_type="image"  # Auto-detects image/video
+                    )
+                    images.append(upload_result["secure_url"])
+                    # logger.info("testbcloudinary in")
+                    # images.append(upload_result["secure_url"])  # Store secure HTTPS URL
+                except Exception as cloudinary_error:
+                    logger.info(cloudinary_error)
 
-                image_path = os.path.join(Config.UPLOAD_PROJECT_IMAGE, image_filename)
-                with open(image_path, "wb") as buffer:
-                    # shutil.copyfileobj(image.file, buffer)
-                    buffer.write(file_content)  # Write the file content directly
-
-                images.append(image_filename)
+                    raise HTTPException(
+                        status_code=500,
+                        detail=f"Failed to upload image to Cloudinary: {str(cloudinary_error)}"
+                    )
 
         await project_model.db.update_one(
             {"_id": ObjectId(project_id)},
